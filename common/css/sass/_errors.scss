@@ -1,0 +1,85 @@
+.row.error {
+    position: absolute;
+    vertical-align: top;
+    top: 50%;
+    
+    .fourohfour-box {
+        display: relative;
+        height: 120px;
+        width: 120px;
+        overflow: hidden;
+        background: $snl-blue-grey-300;
+        float: left;
+        margin-right: 24px;
+        
+        &:hover {
+            animation: error-shake-big 0.5s ease-in-out 1;
+            
+            .fourohfour-text {
+                animation: error-shake-big 0.6s ease-out 1;
+            }
+        }
+    }
+
+    .fourohfour-text {
+        color: white;
+        position: relative;
+        right: 8px;
+        top: 25%;
+        text-align: right;
+        display: block;
+    }
+    
+    h1 {
+        font-weight: 700;
+        display: inline-block;
+        margin: 0;
+        line-height: 1em;
+    }
+    
+    .button-group {
+        margin-top: 16px;
+    }
+}
+
+@keyframes error-shake-big {
+    8%, 41% {
+        transform: translateX(-10px);
+    }
+    25%, 58% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    92% {
+       transform: translateX(5px);
+    }
+    0%, 100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes error-shake-big-react {
+    8% {
+        transform: translateX(7px);
+    }
+    25% {
+        transform: translateX(-8px);
+    }
+    41% {
+        transform: translateX(9px);
+    }
+    58% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(7px);
+    }
+    92% {
+       transform: translateX(-4px);
+    }
+    0%, 100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,42 @@
+/* styles.scss */
+
+// Authored Dependencie Override - Sass needs this before Vendor Dependencies
+@import "bootstrap-variables-override";
+
+// Vendor Dependencies
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Other Customized Dependencies
+@import "jasnybootstrap";
+@import "smartmenus";
+//
+
+// Authored Dependencies
+@import "mixins";
+@import "color-palettes";
+
+// Components & Patterns
+@import "global";
+@import "type";
+
+@import "hamburger";
+@import "nav";
+@import "search";
+
+@import "errors";
+
+@import "header";
+@import "footer";
+
+// Color Themes
+@import "theme-snl-amber";
+@import "theme-snl-clear";
+@import "theme-snl-med-blue"; /*brand-primary*/
+@import "theme-snl-light-blue";
+@import "theme-snl-dark-blue";
+@import "theme-snl-blue-grey";
+@import "theme-snl-green";
+@import "theme-snl-lavender";
+@import "theme-snl-periwinkle";
+@import "alerts";
+@import "buttons";

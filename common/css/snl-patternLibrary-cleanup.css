@@ -1,0 +1,546 @@
+/*-- Pattern Library --*/
+
+/*-------------------------------------------
+moved a bunch of stuff into _global.scss
+other items are in other .scss files
+- still checking and cleaning up and verifiying what
+PL needs, and other sites that may be depending on these files - blbyers 2016-09-01
+--------------------------------------------*/
+
+
+
+/*
+p, ul, ol, dl, dt {
+	margin-bottom:1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	font-weight:200;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	margin:0;
+}
+*/
+
+
+/*-- Original Headings Scale --*/
+/*
+.hero h1 {
+	font-size:4.5em;
+	line-height:1em;
+	font-weight:200;
+	padding-top:0;
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 1em;
+	font-weight: 200;
+	margin-bottom:.5em;
+}
+
+h1:first-child {
+	padding-top:0;
+}
+
+h2:first-child {
+	padding-top:0;
+}
+
+h2, aside h1 {
+	font-size: 2.25em;
+	line-height: 1.33333em;
+	margin-bottom:.6667em;
+	font-weight:300;
+}
+h3, aside h2 {
+	font-size:1.75em;
+	line-height:1.2857em;
+	margin-bottom:.8571em;
+	font-weight:300;
+}
+h4, aside h3 {
+	font-size: 1.25em;
+	line-height: 1.2em;
+	margin-bottom:1.2em;
+	font-weight:600;
+}
+h5 {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom:1.5em;
+	font-weight:600;
+}
+h6 {
+	font-weight: 600;
+	font-size: .875em;
+	line-height: 1.71429em;
+	margin-bottom:1.71429em;
+}*/
+
+/*--*/
+
+
+
+/*--*/
+
+
+/* check these against _nav.scss --------------------------*/
+/*
+nav ul,
+.nav ul,
+.navbar-nav ul {
+	padding-left: 0;
+	list-style-type:none;
+}
+
+nav ul ul,
+.nav ul ul,
+.navbar-nav ul ul {
+	list-style-type:none;
+}
+
+nav ul li,
+.nav ul li,
+.navbar-nav ul li {
+	margin:0;
+}*/
+
+
+/*--*/
+
+
+
+/*header*/
+
+/*
+.header .headingGroup {
+	margin:0;
+	padding:3em;  /* for original headings scale *
+}
+
+.header {
+	background: #00ADD0;
+	color: #fff;
+}
+
+.header h1 {
+	padding:0;
+	margin:0;
+	color:#fff;
+}
+.header .tagline {
+	padding:0;
+}
+.header h1 + .tagline {
+	/*margin-bottom: 1.25em;
+	margin-top: -1.5em;*
+
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.header #primaryMenu {
+	background-color: rgba(0, 0, 0, 0.06);
+	line-height: 1.25em;
+}
+
+.menu-hamburger {
+	padding: 12px;
+	font-size:20px;
+	margin-right:12px;
+}
+
+.header #primaryMenu .menu-hamburger {
+	cursor: default;
+	display: block;
+	color: rgba(255, 255, 255, 0.80);
+}
+.header #primaryMenu .menu-hamburger:hover {
+	/*background-color: rgba(255, 255, 255, 0.1);*
+	color: rgba(255, 255, 255, 1.0);
+	cursor: pointer;
+}
+
+.header #primaryMenu .menu-hamburger.active {
+	background-color: rgba(0, 0, 0, 0.06);
+	color: rgba(255, 255, 255, 1.0);
+	cursor: pointer;
+}
+
+.header #primaryMenu #sectionHeading {
+	top: -.1875em;
+	position:relative;
+	display:none;
+}
+
+.header #primaryMenu .nav li {
+	background: transparent;
+	/*border-bottom: 3px solid #00ADD0;*
+	border-bottom: .1875em solid transparent;
+}
+.header #primaryMenu .nav a {
+	color: #fff;
+}
+
+
+.header #primaryMenu .nav li.active,
+.header #primaryMenu .navbar-nav > li:hover {
+	/*background: #4FC6DF;*
+	background: #00ADD0;
+	/*border-bottom: .1875em solid #0086B6;*
+	border-bottom:0.1875em solid rgba(0, 0, 0, 0.25);
+}
+
+header #primaryMenu .nav li.active::after,
+.header #primaryMenu .navbar-nav > li:hover::after,
+.header #primaryMenu .navbar-nav > li > a:focus::after,
+.header #primaryMenu .navbar-nav > li > a:hover::after {
+	content: ' ';
+    	position:absolute;
+		top:0; right:0; bottom:0; left:0;
+		background-color: rgba(255, 255, 255, 0.25);
+		z-index:0;
+	/*border-bottom: .1875em solid #0086B6;*
+}
+
+.header #primaryMenu .navbar-nav > li > a {
+	padding: .44em 1em .36em;
+	position:relative;
+	z-index:1;
+}
+
+.header #primaryMenu .navbar-nav > li:hover {
+/*	background-color: rgba(255, 255, 255, 0.25);
+	border-bottom:0.1875em solid rgba(0, 0, 0, 0.25);*/
+	/*border-bottom: .1875em solid #0086B6;*
+	cursor:pointer;
+}
+
+.header #primaryMenu .navbar-nav > li > a:focus,
+.header #primaryMenu .navbar-nav > li > a:hover {
+	/*background: #4FC6DF;*/
+	/*background: #00ADD0;*
+}
+
+.header #primaryMenu .nav.active {
+	display: block;
+}
+
+.header #primaryMenu .nav.active li {
+	float: none;
+}
+*/
+
+
+/*--secondary menu--*/
+/*
+#secondaryMenuWrapper {
+	width: 300px;
+	border-width: 0;
+	height:100%;
+	border:none;
+	background: #f9f9f9;
+	position: absolute;
+	left:0;
+	bottom:0;
+	z-index: 1;
+	display:none;
+	padding: 1em 1.5em;
+}
+
+#secondaryMenuWrapper #secondaryMenu {
+	margin-bottom:0;
+	position:relative;
+	z-index:1;
+
+}
+#secondaryMenuWrapper #secondaryMenu a {
+	color: #555;
+}
+
+#secondaryMenuWrapper #secondaryMenu li {
+	font-weight:300;
+}
+
+#secondaryMenuWrapper #secondaryMenu li ul li {
+padding:.1875em 0;
+font-weight:300;
+}
+#secondaryMenuWrapper #secondaryMenu ul li.active {
+	padding-bottom:.1875em;
+}
+#secondaryMenuWrapper #secondaryMenu ul li.active ul.opened {
+padding-top:.1875em;
+padding-bottom:0;
+}
+
+#secondaryMenuWrapper #secondaryMenu li ul {
+	display: none;
+	padding-left:0;
+	margin-top:0;
+}
+#secondaryMenuWrapper #secondaryMenu li ul ul {
+	display: none;
+	padding-left:12px;
+	padding-bottom:0;
+}
+#secondaryMenuWrapper #secondaryMenu li ul {
+	display: none;
+}
+#secondaryMenuWrapper #secondaryMenu li ul ul {
+	display: none;
+}
+#secondaryMenuWrapper #secondaryMenu a:hover {
+	text-decoration: none;
+	color:#333;
+}
+
+#secondaryMenuWrapper #secondaryMenu li > a:hover > span {
+	border-bottom: 2px solid #00ADD0;
+	text-decoration: none;
+}
+
+
+#secondaryMenuWrapper.active #secondaryMenu a.parentMenuItem,
+#secondaryMenuWrapper.active #secondaryMenu .topMenuItem {
+	font-weight:400;
+}
+
+#secondaryMenuWrapper #secondaryMenu li.active > a:not(.parentMenuItem) > span {
+	border-bottom: 2px solid #00ADD0;
+	text-decoration: none;
+}
+
+#secondaryMenuWrapper #secondaryMenu > li:last-child {
+}
+
+#secondaryMenuWrapper.active {
+	display:block;
+}
+#secondaryMenuWrapper.active #secondaryMenu li ul {
+	display: none;
+}
+#secondaryMenuWrapper.active #secondaryMenu li ul ul {
+	display: none;
+}
+#secondaryMenuWrapper.active #secondaryMenu.active li.active ul.opened,
+#secondaryMenuWrapper.active #secondaryMenu.opened li.active ul.opened {
+	display: block;
+}*/
+
+
+
+
+
+
+/*--*/
+
+
+
+
+
+
+
+
+/*--*/
+
+
+
+/*iframe, .patternExample {
+	border:none;
+	margin-bottom:1.5em;
+	height:auto;
+	overflow:hidden;
+	width:100%;
+}
+
+.patternExample > .row {
+	margin-left:0;
+	margin-right:0;
+}*/
+
+
+
+/*--*/
+
+
+/*iframe.iframe-globalHeader {
+	width:100%;
+	position:relative;
+	height:auto;
+}*/
+
+/*--*/
+
+
+/*-- Alternate Perfect Fourth Scale --*/
+
+/*
+#content {
+	margin-top:3em; /* for perfect fourth baseline scale *
+}
+
+.header .headingGroup {
+	padding:2.25em 3em 3em; /* for perfect fourth scale - see above *
+}
+
+
+
+.hero h1 {
+	font-size:4.209em; /*67.344
+	line-height:1.0691em;
+}
+
+h1 {
+	font-size: 3.157em; /*50.512*
+	line-height: 1.4254em;
+	font-weight: 200;
+	margin-bottom:.475em;
+}
+h2, aside h1 {
+	font-size: 2.369em; /*37.904*
+	line-height: 1.2664em;
+	margin-bottom:.64em;
+}
+h3, aside h2 {
+	font-size: 1.777em; /*28.432*
+    line-height: 1.6882em;
+    margin-bottom: 0.844em;
+}
+h4, aside h3 {
+	font-size: 1.333em; /*21.328*
+	line-height: 1.12528em;
+	margin-bottom:1.12528em;
+}
+h5 {
+	font-size: 1em; /*16*
+	line-height: 1.5em;
+	margin-bottom:1.5em;
+}
+h6 {
+	font-size: .875em;
+	line-height: 1.71429em;
+	margin-bottom:1.71429em;
+	font-weight: 400;
+}*/
+
+/*--*/
+
+
+
+
+
+/*-- Color Palettes --*/
+
+
+/*-- snl-blue --*/
+/*.snl-blue-palette .base-color {background: #0076a9;}*/
+	 /*tints*/
+		/*.snl-blue-palette .tint25 {background: #cce4ee;}
+		.snl-blue-palette .tint50 {background: #99c8dd;}
+		.snl-blue-palette .tint75 {background: #66adcb;}
+		.snl-blue-palette .tint90 {background: #3391ba;}*/
+	 /*shades*/
+		/*.snl-blue-palette .shade06 {background: #006490;}
+		.snl-blue-palette .shade25 {background: #005376;}
+		.snl-blue-palette .shade50 {background: #00415d;}
+		.snl-blue-palette .shade75 {background: #002f44;}*/
+/*--*/
+
+/*
+.color-palettes {
+	max-width:36em;
+}
+
+.color-palettes ul {
+	display:block;
+	margin-left:0;
+	padding:0;
+	list-style:none;
+	overflow:hidden;
+}
+
+.color-palettes ul li {
+	display: block;
+    float: left;
+    height: 6em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 6em;
+}
+
+
+.color-swatch {
+	display: block;
+    height: 6em;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 6em;
+}
+
+.color-palettes .base-color h4 {
+	margin:0;
+}
+
+.color-palettes .base-color {
+	width:12em;
+	height:12em;
+	}
+
+.color-palettes .base-color .color-swatch {
+	width:12em;
+	height:12em;
+}
+
+.color-label {
+	bottom: 0;
+    display: block;
+    left: 0;
+    padding: 0 0.75em 0.5em;
+    position: absolute;
+}
+.color-label.tint {
+	color:#000;
+}
+.color-label.shade {
+	color:#fff;
+}*/
+
+/*-- Color Combinations --*/
+/*
+.color-combinations {
+
+}
+
+.color-combinations ul li {
+    height: 3em;
+    width: 3em;
+}
+
+.color-combinations .color-swatch {
+    height: 3em;
+    width: 3em;
+}
+*/
+
+/*-- test for line length or measure --*/
+	/*.content .col-lg-12 p,
+	.content .col-lg-12 ul,
+	.content .col-lg-12 ol,
+	.content .col-lg-12 dl,
+	.content .col-lg-12 h3,
+	.content .col-lg-12 h4,
+	.content .col-lg-12 h5,
+	.content .col-lg-12 h6 {
+		max-width:37.5em;
+	}*/
+
+
+
+
+/*--*/

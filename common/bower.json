@@ -1,0 +1,35 @@
+{
+  "name": "snl-common",
+  "description": "SNL Common UI library based off of bootstrap and using jQuery and Source Sans Pro fonts",
+  "version": "release1.0.12",
+  "main": [
+    "dist/lib/snl-common.min.js",
+    "dist/styles/snl-common.css"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "css",
+    "js",
+    "assets",
+    "dist/pl-css-js.zip",
+    "*.md",
+    "*.html",
+    "dev_env.json",
+    "Gruntfile.js",
+    "package.json",
+    "dev_env.json.example"
+  ],
+  "authors": [
+    "inside-help@sandia.gov"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+    "jquery": "^1.9.1",
+    "jquery-ui": "^1.12.0"
+  },
+  "private": true,
+  "license": "MIT"
+}

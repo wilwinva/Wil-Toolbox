@@ -1,0 +1,129 @@
+
+.theme-snl-blue-grey {
+
+header {
+
+    .headingGroup {
+        background: $snl-blue-grey;
+
+        h1 {
+            color: white;
+        }
+
+        .tagline {
+            color: white;
+        }
+
+        & + nav.navbar {
+            background: $snl-blue-grey-600;
+        }
+    }
+
+    nav.navbar {
+        border: none;
+        background: $snl-blue-grey;
+
+        .nav {
+            > li{
+               > a{
+                    color: white;
+                    &:hover {
+                        background: $snl-blue-grey-400;
+                        color: white;
+                        border-bottom-color: $snl-blue-grey-800;
+                    }
+                   &:focus {
+                        background: $snl-blue-grey-400;
+                        color: white;
+                        border-bottom-color: $snl-blue-grey-800;
+                    }
+                }
+            }
+
+            .open {
+                background: $snl-blue-grey-700;
+
+                > a {
+                    background-color: transparent;
+                }
+            }
+
+            > li.active {
+
+                a{
+                    color: white;
+                    background: $snl-blue-grey-400;
+                    border-bottom-color: $snl-blue-grey-800;
+                    &:hover {
+                        background: $snl-blue-grey-400;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .navbar-toggle {
+            border-right-color: $snl-blue-grey-300;
+            &:hover {
+                background: $snl-blue-grey;
+            }
+
+            .menu-hamburger {
+                color: $snl-blue-grey-300;
+            }
+
+        }
+
+    }
+
+    .form-control {
+        border-color: $snl-blue-grey-600;
+    }
+
+}
+
+    .navmenu-fixed-left {
+        background: $snl-blue-grey-600;
+
+        .navbar-nav {
+
+                > li {
+                    border-color: $snl-blue-grey;
+                }
+            }
+    }
+
+    .navbar-header {
+        background: $snl-blue-grey;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .dropdown-menu {
+
+        li {
+
+            > a {
+                color: white;
+                &:hover {
+                    background: $snl-blue-grey-600;
+                }
+                &:focus {
+                    background: $snl-blue-grey-600;
+                }
+            }
+        }
+
+        .divider {
+            background-color: $snl-blue-grey-300;
+            margin: ($base-pixel * 1.5);
+        }
+    }
+
+    .dropdown-header {
+        color: $snl-blue-grey-300;
+    }
+
+}

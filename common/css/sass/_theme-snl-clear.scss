@@ -1,0 +1,129 @@
+
+.theme-snl-clear {
+
+header {
+
+    .headingGroup {
+        background: #fff;
+
+        h1 {
+            color: white;
+        }
+
+        .tagline {
+            color: white;
+        }
+
+        & + nav.navbar {
+            background: $snl-grey-100;
+        }
+    }
+
+    nav.navbar {
+        border: none;
+        background: $snl-white;
+
+        .nav {
+            > li{
+               > a{
+                    color: white;
+                    &:hover {
+                        background: $snl-grey-100;
+                        color: white;
+                        border-bottom-color: $snl-medium-blue;
+                    }
+                   &:focus {
+                        background: $snl-grey-100;
+                        color: white;
+                        border-bottom-color: $snl-medium-blue;
+                    }
+                }
+            }
+
+            .open {
+                background: $snl-white-700;
+
+                > a {
+                    background-color: transparent;
+                }
+            }
+
+            > li.active {
+
+                a{
+                    color: white;
+                    background: $snl-grey-100;
+                    border-bottom-color: $snl-medium-blue;
+                    &:hover {
+                        background: $snl-white-400;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .navbar-toggle {
+            border-right-color: $snl-grey-300;
+            &:hover {
+                background: $snl-grey-100;
+            }
+
+            .menu-hamburger {
+                color: $snl-grey-300;
+            }
+
+        }
+
+    }
+
+    .form-control {
+        border-color: $snl-grey-300;
+    }
+
+}
+
+    .navmenu-fixed-left {
+        background: $snl-grey-100;
+
+        .navbar-nav {
+
+                > li {
+                    border-color: $snl-white;
+                }
+            }
+    }
+
+    .navbar-header {
+        background: $snl-white;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .dropdown-menu {
+
+        li {
+
+            > a {
+                color: white;
+                &:hover {
+                    background: $snl-grey-100;
+                }
+                &:focus {
+                    background: $snl-grey-100;
+                }
+            }
+        }
+
+        .divider {
+            background-color: $snl-grey-300;
+            margin: ($base-pixel * 1.5);
+        }
+    }
+
+    .dropdown-header {
+        color: $snl-white;
+    }
+
+}

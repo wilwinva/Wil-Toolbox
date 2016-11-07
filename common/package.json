@@ -1,0 +1,45 @@
+{
+  "name": "snl-common",
+  "version": "1.0.0",
+  "description": "SNL Common UI library based off of bootstrap and using jQuery and Source Sans Pro fonts",
+  "keywords": ["snl common","ui","pattern library common"],
+  "files": [
+    "dist/lib/snl-common.min.js",
+    "dist/fonts/**",
+    "dist/styles/**",
+    "!dist/styles/base.css",
+    "!dist/styles/fonts.css",
+    "!dist/styles/production.css",
+    "!dist/styles/snl-common.css",
+    "!dist/styles/snl-patternLibrary.css"
+  ],
+  "directories": {
+    "lib": "dist/lib",
+    "styles": "dist/styles",
+    "fonts": "dist/fonts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github2.sandia.gov:corporate-web-team/common.git#release1.0.20"
+  },
+  "author": {
+    "name": "inside-help@sandia.gov"
+  },
+  "readme": "# Add two numbers (for learning purpose)nnDemo module for codeforgeek.com tutorialnn## Installnn npm install nodecalcnnn## APInn### -calc(a,b,p) n where, n a=number,nb=number,p=operator",
+  "readmeFilename": "README.md",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^1.3.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-cssmin": "^0.13.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.1.0",
+    "grunt-svgstore": "^0.5.0",
+    "grunt-ssh": "^0.12.9"
+  }
+}

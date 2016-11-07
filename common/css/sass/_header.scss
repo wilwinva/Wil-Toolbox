@@ -1,0 +1,265 @@
+header {
+  .sub-header {
+    color: gray;
+  }
+  .navbar-default {
+    -moz-bordercolors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #1076aa;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-image-outset: 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-color: -moz-use-text-color;
+    border-style: none;
+    border-width: medium;
+    min-height: 40px;
+  }
+  .site-search-wrapper {
+    margin: -15px 48px 12px 12px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  &.full-header {
+    padding-bottom: 40px;
+    .headingGroup {
+      position: relative;
+    }
+    nav {
+      bottom: -40px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+  &.basic-header {
+    h1 {
+      font-size: 36px;
+      line-height: 1;
+      padding: 14px 24px;
+      float: left;
+    }
+    .headingGroup {
+      padding: 0px;
+      width: 100%;
+      margin-bottom: -7px; // TODO: why is this 7px taller than the nav for no reason?
+      > * {
+        display: inline-block;
+      }
+    }
+    #primaryMenu {
+      > .nav > li > a {
+        padding: 20px 24px 17px;
+      }
+    }
+    .tagline {
+      display: none;
+    }
+    .site-search-wrapper {
+      margin: 16px 24px;
+      position: static;
+    }
+  }
+  .headingGroup {
+    padding: ($grid-gutter-width / 2) 0;
+    h1 {
+      margin: 0;
+    }
+    .tagline {
+      margin-bottom: 0;
+    }
+    & + nav.navbar {
+      margin-left: -($grid-gutter-width);
+      .navbar-brand {
+        display: none;
+      }
+    }
+  }
+
+  nav.navbar {
+    border-radius: 0;
+    margin-left: 0;
+    .nav {
+      > li {
+        > a {
+          padding: $nav-link-padding $nav-link-padding ($nav-link-padding - 3px) ;
+          border-bottom: 3px solid transparent;
+          color: white;
+          &:hover,
+          &:focus {
+            background-color: $nav-link-hover-bg;
+            border-bottom-color: $brand-primary;
+          }
+        }
+      }
+    }
+    .navbar-form {
+      margin: ($base-pixel - 1px) 0;
+      &.navbar-right {
+        padding-right: 0;
+      }
+    }
+    .navbar-toggle {
+      float: left;
+      margin:0;
+      padding: ($base-pixel *2);
+      border:none;
+      border-right: 1px solid;
+      border-radius: 0px;
+      .menu-hamburger {
+        padding: 0;
+        margin-right:0;
+      }
+    }
+    .navbar-brand {
+    padding: ($base-pixel * 2);
+    font-weight: $headings-font-weight;
+    }
+  }
+  .navbar-fixed-top {
+    top: 48px;
+  }
+}
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    header {
+      nav.navbar {
+        margin-left: 0!important;
+
+        .navbar-brand {
+          display: block!important;
+          padding: ($base-pixel * 1.5);
+        }
+      }
+    }
+  }
+
+
+
+// Original PL Header CSS 
+  /*
+  .header .headingGroup {
+  	margin:0;
+  	padding:3em;  /* for original headings scale *
+  }
+
+  .header {
+  	background: #00ADD0;
+  	color: #fff;
+  }
+
+  .header h1 {
+  	padding:0;
+  	margin:0;
+  	color:#fff;
+  }
+  .header .tagline {
+  	padding:0;
+  }
+  .header h1 + .tagline {
+  	/*margin-bottom: 1.25em;
+  	margin-top: -1.5em;*
+
+  	margin-top:0;
+  	margin-bottom:0;
+  }
+
+  .header #primaryMenu {
+  	background-color: rgba(0, 0, 0, 0.06);
+  	line-height: 1.25em;
+  }
+
+  .menu-hamburger {
+  	padding: 12px;
+  	font-size:20px;
+  	margin-right:12px;
+  }
+
+  .header #primaryMenu .menu-hamburger {
+  	cursor: default;
+  	display: block;
+  	color: rgba(255, 255, 255, 0.80);
+  }
+  .header #primaryMenu .menu-hamburger:hover {
+  	/*background-color: rgba(255, 255, 255, 0.1);*
+  	color: rgba(255, 255, 255, 1.0);
+  	cursor: pointer;
+  }
+
+  .header #primaryMenu .menu-hamburger.active {
+  	background-color: rgba(0, 0, 0, 0.06);
+  	color: rgba(255, 255, 255, 1.0);
+  	cursor: pointer;
+  }
+
+  .header #primaryMenu #sectionHeading {
+  	top: -.1875em;
+  	position:relative;
+  	display:none;
+  }
+
+  .header #primaryMenu .nav li {
+  	background: transparent;
+  	/*border-bottom: 3px solid #00ADD0;*
+  	border-bottom: .1875em solid transparent;
+  }
+  .header #primaryMenu .nav a {
+  	color: #fff;
+  }
+
+
+  .header #primaryMenu .nav li.active,
+  .header #primaryMenu .navbar-nav > li:hover {
+  	/*background: #4FC6DF;*
+  	background: #00ADD0;
+  	/*border-bottom: .1875em solid #0086B6;*
+  	border-bottom:0.1875em solid rgba(0, 0, 0, 0.25);
+  }
+
+  header #primaryMenu .nav li.active::after,
+  .header #primaryMenu .navbar-nav > li:hover::after,
+  .header #primaryMenu .navbar-nav > li > a:focus::after,
+  .header #primaryMenu .navbar-nav > li > a:hover::after {
+  	content: ' ';
+      	position:absolute;
+  		top:0; right:0; bottom:0; left:0;
+  		background-color: rgba(255, 255, 255, 0.25);
+  		z-index:0;
+  	/*border-bottom: .1875em solid #0086B6;*
+  }
+
+  .header #primaryMenu .navbar-nav > li > a {
+  	padding: .44em 1em .36em;
+  	position:relative;
+  	z-index:1;
+  }
+
+  .header #primaryMenu .navbar-nav > li:hover {
+  /*	background-color: rgba(255, 255, 255, 0.25);
+  	border-bottom:0.1875em solid rgba(0, 0, 0, 0.25);*/
+  	/*border-bottom: .1875em solid #0086B6;*
+  	cursor:pointer;
+  }
+
+  .header #primaryMenu .navbar-nav > li > a:focus,
+  .header #primaryMenu .navbar-nav > li > a:hover {
+  	/*background: #4FC6DF;*/
+  	/*background: #00ADD0;*
+  }
+
+  .header #primaryMenu .nav.active {
+  	display: block;
+  }
+
+  .header #primaryMenu .nav.active li {
+  	float: none;
+  }
+  */

@@ -1,0 +1,129 @@
+
+.theme-snl-amber {
+
+header {
+
+    .headingGroup {
+        background: $snl-amber;
+
+        h1 {
+            color: white;
+        }
+
+        .tagline {
+            color: white;
+        }
+
+        & + nav.navbar {
+            background: $snl-amber-600;
+        }
+    }
+
+    nav.navbar {
+        border: none;
+        background: $snl-amber;
+
+        .nav {
+            > li{
+               > a{
+                    color: white;
+                    &:hover {
+                        background: $snl-amber-400;
+                        color: white;
+                        border-bottom-color: $snl-amber-800;
+                    }
+                   &:focus {
+                        background: $snl-amber-400;
+                        color: white;
+                        border-bottom-color: $snl-amber-800;
+                    }
+                }
+            }
+
+            .open {
+                background: $snl-amber-700;
+
+                > a {
+                    background-color: transparent;
+                }
+            }
+
+            > li.active {
+
+                a{
+                    color: white;
+                    background: $snl-amber-400;
+                    border-bottom-color: $snl-amber-800;
+                    &:hover {
+                        background: $snl-amber-400;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .navbar-toggle {
+            border-right-color: $snl-amber-300;
+            &:hover {
+                background: $snl-amber;
+            }
+
+            .menu-hamburger {
+                color: $snl-amber-300;
+            }
+
+        }
+
+    }
+
+    .form-control {
+        border-color: $snl-amber-600;
+    }
+
+}
+
+    .navmenu-fixed-left {
+        background: $snl-amber-600;
+
+        .navbar-nav {
+
+                > li {
+                    border-color: $snl-amber;
+                }
+            }
+    }
+
+    .navbar-header {
+        background: $snl-amber;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .dropdown-menu {
+
+        li {
+
+            > a {
+                color: white;
+                &:hover {
+                    background: $snl-amber-600;
+                }
+                &:focus {
+                    background: $snl-amber-600;
+                }
+            }
+        }
+
+        .divider {
+            background-color: $snl-amber-300;
+            margin: ($base-pixel * 1.5);
+        }
+    }
+
+    .dropdown-header {
+        color: $snl-amber-300;
+    }
+
+}

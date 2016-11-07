@@ -1,0 +1,129 @@
+
+.theme-snl-lavender {
+
+header {
+
+    .headingGroup {
+        background: $snl-lavender;
+
+        h1 {
+            color: white;
+        }
+
+        .tagline {
+            color: white;
+        }
+
+        & + nav.navbar {
+            background: $snl-lavender-600;
+        }
+    }
+
+    nav.navbar {
+        border: none;
+        background: $snl-lavender;
+
+        .nav {
+            > li{
+               > a{
+                    color: white;
+                    &:hover {
+                        background: $snl-lavender-400;
+                        color: white;
+                        border-bottom-color: $snl-lavender-800;
+                    }
+                   &:focus {
+                        background: $snl-lavender-400;
+                        color: white;
+                        border-bottom-color: $snl-lavender-800;
+                    }
+                }
+            }
+
+            .open {
+                background: $snl-lavender-700;
+
+                > a {
+                    background-color: transparent;
+                }
+            }
+
+            > li.active {
+
+                a{
+                    color: white;
+                    background: $snl-lavender-400;
+                    border-bottom-color: $snl-lavender-800;
+                    &:hover {
+                        background: $snl-lavender-400;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .navbar-toggle {
+            border-right-color: $snl-lavender-300;
+            &:hover {
+                background: $snl-lavender;
+            }
+
+            .menu-hamburger {
+                color: $snl-lavender-300;
+            }
+
+        }
+
+    }
+
+    .form-control {
+        border-color: $snl-lavender-600;
+    }
+
+}
+
+    .navmenu-fixed-left {
+        background: $snl-lavender-600;
+
+        .navbar-nav {
+
+                > li {
+                    border-color: $snl-lavender;
+                }
+            }
+    }
+
+    .navbar-header {
+        background: $snl-lavender;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .dropdown-menu {
+
+        li {
+
+            > a {
+                color: white;
+                &:hover {
+                    background: $snl-lavender-600;
+                }
+                &:focus {
+                    background: $snl-lavender-600;
+                }
+            }
+        }
+
+        .divider {
+            background-color: $snl-lavender-300;
+            margin: ($base-pixel * 1.5);
+        }
+    }
+
+    .dropdown-header {
+        color: $snl-lavender-300;
+    }
+
+}

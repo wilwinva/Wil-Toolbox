@@ -1,0 +1,129 @@
+
+.theme-dark-blue {
+
+header {
+
+    .headingGroup {
+        background: $snl-dark-blue;
+
+        h1 {
+            color: white;
+        }
+
+        .tagline {
+            color: white;
+        }
+
+        & + nav.navbar {
+            background: $snl-dark-blue-600;
+        }
+    }
+
+    nav.navbar {
+        border: none;
+        background: $snl-dark-blue;
+
+        .nav {
+            > li{
+               > a{
+                    color: white;
+                    &:hover {
+                        background: $snl-dark-blue-400;
+                        color: white;
+                        border-bottom-color: $snl-dark-blue-800;
+                    }
+                   &:focus {
+                        background: $snl-dark-blue-400;
+                        color: white;
+                        border-bottom-color: $snl-dark-blue-800;
+                    }
+                }
+            }
+
+            .open {
+                background: $snl-dark-blue-700;
+
+                > a {
+                    background-color: transparent;
+                }
+            }
+
+            > li.active {
+
+                a{
+                    color: white;
+                    background: $snl-dark-blue-400;
+                    border-bottom-color: $snl-dark-blue-800;
+                    &:hover {
+                        background: $snl-dark-blue-400;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .navbar-toggle {
+            border-right-color: $snl-dark-blue-300;
+            &:hover {
+                background: $snl-dark-blue;
+            }
+
+            .menu-hamburger {
+                color: $snl-dark-blue-300;
+            }
+
+        }
+
+    }
+
+    .form-control {
+        border-color: $snl-dark-blue-600;
+    }
+
+}
+
+    .navmenu-fixed-left {
+        background: $snl-dark-blue-600;
+
+        .navbar-nav {
+
+                > li {
+                    border-color: $snl-dark-blue;
+                }
+            }
+    }
+
+    .navbar-header {
+        background: $snl-dark-blue;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .dropdown-menu {
+
+        li {
+
+            > a {
+                color: white;
+                &:hover {
+                    background: $snl-dark-blue-600;
+                }
+                &:focus {
+                    background: $snl-dark-blue-600;
+                }
+            }
+        }
+
+        .divider {
+            background-color: $snl-dark-blue-300;
+            margin: ($base-pixel * 1.5);
+        }
+    }
+
+    .dropdown-header {
+        color: $snl-dark-blue-300;
+    }
+
+}

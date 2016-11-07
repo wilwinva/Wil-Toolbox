@@ -1,0 +1,11 @@
+<svg version="1.1" id="calendar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+	<path d="M21,3.5h-3v-2h-2v6h2v-2h3v15H3v-15h2v-2H3c-1.1,0-2,0.9-2,2v15c0,1.1,0.9,2,2,2h18c1.1,0,2-0.9,2-2v-15
+		C23,4.4,22.1,3.5,21,3.5z"/>
+	<polygon points="8,5.5 15,5.5 15,3.5 8,3.5 8,1.5 6,1.5 6,7.5 8,7.5 	"/>
+	<rect x="5" y="9.5" width="4" height="4"/>
+	<rect x="10" y="9.5" width="4" height="4"/>
+	<rect x="15" y="9.5" width="4" height="4"/>
+	<rect x="5" y="14.5" width="4" height="4"/>
+	<rect x="10" y="14.5" width="4" height="4"/>
+</svg>

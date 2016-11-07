@@ -1,0 +1,129 @@
+
+.theme-snl-med-blue {
+
+header {
+
+    .headingGroup {
+        background: $brand-primary;
+
+        h1 {
+            color: white;
+        }
+
+        .tagline {
+            color: white;
+        }
+
+        & + nav.navbar {
+            background: $brand-primary-600;
+        }
+    }
+
+    nav.navbar {
+        border: none;
+        background: $brand-primary;
+
+        .nav {
+            > li{
+               > a{
+                    color: white;
+                    &:hover {
+                        background: $brand-primary-400;
+                        color: white;
+                        border-bottom-color: $brand-primary-800;
+                    }
+                   &:focus {
+                        background: $brand-primary-400;
+                        color: white;
+                        border-bottom-color: $brand-primary-800;
+                    }
+                }
+            }
+
+            .open {
+                background: $brand-primary-700;
+
+                > a {
+                    background-color: transparent;
+                }
+            }
+
+            > li.active {
+
+                a{
+                    color: white;
+                    background: $brand-primary-400;
+                    border-bottom-color: $brand-primary-800;
+                    &:hover {
+                        background: $brand-primary-400;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .navbar-toggle {
+            border-right-color: $brand-primary-300;
+            &:hover {
+                background: $brand-primary;
+            }
+
+            .menu-hamburger {
+                color: $brand-primary-300;
+            }
+
+        }
+
+    }
+
+    .form-control {
+        border-color: $brand-primary-600;
+    }
+
+}
+
+    .navmenu-fixed-left {
+        background: $brand-primary-600;
+
+        .navbar-nav {
+
+                > li {
+                    border-color: $brand-primary;
+                }
+            }
+    }
+
+    .navbar-header {
+        background: $brand-primary;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .dropdown-menu {
+
+        li {
+
+            > a {
+                color: white;
+                &:hover {
+                    background: $brand-primary-600;
+                }
+                &:focus {
+                    background: $brand-primary-600;
+                }
+            }
+        }
+
+        .divider {
+            background-color: $brand-primary-300;
+            margin: ($base-pixel * 1.5);
+        }
+    }
+
+    .dropdown-header {
+        color: $brand-primary-300;
+    }
+
+}

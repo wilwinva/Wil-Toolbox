@@ -1,0 +1,8 @@
+{
+    "host" : "my.host.here",
+    "username" : "ballen",
+    "port": 22,
+    "base_path": "/path/to/site/on/server",
+    "showProgress": true,
+    "releases_to_keep": 5
+}

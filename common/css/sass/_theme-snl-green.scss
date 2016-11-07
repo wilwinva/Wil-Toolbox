@@ -1,0 +1,129 @@
+
+.theme-snl-green {
+
+header {
+
+    .headingGroup {
+        background: $snl-green;
+
+        h1 {
+            color: white;
+        }
+
+        .tagline {
+            color: white;
+        }
+
+        & + nav.navbar {
+            background: $snl-green-600;
+        }
+    }
+
+    nav.navbar {
+        border: none;
+        background: $snl-green;
+
+        .nav {
+            > li{
+               > a{
+                    color: white;
+                    &:hover {
+                        background: $snl-green-400;
+                        color: white;
+                        border-bottom-color: $snl-green-800;
+                    }
+                   &:focus {
+                        background: $snl-green-400;
+                        color: white;
+                        border-bottom-color: $snl-green-800;
+                    }
+                }
+            }
+
+            .open {
+                background: $snl-green-700;
+
+                > a {
+                    background-color: transparent;
+                }
+            }
+
+            > li.active {
+
+                a{
+                    color: white;
+                    background: $snl-green-400;
+                    border-bottom-color: $snl-green-800;
+                    &:hover {
+                        background: $snl-green-400;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .navbar-toggle {
+            border-right-color: $snl-green-300;
+            &:hover {
+                background: $snl-green;
+            }
+
+            .menu-hamburger {
+                color: $snl-green-300;
+            }
+
+        }
+
+    }
+
+    .form-control {
+        border-color: $snl-green-600;
+    }
+
+}
+
+    .navmenu-fixed-left {
+        background: $snl-green-600;
+
+        .navbar-nav {
+
+                > li {
+                    border-color: $snl-green;
+                }
+            }
+    }
+
+    .navbar-header {
+        background: $snl-green;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .dropdown-menu {
+
+        li {
+
+            > a {
+                color: white;
+                &:hover {
+                    background: $snl-green-600;
+                }
+                &:focus {
+                    background: $snl-green-600;
+                }
+            }
+        }
+
+        .divider {
+            background-color: $snl-green-300;
+            margin: ($base-pixel * 1.5);
+        }
+    }
+
+    .dropdown-header {
+        color: $snl-green-300;
+    }
+
+}

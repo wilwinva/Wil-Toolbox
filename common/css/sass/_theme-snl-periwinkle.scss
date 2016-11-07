@@ -1,0 +1,129 @@
+
+.theme-snl-periwinkle {
+
+header {
+
+    .headingGroup {
+        background: $snl-periwinkle;
+
+        h1 {
+            color: white;
+        }
+
+        .tagline {
+            color: white;
+        }
+
+        & + nav.navbar {
+            background: $snl-periwinkle-600;
+        }
+    }
+
+    nav.navbar {
+        border: none;
+        background: $snl-periwinkle;
+
+        .nav {
+            > li{
+               > a{
+                    color: white;
+                    &:hover {
+                        background: $snl-periwinkle-400;
+                        color: white;
+                        border-bottom-color: $snl-periwinkle-800;
+                    }
+                   &:focus {
+                        background: $snl-periwinkle-400;
+                        color: white;
+                        border-bottom-color: $snl-periwinkle-800;
+                    }
+                }
+            }
+
+            .open {
+                background: $snl-periwinkle-700;
+
+                > a {
+                    background-color: transparent;
+                }
+            }
+
+            > li.active {
+
+                a{
+                    color: white;
+                    background: $snl-periwinkle-400;
+                    border-bottom-color: $snl-periwinkle-800;
+                    &:hover {
+                        background: $snl-periwinkle-400;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .navbar-toggle {
+            border-right-color: $snl-periwinkle-300;
+            &:hover {
+                background: $snl-periwinkle;
+            }
+
+            .menu-hamburger {
+                color: $snl-periwinkle-300;
+            }
+
+        }
+
+    }
+
+    .form-control {
+        border-color: $snl-periwinkle-600;
+    }
+
+}
+
+    .navmenu-fixed-left {
+        background: $snl-periwinkle-600;
+
+        .navbar-nav {
+
+                > li {
+                    border-color: $snl-periwinkle;
+                }
+            }
+    }
+
+    .navbar-header {
+        background: $snl-periwinkle;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .dropdown-menu {
+
+        li {
+
+            > a {
+                color: white;
+                &:hover {
+                    background: $snl-periwinkle-600;
+                }
+                &:focus {
+                    background: $snl-periwinkle-600;
+                }
+            }
+        }
+
+        .divider {
+            background-color: $snl-periwinkle-300;
+            margin: ($base-pixel * 1.5);
+        }
+    }
+
+    .dropdown-header {
+        color: $snl-periwinkle-300;
+    }
+
+}

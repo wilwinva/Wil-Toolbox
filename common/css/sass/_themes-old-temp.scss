@@ -1,0 +1,208 @@
+//
+// Themes - temporary (to be broken out into individual sass files - see theme-snl-blue.scss)
+// --------------------------------------------------
+
+
+
+.header,
+.header #primaryMenu .navbar-nav > li > a:focus,
+.header #primaryMenu .navbar-nav > li > a:hover,
+.header #primaryMenu .navbar-nav > li:hover,
+.header #primaryMenu .nav li.active {
+		background:#00ADD0;
+	}
+
+	/*-- Theme snl-secondary --*/
+	.theme-snl-secondary .header,
+	.theme-snl-secondary .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-snl-secondary .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-snl-secondary .header #primaryMenu .navbar-nav > li:hover,
+	.theme-snl-secondary .header #primaryMenu .nav li.active {
+		background:#fff;
+		color:#666;
+	}
+
+	.theme-snl-secondary .header h1,
+	.theme-snl-secondary .header #primaryMenu #sectionHeading {
+		color:#00ADD0;
+	}
+
+	.theme-snl-secondary .header #primaryMenu .nav a {
+    	color: #666;
+	}
+
+	.theme-snl-secondary .header #primaryMenu .nav li.active,
+	.theme-snl-secondary .header #primaryMenu .navbar-nav > li:hover {
+		border-bottom:0.1875em solid #4FC6DF;
+	}
+
+	.theme-snl-secondary .header #primaryMenu .menu-hamburger {
+		color: rgba(0, 0, 0, 0.40);
+	}
+	.theme-snl-secondary .header #primaryMenu .menu-hamburger:hover {
+		/*background-color: rgba(255, 255, 255, 0.1);*/
+		color: rgba(0, 0, 0, 0.60);
+	}
+
+	.theme-snl-secondary .header #primaryMenu .menu-hamburger.active {
+		/*background-color: rgba(0, 0, 0, 0.06);*/
+		color: rgba(0, 0, 0, 0.60);
+	}
+
+	/*-- theme-snl-blue--*/
+	.theme-snl-blue .header,
+	.theme-snl-blue .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-snl-blue .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-snl-blue .header #primaryMenu .navbar-nav > li:hover,
+	.theme-snl-blue .header #primaryMenu .nav li.active {
+		background:#00ADD0;
+	}
+
+	/*-- Theme Green --*/
+	.theme-green .header,
+	.theme-green .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-green .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-green .header #primaryMenu .navbar-nav > li:hover,
+	.theme-green .header #primaryMenu .nav li.active {
+		background:#6CB312;
+	}
+
+	/*-- Theme Gold --*/
+	.theme-gold .header,
+	.theme-gold .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-gold .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-gold .header #primaryMenu .navbar-nav > li:hover,
+	.theme-gold .header #primaryMenu .nav li.active {
+		background: #FFC200;
+	}
+
+	/*-- Theme Orange --*/
+	.theme-orange .header,
+	.theme-orange .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-orange .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-orange .header #primaryMenu .navbar-nav > li:hover,
+	.theme-orange .header #primaryMenu .nav li.active {
+		background: #FF6600;
+	}
+
+	/*-- Theme Red --*/
+	.theme-red .header,
+	.theme-red .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-red .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-red .header #primaryMenu .navbar-nav > li:hover,
+	.theme-red .header #primaryMenu .nav li.active {
+		background: #CC0000;
+	}
+
+	/*-- Theme Purple --*/
+	.theme-purple .header,
+	.theme-purple .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-purple .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-purple .header #primaryMenu .navbar-nav > li:hover,
+	.theme-purple .header #primaryMenu .nav li.active {
+		background: #B312B1;
+	}
+
+	/*-- Theme Navy --*/
+	.theme-navy .header,
+	.theme-navy .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-navy .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-navy .header #primaryMenu .navbar-nav > li:hover,
+	.theme-navy .header #primaryMenu .nav li.active {
+		background: #003366;
+	}
+
+	/*-- Theme Royal --*/
+	.theme-royal .header,
+	.theme-royal .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-royal .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-royal .header #primaryMenu .navbar-nav > li:hover,
+	.theme-royal .header #primaryMenu .nav li.active {
+		background: #0066CC;
+	}
+
+	/*-- Theme Dark Gray --*/
+	.theme-dk-gray .header,
+	.theme-dk-gray .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-dk-gray .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-dk-gray .header #primaryMenu .navbar-nav > li:hover,
+	.theme-dk-gray .header #primaryMenu .nav li.active {
+		background:#666;
+	}
+
+	.theme-dk-gray .header #primaryMenu .nav li.active,
+	.theme-dk-gray .header #primaryMenu .navbar-nav > li:hover {
+		border-bottom:0.1875em solid #4FC6DF;
+	}
+
+	/*-- Theme Light Gray --*/
+	.theme-lt-gray .header,
+	.theme-lt-gray .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-lt-gray .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-lt-gray .header #primaryMenu .navbar-nav > li:hover,
+	.theme-lt-gray .header #primaryMenu .nav li.active {
+		background:#f6f6f6;
+		color:#666;
+	}
+
+	.theme-lt-gray .header h1,
+	.theme-lt-gray .header #primaryMenu .nav a {
+    	color: #666;
+	}
+
+	.theme-lt-gray .header #primaryMenu .nav li.active,
+	.theme-lt-gray .header #primaryMenu .navbar-nav > li:hover {
+		border-bottom:0.1875em solid #4FC6DF;
+	}
+
+	.theme-lt-gray .header #primaryMenu .menu-hamburger {
+		color: rgba(0, 0, 0, 0.40);
+	}
+	.theme-lt-gray .header #primaryMenu .menu-hamburger:hover {
+		/*background-color: rgba(255, 255, 255, 0.1);*/
+		color: rgba(0, 0, 0, 0.60);
+	}
+
+	.theme-lt-gray .header #primaryMenu .menu-hamburger.active {
+		/*background-color: rgba(0, 0, 0, 0.06);*/
+		color: rgba(0, 0, 0, 0.60);
+	}
+
+	/*-- Theme Clear --*/
+	.theme-clear .header,
+	.theme-clear .header #primaryMenu .navbar-nav > li > a:focus,
+	.theme-clear .header #primaryMenu .navbar-nav > li > a:hover,
+	.theme-clear .header #primaryMenu .navbar-nav > li:hover,
+	.theme-clear .header #primaryMenu .nav li.active {
+		background: #fff;
+		color:#666;
+	}
+
+	.theme-clear .header h1,
+	.theme-clear .header #primaryMenu .nav a {
+    	color: #666;
+	}
+
+	.theme-clear .header #primaryMenu {
+    	background-color: transparent;
+	}
+
+	.theme-clear .header #primaryMenu .nav li.active,
+	.theme-clear .header #primaryMenu .navbar-nav > li:hover {
+		border-bottom:0.1875em solid #4FC6DF;
+	}
+
+	.theme-clear .header #primaryMenu .menu-hamburger {
+		color: rgba(0, 0, 0, 0.40);
+	}
+	.theme-clear .header #primaryMenu .menu-hamburger:hover {
+		/*background-color: rgba(255, 255, 255, 0.1);*/
+		color: rgba(0, 0, 0, 0.60);
+	}
+
+	.theme-clear .header #primaryMenu .menu-hamburger.active {
+		/*background-color: rgba(0, 0, 0, 0.06);*/
+		color: rgba(0, 0, 0, 0.60);
+	}
+
+/*--*/

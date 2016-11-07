@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>PL Color Test</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="css/snl-common.min.css">
+        <script src="js/jquery.min.js"></script>
+
+    </head>
+
+    <body class="color-test">
+        <div class="container">
+            <div class="row">
+                <h2>Sandia Web Colors</h2>
+            </div>
+            <div class="row">
+                <h3>Signature Colors</h3>
+                <p>These signature colors are the primary theme colors for Sandia web applications. A suggested use of these colors would be to utilize one of the base-color blues as the primary theme color; i.e. Header background color. Then chose a different blue for components like button colors. The Orange should be reserved as an Accent color and used very sparingly for elements like: call outs to important text, main action buttons, neutral-connotation alert or notification. Tints and shades of the base colors are to be used for contrast and hierarcy; i.e button states (hover, focus), nav-bar background color, nav-bar underline border</p>
+            </div>
+            <div id="IS-dark-blue" class="row color-row">
+            </div>
+            <div id="IS-medium-blue" class="row color-row">
+            </div>
+            <div id="IS-light-blue" class="row color-row">
+            </div>
+            <div id="IS-salmon" class="row color-row">
+            </div>
+            <div class="row">
+                <h3>Secondary/Background Colors</h3>
+                <p>These colors broaden the color spectrum for purposes of hierarchy. Applications for these can be site-footer backgrounds, panel backgrounds, border colors, and horizontal rules.</p>
+            </div>
+            <div id="IS-grey-blue" class="row color-row">
+            </div>
+            <div id="IS-cool-grey" class="row color-row">
+            </div>
+            <div class="row">
+                <h3>Tertiary Colors</h3>
+                <p>These colors are used primarily for content-specific needs, such as alerts and illustrations. They should never overpower the primary colors.</p>
+            </div>
+            <div id="IS-red" class="row color-row"></div>
+            <div id="snl-red-orange" class="row color-row"></div>
+            <div id="snl-amber" class="row color-row"></div>
+            <div id="IS-yellow" class="row color-row"></div>
+            <div id="snl-green" class="row color-row"></div>
+            <div id="snl-purple" class="row color-row"></div>
+            <div id="snl-periwinkle" class="row color-row"></div>
+            <div id="snl-royal-blue" class="row color-row"></div>
+        </div>
+
+        <!--<div class="container">
+            <div class="row">
+                <h2>Pattern Library Web Colors</h2>
+            </div>
+            <div id="snl-blue" class="row color-row">
+            </div>
+            <div id="snl-royal-blue" class="row color-row ">
+            </div>
+            <div id="snl-purple" class="row color-row">
+            </div>
+            <div id="snl-red" class="row color-row">
+            </div>
+            <div id="snl-orange" class="row color-row">
+            </div>
+            <div id="snl-gold" class="row color-row">
+            </div>
+            <div id="snl-green" class="row color-row">
+            </div>
+            <div id="snl-navy" class="row color-row">
+            </div>
+            <div id="snl-grey-blue" class="row color-row">
+            </div>
+            <div id="snl-gray" class="row color-row">
+            </div>
+        </div> -->
+
+<!--
+        <div class="container">
+            <div class="row portlet-training-compliance">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+-->
+
+
+        <script>
+
+            function rgb2hex(rgb) {
+                rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+                function hex(x) {
+                return ("0" + parseInt(x).toString(16)).slice(-2);
+                }
+                return hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+            }
+
+            function getContrastYIQ(hexcolor){
+	           var r = parseInt(hexcolor.substr(0,2),16);
+	           var g = parseInt(hexcolor.substr(2,2),16);
+	           var b = parseInt(hexcolor.substr(4,2),16);
+	           var yiq = ((r*299)+(g*587)+(b*114))/1000;
+	           return (yiq >= 128) ? 'black' : 'white';
+            }
+            function swatch(){
+                $('.color-swatch').each(function(){
+                        var bgColor = $(this).css('background-color');
+                        var changeHex = rgb2hex(bgColor);
+                        var pColor = getContrastYIQ(changeHex);
+                        $(this).append('<p>#'+ changeHex + '</p>');
+                        $(this).children("p").addClass(pColor);
+
+                });
+            };
+
+            function generateColumns(){
+                $('.row.color-row').each(function(){
+                    var rowColor = $(this).attr('id');
+                    console.log(rowColor);
+                    var colorSuffix = ["-900", "-800", "-700", "-600", "", "-400", "-300", "-200", "-100", "-50",];
+                    var arrayLength = colorSuffix.length;
+                    for (var i = 0; i < arrayLength; i++) {
+                        $(this).append('<div class="col-xs-1 color-swatch ' + rowColor + colorSuffix[i] +'"></div>');
+                    }
+                });
+            };
+            $(document).ready(function() {
+                generateColumns();
+                swatch();
+
+            });
+        </script>
+    </body>
+</html>

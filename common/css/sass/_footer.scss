@@ -1,0 +1,29 @@
+footer {
+    position: absolute;
+    bottom:36px;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    background-color: #edefef;
+    
+    .navbar-form {
+            margin: ($base-pixel - 1px) 0;
+            &.navbar-right {
+                padding-right: 0;
+            }
+        }
+}
+
+@media (max-width: $grid-float-breakpoint-max) {
+    
+    footer {
+        
+        .navbar-nav {
+            margin: ($base-pixel) 0;
+        }
+        
+        .navbar-form {
+            padding: ($base-pixel) 0;
+        }
+    }
+    
+}
