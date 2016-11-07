@@ -1,0 +1,51 @@
+/* CSS Document */
+
+.content-page {
+	
+	.col-md-8:first-child {
+		padding:0;
+	}
+	
+	.content-group {
+		border-top:1px solid $snl-grey-200;
+		padding:$base-pixel-x2 0;
+		
+		.col-xs-12 {
+			padding:0 $base-pixel-x3 0 0;
+			
+			&:last-child {
+				padding-right:0 !important;
+		}
+		
+		/*div {
+			padding-right:$base-pixel-x2 !important;
+			border-right:1px solid #ddd;
+			
+			&:last-child {
+				padding-right:0 !important;
+			}*/
+		}
+	}
+	
+}
+
+.az-index {
+	
+	ul li.term {
+		list-style:none;
+		/*font-size: 1.25em;
+		line-height: 1.2em;*/
+    	font-weight: 600;
+		margin:0;
+	}
+	
+	/*ul ul, 
+	ol ol {
+		margin-top:.5em;
+	}
+	
+	ul li, ol li {
+		margin-bottom:.5em;
+	}
+	*/
+}

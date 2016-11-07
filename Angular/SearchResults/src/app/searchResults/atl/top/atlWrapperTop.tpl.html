@@ -1,0 +1,6 @@
+<span class="atlWrapper" ng-if="searchType == 'web' || searchType == 'cps'">
+  <ng-include src="'app/searchResults/atl/top/atlSpelling.tpl.html'" ng-if="atl.source == 'SPELLING_ATL'"></ng-include>
+  <ng-include src="'app/searchResults/atl/top/atlForms.tpl.html'" ng-if="atl.source == 'ATL_FORM'"></ng-include>
+  <ng-include src="'app/searchResults/atl/top/atlPolicy.tpl.html'" ng-if="atl.source == 'ATL_Policy'"></ng-include>
+  <ng-include src="'app/searchResults/atl/top/atlOrgs.tpl.html'" ng-if="atl.source == 'ORGS_ATL'"></ng-include>
+</span>

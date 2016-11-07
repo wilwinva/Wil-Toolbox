@@ -1,0 +1,7 @@
+{
+  "config" : {
+    "isDev": true,
+    "baseApiUrl": "https://api.github.com",
+    "companyName": "Project Seed"
+  }
+}

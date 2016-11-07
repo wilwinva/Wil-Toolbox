@@ -1,0 +1,13 @@
+<div class="col-sm-2">
+  <ul class="nav nav-stacked hidden-xs">
+    <li ng-class="{active: searchResults.resourceType == '{{cpsType}}'}" ng-repeat="cpsType in searchResults.cpsSubSearchTypes">
+      <a href="" class="resourceType{{cpsType}}" ng-bind="cpsType"
+         ng-click="searchResults.resourceType=cpsType;searchResults.showResults(searchResults.searchTerm, searchResults.searchType,0, 25, searchResults.currentPage, searchResults.resourceType)"></a>
+    </li>
+  </ul>
+  <select class="techlib-select-mobile">
+    <option ng-selected="searchResults.resourceType == '{{cpsType}}'" ng-model="searchResults.resourceType" ng-repeat="cpsType in searchResults.cpsSubSearchTypes"
+            ng-bind="cpsType" ng-value="cpsType"
+            ng-click="searchResults.resourceType=cpsType;searchResults.showResults(searchResults.searchTerm, searchResults.searchType,0, 25, searchResults.currentPage, searchResults.resourceType)">
+  </select>
+</div>

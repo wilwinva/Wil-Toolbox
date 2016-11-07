@@ -1,0 +1,26 @@
+<div class="aroundSandia">
+  <div class="footer">
+    <p><a href="http://info.sandia.gov/newscenter/">NewsCenter</a> | <a
+        href="http://www.sandia.gov/news/publications/labnews/">Lab News</a> | <a
+        href="https://info.sandia.gov/lostandfound/ads.cgi" title="View Lost &amp; Found ads">Lost
+      &amp; Found</a></p>
+  </div>
+</div>
+<!--<script src="app/components/portlet/aroundSandia/aroundSandia.js"></script>-->
+
+<script type="text/javascript">
+  $(document).ready(function (e) {
+    AroundSandia.init();
+
+    $(window).resize(function () {
+      window.clearInterval(AroundSandia.resizeIntervalID);
+      AroundSandia.resizeIntervalID = null;
+      AroundSandia.resizeIntervalID = window.setTimeout(function () {
+        AroundSandia.getSize();
+        window.clearInterval(AroundSandia.resizeIntervalID);
+      }, 500);
+    });
+
+  }).delay(1500);
+
+</script>

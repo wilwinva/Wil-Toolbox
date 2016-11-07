@@ -1,0 +1,9 @@
+<div id="spellCheckerPosition" class="atlStyleOne" ng-init="atl">
+  <span>Did you mean:</span>
+  <a ng-href="{{atl.link | decode | replaceSpaces}}">
+    <b>
+      <i ng-bind-html="atl.payload.correction | decode | replaceSpaces">
+      </i>
+    </b>
+  </a>
+</div>

@@ -1,0 +1,180 @@
+------------------------ DROPDOWN SQL ---------------------------------------
+   [{"id": 22, "name":"Corporate Governance"},
+    {"id": 22, "name":"ES&H"},
+    {"id": 22, "name":"Facilities"},
+    {"id": 22, "name":"Finance"},
+    {"id": 22, "name":"Human Resources"},
+    {"id": 22, "name":"Information Management & Cyber Security"},
+    {"id": 22, "name":"Integrated Safeguards and Security"},
+    {"id": 22, "name":"Other Corporate Terms"},
+    {"id": 22, "name":"Supply Chain Management"}];
+// SQL for retrieving categories
+SELECT PA.policy_area_id as id, PA.policy_area_desc as name
+FROM dbo.policy_area PA
+WHERE PA.delete_flag <> 'Y'
+ORDER BY PA.policy_area_desc
+
+--
+
+//Sources needed for filter dropdowns
+SELECT source_id, source_name
+FROM source
+WHERE delete_flag <> 'Y'
+----------------------------------------------------------
+
+---- SQL for retrieving term content based on filters ------
+//Letter selected from alphabet dropdown
+SELECT t.term_id, t.term_name, t.acronym, t.abbrev_simplified, t.definition, PA.policy_area_desc, related.term_name
+FROM dbo.term t
+INNER JOIN dbo.term_2_sub_policy_area T2SP ON t.term_id = T2SP.term_id and T2SP.delete_flag <> 'Y'
+INNER JOIN dbo.sub_policy_area SPA ON T2SP.sub_policy_area_id = SPA.sub_policy_area_id and SPA.delete_flag <> 'Y'
+INNER JOIN dbo.policy_area PA ON PA.policy_area_id = SPA.policy_area_id and PA.delete_flag <> 'Y'
+LEFT JOIN dbo.related_term RT ON t.term_id = RT.term_id and RT.delete_flag <> 'Y'
+LEFT JOIN dbo.term related ON RT.related_term_id = related.term_id and related.delete_flag <> 'Y'
+WHERE t.delete_flag <> 'Y'
+AND t.term_name LIKE 'A%'
+
+// NOTE that MOWS can only filter on Category, SubCategory/subGlossary (same dropdown), term and definition
+// but admins can also filter on termId, source, delete_flag and subGlossary (separate dropdown)
+
+-- category selected
+SELECT t.term_id, t.term_name, t.acronym, t.abbrev_simplified, t.definition, PA.policy_area_desc, SPA.sub_policy_area_desc, g.sub_glossary_desc, related.term_name
+FROM dbo.term t
+INNER JOIN dbo.term_2_sub_policy_area T2SP ON t.term_id = T2SP.term_id and T2SP.delete_flag <> 'Y'
+INNER JOIN dbo.sub_policy_area SPA ON T2SP.sub_policy_area_id = SPA.sub_policy_area_id and SPA.delete_flag <> 'Y'
+INNER JOIN dbo.policy_area PA ON PA.policy_area_id = SPA.policy_area_id and PA.delete_flag <> 'Y'
+LEFT JOIN dbo.related_term RT ON t.term_id = RT.term_id and RT.delete_flag <> 'Y'
+LEFT JOIN dbo.term related ON RT.related_term_id = related.term_id and related.delete_flag <> 'Y'
+WHERE t.delete_flag <> 'Y' --admin filters change to ?
+AND t.term_name LIKE 'A%' -- letter selected from dropdown
+AND t.term_name LIKE '%?%' OR t.definition LIKE '%?%' -- term and def'n
+AND PA.policy_area_id=?
+AND t.term_id = ? --admin filters
+AND t.source_id = ? --admin filters
+ORDER BY t.term_name;
+
+------------------------------------------------------------
+
+---- SQL for inserting new acronym/def'n -------
+String termInsertStr = "INSERT INTO cdm.dbo.term (term_name,term_anchor,source_id,definition,owner_snl_id,owner_deptid,delete_flag,created_by,created_date,create_application,update_reason,acronym,abbrev_simplified,expansion_in_caps) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+//sourceId= 3(CDM)
+String cdmTermStr = "select term_id from cdm.dbo.term where term_name = ?";
+String subPolicyStr = "INSERT INTO cdm.dbo.term_2_sub_policy_area (term_id,sub_policy_area_id,created_by,created_date,create_application,delete_flag) VALUES (?,?,?,?,?,?)";
+//add ES&H terms to subglossary
+INSERT INTO cdm.dbo.term_2_sub_glossary (term_id,sub_glossary_id,created_by,created_date,create_application,delete_flag) VALUES (?,?,?,?,?,?)
+-------------------------------------------------
+
+---- SQL for updating existing acronym/def'n -------
+UPDATE cdm.dbo.term
+SET term_id=?,term_name=?,term_anchor=?,definition=?,owner_snl_id=?,owner_deptid=?,delete_flag=?,last_updated_by=?,last_updated_date=?,last_update_application=?,update_reason=?,acronym=?,abbrev_simplified=?,expansion_in_caps=?
+WHERE term_id=?
+//TODO: is term_history updated every time a term changes?
+//can the term_name be updated or would that be a new term?
+
+//TODO: we will need to keep track of what the category/subcategory mapping was before and after the update
+UPDATE term_2_sub_policy_area SET delete_flag='Y', last_updated_by=?,last_updated_date=?,last_update_app=? where term_id=? and sub_policy_area_id=?
+INSERT INTO cdm.dbo.term_2_sub_policy_area (term_id,sub_policy_area_id,created_by,created_date,create_application,delete_flag, last_updated_by,last_updated_date,last_update_app) VALUES (?,?,?,?,?,?,?,?,?)
+
+//TODO: we will need to keep track of what the glossary/subglossary mapping was before and after the update
+UPDATE term_2_sub_glossary SET delete_flag='Y', last_updated_by=?,last_updated_date=?,last_update_app=? where term_id=? and sub_glossary_id=?
+INSERT INTO cdm.dbo.term_2_sub_glossary (term_id,sub_glossary_id,created_by,created_date,create_application,delete_flag, last_updated_by,last_updated_date,last_update_app) VALUES (?,?,?,?,?,?,?,?,?)
+----------------------------------------------------
+
+---- SQL for Maintain Category/Sub-Categories -------
+SELECT policy_area_id, policy_area_desc
+FROM policy_area
+WHERE delete_flag <> 'Y'
+
+-- add, edit, delete (note a policy area can't be deleted if there are still terms referencing it)
+INSERT INTO policy_area (policy_area_desc, delete_flag, created_by, created_date, create_application) VALUES (?,?,?,?,?)
+UPDATE policy_area SET policy_area_desc=?, last_updated_by=?, last_updated_date=?, last_update_application=? WHERE policy_area_id=?
+UPDATE policy_area SET delete_flag='Y', last_updated_by=?, last_updated_date=?, last_update_application=? WHERE policy_area_id=?
+
+SELECT sub_policy_area_id, sub_policy_area_desc
+FROM sub_policy_area
+WHERE delete_flag <> 'Y'
+AND policy_area_id = ?
+
+-- add, edit, delete (note a sub-policy area can't be deleted if there are still terms referencing it)
+INSERT INTO sub_policy_area (policy_area_id, sub_policy_area_desc, delete_flag, created_by, created_date, create_application) VALUES (?,?,?,?,?,?)
+UPDATE sub_policy_area SET sub_policy_area_desc=?, last_updated_by=?, last_updated_date=?, last_update_application=? WHERE sub_policy_area_id=?
+UPDATE sub_policy_area SET delete_flag='Y', last_updated_by=?, last_updated_date=?, last_update_application=? WHERE sub_policy_area_id=?
+-----------------------------------------------------
+
+---- SQL for Maintain ES&H Sub-Glossaries ----------
+SELECT sub_glossary_id, sub_glossary_desc
+FROM sub_glossary
+WHERE delete_flag <> 'Y'
+AND glossary_id = 1 //ES&H
+
+-- add, edit, delete  (note a sub-glossary can't be deleted if there are still terms referencing it)
+INSERT INTO sub_glossary (glossary_id, sub_glossary_desc, delete_flag, created_by, created_date, create_application) VALUES (?,?,?,?,?,?)
+UPDATE sub_glossary SET sub_glossary_desc=?, last_updated_by=?, last_updated_date=?, last_update_application=? WHERE sub_glossary_id=?
+UPDATE sub_glossary SET delete_flag='Y', last_updated_by=?, last_updated_date=?, last_update_application=? WHERE sub_glossary_id=?
+----------------------------------------------------
+
+---- SQL for Preview (Active Terms) -------
+//TODO: this report should be removed since the main page already performs this functionality
+// View all terms, View ES&H Terms, View Non-ES&H terms
+SELECT t.term_id, t.term_name, t.acronym, t.abbrev_simplified, t.definition, PA.policy_area_desc, SPA.sub_policy_area_desc, related.term_name
+FROM dbo.term t
+INNER JOIN dbo.term_2_sub_policy_area T2SP ON t.term_id = T2SP.term_id and T2SP.delete_flag <> 'Y'
+INNER JOIN dbo.sub_policy_area SPA ON T2SP.sub_policy_area_id = SPA.sub_policy_area_id and SPA.delete_flag <> 'Y'
+INNER JOIN dbo.policy_area PA ON PA.policy_area_id = SPA.policy_area_id and PA.delete_flag <> 'Y'
+LEFT JOIN dbo.related_term RT ON t.term_id = RT.term_id and RT.delete_flag <> 'Y'
+LEFT JOIN dbo.term related ON RT.related_term_id = related.term_id and related.delete_flag <> 'Y'
+WHERE t.delete_flag <> 'Y'
+AND PA.policy_area_id=23 //ES&H
+ORDER BY t.term_name;
+-------------------------------------------
+
+---- SQL for Create a Change Report -------
+SELECT t.last_updated_date, t.term_id, t.term_name, t.acronym, t.abbrev_simplified, t.definition, t.update_reason, t.last_updated_by
+FROM dbo.term t
+INNER JOIN dbo.term_2_sub_policy_area T2SP ON t.term_id = T2SP.term_id and T2SP.delete_flag <> 'Y'
+LEFT JOIN dbo.sub_policy_area SPA ON T2SP.sub_policy_area_id = SPA.sub_policy_area_id and SPA.delete_flag <> 'Y'
+LEFT JOIN dbo.policy_area PA ON PA.policy_area_id = SPA.policy_area_id and PA.delete_flag <> 'Y'
+WHERE PA.policy_area_id=?
+AND t.last_updated_date >= '2013-10-02 18:06:48.587'
+AND t.last_updated_date <= '2013-10-15 10:08:10.057';
+-------------------------------------------
+
+---- SQL for Create a History Report -------
+// Use term lookup query for the report filters to retrieve term
+
+// This report lists the change history of the selected term. (retrieve the most recent version plus history versions)
+SELECT delete_flag, definition, update_reason, last_updated_by, last_updated_date
+FROM dbo.term
+WHERE term_id = ?
+UNION
+SELECT delete_flag, definition, update_reason, last_updated_by, last_updated_date
+FROM dbo.term_history
+WHERE term_id = ?
+--------------------------------------------
+
+---- SQL for Create a Term By Date Report ------
+//This report lists all the terms effective on the specified date.
+SELECT T.term_id, T.term_name, T.created_date, t.last_updated_date
+FROM term AS T
+WHERE T.created_date <= ?
+AND (T.last_updated_date IS NULL OR T.last_updated_date <= ?)
+UNION
+SELECT termhis.term_id, termhis.term_name, termhis.created_date, termhis.last_updated_date
+FROM term_history as termhis
+WHERE termhis.created_date <= '10-01-2010'
+AND termhis.term_name IS NOT NULL
+AND (termhis.last_updated_date IS NULL OR termhis.last_updated_date <= ?)
+and termhis.term_id NOT IN
+(SELECT T.term_id
+FROM term AS T
+WHERE T.created_date <= ?
+AND T.term_name IS NOT NULL
+AND (T.last_updated_date IS NULL OR T.last_updated_date <= ?)
+)
+order by t.term_name;
+
+------------------------------------------------
+
+---- SQL for Create a Review Spreadsheet -------
+//TODO:
+------------------------------------------------

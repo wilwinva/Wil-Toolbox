@@ -1,0 +1,51 @@
+<div id="atlPolicyFaq" class="panel atl atl-policy-faq" ng-init="questions=atl.payload[0].questions;">
+  <div class="panel-heading">
+    <a class="searchLink" ng-class="{noPayload: !atl.payload}" ng-href="{{env.cpsFaqUrl}}"
+       ng-bind-html="atl.title | decode | replaceSpaces"></a>
+  </div>
+  <ul class="list-group" ng-init="showListItem=false;numberOfItemsToShow=3" ng-if="questions">
+    <li class="list-group-item" ng-repeat="question in questions" ng-show="$index < numberOfItemsToShow ? true:showListItem">
+      <div class="faq-question-wrapper container-fluid">
+        <div class="row">
+          <svg class="snl-icon snl-icon-chevron-right" ng-attr-title="{{showAnswer?'Hide Data':'Show Data'}}"
+            ng-mousedown="showAnswer = !showAnswer;"
+            ng-class="{'expanded': showAnswer}" viewBox="0 0 24 24" snl-click-tracking="PolicyFAQExpand">
+            <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+          </svg>
+          <span class="group-title col-md-12" ng-click="showAnswer = showAnswer ? false : true;" ng-bind="question.question | decode |replaceSpaces"></span>
+        </div>
+      </div>
+      <div class="faq-answer-wrapper fadeIt container-fluid" ng-show="showAnswer">
+        <div class="row">
+          <span class="faq-answer col-md-12" ng-bind-html="question.answer |decode | replaceSpaces"></span>
+          <snl-term-definition term-obj="{{ question.termDef }}" parent-index="{{ $index + 1 }}"></snl-term-definition>
+          <div class="col-md-12 sme-policies-wrapper">
+            <div class="row">
+              <div class="faq-smes col-md-6" ng-if="question.smes.length > 0">
+                <h5>Subject Matter Experts</h5>
+                <ul>
+                  <li ng-repeat="sme in question.smes">
+                    <a ng-href="{{sme.smeEmail}}" ng-bind="sme.smeName"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="faq-policies col-md-6" ng-if="question.rcps.length > 0">
+                <h5>Related Information</h5>
+                <ul>
+                  <div ng-repeat="relatedInfo in question.rcps">
+                    <a ng-if="relatedInfo.rcpLink != ''" ng-href="{{relatedInfo.rcpLink}}" ng-bind-html="relatedInfo.rcpDescription | decode | replaceSpaces"></a>
+                    <p ng-if="relatedInfo.rcpLink == ''" ng-bind-html="relatedInfo.rcpDescription | decode | replaceSpaces"></p>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="paginate-bar list-group-item" ng-show="questions.length > numberOfItemsToShow">
+      <span ng-bind="!showListItem ? 'Showing ' + numberOfItemsToShow + ' of ' + questions.length:'Showing ' + questions.length + ' of ' + questions.length"></span>
+      <a ng-click="showListItem=!showListItem" ng-bind="!showListItem ? 'Show more':'Show less'"></a>
+    </li>
+  </ul>
+</div>

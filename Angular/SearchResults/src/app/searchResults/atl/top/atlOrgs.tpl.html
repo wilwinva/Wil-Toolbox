@@ -1,0 +1,55 @@
+<div id="atlOrgs" class="panel atl atl-org">
+  <div id="orgAbove" ng-init="atl">
+            <div class="panel-body" ng-init="orgCode = (atl.description | orgCode)">
+                <p class="label">Organization</p>
+              <h3 class="pull-left">
+                <span class="org-number">{{orgCode}}</span><span class="vertical-divider">&nbsp;|&nbsp;</span><span class="org-title"><a ng-href="{{atl.link | decode | replaceSpaces}}" ng-bind-html="atl.title | decode | replaceSpaces"></a>
+                </span>
+              </h3>
+              <a class="btn pull-right" ng-href="https://webprod.sandia.gov/SAPLE/search.jsp?query={{orgCode}}">
+                    Staff Roster
+              </a>
+            </div>
+        <hr>
+            <div class="panel-body">
+                <div class="container-fluid person-info">
+                    <div class="row">
+                       <!-- <div class="col-xs-3">
+                            <div class="person-id-photo">
+                                <img class="img-responsive" ng-src="{{saple.misc.badgephoto.value}}"/>
+                            </div>
+                        </div> -->
+                        <div class="col-xs-9">
+                            <p class="person-title" ng-bind="atl.payload[7].managerTitle">
+                            </p>
+                            <p class="person-name">
+                              <a ng-href="https://webprod.sandia.gov/SAPLE/search.jsp?query=snlid:{{atl.payload[6].managerID}}"
+                                 ng-bind="atl.payload[2].managerName"></a>
+                            </p>
+                            <p class="person-phone" ng-bind="atl.payload[4].managerPhone | phone">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              <div class="container-fluid person-info" ng-if="atl.payload[10].secretaryName">
+                    <div class="row">
+                        <!--<div class="col-xs-3">
+                            <div class="person-id-photo">
+                                <img class="img-responsive" ng-src="{{saple.misc.badgephoto.value}}"/>
+                            </div>
+                        </div> -->
+                        <div class="col-xs-9">
+                            <p class="person-title">SEC/ADMIN
+                            </p>
+                            <p class="person-name">
+                                <a ng-href="https://webprod.sandia.gov/SAPLE/search.jsp?query=snlid:{{atl.payload[12].secretaryID}}"
+                     ng-bind="atl.payload[10].secretaryName"></a>
+                            </p>
+                            <p class="person-phone" ng-bind="atl.payload[8].secretaryPhone | phone">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+</div>

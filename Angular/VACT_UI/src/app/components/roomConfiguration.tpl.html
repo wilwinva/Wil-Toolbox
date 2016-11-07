@@ -1,0 +1,45 @@
+<div ng-class="{classified:roomCtrl.room_classification==1,spn:roomCtrl.room_classification==2}">
+    <h2 class="pull-left">VACT Room Configuration</h2>
+    <h4 class="pull-right">
+        <span class="bldg">Building: {{roomCtrl.room_properties.bldg}}</span>
+        <span class="room">Room: {{roomCtrl.room_properties.room}}</span>
+        <span class="room-type">VACT Type: {{roomCtrl.room_properties.vactType}}</span>
+        <br/>
+      <span class="classsification">
+          Room Classification:
+            <select ng-model="roomCtrl.room_classification"
+                    ng-options="classification.id as classification.label for classification in roomCtrl.room_classifications"
+                    ng-change="roomCtrl.setRoomClassification(roomCtrl.room_classification)">
+            </select>
+        </span>
+    </h4>
+
+    <div class="col-sm-12" id="sourceEquipment">
+        <h4>Source Equipment</h4>
+        <span ng-repeat="source in roomCtrl.sources" class="vactButton" ng-class="{displaying:source.target != 'none'}">
+            <vact-equipment source="source"></vact-equipment>
+            {{source.label}}
+            <vact-camera-remote-control camid="{{source.id}}" ng-if="source.type=='video_camera'"></vact-camera-remote-control>
+            <div class="display">Displayed on</div>
+            <select ng-model="source.target"
+                    ng-options="target.id as target.label for target in roomCtrl.targets"
+                    ng-change="roomCtrl.targetSelected(source)">
+                <option value="">None</option>
+            </select>
+          </span>
+    </div>
+
+    <div class="col-sm-12" id="targetEquipment">
+        <h4>Target Equipment</h4>
+        <span ng-repeat="target in roomCtrl.targets" class="vactButton" ng-class="{displaying:target.source}">
+          <vact-equipment source="target"></vact-equipment>
+          {{target.label}}
+          <div class="display">Displaying</div>
+          <select ng-model="target.source"
+                  ng-options="source.id as source.label for source in roomCtrl.sources"
+                  ng-change="roomCtrl.sourceSelected(target)">
+              <option value="">None</option>
+          </select>
+        </span>
+    </div>
+</div>

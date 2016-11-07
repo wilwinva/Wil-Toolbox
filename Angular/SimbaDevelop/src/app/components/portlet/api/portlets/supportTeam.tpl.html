@@ -1,0 +1,29 @@
+<div ng-show="apiCtrl.fetching" class="loader-container"> <!-- ng-show="apiCtrl.fetching" -->
+    <div class="loaderbg"></div>
+    <div class="loader"></div>
+</div>
+<div class="panel-body">
+  <div ng-hide="apiCtrl.error">
+     <ul class="list-group">
+         <li class="list-group-item clearfix" ng-repeat="supportTeam in apiCtrl.data" snl-render-on-finish ng-init="show = false" snl-click-tracking="SupportTeamExpandCollapse">
+        <snl-expander-data show="show"></snl-expander-data>
+        <h3 ng-click="show=show?false:true" class="group-title"><span class="ng-binding" ng-bind="supportTeam.provided_service_name"></span></h3>
+             <ul class="list-group team-content clearfix fadeIt" ng-show="show">
+                 <li class="team-description" ng-bind-html="supportTeam.provided_service_desc"></li>
+                 <li>
+            <ul class="team-members">
+              <li class="label">Team Members</li>
+              <li class="contact-info" ng-repeat="teamMember in supportTeam.members">
+                <span class="team-member-name">
+                  <a href="https://mysite.sandia.gov/Person.aspx?accountname=SANDIA\{{teamMember.email}}" ng-bind="teamMember.name"></a>
+                </span>
+                <span class="team-member-phone" ng-bind="teamMember.phone"></span>
+                <span class="team-memeber-role" ng-bind-html="teamMember.role" ng-if="trim(teamMember.role).length > 0"></span>
+               </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

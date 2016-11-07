@@ -1,0 +1,57 @@
+<div class="panel portlet panel-default">
+  <div class="table-responsive">
+    <div class="table-filters">
+      <label>Filter data by:</label>
+      <input type="text" ng-model="filterTermSuperseded" value="" placeholder="ID, Term, or Acronym"
+             ng-model-options="{debounce:400}"
+             ng-change="ctrl.loadFilteredResults();"/>
+      <span class="glyphicon glyphicon-remove-sign pull-right" ng-click="ctrl.closeModal()"></span>
+
+    </div>
+    <table class="table table-striped table-hover">
+      <thead>
+      <tr>
+        <th></th>
+        <th ng-click="ctrl.sort('id')">
+          ID
+          <svg class="snl-icon snl-icon-16px" ng-show="ctrl.sortKey=='termID'"
+               ng-class="{'snl-icon-caret-up':!ctrl.reverse,'snl-icon-caret-down':ctrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="ctrl.sort('term')">
+          <span>Term</span>
+          <svg class="snl-icon snl-icon-16px" ng-show="ctrl.sortKey=='term'"
+               ng-class="{'snl-icon-caret-up':!ctrl.reverse,'snl-icon-caret-down':ctrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="ctrl.sort('acronym')">
+          <span>Acronym</span>
+          <svg class="snl-icon snl-icon-16px" ng-show="ctrl.sortKey=='acronym'"
+               ng-class="{'snl-icon-caret-up':!ctrl.reverse,'snl-icon-caret-down':ctrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr dir-paginate="termGroup in ctrl.terms|orderBy:ctrl.sortKey:ctrl.reverse|filter:filterTermSuperseded|itemsPerPage:ctrl.pageSize"
+          pagination-id="supersededTerms">
+        </td>
+        <td>
+          <input type="radio" name="termToReplace" ng-click="ctrl.updateSingleSelect(termGroup)" ng-if="!multiSelect"/>
+          <input type="checkbox" ng-click="ctrl.updateMultiSelect(termGroup)" ng-checked="ctrl.inList(termGroup.id)!=-1" ng-if="multiSelect"/>
+        </td>
+        <td ng-bind="termGroup.id"></td>
+        <td ng-bind="termGroup.term"></td>
+        <td ng-bind="termGroup.acronym"></td>
+      </tr>
+      </tbody>
+    </table>
+    <snl-paginator pagination-id="supersededTerms" page-size="ctrl.pageSize"
+                   page-options="ctrl.pageOptions" num-records="ctrl.numRecords"
+                   scroll-to="#SupersededTermTop"
+                   min-data-length="5"></snl-paginator>
+  </div>
+</div>

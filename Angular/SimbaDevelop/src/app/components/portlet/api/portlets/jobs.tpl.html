@@ -1,0 +1,99 @@
+<div ng-show="apiCtrl.fetching" class="loader-container"> <!-- ng-show="apiCtrl.fetching" -->
+    <div class="loaderbg"></div>
+    <div class="loader"></div>
+</div>
+
+<div ng-hide="apiCtrl.error" class="panel-body" ng-class="{'no-data':apiCtrl.numRecords == 0}">
+
+    <div class="table-controls" snl-click-tracking="JobsFilterBox">
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text" ng-model="filterBy" class="form-control" placeholder="Filter Results By:">
+            </div>
+        </form>
+    </div>
+
+    <div id="JobPostings" class="table-responsive">
+        <table class="table table-striped table-hover table-blue">
+            <thead>
+            <tr>
+                <th ng-click="apiCtrl.sort('id')" ng-init="apiCtrl.sort('id')" snl-click-tracking="JobsSortID">
+                    ID
+                    <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='id'"
+                         ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+                        <use xlink:href="#snl-icon-caret"/>
+                    </svg>
+                </th>
+                <th ng-click="apiCtrl.sort('title')" snl-click-tracking="JobsSortTitle">
+                    Title
+                    <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='title'"
+                         ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+                        <use xlink:href="#snl-icon-caret"/>
+                    </svg>
+                </th>
+                <th ng-click="apiCtrl.sort('status')" snl-click-tracking="JobsSortStatus">
+                    Status
+                    <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='status'"
+                         ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+                        <use xlink:href="#snl-icon-caret"/>
+                    </svg>
+                </th>
+                <th ng-click="apiCtrl.sort('open_date')" snl-click-tracking="JobsSortOpenDate">
+                    Open Date
+                    <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='open_date'"
+                         ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+                        <use xlink:href="#snl-icon-caret"/>
+                    </svg>
+                </th>
+                <th ng-click="apiCtrl.sort('target')" snl-click-tracking="JobsSortTarget">
+                    Target
+                    <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='target'"
+                         ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+                        <use xlink:href="#snl-icon-caret"/>
+                    </svg>
+                </th>
+                <th ng-click="apiCtrl.sort('hired')" snl-click-tracking="JobsSortHired">
+                    Hired
+                    <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='hired'"
+                         ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+                        <use xlink:href="#snl-icon-caret"/>
+                    </svg>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr dir-paginate="job in apiCtrl.data|orderBy:apiCtrl.sortKey:apiCtrl.reverse|filter:filterBy|itemsPerPage:apiCtrl.pageSize"
+                pagination-id="job" snl-on-finish-render="apiCtrl.renderPagination()">
+                <td ng-bind="job.id"></td>
+                <td ng-bind="job.title"></td>
+                <td ng-bind="job.status"></td>
+                <td ng-bind="job.open_date | reformatDate | date:'MM/dd/yyyy'"></td>
+                <td ng-bind="job.target"></td>
+                <td ng-bind="job.hired"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <snl-paginator pagination-id="job" page-size="apiCtrl.pageSize"
+                   page-options="apiCtrl.pageOptions" num-records="apiCtrl.numRecords" scroll-to="#JobPostings"
+                   min-data-length="5"></snl-paginator>
+
+</div>
+
+<div class="panel-footer clearfix">
+    <p>Links to individual job postings are no longer available. Please use the links below to view, create, and work
+        with your job postings.</p>
+    <ul class="nav navbar-nav inline-list">
+        <li><a href="https://hrss.sandia.gov/psp/pspr1/EMPLOYEE/HRMS/c/HRS_HRPM.HRS_JOB_OPNG_SRCH.GBL" target="PeopleSoft_Window"
+               title="View job openings in PeopleSoft">Browse</a></li>
+        <li><a href="https://sharepoint.sandia.gov/sites/jrrf/" target="PeopleSoft_Window"
+               title="Create job opening in PeopleSoft">Create</a></li>
+        <li><a href="https://hrss.sandia.gov/psp/pspr1/EMPLOYEE/HRMS/c/HRS_HRAT.HRS_INT_EVAL_SRCH.GBL" target="PeopleSoft_Window"
+               title="View or Enter Interview Evaluations in PeopleSoft">Interview Evaluations</a></li>
+        <li><a href="https://hrss.sandia.gov/psp/pspr1/EMPLOYEE/HRMS/c/HRS_HRUE.HRS_RECRUIT_CONSOL.GBL" target="PeopleSoft_Window"
+               title="View Pending Job Approvals in PeopleSoft">Pending Approvals</a></li>
+        <li><a class="swift_mail" href="mailto:techweb-basic@sandia.gov?subject=My Job Postings Portlet"
+               title="Email comments on this portlet">Comments</a></li>
+    </ul>
+</div>

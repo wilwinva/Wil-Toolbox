@@ -1,0 +1,39 @@
+.alerts {
+    
+    ul {
+        max-width: none;
+		margin-bottom:$base-pixel;
+        margin-left: -$base-pixel-x3;
+        margin-right: -$base-pixel-x3;
+		
+        li {
+			border:none;
+			border-radius:3px;
+            background: $snl-red;
+            color: white;
+			padding:$base-pixel $base-pixel-x2;
+			margin-bottom:8px;
+			@include shadow(1);
+			
+			&:last-child {
+				margin-bottom:0;
+			}
+        }
+		
+		&:last-child {
+			margin-bottom:$base-pixel-x3;
+		}
+    }
+}
+
+@media (max-width: 767px) {
+
+    .alerts {
+        
+        ul {
+            margin-left: -$base-pixel;
+            margin-right: -$base-pixel;
+        }
+    }
+
+}

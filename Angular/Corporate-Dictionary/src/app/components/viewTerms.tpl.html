@@ -1,0 +1,135 @@
+<section class="main-container">
+    <h2>Corporate Dictionary</h2>
+    <div class="row">
+        <div class="col-md-9">
+            <p>The Corporate Dictionary includes Sandia-specific terms. Dictionary and glossary terms from other sources
+                are being integrated on an on-going basis.</p>
+            <p><strong>Instructions:</strong> To view category or Policy Area-specific terms, please select an item from
+                the Category list below. To search for keywords on the page, use the Ctrl-F search (hit Control and the
+                F key at the same time). You can <a
+                        href="https://eims.sandia.gov/Workplace/getContent?id=release&amp;vsId=%7B502BCBB8-EC21-483C-97A0-FC1BA5B23088%7D&amp;objectStoreName=EIMS.__.Content&amp;objectType=document">request
+                    a new term</a> or request a new acronym if there is a term or acronym the enterprise should know
+                about.</p>
+            <form id="SearchForm" method="post" name="SearchForm" class="form-inline">
+                <h3>Explore the Corporate Acronyms and Dictionary
+                    <!--TODO: need ng-if admin -->
+                    <span class="glyphicon glyphicon-question-sign helpIcon" title="1. Search for the term to be edited &#013;2. Once found, hover over the term until the pencil icon appears &#013;3. Click on the pencil to open the edit window" ng-click="ctrl.popupHelpDialog($event)"></span></h3>
+                <div class="cpsDictionaryAlphabet">
+                    <div class="form-group">
+                        <label>Search Text:</label>&#160;
+                        <input class="searchText form-control" id="searchText"
+                               maxlength="75" name="searchText" type="text"
+                               ng-model="ctrl.search.text"
+                               ng-model-options="{debounce:400}"
+                               ng-change="ctrl.loadFilteredResults();"
+                               ng-focus="show=false;"
+                        />
+                        <span class="padding">in</span>
+                        <span class="padding">
+                            <input class="search-checkbox checkbox"
+                                   id="searchTypeTermOnly"
+                                   name="searchType"
+                                   title="Search within Terms."
+                                   value="TermOnly"
+                                   type="checkbox"
+                                   ng-model="ctrl.search.term"
+                            />
+                            <label for="searchTypeTermOnly">Term</label>
+                        </span>
+                        <span class="padding">
+                            <input class="search-checkbox checkbox"
+                                   id="searchTypeAcronymOnly"
+                                   name="searchType"
+                                   title="Search within Acronyms."
+                                   value="AcronymOnly"
+                                   type="checkbox"
+                                   ng-model="ctrl.search.acronym"
+                            />
+                            <label for="searchTypeAcronymOnly">Acronym</label>
+                        </span>
+                        <span class="padding">
+                            <input class="search-checkbox checkbox"
+                                   id="searchTypeDefOnly"
+                                   name="searchType"
+                                   title="Search within Definitions."
+                                   value="DefOnly" type="checkbox"
+                                   ng-model="ctrl.search.definition"/>
+                            <label for="searchTypeDefOnly">Definition</label>
+                        </span>
+                        <span class="padding">
+                            <input class="search-checkbox checkbox"
+                                   id="searchTypeIdOnly"
+                                   name="searchType"
+                                   title="Search within Ids."
+                                   value="IdOnly" type="checkbox"
+                                   ng-model="ctrl.search.id"/>
+                            <label for="searchTypeIdOnly">Id</label>
+                        </span>
+                    </div>
+                    <div class="selectionOptions clearfix">
+                        <div class="form-group">
+                            <label>Category:</label>
+                            <select id="searchCategory" class="form-control" name="category"
+                                    ng-model="ctrl.search.category"
+                                    ng-options="option.name for option in ctrl.categoryOptions"
+                                    title="Limit terms to a category.">
+                                <option selected="selected" value="">All Categories</option>
+                            </select>
+                        </div>
+                        <!--TODO: need ng-if admin -->
+                        <span class="padding">
+                            <label for="TermDeleteFlag">Term status is:</label>
+                            <select id="TermDeleteFlag" class="form-control"
+                                    ng-options="item as item.option for item in ctrl.statusOptions"
+                                    ng-model="ctrl.search.active">
+                            </select>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- This has class col-md-3 --->
+        <div class="col-sm-3">
+            <snl-report-actions></snl-report-actions>
+            <snl-admin-actions></snl-admin-actions>
+        </div>
+    </div>
+    <div class="row" id="CpsDictionaryDiv" ng-show="ctrl.terms.length>0">
+        <hr/>
+        <div class="col-md-12">
+            <h3>"{{ctrl.queryText}}"</h3>
+            <div class="search-results col-md-12" id="searchResults">
+                <div class="result row" ng-repeat="term in ctrl.terms | searchtypefilter:ctrl.search"
+                     ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                    <h5 ng-bind-html="term.term | highlight:ctrl.search"></h5>
+
+                    <span class="result-actions pull-right">
+                            <svg class="snl-icon snl-icon-edit" ng-click="ctrl.editTerm(term);" title="Edit Result"
+                                 viewbox="0 0 24 24" ng-class="{'show-pencil': hover}">
+                                <g class="pencil-shape">
+                                    <path d="M19.1,9.1l0.7-0.7c1.4-1.4,1.4-2.8,0-4.2c-1.4-1.4-2.9-1.4-4.3,0l-0.6,0.6L19.1,9.1z"></path>
+                                    <path d="M3.4,20.6c0.2,0.2,0.5,0.3,0.9,0.2l4.2-1.1l-0.7-3.5l-3.5-0.7l-1.1,4.2C3.1,20,3.2,20.4,3.4,20.6z"></path>
+                                    <polygon points="17.7,10.6 13.4,6.3 5.5,14.2 9.2,14.8 9.9,18.3"></polygon>
+                                </g>
+                            </svg>
+                        </span>
+                    <div class="result-text" ng-bind-html="term.definition | highlight:ctrl.search "></div>
+                    <div class="term.categories">Categories: <span
+                            ng-repeat="category in term.categories  track by $index"> <span
+                            ng-bind-html="category.name  | highlightG:ctrl.search"></span>{{$last ? '' : ', '}} </span>
+                    </div>
+                    <div class="term.term">Term ID: <span ng-bind-html="term.id | highlight:ctrl.search"></span>
+                    </div>
+                    <div class="result.acronym" ng-if="term.acronym">Acronym: <span
+                            ng-bind-html="term.acronym | highlight:ctrl.search"></span></div>
+                    <div class="result.delete_flag">Inactive: {{term.deleteFlag}}</div>
+                    <div class="result.seeAlso" ng-if="term.relatedTerms">See Also: <span
+                            ng-repeat="related in term.relatedTerms track by $index" ng-bind-html="related.term">
+                                {{$last ? '' : ', '}} </span>
+                    </div>
+                    <br ng-show="!$last"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

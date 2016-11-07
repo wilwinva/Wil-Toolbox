@@ -1,0 +1,13 @@
+<inside-menu></inside-menu>
+<div class="col-md-10 col-sm-9 main-content">
+	<ng-include src="'app/components/topRegion/topRegion.tpl.html'"></ng-include>
+
+	<div class="content-page az-index">
+		<div class="row layout-normal">
+            <div class="col-md-12">
+			<h1>{{alphabetIndexCtrl.title}}</h1>
+			<div ng-bind-html="alphabetIndexCtrl.data | html"></div>
+                </div>
+		</div>
+	</div>
+</div>

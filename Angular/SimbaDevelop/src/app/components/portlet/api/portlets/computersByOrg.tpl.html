@@ -1,0 +1,120 @@
+<div ng-show="apiCtrl.fetching" class="loader-container">
+    <div class="loaderbg"></div>
+    <div class="loader"></div>
+</div>
+<div ng-hide="apiCtrl.error" class="panel-body" ng-class="{'no-data':apiCtrl.numRecords == 0}">
+    <div class="panel-footer clearfix">
+            <div class="computer-stats">Org Stats:<br>
+                <span class="percentage-age-label">3+ years old:</span>
+                <span class="percentage-number">{{apiCtrl.data.stats.org_3_Yr_Stats}}%</span>
+                <div class="percentage-bar">
+                    <div class="filled" style="width:{{apiCtrl.data.stats.org_3_Yr_Stats}}%;">&nbsp;</div>
+                </div><br>
+                <span class="percentage-age-label">5+ years old:</span>
+                <span class="percentage-number">{{apiCtrl.data.stats.org_5_Yr_Stats}}%</span>
+                <div class="percentage-bar">
+                    <div class="filled" style="width:{{apiCtrl.data.stats.org_5_Yr_Stats}}%;">&nbsp;</div>
+                </div>
+            </div>
+            <div class="computer-stats">Corp Stats: <br>
+                <span class="percentage-age-label">3+ years old:</span>
+                <span class="percentage-number">{{apiCtrl.data.stats.corp_3_Yr_Stats}}%</span>
+                <div class="percentage-bar">
+                    <div class="filled" style="width:{{apiCtrl.data.stats.corp_3_Yr_Stats}}%;">&nbsp;</div>
+                </div><br>
+                <span class="percentage-age-label">5+ years old:</span>
+                <span class="percentage-number">{{apiCtrl.data.stats.corp_5_Yr_Stats}}%</span>
+                <div class="percentage-bar">
+                    <div class="filled" style="width:{{apiCtrl.data.stats.corp_5_Yr_Stats}}%;">&nbsp;</div>
+                </div>
+            </div>
+    </div>
+  <div class="table-controls">
+    <form class="form-inline pull-left" ng-submit="apiCtrl.fetchApiResults(apiCtrl.orgnum)">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text"  title="Enter org number to search here" ng-model="apiCtrl.orgnum" class="form-control" placeholder="Org ID" snl-click-tracking="ComputersByOrgSearchBox"/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" snl-click-tracking="ComputersByOrgSearchSubmit">Go</button>
+                </span>
+            </div>
+        </div>
+    </form>
+    <form class="form-inline pull-right">
+      <div class="form-group">
+        <input type="text" ng-model="filterBy" class="form-control" placeholder="Filter Results By:" snl-click-tracking="ComputersByOrgFilterBox">
+      </div>
+    </form>
+    <div class="clearfix"></div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover table-blue clearfix" id="ComputersByOrgResults">
+      <thead>
+      <tr>
+        <th ng-click="apiCtrl.sort('owner')" snl-click-tracking="ComputersByOrgSortOwner">
+          Owner
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='owner'"
+               ng-class="{'snl-icon-caret-up':apiCtrl.reverse,'snl-icon-caret-down':!apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('org')" snl-click-tracking="ComputersByOrgSortOrg">
+          Org
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='org'"
+               ng-class="{'snl-icon-caret-up':apiCtrl.reverse,'snl-icon-caret-down':!apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('machine')" snl-click-tracking="ComputersByOrgSortComputer">
+          Computer
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='machine'"
+               ng-class="{'snl-icon-caret-up':apiCtrl.reverse,'snl-icon-caret-down':!apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('machine_make')" snl-click-tracking="ComputersByOrgSortType">
+          Type
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='machine_make'"
+               ng-class="{'snl-icon-caret-up':apiCtrl.reverse,'snl-icon-caret-down':!apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('acquired_date')" ng-init="apiCtrl.sort('acquired_date')" snl-click-tracking="ComputersByOrgSortAcquired">
+          Acquired
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='acquired_date'"
+               ng-class="{'snl-icon-caret-up':apiCtrl.reverse,'snl-icon-caret-down':!apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr dir-paginate="computer in apiCtrl.data.computers|orderBy:apiCtrl.sortKey:apiCtrl.reverse|filter:filterBy|itemsPerPage:apiCtrl.pageSize"
+          pagination-id="computersByOrg" snl-on-finish-render="apiCtrl.renderPagination()">
+        <td ng-bind="computer.owner"></td>
+        <td ng-bind="computer.assigned_org"></td>
+        <td class="cell-with-link">
+          <a ng-href="{{apiCtrl.digsUrl + computer.snum}}"
+             ng-mouseover="showHoverDetail = true" ng-mouseleave="showHoverDetail = false">{{computer.machine}}</a>
+          <div class="details-popup" ng-show="showHoverDetail">
+            <p><label>Name:</label><span ng-bind="computer.snum"></span></p>
+            <p><label>Make:</label><span ng-bind="computer.machine_model"></span></p>
+            <p><label>Location:</label><span ng-bind="computer.location"></span></p>
+          </div>
+
+        </td>
+        <td ng-bind="computer.machine_make"></td>
+        <td ng-class="(computer.five_years_old == true)?'text-danger':(computer.three_years_old == true)?'text-warning':''">
+          <span ng-attr-title={{title}} ng-init="title = (computer.five_years_old === true)?'Computer at least 5 years old.':(computer.three_years_old === true)?'Computer at least 3 years old.':''" ng-bind="computer.acquired_date | reformatDate | date:'MM/dd/yyyy'"></span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <snl-paginator pagination-id="computersByOrg" page-size="apiCtrl.pageSize"
+                   page-options="apiCtrl.pageOptions" num-records="apiCtrl.numRecords" scroll-to="#ComputersByOrgResults"
+                   min-data-length="5" snl-click-tracking="ComputersByOrgPagination">
+    </snl-paginator>
+
+</div>

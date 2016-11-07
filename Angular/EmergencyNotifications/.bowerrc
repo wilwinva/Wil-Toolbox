@@ -1,0 +1,6 @@
+{
+  "directory": "bower_components",
+  "registry": "http://bower.herokuapp.com",
+  "proxy": "http://wwwproxy.sandia.gov:80/",
+  "https-proxy": "http://wwwproxy.sandia.gov:80/"
+}

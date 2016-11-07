@@ -1,0 +1,10 @@
+.camera-controls{height:50px}
+.camera-controls div span{display:inline;}
+.camera-controls .pan{display:inline-block;width:60%;}
+.camera-controls .zoom{display:inline-block;width:30%;}
+.camera-controls .pan .left{left:5px;top:13px}
+.camera-controls .pan .up{left:0;top:0;}
+.camera-controls .pan .down{left:-19px;top:27px;}
+.camera-controls .pan .right{left:15px;top:-11px;}
+.camera-controls .zoom .in{left:0;top:4px;}
+.camera-controls .zoom .out{left:0;top:4px;}

@@ -1,0 +1,56 @@
+<p>
+    Acronym records have these required fields: Acronym, full name, and an association with a Category.
+</p>
+<p>
+    Acronym - the abbreviation to be defined
+</p>
+<p>
+    Full name – the expansion of the acronym.
+</p>
+<p>
+    Selecting "Inactive" from the status dropdown – allows for the inactivation of the term currently being displayed.
+    CADM will prompt for "Term Superseded by TermID: ____." Terms are never deleted from the database to avoid broken
+    links.
+</p>
+<p>
+    Anchor – a string suitable to be an HTML anchor identifier. Efforts should be made to make anchors distinct among
+    all terms in the database. For new terms, an anchor is generated based on the text of the Term name (but no
+    uniqueness checking is performed). Historically, anchors have
+    been embedded in the text of definitions to relate to other terms, such as: "Also see:" and "Related To:"
+</p>
+<p>
+    Popup URL – a URL suitable for embedding in another document. See the section on remoteTermDef.cfm for more details.
+</p>
+<p>
+    Definition – formatted text containing the definition of the current term. Definition is stored as HTML and may
+    contain tables, lists, and other font formatting. Where applicable, the definition can contain a horizontal list of
+    synonyms.
+</p>
+
+<p>
+    Category Association – Choose a Category Area from the dropdown list and click "Add". CADM will update the Term
+    Usage to reflect the new association. The "X" icons allow for deletion of the Category term associations.
+</p>
+<p>
+    Related To: / Related By:
+    Terms can be related to each other. Click the "Add" button to the right of Related To: on the Edit Term screen. CADM
+    will display a popup grid that is very similar to the Find
+    Term screen allowing the user to choose which other terms are related to the current term. The user may apply
+    filters to narrow the search for related terms. Mark the checkbox next to any term to be related.
+    Any terms already related will already have a check mark.
+    Click the "Return" button to return to the Edit Term screen.
+    Relating terms via "Related To:" allows a unique association to another term in the
+    database without using anchors embedded in the text of a term definition.
+    CADM displays a list of terms that relate to the term being edited in the "Related by:"
+    area. Hyperlinks allow the user to navigate to the terms that relate to and are related by.
+</p>
+<p>
+    Created by: Created on: Creation Application:
+    Update by: Updated on: Update Application:
+    Are all informational fields providing history on term creation and change. These fields are maintained by CADM and
+    cannot be altered by the user.
+</p>
+<p>
+    "Submit" button – when changes are made, click the save button. CADM does keep track of modified fields and will
+    prompt the user that there is unsaved data if the user attempts to navigate away without saving a term records.
+</p>

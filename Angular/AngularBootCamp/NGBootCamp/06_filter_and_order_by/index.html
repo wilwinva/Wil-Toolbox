@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="example">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Workshop</title>
+  <script src="../vendor/angular.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="../vendor/bootstrap.css"/>
+</head>
+<body ng-controller="AppCtrl as app">
+
+<input type="text" ng-model="app.filterInput.company"/>
+<input type="text" ng-model="app.filterInput.name"/>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th ng-click="app.setOrder('name')">Name</th>
+      <th ng-click="app.setOrder('email')">Email</th>
+      <th ng-click="app.setOrder('company')">Company</th>
+      <th ng-click="app.setOrder('balance')">Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="person in app.people | filter:app.filterInput | orderBy: app.orderBy">
+      <td>{{person.name}}</td>
+      <td>{{person.email}}</td>
+      <td>{{person.company}}</td>
+      <td>{{person.balance}}</td>
+    </tr>
+  </tbody>
+</table>
+{{app.people}}
+</body>
+</html>

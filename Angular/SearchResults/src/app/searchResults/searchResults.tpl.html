@@ -1,0 +1,114 @@
+<div id="search" class="clearfix">
+  <div ui-view="search_box"></div>
+</div>
+<div class="row" ng-show="!searching">
+  <div class="col-md-6 col-lg-offset-2" ng-if="searchResults.totalResults == 0 && searchResults.searchType != 'techlib'">
+    <div class="no-results-found" class="col-xs-12">
+      No Results found ... :(
+    </div>
+  </div>
+
+  <ng-include src="'app/searchResults/policyFacets.tpl.html'" ng-if="searchResults.searchType == 'web' && searchResults.totalResults > 0"></ng-include>
+  <ng-include src="'app/searchResults/techLibFacets.tpl.html'" ng-if="searchResults.searchType == 'techlib'"></ng-include>
+
+  <div ng-class="{'col-sm-10': searchResults.searchType == 'web'}">
+    <div ng-class="{'container-fluid': searchResults.searchType == 'web'}">
+      <div ng-class="{'row': searchResults.searchType == 'web'}">
+
+        <div id="searchAtlWrapper" class="col-lg-4 col-md-6 col-md-push-6 col-lg-push-8">
+          <div class="inside" ng-if="searchResults.searchType != 'filenet' && searchResults.searchType != 'techlib'">
+            <!-- area for the ATLS **this ng-repeat can produce 2 atl records which breaks the techLib and filenet ATLs and makes them show up twice-->
+            <div ng-repeat="atl in searchResults.atls">
+              <atl-content-right atl="atl" env="searchResults.env" search-type="searchResults.searchType" search-term="searchResults.searchTerm"></atl-content-right>
+            </div>
+            <div ng-if="searchResults.atlSapleContent">
+              <atl-content-right atl="searchResults.atlSapleContent" search-type="searchResults.searchType" search-term="searchResults.searchTerm"></atl-content-right>
+            </div>
+          </div>
+          <div class="inside" ng-if="searchResults.searchType == 'filenet' || searchResults.searchType == 'techlib'">
+            <!-- area for the filenet and techLib ATLS **the above ng-repeat can produce 2 atl records which breaks the techLib and filenet ATLs and makes them show up twice -->
+            <div class="atlWrapper" ng-if="searchResults.searchType == 'techlib'">
+              <div class="atl atl-advanced-search">
+                <a class="btn" href="http://librarysearch.sandia.gov:1701/primo_library/libweb/action/search.do">
+                  <strong>Advanced Search</strong><br>Available on the Technical Library website
+                </a>
+              </div>
+            </div>
+            <div class="atlWrapper" ng-if="searchResults.searchType == 'filenet'">
+              <div class="atl atl-advanced-search">
+                <a class="btn" href="https://eims.sandia.gov/Workplace/Search.jsp">
+                  <strong>Advanced Search</strong><br>Available on the EIMS FileNet website
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-offset-2 col-lg-pull-4 col-md-pull-6" ng-if="searchResults.totalResults == 0 && searchResults.searchType == 'techlib'">
+          <p class="smi-page-range">No Results found in this category ...</p>
+        </div>
+
+        <div id="searchListWrapper" class="col-md-6 col-lg-offset-2 col-lg-pull-4 col-md-pull-6" ng-if="searchResults.totalResults > 0">
+          <div ng-repeat="atl in searchResults.atls">
+            <atl-content-top atl="atl" search-type="searchResults.searchType" search-term="searchResults.searchTerm"></atl-content-top>
+          </div>
+
+          <smi-page-range page-begin="searchResults.pageBegin" total-results="searchResults.totalResults" num-results="searchResults.numResults"></smi-page-range>
+          <smi-pager ng-if="searchResults.admin" search-term="searchResults.searchTerm" search-type="searchResults.searchType" current-page="searchResults.currentPage"
+                     page-begin="searchResults.pageBegin"
+                     num-results="searchResults.numResults" total-results="searchResults.totalResults" num-search-results="searchResults.numSearchResults"
+                     parent-search-id="searchResults.parentSearchId"></smi-pager>
+
+          <ul class="search-list" ng-class="(searchResults.admin)?' admin':''" ng-if="searchResults.searchType != 'techlib'" ng-init="pageNumber = searchResults.pageBegin">
+            <li class="search-item" data-ng-repeat="searchResult in searchResults.searchResultsContent.content">
+              <span class="item-number" ng-bind="pageNumber + $index" ng-if="searchResults.admin"></span>
+              <div class="search-link">
+                <a ng-href="https://webprod.sandia.gov/{{searchResult.link | decode | replaceSpaces}}"
+                   ng-bind-html="searchResult.title | decode | decode | replaceSpaces | limitCharacters" ng-if="searchResults.searchType != 'filenet'"></a>
+                <a ng-href="{{searchResult.url | decode | decode | replaceSpaces}}"
+                   ng-bind-html="searchResult.title | decode | decode | replaceSpaces | limitCharacters" ng-if="searchResults.searchType == 'filenet'"></a>
+              </div>
+              <div class="url">{{searchResult.url | decode | decode | limitCharacters}}</div>
+              <div class="search-description" ng-bind-html="searchResult.description | decode | replaceSpaces" ng-if="searchResults.searchType != 'filenet'"></div>
+
+            </li>
+          </ul>
+
+          <ul class="search-list tech-lib" ng-if="searchResults.searchType == 'techlib' " ng-init="pageNumber = searchResults.pageBegin">
+            <li class="clearfix search-item" data-ng-repeat="searchResult in searchResults.searchResultsContent.content">
+              <span class="item-number" ng-bind="pageNumber + $index" ng-if="searchResults.admin"></span>
+              <div class="search-item-img-wrapper" style="float:left; vertical-align: top;"
+                   ng-show="searchResult.image | imageIsStandard">
+                <img ng-src="{{searchResult.image | decode}}"/>
+              </div>
+              <div class="search-link">
+                <a ng-href="{{searchResult.link | decode | replaceSpaces}}"
+                   ng-bind-html="searchResult.title | decode | replaceSpaces"></a></div>
+              <div class="item-type" ng-bind="searchResult.type"></div>
+              <ul class="search-item-content-wrapper">
+                <li>
+                  <strong>Author:</strong>
+                  <span ng-bind="searchResult.author |decode | replaceSpaces"></span>
+                </li>
+                <li ng-if="searchResult.callNo">
+                  <strong>CallNo:</strong>
+                  <span ng-bind="searchResult.callNo | decode | replaceSpaces"></span>
+                </li>
+                <li>
+                  <strong>Publish Date:</strong>
+                  <span ng-bind="searchResult.pubDate | replaceSpaces"></span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <smi-pagination search-term="searchResults.searchTerm" search-type="searchResults.searchType" current-page="searchResults.currentPage"
+                          page-begin="searchResults.pageBegin"
+                          num-results="searchResults.numResults" total-results="searchResults.totalResults" num-search-results="searchResults.numSearchResults"
+                          parent-search-id="searchResults.parentSearchId"></smi-pagination>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

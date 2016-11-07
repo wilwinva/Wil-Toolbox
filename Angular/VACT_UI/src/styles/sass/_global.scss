@@ -1,0 +1,317 @@
+/*global styles*/
+
+
+body {
+    background: #fafafa;
+}
+svg {
+    box-sizing: border-box;
+}
+
+hr {
+    border-color: $sandia-border-grey;
+}
+
+*:focus {
+    outline: none;
+}
+
+span:focus, svg:focus, p:focus, th:focus {
+    outline: none;
+ }
+
+
+.ng-hide:not(.ng-hide-animate) {
+  /* this is just another form of hiding an element */
+  display: block!important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+[ng-cloak]
+{
+  display: none !important;
+}
+
+
+.img-responsive {
+	width:100%; /* fixes large images in directory portlet */
+}
+
+
+/*layout helpers*/
+
+.layout-col-1 {
+	padding-left:0;
+	padding-right:$base-pixel-x1-5;
+}
+
+.layout-col-2 {
+	padding-left:$base-pixel-x1-5;
+	padding-right:0;
+}
+
+#home {
+    > .row {
+        background: #fafafa;
+        .main-content {
+			padding-bottom:$base-pixel-x3;
+            background: #fafafa;
+        }
+    }
+}
+
+a {
+	transition: all 0.2s;
+    @include smi-ease(1);
+}
+
+.inline-list {
+        margin: 0;
+        padding: $base-pixel 0;
+        line-height: $base-pixel-x3;
+
+    li {
+        border-left: 1px solid $text-color-50;
+        padding:0 $base-pixel;
+        float:left;
+
+        &:first-child {
+            border-left:none;
+			padding-left:0;
+        }
+
+        &:last-child {
+			padding-right:0;
+        }
+
+
+        a, a:visited {
+            padding:0;
+            margin:0;
+            line-height:$base-pixel-x3;
+
+            &:hover {
+                text-decoration:underline;
+            }
+        }
+    }
+}
+
+.paginationWrapper {
+    margin: 0 0 20px 20px;
+    
+    a {
+        margin-left: 10px;
+    }
+    
+    .smiPageRange {
+        display: inline-block;
+    }
+    
+    #resultsPerPage {
+        margin: 0 10px;
+    }
+}
+
+
+select {
+    background: #fff url(https://pl.sandia.gov/common/current/images/svg-icons/caret.svg) no-repeat right !important;
+    background-size: 24px 20px !important;
+    background-position:right center;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid $sandia-border-grey;
+    padding:$base-pixel-half $base-pixel-x2 $base-pixel-half $base-pixel;
+    color:#888;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+.select-mobile {
+    display: none;
+    margin-bottom: $base-pixel-x2;
+	width:88px;
+    padding-left: 8px;
+}
+
+.details-popup {
+    position:absolute;
+    z-index:100;
+    background:#fff;
+    @include shadow(2);
+    transform: scale(1);
+    transform-origin: top left;
+    transition: all 0.2s;
+    @include smi-ease(1);
+    padding: $base-pixel;
+    
+    &.ng-hide {
+        transform: scale(0);
+        @include shadow(1);
+        
+        p {
+            opacity: 0;
+            
+        }
+    }
+    
+    &.ng-hide-add {
+        animation: scale2zero 0.2s ease-in-out 1;
+    }
+    
+    p {
+        margin-bottom: 0;
+        opacity: 1;
+        transition: all 0.2s 0.1s;
+        @include smi-ease(1);
+        
+        label {
+            font-size: 0.85em;
+            padding-right: $base-pixel-half;
+            color: $snl-grey;
+        }
+    }
+}
+
+.cell-with-link {
+    padding: 0!important;
+    
+    a {
+        padding: $base-pixel-x1-5 $base-pixel-x2;
+        display: block;
+    }
+}
+
+.fadeIt {
+    -webkit-transition: max-height 1.5s, opacity .5s;
+    -moz-transition: max-height 1.5s, opacity .5s;
+    -ms-transition: max-height 1.5s, opacity .5s;
+    -o-transition: max-height 1.5s, opacity .5s;
+    transition: max-height 1.5s, opacity .5s;
+    display:block !important;
+    overflow: hidden;
+    max-height: 3000px;
+    opacity: 1;
+    position: relative;
+}
+
+.fadeIt.ng-hide {
+    -webkit-transition: max-height .5s, opacity .75s;
+    -moz-transition: max-height .5s, opacity .75s;
+    -ms-transition: max-height .5s, opacity .75s;
+    -o-transition: max-height .5s, opacity .75s;
+    transition: max-height .5s, opacity .75s;
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+}
+
+.fadeIt.ng-hide-add {
+    animation: 0.3s go2zero ease;
+}
+
+
+
+.input-group-addon {
+    color: $snl-blue-grey-700;
+}
+
+#backToTop {
+	font-size:12px;
+    position: fixed;
+	bottom:0;
+    right: $base-pixel-x3;
+    background: rgba($snl-medium-blue, 0.85);
+	padding:14px 8.5px $base-pixel-half;
+    z-index: 9999999;
+    color:white;
+    text-decoration: none;
+    cursor:pointer;
+    
+    &:after {
+        content: '\25b2';
+        padding-left: .36em;
+        font-size: 8px;
+        position: absolute;
+        top: $base-pixel-half;
+        left: 33%;
+    }
+    
+    &:hover {
+		transition: all 0.2s ease 0s;
+		background: rgba($snl-medium-blue, 1.0);  
+    }
+}
+
+.skip-to-content {
+    position: absolute;
+    top: -($base-pixel * 13);
+    width: 100%;
+    height: ($base-pixel * 12);
+    padding-top: ($base-pixel * 4);
+    text-align: center;
+    z-index:1000000;
+    background: $snl-dark-blue-800;
+    transition: top 0.4s ease-in;
+    color: white!important;
+    
+    &:focus, &:active {
+        top: 0px; 
+        color: white!important;
+    }
+}
+
+.dont-break-out {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+
+/*global app classes - start*/
+#content{margin-top:10px;}
+
+ul{list-style-type: none;}
+h4{
+    margin-top:10px;margin-bottom:0;
+    span{margin-right:30px;}
+    .bldg{}
+    .room{}
+    .room-type{display:none;}
+}
+
+#content{
+    .classified h2{color:red;}
+    .spn h2{color:blue;}
+}
+
+table {
+    margin-bottom: 20px;
+    .odd {
+        background-color: #eee;
+    }
+    .even {
+        background-color: #ccc;
+    }
+    label {
+        color: #000 !important;
+    }
+}
+/*global app classes - end*/
+

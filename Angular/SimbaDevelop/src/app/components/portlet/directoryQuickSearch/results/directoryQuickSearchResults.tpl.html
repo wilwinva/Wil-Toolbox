@@ -1,0 +1,21 @@
+<div class="directory-listing" id="{{ctrl.resultsDivId}}" style="">
+    <div class="table-responsive">
+        <ng-include src="'app/components/portlet/directoryQuickSearch/results/organization.tpl.html'" ng-if="ctrl.isOrg"></ng-include>
+        <ng-include src="'app/components/portlet/directoryQuickSearch/results/person.tpl.html'" ng-if="numPersonnel > 0"></ng-include>
+
+        <ng-include src="'app/components/portlet/directoryQuickSearch/results/subordinateOrgs.tpl.html'" ng-if="ctrl.isOrg && rosterInfo.childOrg.length > 0"></ng-include>
+    </div>
+    <div class="directory-pagination" ng-if="numPersonnel > 0" ng-show="ctrl.showPagination == true">
+        <snl-paginator pagination-id="dqsResults" page-size="ctrl.pageSize"
+                       page-options="ctrl.pageOptions" num-records="ctrl.numRecords" min-data-length="5"
+                       scroll-to="#{{ctrl.resultsDivId}}"
+                       snl-click-tracking="DirectoryQuickSearchPagination">
+        </snl-paginator>
+    </div>
+    <div class="panel-footer" ng-show="hasResult > 0 && numPersonnel > 0">
+        <div class="SNLDirectoryShowAll">
+            <a title="See results in Saple" ng-href="{{ctrl.sapleMultipleRecordsUrl + searchTerm}}">{{ctrl.showPagination ? 'View all
+                results in SAPLE' : 'View results in SAPLE'}}</a>
+        </div>
+    </div>
+</div>

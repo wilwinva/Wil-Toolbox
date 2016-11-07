@@ -1,0 +1,24 @@
+<div class="panel portlet panel-default {{portletClass}}" ng-init="open = (expanded == 1 || expanded=='')" ng-class="{'expanded': open}" ng-aria-expanded="{{open}}">
+    <div class="panel-heading">
+        <h2 ng-bind="portletName" ng-click="open = !open; updateExpand(id, open);" tabindex="0"></h2>
+        <div class="portlet-controls">
+            <span class="portlet-edit" ng-if="edit==true"><img alt="edit portlet icon"/></span>
+            <span class="portlet-remove" ng-if="remove==true"><img alt="remove portlet icon"/></span>
+            <svg class="snl-icon snl-icon-chevron-down" ng-attr-title="{{open?'Hide Portlet':'Show Portlet'}}" ng-click="open = !open; updateExpand(id, open);" ng-class="{'expanded': open}" tabindex="0">
+                <use xlink:href="#snl-icon-chevron"></use>
+            </svg>
+        </div>
+    </div>
+    <div ng-show="open" class='fadeIt'>
+        <!-- *** Loader spinner for each portlet: commented out because CPU usage for the infinite SVG animation. We need to find a better solution for showing, and hiding the spinner when content is loaded on a portlet by portlet basis...
+
+        <div ng-show="apiCtrl.fetching" class="loader-container" tabindex="-1">
+            <div class="loaderbg"></div>
+            <div class="loader"></div>
+        </div> -->
+        <div ng-if="open" tabindex="{{open?0:-1}}">
+            <ng-transclude></ng-transclude>
+        </div>
+        <div class="max-height-reached"><p><a href="#" onclick="return maxHeightReached(this);">Show more content</a></p></div>
+    </div>
+</div>

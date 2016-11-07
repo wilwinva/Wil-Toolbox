@@ -1,0 +1,49 @@
+<div class="container-fluid teaser-index-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="teaser-index clearfix">
+                <!-- Teasers and Index Links -->
+                <snl-teasers></snl-teasers>
+                <ng-include src="'app/components/topRegion/alphabetIndex.tpl.html'"></ng-include>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid alerts">
+    <div class="row" tabindex="-1">
+        <div class="col-md-12">
+            <!-- Alerts -->
+            <snl-alerts></snl-alerts>
+        </div>
+    </div>
+</div>
+
+<script>
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+
+    (function (d, t) { //https://rails-rn-prod.sandia.gov/sos/page_load.debug.js?track_external_links&debug_level=5
+                var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                g.id = 'perf_mon_js';
+                var userName = getCookie('userid');
+
+                g.src = 'https://rails-rn-prod.sandia.gov/sos/noauth/page_load.js?username=' + userName + '&track_external_links';
+                s.parentNode.insertBefore(g, s);
+
+            }
+            (document, 'script')
+    );
+</script>

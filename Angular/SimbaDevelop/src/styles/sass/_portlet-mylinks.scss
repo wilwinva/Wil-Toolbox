@@ -1,0 +1,472 @@
+.myLinksHeading {
+        margin-left:16px;
+        margin-bottom: 0px;
+    }
+
+
+.ui-state-highlight {
+    height:1em;
+    line-height: 1.2em;
+    margin-bottom: 1.2em;
+    background: #a9a9a9 !important
+}
+
+/* Fixes delay when hiding the link when edit button clicked. */
+.ng-hide {
+    transition: none !important;
+}
+
+.linkPlaceholder {
+    padding: 0 !important;
+    background-color: $snl-grey-50 !important;
+    border:1px dashed $snl-blue-grey-400 !important;
+    box-sizing: border-box !important;
+    border-radius: 3px;
+    margin:-$base-pixel-half 0 2px !important;
+}
+
+.ungrouped-links .linkPlaceholder {
+	background:$snl-grey-100 !important;
+}
+
+
+ .groupsSortable.list-group {
+
+    position: relative;
+
+      .groupPlaceholder {
+        background-color: $snl-grey-100 !important;
+        border:1px dashed $snl-blue-grey-400 !important;
+        position: relative;
+        margin-bottom: 0 !important;
+      }
+}
+
+.group-header-table {
+    display: table;
+    transition: all 0.3s ease-in;
+    max-height: 24px;
+}
+
+.group-header-left {
+    display:table-cell;
+    width: ($base-pixel-x6 + 2);
+}
+.group-header-right {
+    display:table-cell;
+}
+
+
+
+.addNewLinkNested {
+    display: inline-block;
+    color: #06C;
+    cursor: pointer;
+    margin-top: $base-pixel-x1-5;
+    text-decoration: underline;
+}
+
+
+ul.linksSortable {
+    min-height: 2px;
+}
+
+/* ---------- Label Switch ---------- */
+.toggle {
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  width: 26px;
+    margin-bottom: 0px;
+    margin-top:2px;
+}
+.toggle input[type="checkbox"] {
+  display: none;
+}
+.toggle input[type="checkbox"] ~ .checkbox {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #e8e8e8;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 26px;
+  z-index: 0;
+}
+.toggle input[type="checkbox"] ~ .checkbox:before {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  bottom: 0;
+  left: 1px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: white;
+  border-radius: 16px;
+  content: "";
+  height: 14px;
+  width: 24px;
+  z-index: 1;
+}
+.toggle input[type="checkbox"] ~ .checkbox:after {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  bottom: 0;
+  left: 1px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 14px;
+  width: 14px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  content: "";
+  z-index: 2;
+}
+.toggle input[type="checkbox"]:checked ~ .checkbox {
+  background: #477DCA;
+}
+.toggle input[type="checkbox"]:checked ~ .checkbox:before {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.toggle input[type="checkbox"]:checked ~ .checkbox:after {
+  left: 11px;
+}
+
+.toggle-label {
+    margin-top:4px;
+}
+
+
+
+
+#links {
+
+    &.compact-space {
+
+        .list-group-item {
+            padding-top: $base-pixel;
+            padding-bottom: $base-pixel;
+        }
+        .mylinks-list {
+            > li {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .panel-body {
+        background-color: #f6f6f6;
+        padding: $base-pixel-x2;
+        margin-bottom: 0px;
+        border-bottom: 0px;
+
+
+        .btn {
+            border: 1px solid $snl-blue-grey-600;
+            color: $snl-blue-grey-600;
+            background: transparent;
+
+            &:hover {
+                background: $snl-blue-grey-600;
+                color: white;
+            }
+        }
+
+        > div {
+            margin-top: $base-pixel;
+        }
+
+        .group-name-edit, .link-name-edit {
+            margin-left: 0;
+        }
+
+		.group-name-edit  {
+			margin-top: $base-pixel-x1-5;
+			background-color: #f6f6f6;
+		}
+
+    }
+
+    .snl-icon + .snl-icon {
+        margin-left:-($base-pixel-half);
+    }
+
+
+
+
+
+    .snl-icon-edit {
+        padding: $base-pixel-half;
+        margin-left: $base-pixel;
+
+        .pencil-shape {
+            @include snl-icon-state(hidden)
+        }
+
+        &.show-pencil {
+            .pencil-shape {
+                @include snl-icon-state(show)
+            }
+            &:hover {
+                .pencil-shape {
+                    @include snl-icon-state(hover)
+                }
+            }
+        }
+    }
+
+    .snl-icon-draggable-lg, .snl-icon-draggable-sm {
+        cursor: grab;
+
+
+        circle{
+            @include snl-icon-state(hidden)
+        }
+
+        &.show-drag {
+            circle{
+            @include snl-icon-state(show)
+            }
+
+            &:hover {
+            circle {
+                @include snl-icon-state(hover)
+            }
+
+        }
+        }
+
+    }
+
+    .snl-icon-check, .snl-icon-close {
+        padding: $base-pixel-half;
+
+        &:hover {
+            use {
+                @include snl-icon-state(hover)
+            }
+        }
+    }
+
+
+    .list-group-item {
+       // padding: $base-pixel-x1-5 $base-pixel-x2 $base-pixel-x1-5 $base-pixel;
+        background-color: $white;
+        @include shadow(0);
+        transition-property: box-shadow, transform;
+        transition-duration: 0.3s;
+        @include smi-ease(1);
+
+        &:first-child {
+          border-top-width: 1px;
+        }
+
+        &.ui-sortable-helper {
+          background: $white !important;
+            @include shadow(1);
+            transform: translate(-1px, -1px);
+            transition-property: box-shadow, transform;
+            transition-duration: 0.3s;
+            @include smi-ease(1);
+            border:none;
+            cursor: grabbing!important;
+            opacity: .9;
+
+            svg, span, a {
+              cursor: grabbing!important;
+            }
+        }
+
+        .group-name {
+            line-height: $base-pixel-x3;
+            margin: 0;
+            max-width: 100%;
+            display: block;
+            max-height: 400px;
+            transition: all 0.3s ease-in;
+
+            .group-name-text {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+
+    .ungrouped-links {
+        padding-left: 0;
+        margin-left: -($base-pixel);
+        margin-top: 0;
+		margin-bottom:0;
+
+        .list-group-item {
+            background: none;
+            box-shadow: none;
+            padding: 0;
+            border: none;
+
+            .mylinks-list {
+                padding-left: 0;
+                margin-top: $base-pixel-x2;
+                margin-bottom:0;
+
+                li {
+                    background: transparent;
+                    transition: margin 0.2s ease-in;
+                    margin-bottom:$base-pixel;
+
+                    /* &:first-of-type {
+                        margin-top: $base-pixel-x2;
+                    } */
+                }
+            }
+        }
+    }
+
+    .mylinks-list {
+        padding-left: $base-pixel-x3;
+		overflow:visible;
+
+        li {
+            margin-bottom: $base-pixel;
+            background: white;
+            @include shadow(0);
+            transition-property: box-shadow, transform;
+            transition-duration: 0.3s;
+            @include smi-ease(1);
+
+            &.ui-sortable-helper {
+                @include shadow(1);
+                transform: translate(-1px, -1px);
+                transition-property: box-shadow, transform;
+                transition-duration: 0.3s;
+                @include smi-ease(1);
+                cursor: grabbing!important;
+				        background:$white !important;
+                border-radius: 3px;
+                opacity: .9;
+                // min-height:40px;
+                /*padding:8px 0 0 !important;*/
+
+                svg, span, a {
+                    cursor: grabbing!important;
+                }
+            }
+
+            > a {
+                display: inline-block;
+                max-width: 75%;
+            }
+        }
+    }
+
+    .form-control {
+        height: auto;
+    }
+
+    .group-name-edit {
+        margin-left: $base-pixel-x5 + 1;
+		background: #fff;
+		display:block;
+		opacity: 0.99;
+
+        &.ng-hide-add, &.ng-hide-remove {
+            transition: all ease-in-out 0.3s;
+        }
+
+        &.ng-hide {
+            opacity: 0;
+        }
+
+        .form-control {
+            padding: $base-pixel-half $base-pixel;
+            margin: -($base-pixel-half) 0!important;
+            line-height: (($base-pixel-x3)-2);
+            width: 60%;
+            display:inline-block;
+         }
+
+        .edit-actions {
+            margin-top: 0;
+        }
+    }
+
+    .link-name-edit {
+        margin-left: $base-pixel-x2 + 2;
+
+        &.group-link-add {
+            margin-top: $base-pixel;
+        }
+
+        .input-group {
+
+            .form-control {
+                padding: $base-pixel-half $base-pixel;
+                line-height: (($base-pixel-x3)-2);
+            }
+
+            .input-group-addon {
+                @extend .form-control;
+                background: #eeeeee;
+                font-size: $base-pixel * 1.75;
+            }
+
+            &:nth-of-type(1) {
+                z-index: 2;
+                border-bottom-width: 1px;
+
+
+                .input-group-addon, .form-control {
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+            }
+            &:nth-of-type(2) {
+                z-index: 1;
+
+                .input-group-addon, .form-control {
+                    border-top: 0px;
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                }
+            }
+        }
+        .checkbox {
+            padding:0;
+            margin-top: $base-pixel-half;
+            font-size: 0.85em;
+
+            input {
+                margin-top: $base-pixel-half;
+            }
+        }
+
+        .edit-actions {
+            margin-top: $base-pixel-half;
+        }
+    }
+
+    .edit-actions {
+        float: right;
+        cursor: pointer;
+		font-size: 0.85em !important;
+        font-weight:600;
+            a {
+               padding: 0 0 0 $base-pixel;
+            }
+    }
+
+
+
+}

@@ -1,0 +1,176 @@
+<snl-site-header user-first-name="{{userCtrl.userFirstName}}"
+                 user-last-name="{{userCtrl.userLastName}}"></snl-site-header>
+
+<div class="container-fluid main-content">
+    <div class="content row">
+
+        <h1 class="">Sign up for emergency notifications in 3 easy steps:</h1>
+
+        <strong>
+            <ol>
+                <li>Pick your notification(s)</li>
+                <li>Enter your personal email &amp; mobile number</li>
+                <li>Respond to our confirmation email &amp; text</li>
+            </ol>
+        </strong>
+
+
+        <form id="subscribe" class="form-horizontal" action="/alerts/subscribe"
+              method="post">
+            <fieldset>
+                <!-- Form Name -->
+
+                <legend><strong>Step 1:</strong> Check the item(s) you want to know about right away.</legend>
+
+                <!-- Multiple Checkboxes -->
+                <div class="form-group subscribe-checkboxes">
+                    <label class="col-md-4 control-label" for="gate">Subscriptions</label>
+
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label for="gateclosure">
+                                <input type="checkbox" name="gateclosure" ng-model="formData.gate">
+                                Gate Closure
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="lockdown">
+                                <input type="checkbox" name="lockdown" ng-model="formData.lockdown">
+                                Lock Down
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="delays">
+                                <input type="checkbox" name="delays" ng-model="formData.delay">
+                                Delays
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="activeshooter">
+                                <input type="checkbox" name="activeshooter" ng-model="formData.activeshooter">
+                                Active Shooter
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="shelter">
+                                <input type="checkbox" name="shelter" ng-model="formData.shelter">
+                                Shelter in Place
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="itnotification">
+                                <input type="checkbox" name="itnotification" ng-model="formData.itnotification">
+                                IT Notification
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <legend><strong>Step 2:</strong> How do you want to be notified — email, text, or both?</legend>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Personal Email Address</label>
+                        <div class="col-md-4">
+                            <input id="textinput" name="email" type="text" placeholder="email"
+                                   class="form-control input-md" ng-model="formData.email">
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Personal cellphone #</label>
+                        <div class="col-md-4">
+                            <input id="textinput" name="cell" type="tel" placeholder="phone number"
+                                   class="form-control input-md" ng-model="formData.cell">
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="carrier">Carier Settings</label>
+                        <div class="col-md-4">
+                            <select id="carrier" name="carrier" class="form-control" ng-model="formData.carrier">
+                                <!-- <option value="@txt.att.net">ATT</option>
+                                <option value="@vtext.com">Verizon</option>
+                                <option value="@messaging.sprintpcs.com">Sprint</option>
+                                <option value="@vmobl.com">Virgin Mobile</option>
+                                <option value="@email.uscc.net">US Cellular</option>
+                                <option value="@messaging.nextel.com">Nextel</option>
+                                <option value="@myboostmobile.com">Boost Mobile</option>
+                                <option value="@message.alltel.com">Alltel</option> -->
+                                <option value="alltel">Alltel</option>
+                                <option value="alltel">ACS Wireless
+                                <option value="alltel">Alltel
+                                <option value="alltel">RINA/All West Wireless
+                                <option value="alltel">EKN/Appalachian Wireless
+                                <option value="alltel">Arch Wireless
+                                <option value="alltel">AT&T Wireless
+                                <option value="alltel">Bluegrass Cellular
+                                <option value="alltel">Boost USA
+                                <option value="alltel">Cellcom
+                                <option value="cellSouth">Cellular South</option>
+                                <option value="centennial">Centennial</option>
+                                <option value="centralWireless">Central Wireless</option>
+                                <option value="amerilink">Amerilink</option>
+                                <option value="cincinnatiBell">Cincinnati Bell</option>
+                                <option value="att">AT&T (Formerly Cingular Wireless)</option>
+                                <option value="cox">Cox Communications</option>
+                                <option value="cricket">Cricket Communications</option>
+                                <option value="rinaCTA">RINA/CTC Telecom-Cambridge</option>
+                                <option value="dobson">Dobson</option>
+                                <option value="rinaSnake">RINA/Snake River PCS</option>
+                                <option value="ecit">ECIT - Cell One of East Central IL</option>
+                                <option value="edge">Edge Wireless</option>
+                                <option value="element">Element Mobile</option>
+                                <option value="rinaFmtc">RINA/FMTC-Farmers Mutual Telephone Co.</option>
+                                <option value="gci">GCI Communications</option>
+                                <option value="rinaSilverstar">RINA/Silverstar</option>
+                                <option value="immix">Immix Wireless/PC Management</option>
+                                <option value="inland">Inland Cellular</option>
+                                <option value="iowa">Iowa Wireless</option>
+                                <option value="ivc">Illinois Valley Cellular</option>
+                                <option value="metrocall">Metrocall Wireless</option>
+                                <option value="metroPCS">Metro PCS</option>
+                                <option value="midwest">Midwest Wireless</option>
+                                <option value="nexTech">Nex-Tech Wireless</option>
+                                <option value="northCoast">North Coast PCS</option>
+                                <option value="nTelos">nTelos</option>
+                                <option value="rinaNucla">RINA/Nucla-Naturita Telephone Co.</option>
+                                <option value="pacific">Pacific Bell    </option>
+                                <option value="plateau">Plateau Telecom</option>
+                                <option value="pocket">Pocket Wireless</option>
+                                <option value="revol">Revol</option>
+                                <option value="rcc">RCC/Unicel</option>
+                                <option value="rinaSouth">RINA/South Central</option>
+                                <option value="south">South Canaan Cell</option>
+                                <option value="sBell">Southern Bell</option>
+                                <option value="sprint">Sprint PCS</option>
+                                <option value="suncom">Suncom</option>
+                                <option value="rinaSyringa">RINA/Syringa Wireless</option>
+                                <option value="Thumb">Thumb Cellular</option>
+                                <option value="tmobile">T-Mobile USA</option>
+                                <option value="triton">Triton PCS</option>
+                                <option value="rinaUbet">RINA/UBET</option>
+                                <option value="united">United Wireless</option>
+                                <option value="us">US Cellular</option>
+                                <option value="verizon">Verizon Wireless</option>
+                                <option value="viaero">Viaero Wireless</option>
+                                <option value="virgin">Virgin USA</option>
+                                <option value="westCentral">West Central Wireless</option>
+                                <option value="westWireless">Western Wireless</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <br><br>
+                    <div class="col-md-offset-4 col-xs-12">
+                        <!-- <input type="submit" name="submit" class="btn btn-success col-md-4 col-xs-12 form-group"> -->
+                        <button type="submit" class="btn btn-primary col-md-4 col-xs-12">Submit!</button>
+                    </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+
+</div>

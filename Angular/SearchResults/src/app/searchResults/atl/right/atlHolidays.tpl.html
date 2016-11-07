@@ -1,0 +1,12 @@
+<div class="panel atl">
+    <div class="panel-heading">
+      <a class="searchLink" ng-class="{noPayload: !atl.payload}" ng-href="{{atl.link | decode | replaceSpaces}}"
+         ng-bind-html="atl.title | decode | replaceSpaces"></a>
+    </div>
+  <ul class="list-group" ng-if="atl.payload">
+    <li class="list-group-item" data-ng-repeat="payload in atl.payload">
+      <span ng-bind-html="payload.label"></span>
+      <span class="pull-right date" ng-bind-html="payload.date"></span>
+    </li>
+  </ul>
+</div>

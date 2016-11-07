@@ -1,0 +1,94 @@
+<div ng-show="apiCtrl.fetching" class="loader-container"> <!-- ng-show="apiCtrl.fetching" -->
+    <div class="loaderbg"></div>
+    <div class="loader"></div>
+</div>
+<div ng-hide="apiCtrl.error" class="panel-body" ng-class="{'no-data':apiCtrl.numRecords == 0}">
+  <div class="panel-footer">Training Past Due or Due within 45 Days for Org <span ng-bind="apiCtrl.orgnum"></span></div>
+  <div class="table-controls">
+      <form class="form-inline pull-left" ng-submit="apiCtrl.fetchApiResults(apiCtrl.orgnum)">
+        <div class="form-group">
+            <div class="input-group" >
+                <input type="text" title="Enter org number to search here" ng-model="apiCtrl.orgnum" class="form-control"  placeholder="Org ID" snl-click-tracking="TrainingByOrgSearchBox"/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" snl-click-tracking="TrainingByOrgSearchBoxSubmit">Go</button>
+                </span>
+            </div>
+        </div>
+    </form>
+    <form class="form-inline">
+      <div class="form-group pull-right">
+        <input type="text" ng-model="filterBy" class="form-control" placeholder="Filter Results By:" snl-click-tracking="TrainingByOrgFilterBox">
+      </div>
+    </form>
+    <div class="clearfix"></div>
+  </div>
+  <div id="TrainingByOrgResults" class="table-responsive">
+    <table class="table table-striped table-hover table-blue clearfix">
+      <thead>
+      <tr>
+        <th ng-click="apiCtrl.sort('student')" snl-click-tracking="TrainingByOrgSortStudent">
+          Student
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='student'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('org')" snl-click-tracking="TrainingByOrgSortOrg">
+          Org
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='org'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('title')" snl-click-tracking="TrainingByOrgSortCourseTitle">
+          Course Title
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='title'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('due')" ng-init="apiCtrl.sort('due')" snl-click-tracking="TrainingByOrgSortDue">
+          Due Date
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='due'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('reason_taken')" snl-click-tracking="TrainingByOrgSortReason">
+          Reason Taken
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='reason_taken'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('status')" snl-click-tracking="TrainingByOrgSortStatus">
+          Status
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='status'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+      </tr>
+      </thead>
+      <tbody snl-click-tracking="TrainingByOrgPagination">
+      <tr dir-paginate="training in apiCtrl.data|orderBy:apiCtrl.sortKey:apiCtrl.reverse|filter:filterBy|itemsPerPage:apiCtrl.pageSize"
+          pagination-id="trainingByOrg" snl-on-finish-render="apiCtrl.renderPagination()" >
+        <td ng-bind="training.student"></td>
+        <td><a ng-href="{{apiCtrl.orgUrl}}{{apiCtrl.orgnum}}" ng-bind="apiCtrl.orgnum"></a></td>
+        <td>
+          <a ng-href="{{apiCtrl.tedsUrl}}TEDSEveryOne.jsp?mode=1&action=courseSearch&takeSingle=true&SrchStatus=A&localCd={{training.course}}"
+             ng-bind="training.title"></a></td>
+        <td ng-class="(training.due_in_2_weeks === true)?'text-danger':(training.due_in_1_month === true)?'text-warning':''">
+          <span ng-attr-title={{title}}
+                ng-init="title = (training.due_in_2_weeks === true)?'Class due in 2 weeks.':(training.due_in_1_month === true)?'Class due in 1 month.':''" ng-bind="training.due | reformatDate | date:'MM/dd/yyyy'"></span>
+        </td>
+        <td ng-bind="training.reason_taken"></td>
+        <td ng-bind="training.status"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <snl-paginator pagination-id="trainingByOrg" page-size="apiCtrl.pageSize"
+                 page-options="apiCtrl.pageOptions" num-records="apiCtrl.numRecords" scroll-to="#TrainingByOrgResults"
+                 min-data-length="5" snl-click-tracking="TrainingByOrgPagination"></snl-paginator>
+</div>

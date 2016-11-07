@@ -1,0 +1,131 @@
+<div id="manageTerm" class="row">
+    <h1><span ng-bind="ctrl.isUpdate ? 'Update':'Create'"></span> a<span
+            ng-bind="ctrl.isAcronym ? 'n Acronym':' Definition'"></span></h1>
+    <div class="content">
+        <div class="row required">
+            <span class="col-sm-12">
+                <span class="glyphicon glyphicon-asterisk">Required</span>
+            </span>
+        </div>
+        <div class="row" ng-if="ctrl.isUpdate">
+            <label class="col-sm-2">ID</label>
+            <span class="glyphicon glyphicon-asterisk clean"></span>
+            <span ng-model="ctrl.data.id" ng-bind="ctrl.data.id"></span>
+            <md-button ng-click="ctrl.popupHistoryDialog($event, ctrl.result)"
+                       class="btn btn-link pull-right history-btn">Show History
+            </md-button>
+        </div>
+        <div class="row" ng-if="ctrl.isAcronym">
+            <label class="col-sm-2">Acronym
+                <span class="glyphicon glyphicon-asterisk required"></span>
+            </label>
+            <input id="acronym" size="10" maxsize="75" name="acronym" ng-model="ctrl.data.acronym" type="text"/>
+        </div>
+        <div class="row">
+            <label class="col-sm-2">
+                {{ctrl.termTitle}}
+                <span ng-if="ctrl.isAcronym" class="glyphicon glyphicon-question-sign helpIcon"
+                      title="The term or phrase of the acronym expanded. Example: OUO would be Official Use Only"
+                      ng-click="ctrl.popupHelpDialog($event)"></span>
+                <span class="glyphicon glyphicon-asterisk required"></span>
+            </label>
+            <input id="term" size="50" maxsize="75" name="term" ng-model="ctrl.data.term" type="text"/>
+        </div>
+        <div class="row" id="SupersededTermTop">
+            <label class="col-sm-2">
+                Status
+                <span class="glyphicon glyphicon-question-sign helpIcon"
+                      title="Term Status shows or hides a term from the CADM search for the general members of the workforce."
+                      ng-click="ctrl.popupHelpDialog($event)"></span>
+            </label>
+            <select id="TermDeleteFlag" ng-model="ctrl.data.deleteFlag"
+                    ng-options="item as item.option for item in ctrl.statusOptions">
+            </select>
+            <span ng-if="ctrl.data.deleteFlag.value=='Y'" style="margin-left:10px"> <!--TODO: remove inline style -->
+                <label>Superseded By Term:</label>
+                <button ng-click="replaceTerm = true">
+                    Lookup Term
+                </button>
+                <input type="text" ng-value="ctrl.data.supersededByTerm.term" readonly/>
+                <div class="col-sm-offset-2 col-sm-10" ng-show="replaceTerm">
+                    <term-picker selected="ctrl.data.supersededByTerm" multi-select=false
+                                 parent-id=replaceTerm></term-picker>
+                </div>
+            </span>
+        </div>
+        <div class="row">
+            <label class="col-sm-2">
+                Definition
+                <span ng-if="ctrl.isAcronym" class="glyphicon glyphicon-question-sign helpIcon"
+                      title="The definition or an expanded explanation of an acronym."
+                      ng-click="ctrl.popupHelpDialog($event)"></span>
+                <span ng-if="!ctrl.isAcronym" class="glyphicon glyphicon-question-sign helpIcon"
+                      title="This is the 'dictionary' definition of the term."
+                      ng-click="ctrl.popupHelpDialog($event)"></span>
+                <span class="glyphicon glyphicon-asterisk required" ng-if="!ctrl.isAcronym"></span>
+            </label>
+            <div class="col-sm-10" style="display:inline-block;padding-left:0;"> <!--TODO: remove inline styles -->
+                <textarea froala="ctrl.froalaOptions" ng-model="ctrl.data.definition"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-sm-2">Categories
+                <span class="glyphicon glyphicon-asterisk required"></span>
+            </label>
+            <select class="" id="category-select" name="categorySelect"
+                    title="Select Categories associated to the term." ng-model="selectedCategory"
+                    ng-options="option.name for option in ctrl.categoryOptions"
+                    ng-change="ctrl.addCategory(selectedCategory)">
+                <option value="" selected disabled>Category</option>
+            </select>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <span ng-repeat="category in ctrl.data.categories">
+                        <a ng-click="ctrl.removeCategory($index)" class="deleteIcon">
+                            <span class="glyphicon glyphicon-remove-circle"></span>
+                            <span ng-bind="category.name"></span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="RelatedTermTop">
+            <label class="col-sm-2">
+                Related Terms
+                <span class="glyphicon glyphicon-question-sign helpIcon"
+                      title="Existing terms in the CADM database that are associated with this term"
+                      ng-click="ctrl.popupHelpDialog($event)"></span>
+            </label>
+            <button ng-click="findTerms = true">
+                Lookup Term(s)
+            </button>
+            <span ng-repeat="relatedTerm in ctrl.data.relatedTerms">
+                        <a ng-click="ctrl.removeTerm(relatedTerm)" class="deleteIcon"><span
+                                class="glyphicon glyphicon-remove-circle"></span> {{relatedTerm.term}}</a>
+            </span>
+            <div ng-show="findTerms">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <term-picker selected="ctrl.data.relatedTerms" multi-select=true parent-id=findTerms></term-picker>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-sm-2">Reason for <span ng-bind="ctrl.isUpdate ? 'Update':'Creation'"></span>
+                <span class="glyphicon glyphicon-asterisk clean"></span>
+            </label>
+            <textarea id="noteText" name="noteText" cols="50" rows="5" class="col-sm-10"
+                      ng-model="ctrl.data.updateReason"></textarea>
+        </div>
+        <div class="row" id="acronymActions">
+            <hr/>
+            <span class="pull-right">
+                <button ng-click="ctrl.cancel();">
+                    Cancel
+                </button>
+                <button ng-click="ctrl.submitChange()">
+                    Submit
+                </button>
+            </span>
+        </div>
+    </div>
+</div>

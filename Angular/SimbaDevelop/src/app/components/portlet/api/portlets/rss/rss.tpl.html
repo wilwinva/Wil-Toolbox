@@ -1,0 +1,50 @@
+<div ng-show="apiCtrl.fetching" class="loader-container"> <!-- ng-show="apiCtrl.fetching" -->
+  <div class="loaderbg"></div>
+  <div class="loader"></div>
+</div>
+
+<div class="portlet-rss" ng-hide="apiCtrl.error">
+  <ul class="list-group">
+    <li class="list-group-item clearfix" ng-repeat="rssGroup in apiCtrl.data" snl-render-on-finish
+        ng-init="showGroup = preferences.portletExpanded['rss-'+rssGroup.id]; groupIndex = $index">
+      <div ng-click="showGroup = !showGroup; apiCtrl.saveExpanded(rssGroup.id, '', showGroup)">
+        <svg class="snl-icon snl-icon-chevron-right" ng-attr-title="{{showGroup?'Hide Data':'Show Data'}}"
+             ng-class="{'expanded': showGroup}" viewBox="0 0 24 24" snl-click-tracking="RSSGroupExpand">
+          <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+        </svg>
+        <h3 class="group-title ng-binding" ng-bind="rssGroup.group_name"></h3>
+      </div>
+      <ul class="list-group" ng-show="showGroup">
+        <li class="list-group-item clearfix" ng-repeat="feed in rssGroup.feeds"
+            ng-init="showFeed = preferences.portletExpanded['rss-'+rssGroup.id+'-'+$index]; showFeed && apiCtrl.fetchFeedResults(groupIndex, $index, feed.url);">
+            <div ng-click="showFeed = !showFeed; apiCtrl.saveExpanded(rssGroup.id, $index, showFeed); showFeed && apiCtrl.fetchFeedResults(groupIndex, $index, feed.url)">
+            <svg class="snl-icon snl-icon-chevron-right" ng-attr-title="{{showFeed?'Hide Data':'Show Data'}}"
+               ng-class="{'expanded': showFeed}" viewBox="0 0 24 24" snl-click-tracking="RSSFeedExpand">
+               <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+            </svg>
+            <h4 class="group-title ng-binding" ng-bind="feed.title"></h4>
+          <span class="rss-refresh" style="display:inline-block;float:right;font-size:.75em;padding:.334em 0 .334em .667em;" ng-if="(feed.refreshedOn && showFeed)" ng-click="apiCtrl.clearFeedResults(groupIndex, $index, feed.url)">
+              <svg class="snl-icon snl-icon-small"><use xlink:href="#snl-icon-refresh"></use></svg>Last Refresh: {{feed.refreshedOn}}</span>
+            </div>
+          <div ng-show="feed.fetchingFeed" class="loader-container" tabindex="-1">
+            <div class="loaderbg"></div>
+            <div class="loader"></div>
+          </div>
+          <ul class="fadeIt clearfix" ng-show="showFeed">
+            <li class="rss-article" ng-repeat="article in feed.articles" ng-init="showSynopsis=false">
+                <svg class="snl-icon snl-icon-chevron-right" ng-class="{'expanded': showSynopsis}" viewBox="0 0 24 24"
+                    ng-click="showSynopsis = !showSynopsis">
+                    <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+                </svg>
+              <a class="article-title" ng-href="{{article.link}}" target="_blank" title="External Link">{{article.title}}</a>
+              <div class="article-summary" ng-show="showSynopsis"
+                   ng-bind-html ="article.description | limitCharacters:(article.error)"></div>
+              <div class="article-date" ng-bind="article.pubdate" ng-if="(article.pubdate.length > 0)"></div>
+              <span class="article-copyright" ng-bind-html="article.copyright" ng-if="(article.copyright.length > 0)"></span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

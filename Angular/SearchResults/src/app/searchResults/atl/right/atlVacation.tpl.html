@@ -1,0 +1,11 @@
+<div class="panel atl atl-vacation" id="atlVacationBalance" ng-if="atl.source == 'ATL_VB'">
+  <div class="panel-heading"> <a class="searchLink" ng-href="{{atl.link | decode | decode | replaceSpaces}}">Vacation/Flex Balance</a> </div>
+  <ul class="list-group" ng-init="payload = (atl.payload[0] | decode | replaceSpaces | formatVacationBalances)">
+    <li class="list-group-item"> <span>Vacation</span> <span class="pull-right date" ng-bind="payload.vacation"></span> </li>
+    <li class="list-group-item"> <span>Vacation Buy</span> <span class="pull-right date" ng-bind="payload.vacationbuy"></span> </li>
+    <li class="list-group-item"> <span>Flex</span> <span class="pull-right date" ng-bind="payload.flex"></span> </li>
+    <li class="list-group-item"> <span>Holiday</span> <span class="pull-right date" ng-bind="payload.holiday"></span> </li>
+    <li class="list-group-item"> <span>Personal Time Off</span> <span class="pull-right date" ng-bind="payload.pto"></span> </li>
+    <li class="list-group-item"> <span>Convertible</span> <span class="pull-right date" ng-bind="payload.convertible"></span> </li>
+  </ul>
+</div>

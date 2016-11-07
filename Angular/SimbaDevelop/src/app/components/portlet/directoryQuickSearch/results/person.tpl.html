@@ -1,0 +1,42 @@
+<table id="personTable" class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Org</th>
+    </tr>
+    </thead>
+    <tbody dir-paginate="saple in quickSearchResults|itemsPerPage:ctrl.pageSize" pagination-id="dqsResults"
+           current-page="ctrl.currentPage" ng-show="$index<ctrl.pageSize?true:showAll">
+    <tr class="person" ng-class="$odd ? 'even' : 'odd'">
+        <td class="name-col">
+            <a title="Show more information" ng-click="show = !show">
+                <svg class="snl-icon snl-icon-chevron-right" ng-class="{'expanded': show}" viewBox="0 0 24 24">
+                    <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+                </svg>
+                <span class="name">{{saple.name.prettyName.value}}</span>
+            </a>
+        </td>
+        <td class="phone-col" ng-bind="saple.phone.office.value | phone"></td>
+        <td class="email-col"
+            ng-init="userid = (saple.misc.email.value | validateSapleEmail) ? saple.misc.userid.value : 'Email'">
+            <a class="emailAddress" title="Send email" ng-href="mailto:{{saple.misc.email.value}}"
+               ng-bind="userid" ng-if="saple.misc.email.value"></a>
+            <span ng-if="!saple.misc.email.value">&nbsp;</span>
+        </td>
+        <td class="org-col">
+            <a class="org" title="View Organization" ng-click="ctrl.fetchResults(saple.org.number.value)"
+               ng-bind="saple.org.number.value" ng-if="!ctrl.isOrg" snl-scroll-on-click scroll-to="#{{ctrl.resultsDivId}}"></a>
+            <span ng-if="ctrl.isOrg">{{saple.org.number.value}}</span>
+        </td>
+    </tr>
+    <tr class="person-info-animate" ng-class="$odd ? 'even' : 'odd'" ng-if="show">
+        <td colspan="4" class="person-info">
+            <div value="{{saple.misc.snlid.value}}" id="0" class="id_card">
+                <snl-directory-person-content saple="saple" map="false"></snl-directory-person-content>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>

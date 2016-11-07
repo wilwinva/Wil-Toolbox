@@ -1,0 +1,6 @@
+<div class="records-per-page" ng-hide="numRecords < minDataLength"> Show
+  <select class="pageSizer" ng-model="pageSize" snl-scroll-on-change scroll-to="{{scrollTo}}">
+    <option ng-repeat="sizeValue in pageOptions" ng-bind="sizeValue" ng-value="sizeValue" ng-Selected="sizeValue == pageSize?'selected':''">
+  </select>
+  records per page
+</div>

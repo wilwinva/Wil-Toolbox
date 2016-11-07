@@ -1,0 +1,18 @@
+<div class="pagination-wrapper">
+    <div class="results-wrapper">
+      <smi-page-range page-begin="pageBegin" total-results="totalResults" num-results="numResults"></smi-page-range>
+      <div class="results-selector">
+        <!--
+                <select class="results-per-page" ng-model="numResults" ng-change="getNumResults(currentPage)">
+                  <option ng-repeat="item in numSearchResults" ng-selected="item == numResults.toString()" ng-value="item">{{item}}</option>
+                </select>
+                results per page
+        -->
+      </div>
+    </div>
+
+  <uib-pagination boundary-links="false" items-per-page="itemsPerPage" total-items="totalItems" max-size="3" ng-model="currentPage" ng-change="getNumResults(currentPage)"
+                  class="pagination-md" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
+
+</div>
+

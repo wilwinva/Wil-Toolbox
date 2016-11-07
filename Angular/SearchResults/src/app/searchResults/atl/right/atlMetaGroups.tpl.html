@@ -1,0 +1,14 @@
+<div id="atlMetaGroups" class="panel atl atl-metagroups" ng-init="showMetaGroups=false">
+  <div class="panel-heading">
+    <a class="searchLink" ng-href="{{atl.link | decode | replaceSpaces}}" ng-bind-html="atl.title | decode | replaceSpaces" title="MetaGroup Utility"></a>
+  </div>
+  <ul class="list-group" ng-if="atl.source == 'ATL_MG'" ng-init="metaGroupUrl='https://metagroup.sandia.gov/cgi-bin/metagroup.pl?group='">
+    <li class="list-group-item clearfix" data-ng-repeat="item in atl.payload[0].content.data" ng-show="$index<5?true:showMetaGroups">
+      <a class="metagroup-name" href="{{metaGroupUrl + item.group}}" ng-bind-html="item.group"></a>
+      <span class="metagroup-description" ng-bind-html="item.description |decode | replaceSpaces"></span>
+    </li>
+  </ul>
+  <div class="panel-footer" ng-show="atl.payload[0].content.data.length > 5">Showing <span>{{!showMetaGroups?'5':atl.payload[0].content.data.length}}</span> of
+    {{atl.payload[0].content.data.length}}&nbsp;&nbsp;<a class="show-more-less" ng-click="showMetaGroups=showMetaGroups?false:true">{{!showMetaGroups?'Show more':'Show less'}}</a>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+/* Vacation Leave Balance Portlet */
+
+.portlet.panel.portlet-vacation {
+	
+	.panel-body {
+		border-bottom:none;
+	}
+
+	.list-group {
+		margin:0 0 0 -1px;
+		border:none;
+		background:transparent;
+	
+		.list-group-item {
+			border-radius:0; 
+			border-top:none;
+			border-right:none;
+			border-bottom:1px solid rgba(0,0,0, 0.1);
+			border-left:1px solid rgba(0,0,0, 0.1);
+			width:50%;
+			float:left;
+			padding:$base-pixel-x1-5 $base-pixel-x2;
+			background:transparent;
+		
+			&:first-child {
+				/*border-top:none;*/
+			}
+			
+			&:last-child {
+				/*border-bottom:none;*/
+				
+			}
+		}
+  	}
+
+	.panel-footer {
+	
+		.balance-date {
+			margin-bottom:$base-pixel;
+			text-align:center;
+            max-width: none;
+		}
+	
+		.nav.inline-list {
+			display:table;
+			margin:0 auto;
+			float:none;
+			
+			li {
+				display:table-cell;
+				float:none;
+			}
+		}
+	}
+}
+
+
+
+	

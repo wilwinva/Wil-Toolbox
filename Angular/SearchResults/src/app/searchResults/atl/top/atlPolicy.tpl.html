@@ -1,0 +1,45 @@
+<span id="atlPolicy" class="atlStyleOne atlWrapper colxs-12">
+  <div class="panel atl atl-corpForms atl-policy" id="centeredFormsATL">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">
+          <a href="http://info.sandia.gov/cps/index.html">
+            Corporate Policies
+          </a>
+        </th>
+      </tr>
+      </thead>
+      <!-- note the policyCategory filter is needed due to fix that needs to be made in ATL WS code -->
+      <tbody ng-init="showPolicy=false">
+      <tr class="docRow fadeIt" ng-repeat="payload in atl.payload" ng-show="$index<2?true:showPolicy">
+        <td class="docDescription">
+            <span class="docTitle">
+              <a class="searchLink" ng-href="{{payload.link | decode | replaceSpaces}}">
+                {{payload.title | decode | replaceSpaces}}
+              </a>
+            </span>
+          <br>
+            <span class="docNum">
+              {{payload.description | policyCategory}} Number {{(payload.description | decode | replaceSpaces | removeStars)}}
+              <span ng-if="payload.payload[0].link2">(Last Revised: {{payload.payload[0].link2}})</span>
+            </span>
+
+          <br>
+            <span class="docRef" ng-init="hasAnchor = payload.payload[0].categoryAnchor.length > 0?true:false">
+              <a ng-href="{{payload.payload[0].categoryAnchor}}" ng-if="hasAnchor">{{payload.payload[0].PolicyCategory}} Policy Area</a>
+              <span ng-if="!hasAnchor">{{payload.payload[0].payload[0].PolicyCategory}} Policy Area</span>
+            </span></td>
+      </tr>
+      </tbody>
+      <tfoot ng-show="atl.payload.length > 2">
+        <tr>
+          <td>
+            Showing <span>{{!showPolicy?'2':atl.payload.length}}</span> of {{atl.payload.length}}&nbsp;&nbsp;<a class="show-more-less" ng-click="showPolicy=showPolicy?false:true">{{!showPolicy?'Show more':'Show less'}}</a>
+          </td>
+        </tr>
+      </tfoot>
+
+    </table>
+  </div>
+</span>

@@ -1,0 +1,216 @@
+<html style="" xmlns="http://www.w3.org/1999/xhtml"
+      class="js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths global wide normal"
+      lang="en">
+<head>
+  <meta content="initial-scale=1" name="viewport">
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>FAQ - Answer</title>
+  <meta content="" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://info-dev.sandia.gov/cps/_assets/js/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet">
+
+  <script src="https://info-dev.sandia.gov/cps/_assets/js/vendor/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="https://info-dev.sandia.gov/cps/_assets/js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="https://info-dev.sandia.gov/cps/_assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript"></script>
+
+  <script src="https://pl.sandia.gov/common/current/js/sticky-button.js"></script>
+  <link rel="stylesheet" href="https://pl.sandia.gov/common/current/css/snl-pl-main.css">
+  <link rel="stylesheet" href="https://pl.sandia.gov/common/current/css/snl-patternLibrary.css">
+  <script type="text/javascript"
+          data-name="SandiaGlobalHeader"
+          data-id="20160602"
+          data-footer="true"
+          data-search="true"
+          data-cchd="true"
+          src="https://pl.sandia.gov/globalheader/current/js/header.js">
+  </script>
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/faq.css">
+
+  <script src="js/angularjs.min.js"></script>
+  <script src="js/json/answer.json" type="text/javascript"></script>
+<!--  <script src="js/json/badges-index.json" type="text/javascript"></script>-->
+  <script src="js/answer.js" type="text/javascript"></script>
+
+</head>
+<body>
+<header role="banner">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="" class="brand"><h3>Corporate Policy System</h3></a>
+    </div>
+    <ul class="nav navbar-nav navbar-right hidden-xs">
+      <li><a>Contact Us</a></li>
+    </ul>
+  </div>
+</header>
+<!--<div id="answers" class="container-fluid">-->
+<div id="answers" class="container-fluid" ng-app="answers" ng-controller="AnswersController as answers">
+  <div class="row main-navigation">
+    <ul class="nav top-nav">
+      <li><a href="https://infoq.sandia.gov/cps/corporate_governance/index.html">Corporate<br>Governance</a></li>
+      <li><a href="https://infoq.sandia.gov/cps/environmental_safety_health/index.html">Environment,<br>Safety &amp; Health</a></li>
+      <li><a href="https://infoq.sandia.gov/cps/facilities/index.html">Facilities</a></li>
+      <li><a href="https://infoq.sandia.gov/cps/finance/index.html">Finance</a></li>
+      <li><a href="https://infoq.sandia.gov/cps/human_resources/index.html">Human Resources<br>&amp; Communications</a></li>
+      <li><a href="https://infoq.sandia.gov/cps/information_management/index.html">Information Management<br> &amp; Cyber Security</a></li>
+      <li><a href="https://infoq.sandia.gov/cps/integrated_safeguards_security/index.html">Integrated Safeguards<br> &amp; Security</a></li>
+      <li><a href="https://infoq.sandia.gov/cps/supply_chain_management/index.html">Supply Chain<br> Management</a></li>
+    </ul>
+  </div>
+  <div class="container-fluid row">
+    <div class="col-md-12">
+      <div id="searches" class="row">
+        <div class="col-md-6">
+          <form method="get" id="srch" action="/cps/search/">
+            <div class="input-group">
+              <input type="text" placeholder="Search for corporate policy by keyword or number" name="s" id="s" class="ui-autocomplete-input form-control" autocomplete="off" size="100">
+              <span class="input-group-btn">
+                <button class="btn" id="searchButtonCPS" type="submit">
+                  <img alt="Search for corporate policy by keyword or number icon" src="https://pl.sandia.gov/globalheader/current/img/search-icon-white.svg">
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <form method="get" id="acro" action="/cps/search/">
+            <div class="input-group">
+              <input type="text" placeholder="Look up acronym" name="acroText" id="acroText" class="ui-autocomplete-input form-control" autocomplete="off" size="100">
+              <span class="input-group-btn">
+                <button class="btn" id="searchButtonPolicy" type="submit">
+                  <img alt="Look up acronym icon" src="https://pl.sandia.gov/globalheader/current/img/search-icon-white.svg">
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 nav" id="leftNav">
+          <ul>
+            <li ng-repeat="leftMenu in answers.answerObj.leftMenu">
+              <span class="group-title" ng-bind="leftMenu.title" ng-init="groups = leftMenu.groups"></span>
+              <svg class="snl-icon snl-icon-chevron-right pull-right" viewBox="0 0 24 24" ng-class="{'expanded': showChild}" ng-mousedown="showChild = !showChild;showList = !showList">
+                <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+              </svg>
+              <ul ng-if="groups.length > 1">
+                <li ng-show="showList" ng-repeat="group in groups">
+                  <span class="group-title" ng-bind="group.title"></span>
+                  <svg class="snl-icon snl-icon-chevron-right pull-right" viewBox="0 0 24 24" ng-class="{'expanded': showSub}" ng-mousedown="showSub = !showSub;">
+                    <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+                  </svg>
+                  <ul ng-show="showSub" ng-init="questions = group.questions">
+                    <li ng-repeat="question in questions">
+                      <a ng-href="question.link" ng-bind="question.description" ng-class="{ active : question.description == answers.answerObj.title }"></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul ng-show="showChild" ng-if="groups.length == 1" ng-init="questions = leftMenu.groups[0].questions">
+                <li ng-repeat="question in questions">
+                  <a ng-href="question.link" ng-bind="question.description" ng-class="{ active : question.description == answers.answerObj.title }"></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-9 container-fluid main-content">
+          <ol class="breadcrumb">
+            <li><a href="#">Frequently Asked Questions</a></li>
+            <li><a href="#">Time Off</a></li>
+            <li class="active"><span>Can I use Flextime?</span></li>
+          </ol>
+          <h3 ng-bind="answers.answerObj.title"></h3><!--page header - Time Off-->
+          <hr/>
+          <div class="row">
+            <div id="answer" class="col-md-9">
+              <h4>Answer</h4>
+              <p style="font-family:'SourceSansPro-Regular', 'Source Sans Pro';font-weight:400;">Exempt employees typically receive no extra pay for hours worked beyond their defined work schedule. However,
+                <span style="font-family:'SourceSansPro-Bold', 'Source Sans Pro Bold', 'Source Sans Pro';font-weight:700;">with prior management approval</span>
+                , flextime may be accrued when business needs create situations that justifies it use to meet business needs. Flextime is earned for the two hours plus any additional hours beyond the two for time worked. Take flextime off in one-hour increments using TRC 288. Flextime may not be taken before it is accumulated. Flextime is not an "automatic" benefit. A maximum rolling balance of 80 hours will apply to flextime during the fiscal year. Additional flextime will not be accrued until the employee’s balance is below 80 hours. Flextime not used prior to termination of employment is forfeited.
+              </p>
+              <div id="panelVote" class="panel_state_content">
+                <button id="upVote" class="cps-light-grey-button">
+                  <span class="glyphicon glyphicon-thumbs-up"></span>
+                  <span class="count">4</span>
+                </button>
+                <button id="downVote" class="cps-light-grey-button">
+                  <span class="glyphicon glyphicon-thumbs-down"></span>
+                  <span class="count">8</span>
+                </button>
+              </div>
+            </div>
+            <div id="rightSidebar" class="col-md-3">
+              <div>
+                <h4>Subject Matter Experts</h4>
+                <ul>
+                  <li>
+                    <a tabindex="0">Angela D Cotinola</a>
+                  </li>
+                  <li>
+                    <a tabindex="0">Melissa Molina</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4>Related Procedures</h4>
+                <ul>
+                  <li>
+                    <a tabindex="0">HR100.5.10, Compensate Employees for Time Outside Regular Work Schedulea</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4>Related Topics</h4>
+                <ul>
+                  <li>
+                    <a tabindex="0">Compressed Work Week Schedule (9/80)</a>
+                  </li>
+                  <li>
+                    <a tabindex="0">Extended Workweek</a>
+                  </li>
+                  <li>
+                    <a tabindex="0">Lunch - Standard and Alternative Schedules</a>
+                  </li>
+                  <li>
+                    <a tabindex="0">Telecommuting</a>
+                  </li>
+                  <li>
+                    <a tabindex="0">Work Hours, Hours of Work, Work Schedule</a>
+                  </li>
+                  <li>
+                    <a tabindex="0">Work on Holidays</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<!--
+          <div class="container-fluid" ng-init="sections = answers.leftMenu.sections">
+            <div class="row" ng-repeat="section in sections">&lt;!&ndash; repeat section from here &ndash;&gt;
+              <article ng-class="($odd?'table-row':'')">
+                <h4 ng-bind="section.title"></h4>&lt;!&ndash; Vacation &ndash;&gt;
+                <div class="col-md-6" ng-repeat="group in section.groups">&lt;!&ndash;repeat question groups from here &ndash;&gt;
+                  <h4 class="group-heading" ng-bind="group.title" ng-if="group.title.length!=0"></h4>
+                  <ol class="questions">
+                    <li ng-repeat="question in group.questions">
+                      <a ng-href="question.link" ng-bind="question.description"></a>
+                    </li>
+                  </ol>
+                </div>
+              </article>
+            </div>
+          </div>
+-->
+          <a href="">Back to Frequenty Asked Policy Questions page.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

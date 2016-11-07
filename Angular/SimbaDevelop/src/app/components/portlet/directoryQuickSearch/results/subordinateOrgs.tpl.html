@@ -1,0 +1,28 @@
+<div class="sub-orgs">
+    <p class="h4">Subordinate Organizations</p>
+    <table id="subOrdinateOrgTable" class="table">
+        <thead>
+        <tr>
+            <th>Org</th>
+            <th>Description</th>
+            <th>Manager</th>
+        </tr>
+        </thead>
+        <tbody data-ng-repeat="subOrg in rosterInfo.childOrg|orderBy:'orgNumber.value'">
+        <tr class="person" ng-class="$odd ? 'even' : 'odd'">
+            <td class="org-col" ng-init="subOrgNum=subOrg.orgNumber.value">
+                <a class="org" title="View Organization" ng-click="ctrl.fetchResults(subOrgNum)"
+                   snl-scroll-on-click scroll-to="#{{ctrl.resultsDivId}}" ng-bind="subOrgNum"></a>
+            </td>
+            <td class="desc-col" ng-init="subOrgTitle=subOrg.orgTitle.value; subOrgUrl=subOrg.orgUrl.value">
+                <a class="desc" title="View Organization's homepage" href="{{subOrgUrl}}"
+                   ng-bind="subOrgTitle" ng-if="subOrgUrl"></a>
+                <span ng-if="!subOrgUrl">{{subOrgTitle}}</span>
+            </td>
+            <td class="manager-col">
+                <span class="name">{{subOrg.manager.name.prettyName.value}}</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

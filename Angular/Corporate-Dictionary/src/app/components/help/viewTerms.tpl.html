@@ -1,0 +1,75 @@
+<p>
+    The CADM – Corporate Acronym Dictionary Management - application provides a platform
+    to maintain a database of Corporate Dictionary and Acronym terms used throughout the policy areas
+    and all of Sandia Corporation. The CADM database maintains the acronyms and terms referenced by
+    web pages published in ILMS and other corporate web pages.
+
+    CADM was designed to replace a legacy corporate term database (formerly known as
+    Business Rules Dictionary), the SPARQL acronym database, and incorporates other Sandia glossaries (ES&H, Finance,
+    etc.) for maintenance on a common platform.
+</p>
+<h2>Find Term:</h2>
+<p>
+    The Find Term screen allows the user to browse, search, filter, select, and view active
+    or inactive dictionary terms from the database. Each dictionary term is assigned a unique Term ID number.
+    Form fields at the top of the Find Term screen allow the user to filter terms displayed in
+    the grid by: Term ID number, a substring Phrase contained within a term, by Policy
+    Area, by Policy and Sub-Policy Area, by Sub-Glossary or by Term Owner. Terms can
+    also be filtered by "Source." Source refers to the origin of the term either "Business
+    Rules" or "ES&H." All new terms have a source of "CADM". These filter fields are logically "ANDed" together. So, for
+    instance, one might search for
+    terms containing the phrase "accident." Click the "Search" button at the right to apply the filter.
+    Double click on a term highlighted in the grid or highlight a term in the grid and click the
+    "Edit" button to edit the term record. </p>
+
+<h2>Available Actions</h2>
+<ul>
+    <li>Edit/delete a term via the index page by clicking the pencil icon</li>
+    <li>Create an Acronym</li>
+    <li>Create a Definition</li>
+    <li>Manage Categories</li>
+    <li>Preview (Active Terms)</li>
+    <li>Create a Change Report</li>
+    <li>Create a History Report</li>
+    <li>Create a Term By Date Report</li>
+    <li>Create a Review Spreadsheet</li>
+</ul>
+<h2>Citing the Corporate Dictionary from other web pages</h2>
+<p>
+    A set of three (3) javascript functions are available to facilitate embedding the definition
+    of Corporate Dictionary terms in other web documents published throughout Sandia
+    Corporation.
+    getDictionaryTermById(this,id) where "id" is an integer dictionary term id. This
+    allows a webpage author to cite exactly one term. (This is the preferred method.)
+    Usage:
+    <a href="" onclick="return getDictionaryTermById(this,7);" title="Lookup
+definition">Acceptable Offer</a>
+    getDictionaryTermByName(this,’term name’) where the string ‘term name’ is a term
+    stored in the Corporate Dictionary
+    Usage:
+    <a href="" onclick="return getDictionaryTermByName(this,'acceptable offer');"
+       title="Lookup definition">acceptable offer</a>
+    getDictionaryTermByAnchor(this,’term_anchor’) where the string ‘term_anchor’ is
+    the anchor of a term stored in the Corporate Dictionary
+    Usage:
+    <a href="" onclick="return getDictionaryTermByAnchor(this,'acceptable_offer');"
+       title="Lookup definition">acceptable offer</a>
+    CADM- Corporate Acronym Dictionary Management 10/7/2013
+    - 20 -
+    These Corporate Dictionary javascript functions can be made available for use in any
+    web page by including the javascript source from the following location in <head>
+        section of the web page:
+        <script src="https://my.sandia.gov/local/common/js/corp_dictionary.js"
+                type="text/javascript"></script>
+        CADM computes a URL that can be embedded in ILMS documents and displays
+        this URL on the Term Edit screen in a read-only text control.
+        remoteTermDef.cfm – the legacy way for others to cite the Corporate Dictionary
+        https://cfwebprod.sandia.gov/cfdocs/CADM/remoteTermDef.cfm?TermID=1234
+        https://cfwebprod.sandia.gov/cfdocs/CADM/remoteTermDef.cfm?searchTerm=accident
+        https://cfwebprod.sandia.gov/cfdocs/CADM/remoteTermDef.cfm?searchAnchor=absorbed_dose_(D)
+        remoteTermDef looks up terms in the CADM database by:
+        TermID, Term name, or Term Anchor.
+        The typical and historical use of remoteTermDef has been to annotate pages in ILMS.
+        While remoteTermDef.cfm is maintained and supported, the preferred way to cite
+        the Corporate Dictionary is via the Javascript functions described in the previous
+        section!</p>

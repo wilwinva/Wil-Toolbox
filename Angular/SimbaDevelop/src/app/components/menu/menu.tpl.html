@@ -1,0 +1,24 @@
+<div class="col-sm-3 col-md-2 left-links clearfix">
+    <div ng-repeat="nav in ctrlMenu.menuData" ng-init="menuItems = nav.menuElements">
+
+        <!-- mobile dropdown menu -->
+        <select class="select-mobile visible-xs" ng-model="menuSelection"
+                ng-options="menuItem.text for menuItem in menuItems | filter:ctrlMenu.showMenuItem"
+                ng-change="ctrlMenu.loadPage(menuSelection)">
+            <option role="header" ng-bind="nav.menuHeader" value="" disabled></option>
+        </select>
+
+        <!-- regular left nav menu -->
+        <ul class="nav nav-stacked hidden-xs">
+            <li role="header" class="header" ng-bind="nav.menuHeader"></li>
+            <li ng-repeat="menuItem in menuItems" ng-if="!menuItem.mobileOnly && ctrlMenu.showMenuItem(menuItem)">
+                <!-- handle links separate from angular states -->
+                <a ng-if="menuItem.href" ng-attr-title="{{menuItem.title}}" ng-href="{{menuItem.href}}"
+                   ng-bind="menuItem.text"></a>
+                <a ng-if="menuItem.state" ng-attr-title="{{menuItem.title}}"
+                   ui-sref="{{menuItem.state}}({page:'{{menuItem.page}}'})" ui-sref-active="active" ng-bind="menuItem.text"></a>
+            </li>
+        </ul>
+
+    </div>
+</div>

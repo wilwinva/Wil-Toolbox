@@ -1,0 +1,29 @@
+{
+  "name": "vact",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-bootstrap": "~0.14.3",
+    "angular-cookies": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "angular-sanitize": "^1.5.5",
+    "angular-touch": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "es5-shim": "~3.1.0",
+    "jquery": "~1.11.1",
+    "jquery-ui": "~1.11.4",
+    "json3": "~3.3.1",
+    "angular-websocket": "~2.0.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.5",
+    "angular-scenario": "1.5.5"
+  },
+  "appPath": "src",
+  "moduleName": "vactApp",
+  "resolutions": {
+    "angular": "1.5.5"
+  }
+}

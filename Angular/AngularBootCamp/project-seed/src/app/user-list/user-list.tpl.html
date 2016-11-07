@@ -1,0 +1,7 @@
+<h2>User List</h2>
+
+<ul>
+  <li ng-repeat="user in userList.users">
+    <a ui-sref="userProfile({username:user.login})">{{user.login}}</a>
+  </li>
+</ul>

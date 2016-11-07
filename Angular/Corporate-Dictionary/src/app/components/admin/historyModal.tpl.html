@@ -1,0 +1,46 @@
+<md-dialog>
+  <md-dialog-content class="container-fluid" style="width:800px; max-width:800px;max-height:800px;">
+    <div class="col-sm-12">
+      <h2 class="row">History</h2>
+      <hr class="row"/>
+      <div class="row">
+        <label class="col-sm-3">Created By:</label>
+        <span class="glyphicon glyphicon-asterisk clean"></span>
+        <span>{{ctrl.data.createdBy}}</span>
+      </div>
+      <div class="row">
+        <label class="col-sm-3">Created Date:</label>
+        <span class="glyphicon glyphicon-asterisk clean"></span>
+        <span>{{ctrl.data.createdDate}}</span>
+      </div>
+      <div class="row">
+        <label class="col-sm-3">Create Application:</label>
+        <span class="glyphicon glyphicon-asterisk clean"></span>
+        <span>{{ctrl.data.createApp}}</span>
+      </div>
+      <div class="row">
+        <label class="col-sm-3">Updated By:</label>
+        <span class="glyphicon glyphicon-asterisk clean"></span>
+        <span>{{ctrl.data.updatedBy}}</span>
+      </div>
+      <div class="row">
+        <label class="col-sm-3">Updated Date:</label>
+        <span class="glyphicon glyphicon-asterisk clean"></span>
+        <span>{{ctrl.data.updatedDate}}</span>
+      </div>
+      <div class="row">
+        <label class="col-sm-3">Update Application:</label>
+        <span class="glyphicon glyphicon-asterisk clean"></span>
+        <span>{{ctrl.data.updateApp}}</span>
+      </div>
+      <div class="row">
+        <label class="col-sm-3">Source:</label>
+        <span class="glyphicon glyphicon-asterisk clean"></span>
+        <span>{{ctrl.data.source}}</span>
+      </div>
+    </div>
+  </md-dialog-content>
+  <md-dialog-actions layout="row">
+    <md-button class="btn btn-default md-raised md-primary" ng-click="cancel();help = false;">Cancel</md-button>
+  </md-dialog-actions>
+</md-dialog>,

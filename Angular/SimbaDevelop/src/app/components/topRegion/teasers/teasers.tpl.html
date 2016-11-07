@@ -1,0 +1,12 @@
+<div class="teasers">
+<div class="teasers-table">
+  <div class="teaser" ng-repeat="teaser in teasersCtrl.data.teasers">
+    <a ng-href="{{teaser.teaserLink | http2https}}">
+      <img ng-src="{{teaser.teaserImage}}" ng-alt="{{teaser.comment}}"/>
+    </a>
+  </div>
+    </div>
+      <div class="past-teasers-btn">
+        <a target="_top" href="{{teasersCtrl.pastTeasersUrl}}">Past Teasers</a>
+  </div>
+</div>

@@ -1,0 +1,297 @@
+#globalHeader {
+  top: -48px !important
+}
+
+#globalFooter, #siteFooter {
+  position: relative !important
+}
+
+footer {
+  bottom: 0;
+}
+.content{
+  max-width:100%;
+}
+main.content{
+  max-width:1100px;
+}
+#dictControls {
+  margin: 0 0 -6px;
+  padding: 0 0 1px;
+}
+
+label {
+  font-weight: 400;
+}
+.termCategories, .termIds {
+  font-size: 0.875em;
+  font-weight: 400;
+}
+
+.termCategoryLabel, .termIdLabel {
+  font-weight: 600;
+}
+
+.termDefinition {
+  font-weight: 300;
+}
+
+.termDefinition p {
+  margin-bottom: 0.2em;
+}
+
+.termName {
+  font-weight: 600;
+}
+
+.cpsDictionaryAlphabet a.first {
+  border: medium none;
+  padding-left: 0;
+}
+
+.cpsDictionaryAlphabet a {
+  /*border-left: 1px solid #ddd;*/
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  padding: 0 4px 0 8px;
+}
+
+.cpsDictionaryAlphabet {
+  font-weight: 400;
+}
+
+input.searchText {
+  display: inline-block;
+  margin-right: 0.5em;
+  width: 230px;
+}
+
+p.selectionOptions {
+  margin: 15px 0;
+  padding: 0;
+}
+
+select#subcategory {
+  margin: 0 10px 0 5px;
+}
+
+select#category {
+  margin: 0 10px 0 5px;
+}
+
+.highlight {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.col-md-3 {
+  width: 25%;
+}
+
+.padding {
+  padding: $base-pixel;
+}
+
+.padding input, .padding label {
+  vertical-align: text-top;
+}
+.panel {
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+.panel-default {
+  border-color: #ddd;
+}
+
+.panel-body {
+  padding-top: 15px;
+  padding-right: 0;
+  padding-bottom: 15px;
+  padding-left: 0;
+}
+
+.snl-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: top;
+  transition: all .3s .1s;
+}
+
+.snl-icon:hover {
+  cursor: pointer
+}
+
+.snl-icon use {
+  fill: #999999
+}
+
+.snl-icon.snl-icon-16px {
+  width: 16px !important;
+  height: 16px !important
+}
+
+.snl-icon-chevron-down {
+  transform: rotate(90deg);
+  margin-right: -2px;
+  margin-top: 1px
+}
+
+.snl-icon-chevron-down.expanded {
+  transform: rotate(-90deg)
+}
+
+.snl-icon-chevron-right {
+  padding: 4px;
+  transform: rotate(0deg)
+}
+
+.snl-icon-chevron-right.expanded {
+  transform: rotate(90deg)
+}
+
+.snl-icon-chevron-right polygon {
+  fill: #999999
+}
+
+.snl-icon-edit {
+  padding: 4px;
+  margin-left: 8px
+}
+
+.snl-icon-edit .pencil-shape {
+  fill-opacity: 0;
+  fill: #323940
+}
+
+.snl-icon-edit.show-pencil .pencil-shape {
+  fill-opacity: 0.5;
+  fill: #323940
+}
+
+.snl-icon-edit.show-pencil:hover .pencil-shape {
+  fill-opacity: 1;
+  fill: #323940
+}
+
+.history-btn {
+  position: relative;
+  top: -15px;
+}
+
+.deleteIcon:hover {
+  cursor: default;
+}
+/* djsedil's styles for Managing Categories form */
+
+input.catDesc {
+  display: inline-block;
+  width: 300px;
+}
+
+.cat-container {
+  background: #fff none repeat scroll 0 0;
+  overflow: hidden;
+  padding: 0 3em;
+  position: relative;
+  width: 35%;
+}
+
+/* dialog styles */
+.dialogWrapper #popupContainer {
+  position: relative; }
+
+.dialogWrapper .footer {
+  width: 100%;
+  text-align: center;
+  margin-left: 20px; }
+
+.dialogWrapper .footer, .dialogWrapper .footer > code {
+  font-size: 0.8em;
+  margin-top: 50px; }
+
+.dialogWrapper button {
+  width: 200px; }
+
+.dialogWrapper div#status {
+  color: #c60008; }
+
+.dialogWrapper .dialog-demo-prerendered md-checkbox {
+  margin-bottom: 0; }
+
+md-dialog-content .help-container.ng-hide-animate.ng-hide {
+  opacity: 0;
+}
+
+md-dialog-content .help-container.ng-hide-animate {
+  opacity: 1;
+}
+
+md-dialog-content .help-container.ng-hide-animate.ng-hide-add, md-dialog-content .help-container.ng-hide-animate.ng-hide-remove {
+  opacity: 1;
+  transition: all linear 0.25s;
+}
+
+.col-sm-0 {
+  display: none;
+}
+
+.required {
+  color: red;
+}
+
+.clean {
+  color: transparent;
+}
+
+#manageTerm {
+
+}
+
+#manageTerm.row .row {
+  margin-bottom: 10px;
+}
+
+#manageTerm.row .row select {
+  margin-left: 0;
+}
+
+#manageTerm.row .row .col-sm-offset-4 > span {
+  margin-right: 10px;
+}
+
+#manageTerm.row .row .col-sm-offset-4 span a {
+  text-decoration: none;
+  //color:#000000;
+}
+
+#manageTerm .table-filters {
+  padding: 10px 10px 0 10px;
+}
+
+#manageTerm .table-controls {
+  padding: 10px 10px 0 10px;
+}
+
+.paginationRange, .records-per-page {
+  display: inline-block;
+}
+
+#searchResults > .result:hover {
+
+}
+
+.col-sm-8 .simditor .simditor-toolbar > ul{
+  //width:100%;
+  max-width:100%;
+  padding-left:0;
+}
+
+.helpIcon:hover {
+  cursor: pointer;
+}

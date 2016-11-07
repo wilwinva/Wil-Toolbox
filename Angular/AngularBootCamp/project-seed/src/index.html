@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="project-seed">
+<head>
+  <title>Project Seed</title>
+
+  <!-- inject:css -->
+  <!-- any *.css files among your sources will go here as: <link rel="stylesheet" href="FILE"> -->
+  <!-- endinject -->
+
+</head>
+<body ng-controller="AppCtrl as app">
+<header>
+  <div ui-view="header">
+    <h1>This is a header</h1>
+  </div>
+  <hr/>
+</header>
+<div ui-view="content"></div>
+<footer>
+  <hr/>
+  <div ui-view="footer">
+    <small>this is a footer for AwesomeCo Inc (c) 2015</small>
+  </div>
+</footer>
+
+<!-- inject:js -->
+<!-- any *.js files among your sources will go here as: <script src="FILE"></script> -->
+<!-- endinject -->
+
+</body>
+</html>

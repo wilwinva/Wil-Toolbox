@@ -1,0 +1,38 @@
+<div class="index">
+    <select ng-model="ctrl.data.alphaIndex" class="select-mobile visible-xs" ng-controller="AlphabetSelectCtrl as ctrl" ng-change="ctrl.loadIndexPage()">
+        <option value="" selected disabled>Index</option>
+        <option ng-repeat="option in ctrl.data.indexOptions" value="{{option.value}}">{{option.name}}</option>
+    </select>
+    <h3 class='hidden-xs'>Index</h3>
+    <div class='index-buttons hidden-xs'>
+        <ul>
+            <li><a ui-sref='inside.alphabetIndex({letter: "a"})' id='a'>A</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "b"})' id='b'>B</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "c"})' id='c'>C</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "d"})' id='d'>D</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "e"})' id='e'>E</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "f"})' id='f'>F</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "g"})' id='g'>G</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "h"})' id='h'>H</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "i"})' id='i'>I</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "j"})' id='j'>J</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "k"})' id='k'>K</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "l"})' id='l'>L</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "m"})' id='m'>M</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "n"})' id='n'>N</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "o"})' id='o'>O</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "p"})' id='p'>P</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "q"})' id='q'>Q</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "r"})' id='r'>R</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "s"})' id='s'>S</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "t"})' id='t'>T</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "u"})' id='u'>U</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "v"})' id='v'>V</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "w"})' id='w'>W</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "x"})' id='x'>X</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "y"})' id='y'>Y</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "z"})' id='z'>Z</a></li>
+            <li><a ui-sref='inside.alphabetIndex({letter: "other"})' id='other'>&hellip;</a></li>
+        </ul>
+    </div>
+</div>

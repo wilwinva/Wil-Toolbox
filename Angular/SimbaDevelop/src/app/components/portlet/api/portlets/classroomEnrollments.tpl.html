@@ -1,0 +1,80 @@
+<div ng-show="apiCtrl.fetching" class="loader-container"> <!-- ng-show="apiCtrl.fetching" -->
+  <div class="loaderbg"></div>
+  <div class="loader"></div>
+</div>
+<div ng-hide="apiCtrl.error" class="panel-body" ng-class="{'no-data':apiCtrl.numRecords == 0}">
+  <div class="table-controls" snl-click-tracking="searchBoxTrainingEnrollment">
+    <form class="form-inline">
+      <div class="form-group" >
+        <input type="text" ng-model="filterBy" class="form-control" placeholder="Filter Results By:">
+      </div>
+    </form>
+  </div>
+  <div id="ClassroomEnrollmentsResults" class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+      <tr>
+        <th ng-click="apiCtrl.sort('course')" snl-click-tracking="EnrollmentsSortByCourse"> Course
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='course'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('title')" snl-click-tracking="EnrollmentsSortByTitle"> Title
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='title'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('date_start')" ng-init="apiCtrl.sort('date_start')" snl-click-tracking="EnrollmentsSortByDate"> Date
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='date_start'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('time')" snl-click-tracking="EnrollmentsSortByTime"> Time
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='time'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('location')" snl-click-tracking="EnrollmentsSortByLocation"> Location
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='location'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('status')" snl-click-tracking="EnrollmentsSortByStatus"> Status
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='status'"
+               ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-if="apiCtrl.numResults == 0">
+        <td colspan="6" style="padding:0;"></td>
+      </tr>
+      <tr dir-paginate="training in apiCtrl.data|orderBy:apiCtrl.sortKey:apiCtrl.reverse|filter:filterBy|itemsPerPage:apiCtrl.pageSize"
+          pagination-id="trainingEnrollments" snl-on-finish-render="apiCtrl.renderPagination()">
+        <td ng-bind="training.course"></td>
+        <td>
+          <a ng-href="{{apiCtrl.tedsUrl}}TEDSEveryOne.jsp?mode=1&action=courseSearch&takeSingle=true&SrchStatus=A&localCd={{training.course}}"
+             ng-bind="training.title"></a></td>
+        <td><span ng-bind="training.date_start | reformatDate | date:'MM/dd/yyyy'"></span>
+          <span ng-if="training.date_start != training.date_end"> - <span ng-bind="training.date_end | reformatDate | date:'MM/dd/yyyy'"></span></span></td>
+        <td ng-bind="training.time+training.time_zone"></td>
+        <td ng-bind="training.location"></td>
+        <td ng-attr-title={{status}}
+            ng-init="status = (training.status == 'Enrolled')?'User is Enrolled.':(training.status == 'In Progress')?'Class is in progress.':'Class is full but user is on the Wait List.'">
+          {{training.status}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <snl-paginator  pagination-id="trainingEnrollments" page-size="apiCtrl.pageSize"
+                 page-options="apiCtrl.pageOptions" num-records="apiCtrl.numRecords" scroll-to="#ClassroomEnrollmentsResults"
+                 min-data-length="5" snl-click-tracking="TrainingEnrollmentsPagination" no-records="'Not enrolled in any class at this time'"></snl-paginator>
+</div>

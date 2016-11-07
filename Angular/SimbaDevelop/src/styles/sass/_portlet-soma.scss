@@ -1,0 +1,37 @@
+/* My Support Team Portlet */
+
+.portlet-soma {
+  margin-top: 24px;
+
+  .status {
+    width: 80px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.green {
+      background-image: url("/images/orb_green.png");
+    }
+    &.red {
+      background-image: url("/images/orb_red.png");
+    }
+  }
+
+  .name {
+    width: 150px;
+  }
+
+  .type {
+    width: 200px;
+  }
+
+  .affected-resources {
+  }
+
+  .normal-downtime {
+    width: 250px;
+  }
+}
+
+
+
+	

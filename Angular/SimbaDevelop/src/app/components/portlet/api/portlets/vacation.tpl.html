@@ -1,0 +1,29 @@
+<div ng-show="apiCtrl.fetching" class="loader-container"> <!-- ng-show="apiCtrl.fetching" -->
+  <div class="loaderbg"></div>
+  <div class="loader"></div>
+</div>
+
+<div ng-hide="apiCtrl.error"> <!-- "|| apiCtrl.fetching" -->
+    
+    <div class="panel-body">
+
+  <ul class="list-group">
+    <li class="list-group-item"><span>Vacation</span> <span class="pull-right date" ng-bind="apiCtrl.data.vacation"></span></li>
+    <li class="list-group-item"><span>Vacation Buy</span> <span class="pull-right date" ng-bind="apiCtrl.data.vacation_buy"></span></li>
+    <li class="list-group-item"><span>Flex</span> <span class="pull-right date" ng-bind="apiCtrl.data.flex"></span></li>
+    <li class="list-group-item"><span>Holiday</span> <span class="pull-right date" ng-bind="apiCtrl.data.holiday"></span></li>
+    <li class="list-group-item"><span>Paid Time Off</span> <span class="pull-right date" ng-bind="apiCtrl.data.paid_time_off"></span></li>
+    <li class="list-group-item"><span>Convertible</span> <span class="pull-right date" ng-bind="apiCtrl.data.convertible"></span></li>
+  </ul>
+</div>
+
+<div class="panel-footer clearfix">
+
+  <p class="balance-date">Balances as of Pay End Date: <span class="date" ng-bind="apiCtrl.data.balance_date"></span></p>
+
+  <ul class="nav navbar-nav inline-list">
+    <li><a id="full-balance" ng-href="{{apiCtrl.vacationBalanceUrl}}">Full Leave Balance Report</a></li>
+    <li><a id="timesheet" ng-href="{{apiCtrl.timesheetUrl}}">Timesheet</a></li>
+  </ul>
+</div>
+    </div>

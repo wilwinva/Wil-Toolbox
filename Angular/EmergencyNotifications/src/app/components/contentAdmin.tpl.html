@@ -1,0 +1,44 @@
+<snl-site-header user-first-name="{{userCtrl.userFirstName}}" user-last-name="{{userCtrl.userLastName}}"></snl-site-header>
+<div class="container-fluid main-content">
+    <div class="content row">
+        <h1>Send Alert</h1>
+
+
+        <form class="form-horizontal" action="https://inside-api-d.sandia.gov/alerts/publish" method="post">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Alert Sender</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Subject</label>
+                    <div class="col-md-4">
+                        <input id="textinput" name="subject" type="text" placeholder="" class="form-control input-md"
+                               required="">
+
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textarea">Alert Message </label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="alert-textarea" name="alert" maxlength="200" style="height:200px;width:375px;">(200 characters max)</textarea>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type ="submit" class="control-label btn btn-primary" value="Send Alert"/>
+                        <input type="hidden" name="addresses"
+                                value="5059176116@txt.att.net,bpsims@sandia.gov,caharve@sandia.gov,setmoor@sandia.gov"/
+                        (value=)>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>

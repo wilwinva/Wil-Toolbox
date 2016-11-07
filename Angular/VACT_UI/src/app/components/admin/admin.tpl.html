@@ -1,0 +1,246 @@
+<div id="admin">
+  <h2>VACT Admin</h2>
+  <div>
+    I want to:
+    <select ng-model="adminCtrl.roomState"
+            ng-options="roomState.id as roomState.label for roomState in adminCtrl.roomStateOptions"
+            ng-change="adminCtrl.loadRoomState(adminCtrl.roomState);">
+    </select>
+  </div>
+  <div id="validation" ng-show="adminCtrl.roomState === 'validation'">
+    <div class="row roomValidation">
+      <div class="col-sm-12" ng-if="!adminCtrl.isClient">
+        <span>
+          <label>Select a bldg </label>
+          <select ng-model="adminCtrl.selectedBldg"
+                  ng-options="item as item for item in adminCtrl.bldgs"
+                  ng-change="adminCtrl.getBldgRooms(adminCtrl.selectedBldg);">
+          </select>
+        </span>
+        <span ng-show="adminCtrl.selectedBldg">
+          <label>Select a room </label>
+          <select ng-model="adminCtrl.selectedRoom"
+                  ng-options="item as item for item in adminCtrl.rooms"
+                  ng-change="adminCtrl.setBldgRooms(adminCtrl.selectedRoom);">
+          </select>
+        </span>
+      </div>
+      <div class="col-sm-12" ng-if="adminCtrl.isClient || adminCtrl.activeRoom">
+        <span>
+          <label>Active room: </label>
+          <span ng-bind="adminCtrl.activeRoom"></span>
+        </span>
+        <span>
+          <label>Room Type: </label>
+          <span ng-bind="adminCtrl.roomType"></span>
+        </span>
+      </div>
+    </div>
+    <div class="row roomValidation" ng-show="adminCtrl.activeRoom">
+      <div class="row">
+        <div class="col-sm-12 updateIguana">
+          <div class="currentIguanaVersion">
+            <span ng-bind="adminCtrl.iguanaUpToDate"></span>
+            <span ng-show="adminCtrl.currentIguanaVersion != adminCtrl.newestIguanaVersion">
+              Update to <select ng-model="adminCtrl.currentIguanaVersion"
+                              ng-options="version.data as version.label for version in adminCtrl.igunanVersions"
+                              ng-change="adminCtrl.updateIguanaVersion(adminCtrl.newestIguanaVersion);">
+                      </select>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 equipmentTemps">
+          <button ng-click="adminCtrl.getTempData();">Get equipment temps</button>
+          <table ng-show="adminCtrl.getTemps">
+            <tr class="header">
+              <th>Equipment</th>
+              <th>Temp</th>
+            </tr>
+            <tr ng-repeat="item in adminCtrl.equipmentTemps" ng-class-odd="'odd'" ng-class-even="'even'">
+              <td ng-bind="item.label"></td>
+              <td>{{item.data}}&deg;</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-sm-6 equipmentSerialNumbers">
+          <button ng-click="adminCtrl.getSerialData();">Get equipment serial numbers</button>
+          <table ng-show="adminCtrl.getSerials">
+            <tr class="header">
+              <th>Equipment</th>
+              <th>Serial Number</th>
+            </tr>
+            <tr ng-repeat="item in adminCtrl.equipmentSerials" ng-class-odd="'odd'" ng-class-even="'even'">
+              <td ng-bind="item.label"></td>
+              <td ng-bind="item.data"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 testErrorCodes">
+          <button> Test error responses</button>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div id="configuration" ng-show="adminCtrl.roomState === 'createConfiguration' || adminCtrl.roomState === 'manageConfiguration'"}];>
+    <div class="row configuration-type" ng-show="adminCtrl.roomState === 'createConfiguration'">
+      <div class="row">
+        <div class="col-sm-5">
+          <label>Create New Configuration as </label>
+          <select ng-model="adminCtrl.configurationType"
+                  ng-options="configurationType.id as configurationType.label for configurationType in adminCtrl.configurationTypes"
+                  ng-change="adminCtrl.loadConfiguration(adminCtrl.configurationType);">
+          </select>
+        </div>
+        <div class="col-sm-1">OR</div>
+        <div class="col-sm-6">
+          <label>Clone Configuration from Existing Room</label>
+          <select ng-model="adminCtrl.roomConfiguration"
+              ng-change="adminCtrl.loadRoomConfiguration(adminCtrl.roomConfiguration);">
+            <option value="none" selected="selected"></option>
+            <option value="870/123">870/123</option>
+            <option value="870/123">870/166</option>
+            <option value="870/123">870/201</option>
+            <option value="870/123">870/222</option>
+            <option value="870/123">870/323</option>
+            <option value="870/123">870/334</option>
+          </select>
+        </div>
+      </div>
+      <div class="row col-sm-12" ng-show="adminCtrl.configurationType && !adminCtrl.activeRoom">
+        <span ng-show="!adminCtrl.activeRoom">
+          <span class="bldg"><label>Bldg:</label><input id="bldg" type="text" length="15" maxlength="20" placeholder="Enter bldg name/number" ng-model="adminCtrl.selectedBldg" ng-change="adminCtrl.loadRoomConfiguration();"/></span>
+          <span class="room"><label>Room:</label><input id="room" type="text" length="15" maxlength="20" placeholder="Enter room name/number" ng-model="adminCtrl.selectedRoom" ng-change="adminCtrl.loadRoomConfiguration();"/></span>
+        </span>
+      </div>
+    </div>
+    <div class="row configuration-type" ng-show="adminCtrl.roomState === 'manageConfiguration'">
+      <div class="col-sm-12">
+        <label>Select a room to manage</label>
+        <div class="col-sm-12" ng-if="!adminCtrl.isClient">
+          <span>
+            <label>Select a bldg </label>
+            <select ng-model="adminCtrl.selectedBldg"
+                    ng-options="item as item for item in adminCtrl.bldgs"
+                    ng-change="adminCtrl.getBldgRooms(adminCtrl.selectedBldg);">
+            </select>
+          </span>
+          <span ng-show="adminCtrl.selectedBldg">
+            <label>Select a room </label>
+            <select ng-model="adminCtrl.selectedRoom"
+                    ng-options="item as item for item in adminCtrl.rooms"
+                    ng-change="adminCtrl.loadRoomConfiguration();">
+            </select>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="roomConfiguration" ng-show="adminCtrl.activeRoom || adminCtrl.configurationType.length != 0">
+      <div class="row location room-classifier">
+        <div class="col-sm-12">
+          <span>
+            <label>Active room: </label>
+            <span ng-bind="adminCtrl.activeRoom"></span>
+          </span>
+          <span class="room-classification">
+            <label>Room Classification:</label>
+            <input type="checkbox" name="roomClassification" ng-click="modifyClassification('unclassified');" ng-model="adminCtrl.unclassified" ng-checked="adminCtrl.unclassified"/> Unclassified
+            <input type="checkbox" name="roomClassification" ng-click="modifyClassification('classified');" ng-model="adminCtrl.classified" ng-checked="adminCtrl.classified"/> Classified
+            <input type="checkbox" name="roomClassification" ng-click="modifyClassification('spn');" ng-model="adminCtrl.spn" ng-checked="adminCtrl.spn"/> SPN
+          </span>
+        </div>
+      </div>
+      <div class="row equipment-selection">
+        <div class="col-sm-3">
+          <label>Equipment Types:</label>
+          <ul class="equipment-types">
+            <li><input type="radio" name="equipment-type" class="computers" ng-click="adminCtrl.resetEquipment();adminCtrl.showComputers=true;">Computers</li>
+            <li><input type="radio" name="equipment-type" class="displays" ng-click="adminCtrl.resetEquipment();adminCtrl.showDisplays=true;">Displays</li>
+            <li><input type="radio" name="equipment-type" class="cameras" ng-click="adminCtrl.resetEquipment();adminCtrl.showCameras=true;adminCtrl.showPeripherals=false;">Cameras</li>
+            <li><input type="radio" name="equipment-type" class="peripherals" ng-click="adminCtrl.resetEquipment();adminCtrl.showPeripherals=true;">Peripherals</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <label>Equipment List:</label>
+          <div class="equipment-lists">
+            <select class="computers"
+                    ng-show="adminCtrl.showComputers" ng-model="adminCtrl.computerSelected"
+                    ng-options="computer.type as computer.label for computer in adminCtrl.computers"
+                    ng-change="adminCtrl.equipmentSelected(adminCtrl.computerSelected,'computers');">
+            </select>
+            <select class="displays"
+                    ng-show="adminCtrl.showDisplays" ng-model="adminCtrl.displaySelected"
+                    ng-options="display.type as display.label for display in adminCtrl.displays"
+                    ng-change="adminCtrl.equipmentSelected(adminCtrl.displaySelected,'displays');">
+            </select>
+            <select class="cameras"
+                    ng-show="adminCtrl.showCameras" ng-model="adminCtrl.cameraSelected"
+                    ng-options="camera.type as camera.label for camera in adminCtrl.cameras"
+                    ng-change="adminCtrl.equipmentSelected(adminCtrl.cameraSelected,'cameras');">
+            </select>
+            <select class="peripherals"
+                    ng-show="adminCtrl.showPeripherals" ng-model="adminCtrl.peripheralSelected"
+                    ng-options="peripheral.type as peripheral.label for peripheral in adminCtrl.peripherals"
+                    ng-change="adminCtrl.equipmentSelected(adminCtrl.peripheralSelected,'peripheral');">
+            </select>
+            {{admin.computerSelected}}
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <label>Equipment Specifics:</label>
+          {{admin.showEquipmentSpecifics}}
+          <div class="equipment-specifics" ng-show="adminCtrl.showEquipmentSpecifics">
+            <img src="" alt=""/>
+            <div><label>Type:</label>{{adminCtrl.equipmentType}}</div>
+            <div><label>Label:</label>{{adminCtrl.equipmentLabel}}</div><!--//this number will increase by 1 for each similar equipment item-->
+            <div><label>ID:</label>{{adminCtrl.equipmentId}}</div><!--//this number will increase by 1 for each similar equipment item-->
+            <div><label>Secured:</label><input type="checkbox" id="secured" ng-click="adminCtrl.equipmentSecured!=adminCtrl.equipmentSecured"/></div>
+            <div>
+              <input type="button" value="Save Equipment" ng-click="adminCtrl.saveEquipment();"  ng-hide="adminCtrl.addAnother"/>
+              <input type="button" value="Save another {{adminCtrl.equipmentType}}" ng-click="adminCtrl.addAnotherEquipment();" ng-show="adminCtrl.addAnother" />
+              <input type="button" value="Cancel" ng-click="adminCtrl.resetEquipment();"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row equipment-configuration">
+        <div class="col-sm-12" id="sourceEquipment">
+          <h4>Source Equipment</h4>
+          <span ng-repeat="source in adminCtrl.sources" class="vactButton" ng-class="{displaying:source.target != 'none'}">
+            <vact-equipment source="source"></vact-equipment>
+            {{source.label}}
+            <div class="display">Displayed on</div>
+            <select ng-model="source.target"
+                    ng-options="target.id as target.label for target in adminCtrl.targets"
+                    ng-change="roomCtrl.targetSelected(source)">
+              <option value="">None</option>
+            </select>
+            <input type="button" value="Delete" ng-click=""/>
+          </span>
+        </div>
+        <div class="col-sm-12" id="targetEquipment">
+          <h4>Target Equipment</h4>
+          <span ng-repeat="target in adminCtrl.targets" class="vactButton" ng-class="{displaying:source.source != 'none'}">
+            <vact-equipment source="target"></vact-equipment>
+            {{target.label}}
+            <div class="display">Displaying</div>
+            <select ng-model="target.source"
+                    ng-options="source.id as source.label for source in adminCtrl.sources"
+                    ng-change="adminCtrl.sourceSelected(target)">
+              <option value="">None</option>
+            </select>
+            <input type="button" value="Delete" ng-click=""/>
+          </span>
+        </div>
+      </div>
+      <div class="row configurtion-actions">
+        <input type="button" value="Save Room configuration"/>
+        <input type="button" class="cancel" value="Cancel"/>
+      </div>
+    </div>
+  </div>
+</div>

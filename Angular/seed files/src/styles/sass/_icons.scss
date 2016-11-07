@@ -1,0 +1,58 @@
+.snl-icon {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        vertical-align: top;
+        transition: all .3s .1s;
+        @include smi-ease(1);
+        
+        
+        &:hover {
+            cursor: pointer;
+        }
+        
+        use {
+           fill: #999999; 
+        }
+        
+        &.snl-icon-16px {
+            width: 16px!important;
+            height: 16px!important;
+        }
+        
+    }
+    
+    .snl-icon-chevron-down {
+        transform: rotate(90deg);
+        margin-right:  -($base-pixel / 4);
+        margin-top: 1px; /*visual spacing*/
+        
+        &.expanded {
+            transform: rotate(-90deg);
+        }
+        
+    }
+    
+    
+    .snl-icon-chevron-right {
+        padding: ($base-pixel / 2);
+        transform: rotate(0deg);
+        
+        &.expanded {
+            transform: rotate(90deg);
+        }
+        
+        polygon {
+           fill: #999999; 
+        }
+    }
+    
+    .snl-icon-caret-up {
+        transform: rotate(-180deg);
+        margin-top: ($base-pixel / 2); 
+    }
+    
+    .snl-icon-caret-down {
+        transform: rotate(0deg);
+        margin-top: ($base-pixel / 2);
+    }

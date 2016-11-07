@@ -1,0 +1,25 @@
+# Packages
+node_modules/
+bower_components/
+
+# Log file
+*.log
+
+# Distribution and dynamically created files
+build/
+dist/
+docs/
+src/app/config.js
+src/app/templates.js
+src/styles/main.css
+.tmp
+
+# PhpStorm IDE settings and configuration
+.idea/
+.editorconfig
+
+# Test results
+coverage
+e2e/results/
+karma/coverage/
+karma/results/

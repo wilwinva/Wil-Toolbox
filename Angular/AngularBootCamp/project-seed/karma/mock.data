@@ -1,0 +1,1 @@
+{pattern: 'data/**/*.json', watched: true, served: true, included: false}

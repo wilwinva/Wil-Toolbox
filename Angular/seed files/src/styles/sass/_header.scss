@@ -1,0 +1,142 @@
+header {
+    background: $inside-blue;
+    
+    .navbar-header {
+        padding: $base-pixel 0;
+    }
+    
+    a.brand, a.brand:visited {
+        color: white;
+		display:block;
+		font-weight:300;
+		margin-bottom: 0;
+		font-size:$base-pixel-x3 - 2;
+		line-height:$base-pixel-x3;
+		margin-top:-1px;
+		text-decoration:none;
+		
+		&:hover, &:focus {
+			color: $brand-primary-40;
+			cursor:pointer;
+			transition: all 0.2s;
+            @include smi-ease(1);
+			text-decoration:underline;
+            outline: none;
+		}
+        
+        &:focus:active {
+            color: white;
+            text-decoration:none;
+        }
+        
+    }
+	
+	
+    .navbar-right {
+        margin-right: 0;
+        padding: $base-pixel 0;
+        line-height: $base-pixel-x3;
+		color:#fff;
+		
+		li {
+			border-left: 1px solid $brand-primary-200;
+			padding:0 $base-pixel;
+			font-size:.875em;
+            
+            &:first-child {
+			border-left:none;
+            }
+            &:last-child {
+			padding-right:0;
+            }
+		}
+		
+		li.user-name {
+				font-weight:600;
+				
+				.user-photo-container {
+					display:block;
+					height:$base-pixel-x5;
+					width:$base-pixel-x5;
+					float:right;
+					margin:(-$base-pixel) 0 (-$base-pixel) $base-pixel;
+					overflow:hidden;
+					border-radius:3px;
+					position:relative;
+				
+				.user-photo {
+					position:absolute;
+					left:-5%;
+					right:0;
+					top:-5%;
+					margin:auto;
+					max-width:110%;
+					
+					font-size: $base-pixel-x1-5;
+					line-height:$base-pixel-x1-5;
+					font-weight:400;
+				}
+				
+				}
+			}
+		
+		
+		a, a:visited {
+			padding:0;
+			color:#fff;
+			margin:0;
+			line-height:$base-pixel-x3;
+			
+			&:hover, &:focus {
+				text-decoration:underline;
+				color: $brand-primary-40;
+                outline: none;
+			}
+            
+            &:focus:active {
+                color: white;
+                text-decoration:none;
+            }
+		}
+    }
+}
+
+
+@media (max-width: 767px) {
+
+header {
+	margin-bottom:$base-pixel-x2;
+    
+    .navbar-header {
+		padding: $base-pixel $base-pixel-x2;
+		background:transparent;
+		width:100%; /*-- for some reason mobile needs this --*/
+		
+		float:left; 
+		width:auto;
+    }
+    
+    a.brand, a.brand:visited {
+        color: white;
+		
+		&:hover, &:focus {
+			color: $brand-primary-50;
+			cursor:pointer;
+			transition: all 0.2s;
+            @include smi-ease(1);
+			text-decoration:none;
+		}
+        
+    }
+
+	.navbar-right {
+		margin-right:-$base-pixel;
+		
+		li.user-name {
+				border:none;
+		}
+	}
+	
+}
+
+}

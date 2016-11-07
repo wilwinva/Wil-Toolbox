@@ -1,0 +1,105 @@
+<div class="container-fluid" id="main-content" tabindex="-1">
+  <div class="row portlets">
+
+    <!-- Left Column -->
+    <div class="col-md-7 layout-col-1">
+      <snl-portlet id="corpWorkbox" portlet-name="Corporate Workbox" portlet-class=""
+                   expanded="{{prefCtrl.portletExpanded.corpWorkbox}}">
+        <snl-api-content ctrl-name="CorpWorkboxCtrl" url="corpWorkbox"
+                         template="app/components/portlet/api/portlets/corpWorkbox/corpWorkbox.tpl.html"
+                         userid="{{prefCtrl.userid}}"></snl-api-content>
+        <!-- TODO: we currently won't ever get here because we aren't storing errors -->
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <snl-portlet id="aroundSandia" portlet-name="Around Sandia" portlet-class=""
+                   expanded="{{prefCtrl.portletExpanded.aroundSandia}}">
+        <ng-include src="'app/components/portlet/aroundSandia/aroundSandia.tpl.html'"></ng-include>
+      </snl-portlet>
+      <snl-portlet id="browseTechweb" portlet-name="Browse Techweb"
+                   portlet-class="portlet-browse-techweb"
+                   expanded="{{prefCtrl.portletExpanded.browseTechweb}}">
+        <snl-browse-techweb></snl-browse-techweb>
+      </snl-portlet>
+      <snl-portlet id="jobs" portlet-name="My Job Postings" portlet-class="portlet-job-postings"
+                   expanded="{{prefCtrl.portletExpanded.jobs}}">
+        <snl-api-content ctrl-name="ApiCtrl" error="error" url="jobs"
+                         template="app/components/portlet/api/portlets/jobs.tpl.html"></snl-api-content>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <snl-portlet id="trainingCompliance"
+                   portlet-name="My Training" portlet-class="portlet-training-compliance"
+                   expanded="{{prefCtrl.portletExpanded.trainingCompliance}}">
+        <snl-api-content ctrl-name="ApiCtrl" error="error" url="trainingCompliance"
+                         template="app/components/portlet/api/portlets/trainingCompliance.tpl.html"></snl-api-content>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <snl-portlet id="classroomEnrollments" portlet-name="My Classroom Enrollments" portlet-class=""
+                   expanded="{{prefCtrl.portletExpanded.classroomEnrollments}}">
+        <snl-api-content ctrl-name="ApiCtrl" error="error" url="classroomEnrollments"
+                         template="app/components/portlet/api/portlets/classroomEnrollments.tpl.html"></snl-api-content>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <snl-portlet id="trainingByOrg" portlet-name="Training by Org"
+                   portlet-class="portlet-training-org"
+                   expanded="{{prefCtrl.portletExpanded.trainingByOrg}}">
+        <snl-api-content ctrl-name="ApiCtrl" error="error" url="trainingByOrg"
+                         template="app/components/portlet/api/portlets/trainingByOrg.tpl.html"
+                         orgnum="{{prefCtrl.orgnum}}"></snl-api-content>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <snl-portlet id="computersByOrg"
+                   portlet-name="Computers By Org" portlet-class="portlet-computers-org"
+                   expanded="{{prefCtrl.portletExpanded.computersByOrg}}">
+        <snl-api-content ctrl-name="ApiCtrl" error="error" url="computersByOrg"
+                         template="app/components/portlet/api/portlets/computersByOrg.tpl.html"
+                         orgnum="{{prefCtrl.orgnum}}"></snl-api-content>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-md-5 layout-col-2">
+
+      <snl-portlet id="dirQuickSearch" portlet-name="Directory Quick Search" portlet-class=""
+                   expanded="{{prefCtrl.portletExpanded.dirQuickSearch}}">
+        <snl-directory error="error"></snl-directory>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <snl-portlet id="links" portlet-name="My Links" portlet-class="portlet-my-links" images="images"
+                   expanded="{{prefCtrl.portletExpanded.links}}" edit=true>
+        <snl-api-content ctrl-name="LinksCtrl" error="error" url="links"
+                         template="app/components/portlet/api/portlets/links/links.tpl.html"></snl-api-content>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <!-- todo: Training Enrollments -->
+      <snl-portlet id="supportTeams" portlet-name="My Support Team" portlet-class="portlet-my-support-team"
+                   expanded="{{prefCtrl.portletExpanded.supportTeams}}">
+        <snl-api-content ctrl-name="ApiCtrl" error="error" url="supportTeam"
+                         template="app/components/portlet/api/portlets/supportTeam.tpl.html"></snl-api-content>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <snl-portlet id="vacation" portlet-name="My Vacation"
+                   portlet-class="portlet-vacation"
+                   expanded="{{prefCtrl.portletExpanded.vacation}}">
+        <snl-api-content ctrl-name="ApiCtrl" error="error" url="vacation"
+                         template="app/components/portlet/api/portlets/vacation.tpl.html"></snl-api-content>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <snl-portlet id="property" portlet-name="My Property"
+                   portlet-class="portlet-my-property" expanded="{{prefCtrl.portletExpanded.property}}">
+        <snl-api-content ctrl-name="ApiCtrl" error="error" url="property"
+                         template="app/components/portlet/api/portlets/property.tpl.html"></snl-api-content>
+        <snl-portlet-error error="error"></snl-portlet-error>
+      </snl-portlet>
+      <div ng-if="prefCtrl.hasRss">
+        <snl-portlet id="rss" portlet-name="My RSS" portlet-class=""
+                     expanded="{{prefCtrl.portletExpanded.rss}}">
+          <snl-api-content ctrl-name="RssCtrl" error="error" url="rss"
+                           template="app/components/portlet/api/portlets/rss/rss.tpl.html"
+                           preferences="prefCtrl"></snl-api-content>
+          <snl-portlet-error error="error"></snl-portlet-error>
+        </snl-portlet>
+      </div>
+    </div>
+  </div>
+</div>

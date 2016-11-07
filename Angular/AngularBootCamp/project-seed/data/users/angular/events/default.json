@@ -1,0 +1,2947 @@
+[
+  {
+    "id": "2024014515",
+    "type": "PullRequestReviewCommentEvent",
+    "actor": {
+      "id": 111951,
+      "login": "mhevery",
+      "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+      "url": "https://api.github.com/users/mhevery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111951?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.dart/pulls/comments/10808236",
+        "id": 10808236,
+        "diff_hunk": "@@ -160,6 +160,226 @@ void main() {\n       input..focus()..dispatchEvent(new TextEvent('textInput', data: text));\n     }\n \n+    describe('date/time type like', () {",
+        "path": "test/directive/ng_model_spec.dart",
+        "position": 4,
+        "original_position": 4,
+        "commit_id": "e113cff2c16c39c6c43371bb964003619c35b7e4",
+        "original_commit_id": "e113cff2c16c39c6c43371bb964003619c35b7e4",
+        "user": {
+          "login": "mhevery",
+          "id": 111951,
+          "avatar_url": "https://avatars.githubusercontent.com/u/111951?",
+          "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+          "url": "https://api.github.com/users/mhevery",
+          "html_url": "https://github.com/mhevery",
+          "followers_url": "https://api.github.com/users/mhevery/followers",
+          "following_url": "https://api.github.com/users/mhevery/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mhevery/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mhevery/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mhevery/subscriptions",
+          "organizations_url": "https://api.github.com/users/mhevery/orgs",
+          "repos_url": "https://api.github.com/users/mhevery/repos",
+          "events_url": "https://api.github.com/users/mhevery/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mhevery/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "Please look at most of our tests. They are simple straight forward. This is important for readability. Your tests have way too many functions calling other functions and so it is not clear what exactly is being tested.\r\n\r\nAlso the tests should be\r\n\r\nit('should do a specific thing'...) not _itWorksForM2E ",
+        "created_at": "2014-03-20T18:09:58Z",
+        "updated_at": "2014-03-20T18:09:58Z",
+        "html_url": "https://github.com/angular/angular.dart/pull/747#discussion_r10808236",
+        "pull_request_url": "https://api.github.com/repos/angular/angular.dart/pulls/747",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/comments/10808236"
+          },
+          "html": {
+            "href": "https://github.com/angular/angular.dart/pull/747#discussion_r10808236"
+          },
+          "pull_request": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/747"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T18:09:58Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2024012712",
+    "type": "ForkEvent",
+    "actor": {
+      "id": 3513574,
+      "login": "ichbinjeff",
+      "gravatar_id": "dd1eb7b61bbfa115b82d43e862e02347",
+      "url": "https://api.github.com/users/ichbinjeff",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3513574?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "forkee": {
+        "id": 17953036,
+        "name": "angular.js",
+        "full_name": "ichbinjeff/angular.js",
+        "owner": {
+          "login": "ichbinjeff",
+          "id": 3513574,
+          "avatar_url": "https://avatars.githubusercontent.com/u/3513574?",
+          "gravatar_id": "dd1eb7b61bbfa115b82d43e862e02347",
+          "url": "https://api.github.com/users/ichbinjeff",
+          "html_url": "https://github.com/ichbinjeff",
+          "followers_url": "https://api.github.com/users/ichbinjeff/followers",
+          "following_url": "https://api.github.com/users/ichbinjeff/following{/other_user}",
+          "gists_url": "https://api.github.com/users/ichbinjeff/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/ichbinjeff/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/ichbinjeff/subscriptions",
+          "organizations_url": "https://api.github.com/users/ichbinjeff/orgs",
+          "repos_url": "https://api.github.com/users/ichbinjeff/repos",
+          "events_url": "https://api.github.com/users/ichbinjeff/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/ichbinjeff/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "private": false,
+        "html_url": "https://github.com/ichbinjeff/angular.js",
+        "description": "",
+        "fork": true,
+        "url": "https://api.github.com/repos/ichbinjeff/angular.js",
+        "forks_url": "https://api.github.com/repos/ichbinjeff/angular.js/forks",
+        "keys_url": "https://api.github.com/repos/ichbinjeff/angular.js/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/ichbinjeff/angular.js/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/ichbinjeff/angular.js/teams",
+        "hooks_url": "https://api.github.com/repos/ichbinjeff/angular.js/hooks",
+        "issue_events_url": "https://api.github.com/repos/ichbinjeff/angular.js/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/ichbinjeff/angular.js/events",
+        "assignees_url": "https://api.github.com/repos/ichbinjeff/angular.js/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/ichbinjeff/angular.js/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/ichbinjeff/angular.js/tags",
+        "blobs_url": "https://api.github.com/repos/ichbinjeff/angular.js/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/ichbinjeff/angular.js/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/ichbinjeff/angular.js/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/ichbinjeff/angular.js/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/ichbinjeff/angular.js/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/ichbinjeff/angular.js/languages",
+        "stargazers_url": "https://api.github.com/repos/ichbinjeff/angular.js/stargazers",
+        "contributors_url": "https://api.github.com/repos/ichbinjeff/angular.js/contributors",
+        "subscribers_url": "https://api.github.com/repos/ichbinjeff/angular.js/subscribers",
+        "subscription_url": "https://api.github.com/repos/ichbinjeff/angular.js/subscription",
+        "commits_url": "https://api.github.com/repos/ichbinjeff/angular.js/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/ichbinjeff/angular.js/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/ichbinjeff/angular.js/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/ichbinjeff/angular.js/issues/comments/{number}",
+        "contents_url": "https://api.github.com/repos/ichbinjeff/angular.js/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/ichbinjeff/angular.js/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/ichbinjeff/angular.js/merges",
+        "archive_url": "https://api.github.com/repos/ichbinjeff/angular.js/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/ichbinjeff/angular.js/downloads",
+        "issues_url": "https://api.github.com/repos/ichbinjeff/angular.js/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/ichbinjeff/angular.js/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/ichbinjeff/angular.js/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/ichbinjeff/angular.js/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/ichbinjeff/angular.js/labels{/name}",
+        "releases_url": "https://api.github.com/repos/ichbinjeff/angular.js/releases{/id}",
+        "created_at": "2014-03-20T18:08:56Z",
+        "updated_at": "2014-03-20T16:27:33Z",
+        "pushed_at": "2014-03-20T16:27:33Z",
+        "git_url": "git://github.com/ichbinjeff/angular.js.git",
+        "ssh_url": "git@github.com:ichbinjeff/angular.js.git",
+        "clone_url": "https://github.com/ichbinjeff/angular.js.git",
+        "svn_url": "https://github.com/ichbinjeff/angular.js",
+        "homepage": "http://angularjs.org",
+        "size": 140048,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": "JavaScript",
+        "has_issues": false,
+        "has_downloads": true,
+        "has_wiki": true,
+        "forks_count": 0,
+        "mirror_url": null,
+        "open_issues_count": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "watchers": 0,
+        "default_branch": "master",
+        "master_branch": "master",
+        "public": true
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T18:08:56Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2024010993",
+    "type": "PullRequestReviewCommentEvent",
+    "actor": {
+      "id": 111951,
+      "login": "mhevery",
+      "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+      "url": "https://api.github.com/users/mhevery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111951?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.dart/pulls/comments/10808140",
+        "id": 10808140,
+        "diff_hunk": "@@ -160,6 +160,226 @@ void main() {\n       input..focus()..dispatchEvent(new TextEvent('textInput', data: text));\n     }\n \n+    describe('date/time type like', () {\n+      // Part of test fixture. Values are supplied below.\n+      final DateTime testDt1 = new DateTime.now();\n+      final DateTime testDt2 = new DateTime.utc(2014, 6, 21); // Summer solstice\n+\n+      //-----------------------------------------------------------------------\n+      // Local test helper functions\n+      \n+      // Conversion functions from DateTime to ...\n+      dynamic id(dynamic dt) => dt;\n+      int toNum(DateTime dt) => dt.millisecondsSinceEpoch;\n+      String toString(dynamic dt) {\n+        // DateTime.toIso8601String() is only available as of Dart 1.3.\n+        // Simplify the following once 1.3+ becomes stable.\n+        if(dt is DateTime)\n+          try { return dt.toIso8601String(); } catch (e) {}\n+        // Try to fix the string to match ISO8601.\n+        String result = dt.toString().replaceFirst(' ', 'T');\n+        // e.g. '2014-03-17 22:27:43' -> '2014-03-17T22:27:43'\n+        return result;\n+      };\n+      \n+      // InputElement setters\n+      dynamic setValAsDateTime(InputElement e, DateTime dt) { e.valueAsDate = dt; return e.valueAsDate; };\n+      dynamic setValAsNum(InputElement e, num dt) { e.valueAsNumber = dt; return e.valueAsNumber; };\n+      dynamic setValue(InputElement e, String dt) { \n+        e.value = dt; \n+        // Don't return e.value since in many cases this is just '' when the\n+        // browser does not accept the string that e.value is set to.\n+        return dt.toString(); \n+      };\n+      String ngValueAsDirAndValue(String ngValueAsValue) => \n+          ngValueAsValue == null ? '' : 'ng-value-as=\"$ngValueAsValue\"';\n+\n+      // Test case generators for \"model to input element\" tests\n+      void _itWorksM2E(String inputType, String ngValueAsValue, Function inputConv, \n+                    Function setValAsFn, \n+                    {bool expectNaN : false}) {\n+        it('should update model from $inputType input value: ${ngValueAsDirAndValue(ngValueAsValue)}', () {\n+          _.compile('<input type=$inputType ng-model=\"model\" '\n+                    '${ngValueAsDirAndValue(ngValueAsValue)} probe=\"p\">');\n+          Probe probe = _.rootScope.context['p'];\n+          InputElement inputElement = probe.element;\n+          //NgDateLikeValueAsDirective ngValueAs = probe.directive(NgDateLikeValueAsDirective);\n+          \n+          void _checkResult(expectedResult) {\n+            var r = _.rootScope.context['model'];\n+            if (expectedResult is num && expectedResult.isNaN) expectNaN = true;\n+            expectNaN ? expect(r != null && r.isNaN,isTrue) :  expect(r).toEqual(expectedResult);\n+          }\n+          var dt = inputConv(testDt1);\n+          var expectedResult = setValAsFn(inputElement, dt);\n+          // print(\"test dt=$dt, expectedResult=$expectedResult\");\n+          _.triggerEvent(inputElement, 'change');\n+          _checkResult(expectedResult);\n+          dt = inputConv(testDt2);\n+          expectedResult = setValAsFn(inputElement, dt);\n+          var input = probe.directive(InputDateLikeDirective);\n+          input.processValue();\n+          _checkResult(expectedResult);\n+        });\n+      };\n+\n+      // Test our assumptions about browser support of valueAs* IDL attributes.\n+      void _itFails(String inputType, String ngValueAsValue, Function conv, Function setValAsFn) {\n+        it('fail to set $inputType input valueAs IDL attribute of type $ngValueAsValue', () {\n+          _.compile('<input type=datetime-local ng-model=\"model\" '\n+                    '${ngValueAsDirAndValue(ngValueAsValue)} probe=\"p\">');\n+          Probe probe = _.rootScope.context['p'];\n+          InputElement inputElement = probe.element;\n+          \n+          var dt = conv(testDt1);\n+          try {\n+            setValAsFn(inputElement, dt);\n+            fail('Setting $inputType input valueAs IDL attribute should have failed but did not');\n+          } catch (e) {}\n+        });\n+      };\n+      \n+      //-----------------------------------------------------------------------\n+      // Actual test cases below this point.\n+\n+      DateTime stripTime(DateTime dt) => new DateTime(dt.year, dt.month, dt.day);\n+      String stripTimeStr(String s) => s.substring(0, \"YYYY-MM-DD\".length);\n+      String stripSeconds(String s) => s.substring(0, \"2014-06-21T00:00\".length);\n+      String stripZulu(String s) => s.replaceAll('Z', '');\n+      String keepYYMM(String s) => s.substring(0, \"YYYY-MM\".length);\n+      String keepTime(String s) => s.substring(\"2014-03-17T\".length);\n+      // Next one is tricky, so used fixed value\n+      // String toWeekStr(DateTime dt) => \"${dt.year}-W${dt.???}\"\n+      String toWeekStr(DateTime dt) => \"${dt.year}-W44\";\n+      comp(f,g) => (x) => f(g(x));\n+      String inputType;\n+  \n+      // Tests failing due to dart2js bug are run conditionally\n+      // TODO: enter dart bug #\n+      // TypeError: Cannot call method 'getTime' of null at dart.convertNativeToDart_DateTime\n+      const SKIP = true;\n+\n+      inputType = 'date';\n+      describe('type=$inputType', () {\n+        _itWorksM2E(inputType, null, stripTime, setValAsDateTime);\n+        _itWorksM2E(inputType, NgDateLikeValueAsDirective.DATE, stripTime, setValAsDateTime);\n+        _itWorksM2E(inputType, NgDateLikeValueAsDirective.BEST, stripTime, setValAsDateTime);\n+        _itWorksM2E(inputType, NgDateLikeValueAsDirective.NUMBER, comp(toNum,stripTime), setValAsNum);\n+        _itWorksM2E(inputType, NgDateLikeValueAsDirective.STRING, comp(stripTimeStr,toString), setValue);\n+      });\n+\n+      inputType = 'datetime';\n+      describe('type=$inputType', () {\n+        // Chrome only currently supports String and essentially treats the\n+        // input as if it were of type text.\n+        if(!SKIP) _itWorksM2E(inputType, null, toString, setValue, expectNaN:true);",
+        "path": "test/directive/ng_model_spec.dart",
+        "position": 116,
+        "original_position": 116,
+        "commit_id": "e113cff2c16c39c6c43371bb964003619c35b7e4",
+        "original_commit_id": "e113cff2c16c39c6c43371bb964003619c35b7e4",
+        "user": {
+          "login": "mhevery",
+          "id": 111951,
+          "avatar_url": "https://avatars.githubusercontent.com/u/111951?",
+          "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+          "url": "https://api.github.com/users/mhevery",
+          "html_url": "https://github.com/mhevery",
+          "followers_url": "https://api.github.com/users/mhevery/followers",
+          "following_url": "https://api.github.com/users/mhevery/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mhevery/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mhevery/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mhevery/subscriptions",
+          "organizations_url": "https://api.github.com/users/mhevery/orgs",
+          "repos_url": "https://api.github.com/users/mhevery/repos",
+          "events_url": "https://api.github.com/users/mhevery/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mhevery/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "What are these if(!SKIP)\r\n\r\nWe should not have if statements in the tests. Tests should be linear set of things. Ifs and loops are tricky because it is very easy to get them to fail in a way that tests actually don't do anything.  ",
+        "created_at": "2014-03-20T18:07:57Z",
+        "updated_at": "2014-03-20T18:07:57Z",
+        "html_url": "https://github.com/angular/angular.dart/pull/747#discussion_r10808140",
+        "pull_request_url": "https://api.github.com/repos/angular/angular.dart/pulls/747",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/comments/10808140"
+          },
+          "html": {
+            "href": "https://github.com/angular/angular.dart/pull/747#discussion_r10808140"
+          },
+          "pull_request": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/747"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T18:07:57Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2024009963",
+    "type": "PullRequestReviewCommentEvent",
+    "actor": {
+      "id": 17868,
+      "login": "axemclion",
+      "gravatar_id": "61089262f3c80cac51d2c4ba138eec3a",
+      "url": "https://api.github.com/users/axemclion",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17868?"
+    },
+    "repo": {
+      "id": 7639232,
+      "name": "angular/protractor",
+      "url": "https://api.github.com/repos/angular/protractor"
+    },
+    "payload": {
+      "comment": {
+        "url": "https://api.github.com/repos/angular/protractor/pulls/comments/10808102",
+        "id": 10808102,
+        "diff_hunk": "@@ -2,6 +2,13 @@ var ConfigParser = require('../../lib/configParser');\n var path = require('path');\n \n describe('the config parser', function() {\n+\n+  function normalize(str) {",
+        "path": "spec/unit/config_test.js",
+        "position": 5,
+        "original_position": 5,
+        "commit_id": "7d64087ceab7b19fc61faf2c7ad9bb86428c078c",
+        "original_commit_id": "7d64087ceab7b19fc61faf2c7ad9bb86428c078c",
+        "user": {
+          "login": "axemclion",
+          "id": 17868,
+          "avatar_url": "https://avatars.githubusercontent.com/u/17868?",
+          "gravatar_id": "61089262f3c80cac51d2c4ba138eec3a",
+          "url": "https://api.github.com/users/axemclion",
+          "html_url": "https://github.com/axemclion",
+          "followers_url": "https://api.github.com/users/axemclion/followers",
+          "following_url": "https://api.github.com/users/axemclion/following{/other_user}",
+          "gists_url": "https://api.github.com/users/axemclion/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/axemclion/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/axemclion/subscriptions",
+          "organizations_url": "https://api.github.com/users/axemclion/orgs",
+          "repos_url": "https://api.github.com/users/axemclion/repos",
+          "events_url": "https://api.github.com/users/axemclion/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/axemclion/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "Note that there could be other characters like a dot, or a hyphen in the file names that have special meanings in the Regex. Hence, we would need to escape the regex. The alternative would be to not use the toMatch method, and instead just use string.match method. ",
+        "created_at": "2014-03-20T18:07:21Z",
+        "updated_at": "2014-03-20T18:07:21Z",
+        "html_url": "https://github.com/angular/protractor/pull/626#discussion_r10808102",
+        "pull_request_url": "https://api.github.com/repos/angular/protractor/pulls/626",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/angular/protractor/pulls/comments/10808102"
+          },
+          "html": {
+            "href": "https://github.com/angular/protractor/pull/626#discussion_r10808102"
+          },
+          "pull_request": {
+            "href": "https://api.github.com/repos/angular/protractor/pulls/626"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T18:07:21Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2024008729",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 2547425,
+      "login": "kosz85",
+      "gravatar_id": "8a5877834ee53c53a9aade4a42b4abe8",
+      "url": "https://api.github.com/users/kosz85",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2547425?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/6764",
+        "labels_url": "https://api.github.com/repos/angular/angular.js/issues/6764/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.js/issues/6764/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.js/issues/6764/events",
+        "html_url": "https://github.com/angular/angular.js/issues/6764",
+        "id": 29804884,
+        "number": 6764,
+        "title": "Angular Profile Mode + Caching tools (ngRepeat default behavior issue)",
+        "user": {
+          "login": "kosz85",
+          "id": 2547425,
+          "avatar_url": "https://avatars.githubusercontent.com/u/2547425?",
+          "gravatar_id": "8a5877834ee53c53a9aade4a42b4abe8",
+          "url": "https://api.github.com/users/kosz85",
+          "html_url": "https://github.com/kosz85",
+          "followers_url": "https://api.github.com/users/kosz85/followers",
+          "following_url": "https://api.github.com/users/kosz85/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kosz85/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kosz85/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kosz85/subscriptions",
+          "organizations_url": "https://api.github.com/users/kosz85/orgs",
+          "repos_url": "https://api.github.com/users/kosz85/repos",
+          "events_url": "https://api.github.com/users/kosz85/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kosz85/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/2.0+suggestion",
+            "name": "2.0 suggestion",
+            "color": "207de5"
+          },
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/component%3A+ngRepeat",
+            "name": "component: ngRepeat",
+            "color": "fef2c0"
+          },
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/frequency%3A+moderate",
+            "name": "frequency: moderate",
+            "color": "fef2c0"
+          },
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/gh%3A+issue",
+            "name": "gh: issue",
+            "color": "5319e7"
+          },
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/severity%3A+inconvenient",
+            "name": "severity: inconvenient",
+            "color": "006b75"
+          }
+        ],
+        "state": "open",
+        "assignee": null,
+        "milestone": {
+          "url": "https://api.github.com/repos/angular/angular.js/milestones/27",
+          "labels_url": "https://api.github.com/repos/angular/angular.js/milestones/27/labels",
+          "id": 489171,
+          "number": 27,
+          "title": "Backlog",
+          "description": "Holds the backlog of issues and pull requests that have been triaged.\r\n\r\nBefore assigning items to this milestone they should be labelled, at the very least with the correct \"type\" label (i.e. \"issue\", \"pr\", \"bug\", \"regression\", \"chore\", \"docs\", etc).  Preferably you should also check for duplicate issues/PRs, note CLA status and assign \"complexity\" and \"impact\" labels too.",
+          "creator": {
+            "login": "IgorMinar",
+            "id": 216296,
+            "avatar_url": "https://avatars.githubusercontent.com/u/216296?",
+            "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+            "url": "https://api.github.com/users/IgorMinar",
+            "html_url": "https://github.com/IgorMinar",
+            "followers_url": "https://api.github.com/users/IgorMinar/followers",
+            "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+            "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+            "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+            "repos_url": "https://api.github.com/users/IgorMinar/repos",
+            "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "open_issues": 496,
+          "closed_issues": 191,
+          "state": "open",
+          "created_at": "2013-11-18T23:30:35Z",
+          "updated_at": "2014-03-20T10:27:44Z",
+          "due_on": null
+        },
+        "comments": 2,
+        "created_at": "2014-03-20T09:42:49Z",
+        "updated_at": "2014-03-20T18:06:40Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "This subject may be a bit controversial, but I hope someone will share my idea.\r\nI think Angular should have built in profile module or good toolkit for that, which would report slow parts of user defined code (ignoring core modules) or parts of templates in angular way (preserving scope hierarchy and similar things).\r\n\r\nAlso I request to disable some of default caching, like in ngRepeat. And this is the controversial part.\r\nWhy you ask? Shouldn't it be blazing fast out of the box? My answer is NO! It should be working correctly, this is main goal!\r\nI was doing very simple paginator, for big project with dynamically loaded modules using requirejs. Very simple, just ng-repat=\"p for pages\" then ng-class=\"{current: p == page}\", and it doesn't work correctly! It start desynchronize after heavy use, because of internal caching. Adding \"track by p + '_' + page\" solved issue, but developers spent quite some time to find what was not working, and caching in that place wasn't really needed, as it wasn't really expensive to rerender it.\r\nCaching should be explicit, enabled on demand (for example by using track by). I think there is enough magic for simple programmer that he need to deal with using angularjs.\r\n\r\nIn addition, there should be available easy caching tools and support for them in directives. This would solve most of performance problems which are currently solved in same way but using external tools."
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/comments/38201241",
+        "html_url": "https://github.com/angular/angular.js/issues/6764#issuecomment-38201241",
+        "issue_url": "https://api.github.com/repos/angular/angular.js/issues/6764",
+        "id": 38201241,
+        "user": {
+          "login": "kosz85",
+          "id": 2547425,
+          "avatar_url": "https://avatars.githubusercontent.com/u/2547425?",
+          "gravatar_id": "8a5877834ee53c53a9aade4a42b4abe8",
+          "url": "https://api.github.com/users/kosz85",
+          "html_url": "https://github.com/kosz85",
+          "followers_url": "https://api.github.com/users/kosz85/followers",
+          "following_url": "https://api.github.com/users/kosz85/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kosz85/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kosz85/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kosz85/subscriptions",
+          "organizations_url": "https://api.github.com/users/kosz85/orgs",
+          "repos_url": "https://api.github.com/users/kosz85/repos",
+          "events_url": "https://api.github.com/users/kosz85/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kosz85/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T18:06:40Z",
+        "updated_at": "2014-03-20T18:06:40Z",
+        "body": "Yes, I'm using it, but as you said :) it's not perfect."
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T18:06:41Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2024008625",
+    "type": "PullRequestReviewCommentEvent",
+    "actor": {
+      "id": 111951,
+      "login": "mhevery",
+      "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+      "url": "https://api.github.com/users/mhevery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111951?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.dart/pulls/comments/10808053",
+        "id": 10808053,
+        "diff_hunk": "@@ -160,6 +160,226 @@ void main() {\n       input..focus()..dispatchEvent(new TextEvent('textInput', data: text));\n     }\n \n+    describe('date/time type like', () {\n+      // Part of test fixture. Values are supplied below.\n+      final DateTime testDt1 = new DateTime.now();\n+      final DateTime testDt2 = new DateTime.utc(2014, 6, 21); // Summer solstice\n+\n+      //-----------------------------------------------------------------------\n+      // Local test helper functions\n+      \n+      // Conversion functions from DateTime to ...\n+      dynamic id(dynamic dt) => dt;\n+      int toNum(DateTime dt) => dt.millisecondsSinceEpoch;\n+      String toString(dynamic dt) {\n+        // DateTime.toIso8601String() is only available as of Dart 1.3.\n+        // Simplify the following once 1.3+ becomes stable.\n+        if(dt is DateTime)\n+          try { return dt.toIso8601String(); } catch (e) {}\n+        // Try to fix the string to match ISO8601.\n+        String result = dt.toString().replaceFirst(' ', 'T');\n+        // e.g. '2014-03-17 22:27:43' -> '2014-03-17T22:27:43'\n+        return result;\n+      };\n+      \n+      // InputElement setters\n+      dynamic setValAsDateTime(InputElement e, DateTime dt) { e.valueAsDate = dt; return e.valueAsDate; };\n+      dynamic setValAsNum(InputElement e, num dt) { e.valueAsNumber = dt; return e.valueAsNumber; };\n+      dynamic setValue(InputElement e, String dt) { \n+        e.value = dt; \n+        // Don't return e.value since in many cases this is just '' when the\n+        // browser does not accept the string that e.value is set to.\n+        return dt.toString(); \n+      };\n+      String ngValueAsDirAndValue(String ngValueAsValue) => \n+          ngValueAsValue == null ? '' : 'ng-value-as=\"$ngValueAsValue\"';\n+\n+      // Test case generators for \"model to input element\" tests\n+      void _itWorksM2E(String inputType, String ngValueAsValue, Function inputConv, \n+                    Function setValAsFn, \n+                    {bool expectNaN : false}) {\n+        it('should update model from $inputType input value: ${ngValueAsDirAndValue(ngValueAsValue)}', () {\n+          _.compile('<input type=$inputType ng-model=\"model\" '\n+                    '${ngValueAsDirAndValue(ngValueAsValue)} probe=\"p\">');\n+          Probe probe = _.rootScope.context['p'];\n+          InputElement inputElement = probe.element;\n+          //NgDateLikeValueAsDirective ngValueAs = probe.directive(NgDateLikeValueAsDirective);\n+          \n+          void _checkResult(expectedResult) {\n+            var r = _.rootScope.context['model'];\n+            if (expectedResult is num && expectedResult.isNaN) expectNaN = true;\n+            expectNaN ? expect(r != null && r.isNaN,isTrue) :  expect(r).toEqual(expectedResult);\n+          }\n+          var dt = inputConv(testDt1);\n+          var expectedResult = setValAsFn(inputElement, dt);\n+          // print(\"test dt=$dt, expectedResult=$expectedResult\");\n+          _.triggerEvent(inputElement, 'change');\n+          _checkResult(expectedResult);\n+          dt = inputConv(testDt2);\n+          expectedResult = setValAsFn(inputElement, dt);\n+          var input = probe.directive(InputDateLikeDirective);\n+          input.processValue();\n+          _checkResult(expectedResult);\n+        });\n+      };\n+\n+      // Test our assumptions about browser support of valueAs* IDL attributes.\n+      void _itFails(String inputType, String ngValueAsValue, Function conv, Function setValAsFn) {\n+        it('fail to set $inputType input valueAs IDL attribute of type $ngValueAsValue', () {\n+          _.compile('<input type=datetime-local ng-model=\"model\" '\n+                    '${ngValueAsDirAndValue(ngValueAsValue)} probe=\"p\">');\n+          Probe probe = _.rootScope.context['p'];\n+          InputElement inputElement = probe.element;\n+          \n+          var dt = conv(testDt1);\n+          try {\n+            setValAsFn(inputElement, dt);\n+            fail('Setting $inputType input valueAs IDL attribute should have failed but did not');\n+          } catch (e) {}\n+        });\n+      };\n+      \n+      //-----------------------------------------------------------------------\n+      // Actual test cases below this point.\n+\n+      DateTime stripTime(DateTime dt) => new DateTime(dt.year, dt.month, dt.day);\n+      String stripTimeStr(String s) => s.substring(0, \"YYYY-MM-DD\".length);\n+      String stripSeconds(String s) => s.substring(0, \"2014-06-21T00:00\".length);\n+      String stripZulu(String s) => s.replaceAll('Z', '');\n+      String keepYYMM(String s) => s.substring(0, \"YYYY-MM\".length);\n+      String keepTime(String s) => s.substring(\"2014-03-17T\".length);\n+      // Next one is tricky, so used fixed value\n+      // String toWeekStr(DateTime dt) => \"${dt.year}-W${dt.???}\"\n+      String toWeekStr(DateTime dt) => \"${dt.year}-W44\";\n+      comp(f,g) => (x) => f(g(x));\n+      String inputType;\n+  \n+      // Tests failing due to dart2js bug are run conditionally\n+      // TODO: enter dart bug #\n+      // TypeError: Cannot call method 'getTime' of null at dart.convertNativeToDart_DateTime\n+      const SKIP = true;\n+\n+      inputType = 'date';\n+      describe('type=$inputType', () {\n+        _itWorksM2E(inputType, null, stripTime, setValAsDateTime);",
+        "path": "test/directive/ng_model_spec.dart",
+        "position": 105,
+        "original_position": 105,
+        "commit_id": "e113cff2c16c39c6c43371bb964003619c35b7e4",
+        "original_commit_id": "e113cff2c16c39c6c43371bb964003619c35b7e4",
+        "user": {
+          "login": "mhevery",
+          "id": 111951,
+          "avatar_url": "https://avatars.githubusercontent.com/u/111951?",
+          "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+          "url": "https://api.github.com/users/mhevery",
+          "html_url": "https://github.com/mhevery",
+          "followers_url": "https://api.github.com/users/mhevery/followers",
+          "following_url": "https://api.github.com/users/mhevery/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mhevery/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mhevery/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mhevery/subscriptions",
+          "organizations_url": "https://api.github.com/users/mhevery/orgs",
+          "repos_url": "https://api.github.com/users/mhevery/repos",
+          "events_url": "https://api.github.com/users/mhevery/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mhevery/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "Our style is to keep it methods in the describe. Currently this style is confusing since it is not clear what exactly is being teste. From within the it you are free to call helper methods.",
+        "created_at": "2014-03-20T18:06:36Z",
+        "updated_at": "2014-03-20T18:06:36Z",
+        "html_url": "https://github.com/angular/angular.dart/pull/747#discussion_r10808053",
+        "pull_request_url": "https://api.github.com/repos/angular/angular.dart/pulls/747",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/comments/10808053"
+          },
+          "html": {
+            "href": "https://github.com/angular/angular.dart/pull/747#discussion_r10808053"
+          },
+          "pull_request": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/747"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T18:06:36Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2024006759",
+    "type": "IssuesEvent",
+    "actor": {
+      "id": 281531,
+      "login": "raghava",
+      "gravatar_id": "d676a1721326a1899183de6b637126a8",
+      "url": "https://api.github.com/users/raghava",
+      "avatar_url": "https://avatars.githubusercontent.com/u/281531?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "opened",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/6777",
+        "labels_url": "https://api.github.com/repos/angular/angular.js/issues/6777/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.js/issues/6777/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.js/issues/6777/events",
+        "html_url": "https://github.com/angular/angular.js/issues/6777",
+        "id": 29842714,
+        "number": 6777,
+        "title": "$httpBackend.whenGET with qunit.js the test case always frezees the process, and never get executes",
+        "user": {
+          "login": "raghava",
+          "id": 281531,
+          "avatar_url": "https://avatars.githubusercontent.com/u/281531?",
+          "gravatar_id": "d676a1721326a1899183de6b637126a8",
+          "url": "https://api.github.com/users/raghava",
+          "html_url": "https://github.com/raghava",
+          "followers_url": "https://api.github.com/users/raghava/followers",
+          "following_url": "https://api.github.com/users/raghava/following{/other_user}",
+          "gists_url": "https://api.github.com/users/raghava/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/raghava/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/raghava/subscriptions",
+          "organizations_url": "https://api.github.com/users/raghava/orgs",
+          "repos_url": "https://api.github.com/users/raghava/repos",
+          "events_url": "https://api.github.com/users/raghava/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/raghava/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+
+        ],
+        "state": "open",
+        "assignee": null,
+        "milestone": null,
+        "comments": 0,
+        "created_at": "2014-03-20T18:05:35Z",
+        "updated_at": "2014-03-20T18:05:35Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "I have written test cases with Qunit.js. The test case with  always freezes the process & it  never executes. Check out the attached JsFiddle link http://jsfiddle.net/kotekar/5aFgd/\r\n\r\nWhile, the whenGET passes. the source is attached for review\r\n\r\n```\r\nvar myApp = angular.module('myApp', []);\r\n\r\nmyApp.config(function($provide) {\r\n  $provide.decorator('$httpBackend', angular.mock.e2e.$httpBackendDecorator);\r\n});\r\n\r\nvar injector = angular.injector(['ng', 'myApp']),\r\n    $httpBackend, $http;\r\n\r\nmodule('$httpBackend test', {\r\n    'setup': function(){\r\n        $httpBackend = injector.get(\"$httpBackend\");\r\n        $http = injector.get(\"$http\");\r\n    }\r\n})\r\n\r\ntest(\"$http whenGET\", function() {\r\n    expect(1);\r\n    \r\n    $httpBackend.whenGET('website.com').respond('whenGET');\r\n    \r\n    $http.get('website.com')\r\n    .success(function(message){\r\n        equal(message, 'whenGET', 'whenGET success');\r\n        start();\r\n    });\r\n    stop();\r\n});\r\n\r\ntest(\"$http expectGET\", function() {\r\n    expect(1);\r\n    \r\n    $httpBackend.expectGET('website.com').respond(200, 'expectGET');\r\n    \r\n    $http.get('website.com')\r\n    .success(function(message){\r\n        equal(message, 'expectGET', 'expectGET success');\r\n        start();\r\n    });\r\n    stop();\r\n});\r\n```"
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T18:05:36Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2024003229",
+    "type": "PushEvent",
+    "actor": {
+      "id": 111951,
+      "login": "mhevery",
+      "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+      "url": "https://api.github.com/users/mhevery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111951?"
+    },
+    "repo": {
+      "id": 16123504,
+      "name": "angular/docs.angulardart.org",
+      "url": "https://api.github.com/repos/angular/docs.angulardart.org"
+    },
+    "payload": {
+      "push_id": 330698542,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "ff6e3e7bea4f6d7d9a52cb62089e480dc5acc8bb",
+      "before": "b1af8fe681398e6bb199ac4b4e801183468f9a6f",
+      "commits": [
+        {
+          "sha": "ff6e3e7bea4f6d7d9a52cb62089e480dc5acc8bb",
+          "author": {
+            "email": "travis@localhost.localdomain",
+            "name": "travis@travis-ci.org"
+          },
+          "message": "Automated push of generated docs from SHA: https://github.com/angular/angular.dart/commit/ea12e7e4fed0955478de48472b0e82a44686e865",
+          "distinct": true,
+          "url": "https://api.github.com/repos/angular/docs.angulardart.org/commits/ff6e3e7bea4f6d7d9a52cb62089e480dc5acc8bb"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2014-03-20T18:03:26Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023993791",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 1819085,
+      "login": "budajeff",
+      "gravatar_id": "278e166e31d684a724c0889ccc558764",
+      "url": "https://api.github.com/users/budajeff",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1819085?"
+    },
+    "repo": {
+      "id": 7639232,
+      "name": "angular/protractor",
+      "url": "https://api.github.com/repos/angular/protractor"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/protractor/issues/552",
+        "labels_url": "https://api.github.com/repos/angular/protractor/issues/552/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/protractor/issues/552/comments",
+        "events_url": "https://api.github.com/repos/angular/protractor/issues/552/events",
+        "html_url": "https://github.com/angular/protractor/issues/552",
+        "id": 28289088,
+        "number": 552,
+        "title": "debug broken on 0.19.0 but works on 0.18.1",
+        "user": {
+          "login": "elgalu",
+          "id": 111569,
+          "avatar_url": "https://avatars.githubusercontent.com/u/111569?",
+          "gravatar_id": "d4b619fb02a125ae43c181d9db3b184c",
+          "url": "https://api.github.com/users/elgalu",
+          "html_url": "https://github.com/elgalu",
+          "followers_url": "https://api.github.com/users/elgalu/followers",
+          "following_url": "https://api.github.com/users/elgalu/following{/other_user}",
+          "gists_url": "https://api.github.com/users/elgalu/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/elgalu/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/elgalu/subscriptions",
+          "organizations_url": "https://api.github.com/users/elgalu/orgs",
+          "repos_url": "https://api.github.com/users/elgalu/repos",
+          "events_url": "https://api.github.com/users/elgalu/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/elgalu/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+          {
+            "url": "https://api.github.com/repos/angular/protractor/labels/bug",
+            "name": "bug",
+            "color": "fc2929"
+          }
+        ],
+        "state": "closed",
+        "assignee": null,
+        "milestone": {
+          "url": "https://api.github.com/repos/angular/protractor/milestones/7",
+          "labels_url": "https://api.github.com/repos/angular/protractor/milestones/7/labels",
+          "id": 582753,
+          "number": 7,
+          "title": "0.20.0",
+          "description": "",
+          "creator": {
+            "login": "juliemr",
+            "id": 2081709,
+            "avatar_url": "https://avatars.githubusercontent.com/u/2081709?",
+            "gravatar_id": "ec8150609d2d6616944b3751ef3309ec",
+            "url": "https://api.github.com/users/juliemr",
+            "html_url": "https://github.com/juliemr",
+            "followers_url": "https://api.github.com/users/juliemr/followers",
+            "following_url": "https://api.github.com/users/juliemr/following{/other_user}",
+            "gists_url": "https://api.github.com/users/juliemr/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/juliemr/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/juliemr/subscriptions",
+            "organizations_url": "https://api.github.com/users/juliemr/orgs",
+            "repos_url": "https://api.github.com/users/juliemr/repos",
+            "events_url": "https://api.github.com/users/juliemr/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/juliemr/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "open_issues": 0,
+          "closed_issues": 4,
+          "state": "closed",
+          "created_at": "2014-02-27T20:17:22Z",
+          "updated_at": "2014-03-05T20:00:08Z",
+          "due_on": null
+        },
+        "comments": 16,
+        "created_at": "2014-02-25T22:05:57Z",
+        "updated_at": "2014-03-20T17:57:57Z",
+        "closed_at": "2014-03-03T18:04:19Z",
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "I'm unable to debug on protractor 0.19.0\r\n> Failed to open socket on port 5858, waiting 1000 ms before retrying\r\n\r\nDowngraded to protractor 0.18.1 and worked fine!\r\nThen re-installed 0.19.0 to test again, and the same socket error.\r\n\r\nTested on chrome33 & firefox27, chromedriver 2.9. node 0.10.25\r\nUsing `webdriver-manager start` in another console.\r\n\r\n```\r\n$ protractor debug config/local/firefox.js\r\n< debugger listening on port 5858\r\nconnecting... ok\r\nbreak in /usr/local/lib/node_modules/protractor/lib/cli.js:7\r\n  5  * Values from command line options override values from the config.\r\n  6  */\r\n  7 'use strict';\r\n  8 \r\n  9 // Coffee is required here to enable config files written in coffee-script.\r\ndebug> c\r\n< ------------------------------------\r\n< PID: 15196 (capability: firefoxANY #1)\r\n< ------------------------------------\r\n< debugger listening on port 5858\r\n< Failed to open socket on port 5858, waiting 1000 ms before retrying\r\n< Failed to open socket on port 5858, waiting 1000 ms before retrying\r\n< Failed to open socket on port 5858, waiting 1000 ms before retrying\r\n< Failed to open socket on port 5858, waiting 1000 ms before retrying\r\n< Failed to open socket on port 5858, waiting 1000 ms before retrying\r\n< Failed to open socket on port 5858, waiting 1000 ms before retrying\r\n```\r\n\r\nThen port 5858 seems to be left open:\r\n\r\n```\r\n$ sudo lsof -i tcp:5858\r\nCOMMAND   PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME\r\nnode    15185 user   11u  IPv4 1397240      0t0  TCP localhost:58131->localhost:5858 (ESTABLISHED)\r\nnode    15187 user    9u  IPv4 1397907      0t0  TCP localhost:5858 (LISTEN)\r\nnode    15187 user   10u  IPv4 1395469      0t0  TCP localhost:5858->localhost:58131 (ESTABLISHED)\r\nnode    15196 user    9u  IPv4 1397907      0t0  TCP localhost:5858 (LISTEN)\r\nnode    15196 user   10u  IPv4 1395469      0t0  TCP localhost:5858->localhost:58131 (ESTABLISHED)\r\n```\r\n\r\nPlease note debug works well when i re-install 0.18.1\r\n\r\nTried with a remote selenium grid, same issue so webdriver-manager is not related.\r\n\r\nhttps://github.com/angular/protractor/issues/549 looks like a question but might be related."
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/protractor/issues/comments/38200127",
+        "html_url": "https://github.com/angular/protractor/issues/552#issuecomment-38200127",
+        "issue_url": "https://api.github.com/repos/angular/protractor/issues/552",
+        "id": 38200127,
+        "user": {
+          "login": "budajeff",
+          "id": 1819085,
+          "avatar_url": "https://avatars.githubusercontent.com/u/1819085?",
+          "gravatar_id": "278e166e31d684a724c0889ccc558764",
+          "url": "https://api.github.com/users/budajeff",
+          "html_url": "https://github.com/budajeff",
+          "followers_url": "https://api.github.com/users/budajeff/followers",
+          "following_url": "https://api.github.com/users/budajeff/following{/other_user}",
+          "gists_url": "https://api.github.com/users/budajeff/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/budajeff/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/budajeff/subscriptions",
+          "organizations_url": "https://api.github.com/users/budajeff/orgs",
+          "repos_url": "https://api.github.com/users/budajeff/repos",
+          "events_url": "https://api.github.com/users/budajeff/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/budajeff/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T17:57:57Z",
+        "updated_at": "2014-03-20T17:57:57Z",
+        "body": "browser.debugger() is being ignored by protractor 0.20.1 on Windows 7 (node-debug 0.1.0)"
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:57:57Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023986745",
+    "type": "PushEvent",
+    "actor": {
+      "id": 111951,
+      "login": "mhevery",
+      "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+      "url": "https://api.github.com/users/mhevery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111951?"
+    },
+    "repo": {
+      "id": 9506008,
+      "name": "mhevery/angular.dart",
+      "url": "https://api.github.com/repos/mhevery/angular.dart"
+    },
+    "payload": {
+      "push_id": 330690774,
+      "size": 2,
+      "distinct_size": 2,
+      "ref": "refs/heads/presubmit",
+      "head": "9730aa1459ef52a3673e1812748c697066ca0dc1",
+      "before": "613030a04c584040a09cade196945fde9fa830cc",
+      "commits": [
+        {
+          "sha": "d71f38c2ccbbbd1301296c87bdb422d999f71120",
+          "author": {
+            "email": "markovuksanovic@gmail.com",
+            "name": "Marko Vuksanovic"
+          },
+          "message": "fix(Jasmine): Execute AfterEach methods\n\nThis change fixes the problem that functions defined using afterEach in unit tests were not run.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/mhevery/angular.dart/commits/d71f38c2ccbbbd1301296c87bdb422d999f71120"
+        },
+        {
+          "sha": "9730aa1459ef52a3673e1812748c697066ca0dc1",
+          "author": {
+            "email": "markovuksanovic@gmail.com",
+            "name": "Marko Vuksanovic"
+          },
+          "message": "chore(EventHandler): Clean up EventHandler tests\n\nCloses #770",
+          "distinct": true,
+          "url": "https://api.github.com/repos/mhevery/angular.dart/commits/9730aa1459ef52a3673e1812748c697066ca0dc1"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:53:55Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023986452",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 4140793,
+      "login": "chalin",
+      "gravatar_id": "c735441a8f71994ab500ce5e599b7fda",
+      "url": "https://api.github.com/users/chalin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4140793?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.dart/issues/773",
+        "labels_url": "https://api.github.com/repos/angular/angular.dart/issues/773/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.dart/issues/773/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.dart/issues/773/events",
+        "html_url": "https://github.com/angular/angular.dart/issues/773",
+        "id": 29801663,
+        "number": 773,
+        "title": "Feature request: support for observable",
+        "user": {
+          "login": "zoechi",
+          "id": 405837,
+          "avatar_url": "https://avatars.githubusercontent.com/u/405837?",
+          "gravatar_id": "5f1c0eb887fd1d645b49a877a9e11293",
+          "url": "https://api.github.com/users/zoechi",
+          "html_url": "https://github.com/zoechi",
+          "followers_url": "https://api.github.com/users/zoechi/followers",
+          "following_url": "https://api.github.com/users/zoechi/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zoechi/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zoechi/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zoechi/subscriptions",
+          "organizations_url": "https://api.github.com/users/zoechi/orgs",
+          "repos_url": "https://api.github.com/users/zoechi/repos",
+          "events_url": "https://api.github.com/users/zoechi/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zoechi/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+
+        ],
+        "state": "closed",
+        "assignee": null,
+        "milestone": null,
+        "comments": 3,
+        "created_at": "2014-03-20T08:42:28Z",
+        "updated_at": "2014-03-20T17:53:43Z",
+        "closed_at": "2014-03-20T16:57:03Z",
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "There is a lot effort going on to improve performance in Angular and\r\nthere are several situations where developers encounter problems (at least negative suprises) because some model changes are not recognized (collections) without some special effort.\r\n\r\nWouldn't it make sense to support something like the observableCollection as it is used in Polymer (https://pub.dartlang.org/packages/observe)? (found the source here https://chromium.googlesource.com/external/dart/+/refs/heads/master/dart/pkg/observe)\r\nI haven't investigated how this works in detail but it is about collections (AFAIK currently only List/Map) that notify about being changed.\r\n\r\nThis could be extended by defining a pattern how every kind of object can notify Angular about changes by (e.g. implementing an interface ChangeNotifier or whatever).\r\n\r\nAs a next step I imagine an object using this pattern being able to notify the collection it is stored in about changes and the collection propagates it to parties interested in changes in the collection.\r\n\r\nI think this could greatly improve developer experience without to much influence on the performance.\r\n\r\nWhat do you think?\r\n\r\nEDIT\r\n\r\nseems this already covers this\r\n[Layer 1: Object.observe Polyfill](https://docs.google.com/document/d/10W46qDNO8Dl0Uye3QX0oUDPYAwaPl0qNy73TVLjd1WI/edit#heading=h.x26w6vayy55n)"
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.dart/issues/comments/38199573",
+        "html_url": "https://github.com/angular/angular.dart/issues/773#issuecomment-38199573",
+        "issue_url": "https://api.github.com/repos/angular/angular.dart/issues/773",
+        "id": 38199573,
+        "user": {
+          "login": "chalin",
+          "id": 4140793,
+          "avatar_url": "https://avatars.githubusercontent.com/u/4140793?",
+          "gravatar_id": "c735441a8f71994ab500ce5e599b7fda",
+          "url": "https://api.github.com/users/chalin",
+          "html_url": "https://github.com/chalin",
+          "followers_url": "https://api.github.com/users/chalin/followers",
+          "following_url": "https://api.github.com/users/chalin/following{/other_user}",
+          "gists_url": "https://api.github.com/users/chalin/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/chalin/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/chalin/subscriptions",
+          "organizations_url": "https://api.github.com/users/chalin/orgs",
+          "repos_url": "https://api.github.com/users/chalin/repos",
+          "events_url": "https://api.github.com/users/chalin/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/chalin/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T17:53:43Z",
+        "updated_at": "2014-03-20T17:53:43Z",
+        "body": "If `observe` turns out to be insufficient, please re-open this issue."
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:53:44Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023983439",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 111951,
+      "login": "mhevery",
+      "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+      "url": "https://api.github.com/users/mhevery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111951?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.dart/issues/770",
+        "labels_url": "https://api.github.com/repos/angular/angular.dart/issues/770/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.dart/issues/770/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.dart/issues/770/events",
+        "html_url": "https://github.com/angular/angular.dart/pull/770",
+        "id": 29790181,
+        "number": 770,
+        "title": "Fix problem with Jasmine and afterEach",
+        "user": {
+          "login": "markovuksanovic",
+          "id": 52777,
+          "avatar_url": "https://avatars.githubusercontent.com/u/52777?",
+          "gravatar_id": "9df3da994139c4dc56900b170d8824a6",
+          "url": "https://api.github.com/users/markovuksanovic",
+          "html_url": "https://github.com/markovuksanovic",
+          "followers_url": "https://api.github.com/users/markovuksanovic/followers",
+          "following_url": "https://api.github.com/users/markovuksanovic/following{/other_user}",
+          "gists_url": "https://api.github.com/users/markovuksanovic/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/markovuksanovic/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/markovuksanovic/subscriptions",
+          "organizations_url": "https://api.github.com/users/markovuksanovic/orgs",
+          "repos_url": "https://api.github.com/users/markovuksanovic/repos",
+          "events_url": "https://api.github.com/users/markovuksanovic/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/markovuksanovic/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+          {
+            "url": "https://api.github.com/repos/angular/angular.dart/labels/cla%3A+yes",
+            "name": "cla: yes",
+            "color": "009800"
+          }
+        ],
+        "state": "open",
+        "assignee": null,
+        "milestone": null,
+        "comments": 2,
+        "created_at": "2014-03-20T02:44:25Z",
+        "updated_at": "2014-03-20T17:52:00Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": "https://github.com/angular/angular.dart/pull/770",
+          "diff_url": "https://github.com/angular/angular.dart/pull/770.diff",
+          "patch_url": "https://github.com/angular/angular.dart/pull/770.patch"
+        },
+        "body": ""
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.dart/issues/comments/38199378",
+        "html_url": "https://github.com/angular/angular.dart/pull/770#issuecomment-38199378",
+        "issue_url": "https://api.github.com/repos/angular/angular.dart/issues/770",
+        "id": 38199378,
+        "user": {
+          "login": "mhevery",
+          "id": 111951,
+          "avatar_url": "https://avatars.githubusercontent.com/u/111951?",
+          "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+          "url": "https://api.github.com/users/mhevery",
+          "html_url": "https://github.com/mhevery",
+          "followers_url": "https://api.github.com/users/mhevery/followers",
+          "following_url": "https://api.github.com/users/mhevery/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mhevery/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mhevery/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mhevery/subscriptions",
+          "organizations_url": "https://api.github.com/users/mhevery/orgs",
+          "repos_url": "https://api.github.com/users/mhevery/repos",
+          "events_url": "https://api.github.com/users/mhevery/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mhevery/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T17:52:00Z",
+        "updated_at": "2014-03-20T17:52:00Z",
+        "body": "@jbdeboer turns out that our afterEatch did not run."
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:52:00Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023983230",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 502633,
+      "login": "jbdeboer",
+      "gravatar_id": "56550177c394ec1202c746750ba3f270",
+      "url": "https://api.github.com/users/jbdeboer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/502633?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.dart/issues/219",
+        "labels_url": "https://api.github.com/repos/angular/angular.dart/issues/219/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.dart/issues/219/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.dart/issues/219/events",
+        "html_url": "https://github.com/angular/angular.dart/issues/219",
+        "id": 20997410,
+        "number": 219,
+        "title": "remove jQuery from the tests",
+        "user": {
+          "login": "mhevery",
+          "id": 111951,
+          "avatar_url": "https://avatars.githubusercontent.com/u/111951?",
+          "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+          "url": "https://api.github.com/users/mhevery",
+          "html_url": "https://github.com/mhevery",
+          "followers_url": "https://api.github.com/users/mhevery/followers",
+          "following_url": "https://api.github.com/users/mhevery/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mhevery/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mhevery/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mhevery/subscriptions",
+          "organizations_url": "https://api.github.com/users/mhevery/orgs",
+          "repos_url": "https://api.github.com/users/mhevery/repos",
+          "events_url": "https://api.github.com/users/mhevery/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mhevery/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+
+        ],
+        "state": "open",
+        "assignee": {
+          "login": "jbdeboer",
+          "id": 502633,
+          "avatar_url": "https://avatars.githubusercontent.com/u/502633?",
+          "gravatar_id": "56550177c394ec1202c746750ba3f270",
+          "url": "https://api.github.com/users/jbdeboer",
+          "html_url": "https://github.com/jbdeboer",
+          "followers_url": "https://api.github.com/users/jbdeboer/followers",
+          "following_url": "https://api.github.com/users/jbdeboer/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jbdeboer/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jbdeboer/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jbdeboer/subscriptions",
+          "organizations_url": "https://api.github.com/users/jbdeboer/orgs",
+          "repos_url": "https://api.github.com/users/jbdeboer/repos",
+          "events_url": "https://api.github.com/users/jbdeboer/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jbdeboer/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "milestone": {
+          "url": "https://api.github.com/repos/angular/angular.dart/milestones/11",
+          "labels_url": "https://api.github.com/repos/angular/angular.dart/milestones/11/labels",
+          "id": 509294,
+          "number": 11,
+          "title": "v0.9.x",
+          "description": null,
+          "creator": {
+            "login": "mhevery",
+            "id": 111951,
+            "avatar_url": "https://avatars.githubusercontent.com/u/111951?",
+            "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+            "url": "https://api.github.com/users/mhevery",
+            "html_url": "https://github.com/mhevery",
+            "followers_url": "https://api.github.com/users/mhevery/followers",
+            "following_url": "https://api.github.com/users/mhevery/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mhevery/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/mhevery/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mhevery/subscriptions",
+            "organizations_url": "https://api.github.com/users/mhevery/orgs",
+            "repos_url": "https://api.github.com/users/mhevery/repos",
+            "events_url": "https://api.github.com/users/mhevery/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/mhevery/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "open_issues": 14,
+          "closed_issues": 6,
+          "state": "open",
+          "created_at": "2013-12-09T23:06:24Z",
+          "updated_at": "2014-03-20T17:39:50Z",
+          "due_on": null
+        },
+        "comments": 1,
+        "created_at": "2013-10-15T05:30:33Z",
+        "updated_at": "2014-03-20T17:51:53Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": ""
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.dart/issues/comments/38199364",
+        "html_url": "https://github.com/angular/angular.dart/issues/219#issuecomment-38199364",
+        "issue_url": "https://api.github.com/repos/angular/angular.dart/issues/219",
+        "id": 38199364,
+        "user": {
+          "login": "jbdeboer",
+          "id": 502633,
+          "avatar_url": "https://avatars.githubusercontent.com/u/502633?",
+          "gravatar_id": "56550177c394ec1202c746750ba3f270",
+          "url": "https://api.github.com/users/jbdeboer",
+          "html_url": "https://github.com/jbdeboer",
+          "followers_url": "https://api.github.com/users/jbdeboer/followers",
+          "following_url": "https://api.github.com/users/jbdeboer/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jbdeboer/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jbdeboer/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jbdeboer/subscriptions",
+          "organizations_url": "https://api.github.com/users/jbdeboer/orgs",
+          "repos_url": "https://api.github.com/users/jbdeboer/repos",
+          "events_url": "https://api.github.com/users/jbdeboer/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jbdeboer/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T17:51:53Z",
+        "updated_at": "2014-03-20T17:51:53Z",
+        "body": "Currently, JQuery does two things that we need to keep:\r\n-> html() which hides the \"ng-binding\" TaggingCompiler implementation details\r\n-> textWithShadow() which hides the shadow DOM in components\r\n\r\nThe rest of JQuery's methods are simple wrappers around Element"
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:51:53Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023979318",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 1078012,
+      "login": "DanTup",
+      "gravatar_id": "c5fb33cb5c21479a760a1f9a96335119",
+      "url": "https://api.github.com/users/DanTup",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1078012?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/2877",
+        "labels_url": "https://api.github.com/repos/angular/angular.js/issues/2877/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.js/issues/2877/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.js/issues/2877/events",
+        "html_url": "https://github.com/angular/angular.js/issues/2877",
+        "id": 15151996,
+        "number": 2877,
+        "title": "Please publish AngularJS as an NPM module",
+        "user": {
+          "login": "dankohn",
+          "id": 3083270,
+          "avatar_url": "https://avatars.githubusercontent.com/u/3083270?",
+          "gravatar_id": "5730f209b34b8474639e0c2020f54513",
+          "url": "https://api.github.com/users/dankohn",
+          "html_url": "https://github.com/dankohn",
+          "followers_url": "https://api.github.com/users/dankohn/followers",
+          "following_url": "https://api.github.com/users/dankohn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/dankohn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/dankohn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/dankohn/subscriptions",
+          "organizations_url": "https://api.github.com/users/dankohn/orgs",
+          "repos_url": "https://api.github.com/users/dankohn/repos",
+          "events_url": "https://api.github.com/users/dankohn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/dankohn/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/needs%3A+investigation",
+            "name": "needs: investigation",
+            "color": "444444"
+          },
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/post-1.2-milestone",
+            "name": "post-1.2-milestone",
+            "color": "d4c5f9"
+          },
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/type%3A+chore",
+            "name": "type: chore",
+            "color": "e7ed39"
+          }
+        ],
+        "state": "open",
+        "assignee": null,
+        "milestone": {
+          "url": "https://api.github.com/repos/angular/angular.js/milestones/27",
+          "labels_url": "https://api.github.com/repos/angular/angular.js/milestones/27/labels",
+          "id": 489171,
+          "number": 27,
+          "title": "Backlog",
+          "description": "Holds the backlog of issues and pull requests that have been triaged.\r\n\r\nBefore assigning items to this milestone they should be labelled, at the very least with the correct \"type\" label (i.e. \"issue\", \"pr\", \"bug\", \"regression\", \"chore\", \"docs\", etc).  Preferably you should also check for duplicate issues/PRs, note CLA status and assign \"complexity\" and \"impact\" labels too.",
+          "creator": {
+            "login": "IgorMinar",
+            "id": 216296,
+            "avatar_url": "https://avatars.githubusercontent.com/u/216296?",
+            "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+            "url": "https://api.github.com/users/IgorMinar",
+            "html_url": "https://github.com/IgorMinar",
+            "followers_url": "https://api.github.com/users/IgorMinar/followers",
+            "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+            "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+            "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+            "repos_url": "https://api.github.com/users/IgorMinar/repos",
+            "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "open_issues": 496,
+          "closed_issues": 191,
+          "state": "open",
+          "created_at": "2013-11-18T23:30:35Z",
+          "updated_at": "2014-03-20T10:27:44Z",
+          "due_on": null
+        },
+        "comments": 38,
+        "created_at": "2013-06-05T03:12:53Z",
+        "updated_at": "2014-03-20T17:49:42Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "It just takes a few minutes to publish an npm module of the existing AngularJS project, but it would accomplish the following:\r\n\r\n* Enable deployment from the standard infrastructure being used for both server and client Javascript code\r\n* Enable browserify users like me to package up client side libraries I fetch with npm (though in production, I reference a copy on the CDN)\r\n* Find new Angular releases using npm outdated.\r\n* Jump ahead of jQuery, which is in the process of taking over the npm management of their library: https://github.com/coolaj86/node-jquery/issues/56\r\n\r\nThe npm name angularjs remains available. I recommend mapping it to git://github.com/angular/angular.js.git#v1.0.x and perhaps also creating an angularjs-unstable which pulls from master.\r\n\r\nThanks!"
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/comments/38199083",
+        "html_url": "https://github.com/angular/angular.js/issues/2877#issuecomment-38199083",
+        "issue_url": "https://api.github.com/repos/angular/angular.js/issues/2877",
+        "id": 38199083,
+        "user": {
+          "login": "DanTup",
+          "id": 1078012,
+          "avatar_url": "https://avatars.githubusercontent.com/u/1078012?",
+          "gravatar_id": "c5fb33cb5c21479a760a1f9a96335119",
+          "url": "https://api.github.com/users/DanTup",
+          "html_url": "https://github.com/DanTup",
+          "followers_url": "https://api.github.com/users/DanTup/followers",
+          "following_url": "https://api.github.com/users/DanTup/following{/other_user}",
+          "gists_url": "https://api.github.com/users/DanTup/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/DanTup/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/DanTup/subscriptions",
+          "organizations_url": "https://api.github.com/users/DanTup/orgs",
+          "repos_url": "https://api.github.com/users/DanTup/repos",
+          "events_url": "https://api.github.com/users/DanTup/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/DanTup/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T17:49:42Z",
+        "updated_at": "2014-03-20T17:49:42Z",
+        "body": "Turns out; I didn't want this whole repo; just the built output!\r\n\r\nSo, I wrote a script... Until there are official packages, you can get the build output (taken from code.angularjs.org) from this repo:\r\n\r\nhttps://github.com/DanTup/angular-builds/\r\n\r\nThere is a branch for each version of Angular published to code.angularjs.org, and each branch has a readme showing the npm command for that version. For example, the latest beta readme is here:\r\n\r\nhttps://github.com/DanTup/angular-builds/tree/1.3.0-beta.2\r\n\r\nand the npm command to install is\r\n\r\n    npm install https://github.com/DanTup/angular-builds/tarball/1.3.0-beta.2 --save-dev\r\n\r\nYou can see a full list of branches/versions here:\r\n\r\nhttps://github.com/DanTup/angular-builds/branches\r\n\r\nHope this might be useful to others until there are official packages."
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:49:44Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023974607",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 29597,
+      "login": "bvaughn",
+      "gravatar_id": "471eb3bb07e1a8ffa692e38ac6832232",
+      "url": "https://api.github.com/users/bvaughn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29597?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/6769",
+        "labels_url": "https://api.github.com/repos/angular/angular.js/issues/6769/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.js/issues/6769/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.js/issues/6769/events",
+        "html_url": "https://github.com/angular/angular.js/issues/6769",
+        "id": 29821493,
+        "number": 6769,
+        "title": "ngOptions can cause flickering/jumping highlight on Firefox",
+        "user": {
+          "login": "bvaughn",
+          "id": 29597,
+          "avatar_url": "https://avatars.githubusercontent.com/u/29597?",
+          "gravatar_id": "471eb3bb07e1a8ffa692e38ac6832232",
+          "url": "https://api.github.com/users/bvaughn",
+          "html_url": "https://github.com/bvaughn",
+          "followers_url": "https://api.github.com/users/bvaughn/followers",
+          "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+          "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+          "repos_url": "https://api.github.com/users/bvaughn/repos",
+          "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/gh%3A+issue",
+            "name": "gh: issue",
+            "color": "5319e7"
+          }
+        ],
+        "state": "open",
+        "assignee": null,
+        "milestone": null,
+        "comments": 3,
+        "created_at": "2014-03-20T14:13:05Z",
+        "updated_at": "2014-03-20T17:46:54Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "**Request Type**: bug\r\n\r\n**How to reproduce**: http://plnkr.co/edit/ciOEcE9fidbeXzRrZ2HN?p=preview\r\n\r\n**Component(s)**: ngOptions\r\n\r\n**Impact**: medium\r\n\r\n**Complexity**: small\r\n\r\n**Detailed Description**:\r\nThe ngOptions directive causes a strange flickering behavior on Firefox when the digest loop is triggered. This issue does not occur for Safari or Chrome. I encountered this issue in version 1.2.14 but after researching, I believe it's been around since version 1.0.x.\r\n\r\n**Other Comments**:\r\nI was able to \"fix\" this issue by editing `src/ng/directive/select.js` line 534 as follows:\r\n```diff\r\n-                if (lastElement[0].selected !== option.selected) {\r\n+                if (existingOption.selected !== option.selected) {\r\n```\r\nUnfortunately this breaks on of the select unit tests, *should select correct input if previously selected option was \"?\"*.\r\n\r\nI'll play with it some more but would welcome any input from the community."
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/comments/38198749",
+        "html_url": "https://github.com/angular/angular.js/issues/6769#issuecomment-38198749",
+        "issue_url": "https://api.github.com/repos/angular/angular.js/issues/6769",
+        "id": 38198749,
+        "user": {
+          "login": "bvaughn",
+          "id": 29597,
+          "avatar_url": "https://avatars.githubusercontent.com/u/29597?",
+          "gravatar_id": "471eb3bb07e1a8ffa692e38ac6832232",
+          "url": "https://api.github.com/users/bvaughn",
+          "html_url": "https://github.com/bvaughn",
+          "followers_url": "https://api.github.com/users/bvaughn/followers",
+          "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+          "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+          "repos_url": "https://api.github.com/users/bvaughn/repos",
+          "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T17:46:54Z",
+        "updated_at": "2014-03-20T17:46:54Z",
+        "body": "@Narretz I just applied that fix to my local checkout of `v1.2.x`. Tested in Firefox and also ran `grunt test`. Fix seemed to work for both!"
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:46:55Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023972281",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 1506344,
+      "login": "nsomaru",
+      "gravatar_id": "e7631cc2814241f7906a7ac05c3c0b03",
+      "url": "https://api.github.com/users/nsomaru",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1506344?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:45:33Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023964030",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 883753,
+      "login": "ahmedshabib",
+      "gravatar_id": "2c14a0b5325067c3d4d1139d7e23d925",
+      "url": "https://api.github.com/users/ahmedshabib",
+      "avatar_url": "https://avatars.githubusercontent.com/u/883753?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:40:56Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023962109",
+    "type": "PushEvent",
+    "actor": {
+      "id": 111951,
+      "login": "mhevery",
+      "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+      "url": "https://api.github.com/users/mhevery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111951?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "push_id": 330678769,
+      "size": 1,
+      "distinct_size": 0,
+      "ref": "refs/heads/master",
+      "head": "ea12e7e4fed0955478de48472b0e82a44686e865",
+      "before": "613030a04c584040a09cade196945fde9fa830cc",
+      "commits": [
+        {
+          "sha": "ea12e7e4fed0955478de48472b0e82a44686e865",
+          "author": {
+            "email": "james@huronbox.com",
+            "name": "James deBoer"
+          },
+          "message": "test(symbols): Track the symbols we export from the angular library\n\nCloses #398",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/ea12e7e4fed0955478de48472b0e82a44686e865"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:39:51Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023962104",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 111951,
+      "login": "mhevery",
+      "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+      "url": "https://api.github.com/users/mhevery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111951?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "action": "closed",
+      "number": 769,
+      "pull_request": {
+        "url": "https://api.github.com/repos/angular/angular.dart/pulls/769",
+        "id": 13763969,
+        "html_url": "https://github.com/angular/angular.dart/pull/769",
+        "diff_url": "https://github.com/angular/angular.dart/pull/769.diff",
+        "patch_url": "https://github.com/angular/angular.dart/pull/769.patch",
+        "issue_url": "https://api.github.com/repos/angular/angular.dart/issues/769",
+        "number": 769,
+        "state": "closed",
+        "title": "test(symbols): Track the symbols we export from the angular library",
+        "user": {
+          "login": "jbdeboer",
+          "id": 502633,
+          "avatar_url": "https://avatars.githubusercontent.com/u/502633?",
+          "gravatar_id": "56550177c394ec1202c746750ba3f270",
+          "url": "https://api.github.com/users/jbdeboer",
+          "html_url": "https://github.com/jbdeboer",
+          "followers_url": "https://api.github.com/users/jbdeboer/followers",
+          "following_url": "https://api.github.com/users/jbdeboer/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jbdeboer/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jbdeboer/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jbdeboer/subscriptions",
+          "organizations_url": "https://api.github.com/users/jbdeboer/orgs",
+          "repos_url": "https://api.github.com/users/jbdeboer/repos",
+          "events_url": "https://api.github.com/users/jbdeboer/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jbdeboer/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "Closes #398",
+        "created_at": "2014-03-19T22:30:24Z",
+        "updated_at": "2014-03-20T17:39:51Z",
+        "closed_at": "2014-03-20T17:39:51Z",
+        "merged_at": "2014-03-20T17:39:51Z",
+        "merge_commit_sha": "910ed33c1d0389f3ce55d9738e59b9c6f30d12e5",
+        "assignee": null,
+        "milestone": null,
+        "commits_url": "https://api.github.com/repos/angular/angular.dart/pulls/769/commits",
+        "review_comments_url": "https://api.github.com/repos/angular/angular.dart/pulls/769/comments",
+        "review_comment_url": "https://api.github.com/repos/angular/angular.dart/pulls/comments/{number}",
+        "comments_url": "https://api.github.com/repos/angular/angular.dart/issues/769/comments",
+        "statuses_url": "https://api.github.com/repos/angular/angular.dart/statuses/ea12e7e4fed0955478de48472b0e82a44686e865",
+        "head": {
+          "label": "jbdeboer:mar19-symbols",
+          "ref": "mar19-symbols",
+          "sha": "ea12e7e4fed0955478de48472b0e82a44686e865",
+          "user": {
+            "login": "jbdeboer",
+            "id": 502633,
+            "avatar_url": "https://avatars.githubusercontent.com/u/502633?",
+            "gravatar_id": "56550177c394ec1202c746750ba3f270",
+            "url": "https://api.github.com/users/jbdeboer",
+            "html_url": "https://github.com/jbdeboer",
+            "followers_url": "https://api.github.com/users/jbdeboer/followers",
+            "following_url": "https://api.github.com/users/jbdeboer/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jbdeboer/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jbdeboer/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jbdeboer/subscriptions",
+            "organizations_url": "https://api.github.com/users/jbdeboer/orgs",
+            "repos_url": "https://api.github.com/users/jbdeboer/repos",
+            "events_url": "https://api.github.com/users/jbdeboer/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jbdeboer/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 9804924,
+            "name": "angular.dart",
+            "full_name": "jbdeboer/angular.dart",
+            "owner": {
+              "login": "jbdeboer",
+              "id": 502633,
+              "avatar_url": "https://avatars.githubusercontent.com/u/502633?",
+              "gravatar_id": "56550177c394ec1202c746750ba3f270",
+              "url": "https://api.github.com/users/jbdeboer",
+              "html_url": "https://github.com/jbdeboer",
+              "followers_url": "https://api.github.com/users/jbdeboer/followers",
+              "following_url": "https://api.github.com/users/jbdeboer/following{/other_user}",
+              "gists_url": "https://api.github.com/users/jbdeboer/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/jbdeboer/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/jbdeboer/subscriptions",
+              "organizations_url": "https://api.github.com/users/jbdeboer/orgs",
+              "repos_url": "https://api.github.com/users/jbdeboer/repos",
+              "events_url": "https://api.github.com/users/jbdeboer/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/jbdeboer/received_events",
+              "type": "User",
+              "site_admin": false
+            },
+            "private": false,
+            "html_url": "https://github.com/jbdeboer/angular.dart",
+            "description": "",
+            "fork": true,
+            "url": "https://api.github.com/repos/jbdeboer/angular.dart",
+            "forks_url": "https://api.github.com/repos/jbdeboer/angular.dart/forks",
+            "keys_url": "https://api.github.com/repos/jbdeboer/angular.dart/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/jbdeboer/angular.dart/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/jbdeboer/angular.dart/teams",
+            "hooks_url": "https://api.github.com/repos/jbdeboer/angular.dart/hooks",
+            "issue_events_url": "https://api.github.com/repos/jbdeboer/angular.dart/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/jbdeboer/angular.dart/events",
+            "assignees_url": "https://api.github.com/repos/jbdeboer/angular.dart/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/jbdeboer/angular.dart/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/jbdeboer/angular.dart/tags",
+            "blobs_url": "https://api.github.com/repos/jbdeboer/angular.dart/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/jbdeboer/angular.dart/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/jbdeboer/angular.dart/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/jbdeboer/angular.dart/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/jbdeboer/angular.dart/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/jbdeboer/angular.dart/languages",
+            "stargazers_url": "https://api.github.com/repos/jbdeboer/angular.dart/stargazers",
+            "contributors_url": "https://api.github.com/repos/jbdeboer/angular.dart/contributors",
+            "subscribers_url": "https://api.github.com/repos/jbdeboer/angular.dart/subscribers",
+            "subscription_url": "https://api.github.com/repos/jbdeboer/angular.dart/subscription",
+            "commits_url": "https://api.github.com/repos/jbdeboer/angular.dart/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/jbdeboer/angular.dart/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/jbdeboer/angular.dart/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/jbdeboer/angular.dart/issues/comments/{number}",
+            "contents_url": "https://api.github.com/repos/jbdeboer/angular.dart/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/jbdeboer/angular.dart/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/jbdeboer/angular.dart/merges",
+            "archive_url": "https://api.github.com/repos/jbdeboer/angular.dart/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/jbdeboer/angular.dart/downloads",
+            "issues_url": "https://api.github.com/repos/jbdeboer/angular.dart/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/jbdeboer/angular.dart/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/jbdeboer/angular.dart/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/jbdeboer/angular.dart/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/jbdeboer/angular.dart/labels{/name}",
+            "releases_url": "https://api.github.com/repos/jbdeboer/angular.dart/releases{/id}",
+            "created_at": "2013-05-02T03:20:39Z",
+            "updated_at": "2014-03-20T17:39:51Z",
+            "pushed_at": "2014-03-20T17:29:32Z",
+            "git_url": "git://github.com/jbdeboer/angular.dart.git",
+            "ssh_url": "git@github.com:jbdeboer/angular.dart.git",
+            "clone_url": "https://github.com/jbdeboer/angular.dart.git",
+            "svn_url": "https://github.com/jbdeboer/angular.dart",
+            "homepage": null,
+            "size": 5551,
+            "stargazers_count": 2,
+            "watchers_count": 2,
+            "language": "Dart",
+            "has_issues": false,
+            "has_downloads": true,
+            "has_wiki": true,
+            "forks_count": 0,
+            "mirror_url": null,
+            "open_issues_count": 0,
+            "forks": 0,
+            "open_issues": 0,
+            "watchers": 2,
+            "default_branch": "master",
+            "master_branch": "master"
+          }
+        },
+        "base": {
+          "label": "angular:master",
+          "ref": "master",
+          "sha": "613030a04c584040a09cade196945fde9fa830cc",
+          "user": {
+            "login": "angular",
+            "id": 139426,
+            "avatar_url": "https://avatars.githubusercontent.com/u/139426?",
+            "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+            "url": "https://api.github.com/users/angular",
+            "html_url": "https://github.com/angular",
+            "followers_url": "https://api.github.com/users/angular/followers",
+            "following_url": "https://api.github.com/users/angular/following{/other_user}",
+            "gists_url": "https://api.github.com/users/angular/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/angular/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/angular/subscriptions",
+            "organizations_url": "https://api.github.com/users/angular/orgs",
+            "repos_url": "https://api.github.com/users/angular/repos",
+            "events_url": "https://api.github.com/users/angular/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/angular/received_events",
+            "type": "Organization",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 9505974,
+            "name": "angular.dart",
+            "full_name": "angular/angular.dart",
+            "owner": {
+              "login": "angular",
+              "id": 139426,
+              "avatar_url": "https://avatars.githubusercontent.com/u/139426?",
+              "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+              "url": "https://api.github.com/users/angular",
+              "html_url": "https://github.com/angular",
+              "followers_url": "https://api.github.com/users/angular/followers",
+              "following_url": "https://api.github.com/users/angular/following{/other_user}",
+              "gists_url": "https://api.github.com/users/angular/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/angular/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/angular/subscriptions",
+              "organizations_url": "https://api.github.com/users/angular/orgs",
+              "repos_url": "https://api.github.com/users/angular/repos",
+              "events_url": "https://api.github.com/users/angular/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/angular/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "private": false,
+            "html_url": "https://github.com/angular/angular.dart",
+            "description": "A web framework for Dart",
+            "fork": false,
+            "url": "https://api.github.com/repos/angular/angular.dart",
+            "forks_url": "https://api.github.com/repos/angular/angular.dart/forks",
+            "keys_url": "https://api.github.com/repos/angular/angular.dart/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/angular/angular.dart/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/angular/angular.dart/teams",
+            "hooks_url": "https://api.github.com/repos/angular/angular.dart/hooks",
+            "issue_events_url": "https://api.github.com/repos/angular/angular.dart/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/angular/angular.dart/events",
+            "assignees_url": "https://api.github.com/repos/angular/angular.dart/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/angular/angular.dart/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/angular/angular.dart/tags",
+            "blobs_url": "https://api.github.com/repos/angular/angular.dart/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/angular/angular.dart/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/angular/angular.dart/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/angular/angular.dart/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/angular/angular.dart/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/angular/angular.dart/languages",
+            "stargazers_url": "https://api.github.com/repos/angular/angular.dart/stargazers",
+            "contributors_url": "https://api.github.com/repos/angular/angular.dart/contributors",
+            "subscribers_url": "https://api.github.com/repos/angular/angular.dart/subscribers",
+            "subscription_url": "https://api.github.com/repos/angular/angular.dart/subscription",
+            "commits_url": "https://api.github.com/repos/angular/angular.dart/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/angular/angular.dart/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/angular/angular.dart/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/angular/angular.dart/issues/comments/{number}",
+            "contents_url": "https://api.github.com/repos/angular/angular.dart/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/angular/angular.dart/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/angular/angular.dart/merges",
+            "archive_url": "https://api.github.com/repos/angular/angular.dart/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/angular/angular.dart/downloads",
+            "issues_url": "https://api.github.com/repos/angular/angular.dart/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/angular/angular.dart/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/angular/angular.dart/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/angular/angular.dart/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/angular/angular.dart/labels{/name}",
+            "releases_url": "https://api.github.com/repos/angular/angular.dart/releases{/id}",
+            "created_at": "2013-04-17T19:42:42Z",
+            "updated_at": "2014-03-20T17:39:51Z",
+            "pushed_at": "2014-03-20T17:39:50Z",
+            "git_url": "git://github.com/angular/angular.dart.git",
+            "ssh_url": "git@github.com:angular/angular.dart.git",
+            "clone_url": "https://github.com/angular/angular.dart.git",
+            "svn_url": "https://github.com/angular/angular.dart",
+            "homepage": "",
+            "size": 15490,
+            "stargazers_count": 787,
+            "watchers_count": 787,
+            "language": "Dart",
+            "has_issues": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "forks_count": 152,
+            "mirror_url": null,
+            "open_issues_count": 91,
+            "forks": 152,
+            "open_issues": 91,
+            "watchers": 787,
+            "default_branch": "master",
+            "master_branch": "master"
+          }
+        },
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/769"
+          },
+          "html": {
+            "href": "https://github.com/angular/angular.dart/pull/769"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/angular/angular.dart/issues/769"
+          },
+          "comments": {
+            "href": "https://api.github.com/repos/angular/angular.dart/issues/769/comments"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/769/comments"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/comments/{number}"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/angular/angular.dart/pulls/769/commits"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/angular/angular.dart/statuses/ea12e7e4fed0955478de48472b0e82a44686e865"
+          }
+        },
+        "merged": true,
+        "mergeable": null,
+        "mergeable_state": "unknown",
+        "merged_by": {
+          "login": "mhevery",
+          "id": 111951,
+          "avatar_url": "https://avatars.githubusercontent.com/u/111951?",
+          "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+          "url": "https://api.github.com/users/mhevery",
+          "html_url": "https://github.com/mhevery",
+          "followers_url": "https://api.github.com/users/mhevery/followers",
+          "following_url": "https://api.github.com/users/mhevery/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mhevery/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mhevery/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mhevery/subscriptions",
+          "organizations_url": "https://api.github.com/users/mhevery/orgs",
+          "repos_url": "https://api.github.com/users/mhevery/repos",
+          "events_url": "https://api.github.com/users/mhevery/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mhevery/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "comments": 1,
+        "review_comments": 2,
+        "commits": 1,
+        "additions": 286,
+        "deletions": 0,
+        "changed_files": 1
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:39:51Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023962098",
+    "type": "IssuesEvent",
+    "actor": {
+      "id": 502633,
+      "login": "jbdeboer",
+      "gravatar_id": "56550177c394ec1202c746750ba3f270",
+      "url": "https://api.github.com/users/jbdeboer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/502633?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "action": "closed",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.dart/issues/398",
+        "labels_url": "https://api.github.com/repos/angular/angular.dart/issues/398/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.dart/issues/398/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.dart/issues/398/events",
+        "html_url": "https://github.com/angular/angular.dart/issues/398",
+        "id": 25261947,
+        "number": 398,
+        "title": "Limit the number of exported symbols from angular libraries",
+        "user": {
+          "login": "pavelgj",
+          "id": 774654,
+          "avatar_url": "https://avatars.githubusercontent.com/u/774654?",
+          "gravatar_id": "12aa5e0243946ec41dbe13e5a506886a",
+          "url": "https://api.github.com/users/pavelgj",
+          "html_url": "https://github.com/pavelgj",
+          "followers_url": "https://api.github.com/users/pavelgj/followers",
+          "following_url": "https://api.github.com/users/pavelgj/following{/other_user}",
+          "gists_url": "https://api.github.com/users/pavelgj/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/pavelgj/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/pavelgj/subscriptions",
+          "organizations_url": "https://api.github.com/users/pavelgj/orgs",
+          "repos_url": "https://api.github.com/users/pavelgj/repos",
+          "events_url": "https://api.github.com/users/pavelgj/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/pavelgj/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+
+        ],
+        "state": "closed",
+        "assignee": {
+          "login": "jbdeboer",
+          "id": 502633,
+          "avatar_url": "https://avatars.githubusercontent.com/u/502633?",
+          "gravatar_id": "56550177c394ec1202c746750ba3f270",
+          "url": "https://api.github.com/users/jbdeboer",
+          "html_url": "https://github.com/jbdeboer",
+          "followers_url": "https://api.github.com/users/jbdeboer/followers",
+          "following_url": "https://api.github.com/users/jbdeboer/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jbdeboer/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jbdeboer/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jbdeboer/subscriptions",
+          "organizations_url": "https://api.github.com/users/jbdeboer/orgs",
+          "repos_url": "https://api.github.com/users/jbdeboer/repos",
+          "events_url": "https://api.github.com/users/jbdeboer/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jbdeboer/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "milestone": {
+          "url": "https://api.github.com/repos/angular/angular.dart/milestones/11",
+          "labels_url": "https://api.github.com/repos/angular/angular.dart/milestones/11/labels",
+          "id": 509294,
+          "number": 11,
+          "title": "v0.9.x",
+          "description": null,
+          "creator": {
+            "login": "mhevery",
+            "id": 111951,
+            "avatar_url": "https://avatars.githubusercontent.com/u/111951?",
+            "gravatar_id": "8d67eedc1442e8392a7add197abacd66",
+            "url": "https://api.github.com/users/mhevery",
+            "html_url": "https://github.com/mhevery",
+            "followers_url": "https://api.github.com/users/mhevery/followers",
+            "following_url": "https://api.github.com/users/mhevery/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mhevery/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/mhevery/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mhevery/subscriptions",
+            "organizations_url": "https://api.github.com/users/mhevery/orgs",
+            "repos_url": "https://api.github.com/users/mhevery/repos",
+            "events_url": "https://api.github.com/users/mhevery/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/mhevery/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          "open_issues": 14,
+          "closed_issues": 6,
+          "state": "open",
+          "created_at": "2013-12-09T23:06:24Z",
+          "updated_at": "2014-03-20T17:39:50Z",
+          "due_on": null
+        },
+        "comments": 2,
+        "created_at": "2014-01-08T18:38:04Z",
+        "updated_at": "2014-03-20T17:39:50Z",
+        "closed_at": "2014-03-20T17:39:50Z",
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "`package:angular/angular.dart` is exporting too many unnecessary symbols which sometime clash with other user-defined and 3rd-party symbols. For instance, `NullTreeSanitizer` is commonly used."
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:39:51Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023958617",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 86437,
+      "login": "lnyousif",
+      "gravatar_id": "4dd659f80f52923c8df63837d5b19ff0",
+      "url": "https://api.github.com/users/lnyousif",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86437?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:37:47Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023957782",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 29597,
+      "login": "bvaughn",
+      "gravatar_id": "471eb3bb07e1a8ffa692e38ac6832232",
+      "url": "https://api.github.com/users/bvaughn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29597?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/6769",
+        "labels_url": "https://api.github.com/repos/angular/angular.js/issues/6769/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.js/issues/6769/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.js/issues/6769/events",
+        "html_url": "https://github.com/angular/angular.js/issues/6769",
+        "id": 29821493,
+        "number": 6769,
+        "title": "ngOptions can cause flickering/jumping highlight on Firefox",
+        "user": {
+          "login": "bvaughn",
+          "id": 29597,
+          "avatar_url": "https://avatars.githubusercontent.com/u/29597?",
+          "gravatar_id": "471eb3bb07e1a8ffa692e38ac6832232",
+          "url": "https://api.github.com/users/bvaughn",
+          "html_url": "https://github.com/bvaughn",
+          "followers_url": "https://api.github.com/users/bvaughn/followers",
+          "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+          "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+          "repos_url": "https://api.github.com/users/bvaughn/repos",
+          "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/gh%3A+issue",
+            "name": "gh: issue",
+            "color": "5319e7"
+          }
+        ],
+        "state": "open",
+        "assignee": null,
+        "milestone": null,
+        "comments": 2,
+        "created_at": "2014-03-20T14:13:05Z",
+        "updated_at": "2014-03-20T17:37:16Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "**Request Type**: bug\r\n\r\n**How to reproduce**: http://plnkr.co/edit/ciOEcE9fidbeXzRrZ2HN?p=preview\r\n\r\n**Component(s)**: ngOptions\r\n\r\n**Impact**: medium\r\n\r\n**Complexity**: small\r\n\r\n**Detailed Description**:\r\nThe ngOptions directive causes a strange flickering behavior on Firefox when the digest loop is triggered. This issue does not occur for Safari or Chrome. I encountered this issue in version 1.2.14 but after researching, I believe it's been around since version 1.0.x.\r\n\r\n**Other Comments**:\r\nI was able to \"fix\" this issue by editing `src/ng/directive/select.js` line 534 as follows:\r\n```diff\r\n-                if (lastElement[0].selected !== option.selected) {\r\n+                if (existingOption.selected !== option.selected) {\r\n```\r\nUnfortunately this breaks on of the select unit tests, *should select correct input if previously selected option was \"?\"*.\r\n\r\nI'll play with it some more but would welcome any input from the community."
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/comments/38197562",
+        "html_url": "https://github.com/angular/angular.js/issues/6769#issuecomment-38197562",
+        "issue_url": "https://api.github.com/repos/angular/angular.js/issues/6769",
+        "id": 38197562,
+        "user": {
+          "login": "bvaughn",
+          "id": 29597,
+          "avatar_url": "https://avatars.githubusercontent.com/u/29597?",
+          "gravatar_id": "471eb3bb07e1a8ffa692e38ac6832232",
+          "url": "https://api.github.com/users/bvaughn",
+          "html_url": "https://github.com/bvaughn",
+          "followers_url": "https://api.github.com/users/bvaughn/followers",
+          "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+          "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+          "repos_url": "https://api.github.com/users/bvaughn/repos",
+          "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T17:37:16Z",
+        "updated_at": "2014-03-20T17:37:16Z",
+        "body": "@Narretz That surely does look like a fix! Any chance at all of this fix making its way into the 1.2.x branch?\r\n\r\nUnfortunately my team is stuck on 1.2.x for the foreseeable future due to 1.3.x's lack of official IE8 support so a fix in master doesn't help us all that much."
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:37:18Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023950373",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 405837,
+      "login": "zoechi",
+      "gravatar_id": "5f1c0eb887fd1d645b49a877a9e11293",
+      "url": "https://api.github.com/users/zoechi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/405837?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.dart/issues/766",
+        "labels_url": "https://api.github.com/repos/angular/angular.dart/issues/766/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.dart/issues/766/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.dart/issues/766/events",
+        "html_url": "https://github.com/angular/angular.dart/pull/766",
+        "id": 29756544,
+        "number": 766,
+        "title": "[WIP] chore(Hop build process)",
+        "user": {
+          "login": "johnvcoleman",
+          "id": 2448636,
+          "avatar_url": "https://avatars.githubusercontent.com/u/2448636?",
+          "gravatar_id": "6e08fa94ab00492143f5d4f469118af2",
+          "url": "https://api.github.com/users/johnvcoleman",
+          "html_url": "https://github.com/johnvcoleman",
+          "followers_url": "https://api.github.com/users/johnvcoleman/followers",
+          "following_url": "https://api.github.com/users/johnvcoleman/following{/other_user}",
+          "gists_url": "https://api.github.com/users/johnvcoleman/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/johnvcoleman/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/johnvcoleman/subscriptions",
+          "organizations_url": "https://api.github.com/users/johnvcoleman/orgs",
+          "repos_url": "https://api.github.com/users/johnvcoleman/repos",
+          "events_url": "https://api.github.com/users/johnvcoleman/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/johnvcoleman/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+          {
+            "url": "https://api.github.com/repos/angular/angular.dart/labels/cla%3A+yes",
+            "name": "cla: yes",
+            "color": "009800"
+          }
+        ],
+        "state": "open",
+        "assignee": null,
+        "milestone": null,
+        "comments": 3,
+        "created_at": "2014-03-19T17:53:45Z",
+        "updated_at": "2014-03-20T17:33:01Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": "https://github.com/angular/angular.dart/pull/766",
+          "diff_url": "https://github.com/angular/angular.dart/pull/766.diff",
+          "patch_url": "https://github.com/angular/angular.dart/pull/766.patch"
+        },
+        "body": "This is a research project to see if the Hop library (https://github.com/dart-lang/hop) would be a good candidate to automate the build process in a platform agnostic way.  This was inspired by @bgourlie and issue #482. I implemented just enough of the build process to get a conversation going, the unit testing is not implemented, but from what I've seen so far I'm pretty confident it can be done.  An alternate approach to this would be to use Gulp, which is what I'm going to experiment with next.\r\n\r\nPlease take a few minutes to check it out and share your opinions.  Thanks!\r\n\r\nTest it out with the following commands:\r\n\r\ndart tool/hop_runner.dart build_debug\r\ndart tool/hop_runner.dart build_release\r\ndart tool/hop_runner.dart analyze_libs\r\ndart tool/hop_runner.dart all_debug\r\ndart tool/hop_runner.dart all_release\r\n"
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.dart/issues/comments/38196988",
+        "html_url": "https://github.com/angular/angular.dart/pull/766#issuecomment-38196988",
+        "issue_url": "https://api.github.com/repos/angular/angular.dart/issues/766",
+        "id": 38196988,
+        "user": {
+          "login": "zoechi",
+          "id": 405837,
+          "avatar_url": "https://avatars.githubusercontent.com/u/405837?",
+          "gravatar_id": "5f1c0eb887fd1d645b49a877a9e11293",
+          "url": "https://api.github.com/users/zoechi",
+          "html_url": "https://github.com/zoechi",
+          "followers_url": "https://api.github.com/users/zoechi/followers",
+          "following_url": "https://api.github.com/users/zoechi/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zoechi/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zoechi/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zoechi/subscriptions",
+          "organizations_url": "https://api.github.com/users/zoechi/orgs",
+          "repos_url": "https://api.github.com/users/zoechi/repos",
+          "events_url": "https://api.github.com/users/zoechi/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zoechi/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T17:33:01Z",
+        "updated_at": "2014-03-20T17:33:01Z",
+        "body": "I haven't used neither hop nor grinder but according to this comment grinder might be a good fit too. https://github.com/dart-gde/chrome.dart/issues/160"
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:33:02Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023946595",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 119337,
+      "login": "killmenot",
+      "gravatar_id": "050ed7d5484e9822d72b9aac20b647c9",
+      "url": "https://api.github.com/users/killmenot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/119337?"
+    },
+    "repo": {
+      "id": 15348075,
+      "name": "angular/diary.js",
+      "url": "https://api.github.com/repos/angular/diary.js"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:30:53Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023944265",
+    "type": "PushEvent",
+    "actor": {
+      "id": 502633,
+      "login": "jbdeboer",
+      "gravatar_id": "56550177c394ec1202c746750ba3f270",
+      "url": "https://api.github.com/users/jbdeboer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/502633?"
+    },
+    "repo": {
+      "id": 9804924,
+      "name": "jbdeboer/angular.dart",
+      "url": "https://api.github.com/repos/jbdeboer/angular.dart"
+    },
+    "payload": {
+      "push_id": 330670180,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/mar19-symbols",
+      "head": "ea12e7e4fed0955478de48472b0e82a44686e865",
+      "before": "56eba36eada931b90fa4d364dfd279097671a81c",
+      "commits": [
+        {
+          "sha": "ea12e7e4fed0955478de48472b0e82a44686e865",
+          "author": {
+            "email": "james@huronbox.com",
+            "name": "James deBoer"
+          },
+          "message": "test(symbols): Track the symbols we export from the angular library\n\nCloses #398",
+          "distinct": true,
+          "url": "https://api.github.com/repos/jbdeboer/angular.dart/commits/ea12e7e4fed0955478de48472b0e82a44686e865"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:29:32Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023942886",
+    "type": "ForkEvent",
+    "actor": {
+      "id": 1487519,
+      "login": "manandaraj",
+      "gravatar_id": "d9fc3de755ee57ef9dfebe95b6f6bf0a",
+      "url": "https://api.github.com/users/manandaraj",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1487519?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "forkee": {
+        "id": 17951758,
+        "name": "angular.js",
+        "full_name": "manandaraj/angular.js",
+        "owner": {
+          "login": "manandaraj",
+          "id": 1487519,
+          "avatar_url": "https://avatars.githubusercontent.com/u/1487519?",
+          "gravatar_id": "d9fc3de755ee57ef9dfebe95b6f6bf0a",
+          "url": "https://api.github.com/users/manandaraj",
+          "html_url": "https://github.com/manandaraj",
+          "followers_url": "https://api.github.com/users/manandaraj/followers",
+          "following_url": "https://api.github.com/users/manandaraj/following{/other_user}",
+          "gists_url": "https://api.github.com/users/manandaraj/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/manandaraj/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/manandaraj/subscriptions",
+          "organizations_url": "https://api.github.com/users/manandaraj/orgs",
+          "repos_url": "https://api.github.com/users/manandaraj/repos",
+          "events_url": "https://api.github.com/users/manandaraj/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/manandaraj/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "private": false,
+        "html_url": "https://github.com/manandaraj/angular.js",
+        "description": "",
+        "fork": true,
+        "url": "https://api.github.com/repos/manandaraj/angular.js",
+        "forks_url": "https://api.github.com/repos/manandaraj/angular.js/forks",
+        "keys_url": "https://api.github.com/repos/manandaraj/angular.js/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/manandaraj/angular.js/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/manandaraj/angular.js/teams",
+        "hooks_url": "https://api.github.com/repos/manandaraj/angular.js/hooks",
+        "issue_events_url": "https://api.github.com/repos/manandaraj/angular.js/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/manandaraj/angular.js/events",
+        "assignees_url": "https://api.github.com/repos/manandaraj/angular.js/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/manandaraj/angular.js/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/manandaraj/angular.js/tags",
+        "blobs_url": "https://api.github.com/repos/manandaraj/angular.js/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/manandaraj/angular.js/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/manandaraj/angular.js/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/manandaraj/angular.js/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/manandaraj/angular.js/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/manandaraj/angular.js/languages",
+        "stargazers_url": "https://api.github.com/repos/manandaraj/angular.js/stargazers",
+        "contributors_url": "https://api.github.com/repos/manandaraj/angular.js/contributors",
+        "subscribers_url": "https://api.github.com/repos/manandaraj/angular.js/subscribers",
+        "subscription_url": "https://api.github.com/repos/manandaraj/angular.js/subscription",
+        "commits_url": "https://api.github.com/repos/manandaraj/angular.js/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/manandaraj/angular.js/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/manandaraj/angular.js/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/manandaraj/angular.js/issues/comments/{number}",
+        "contents_url": "https://api.github.com/repos/manandaraj/angular.js/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/manandaraj/angular.js/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/manandaraj/angular.js/merges",
+        "archive_url": "https://api.github.com/repos/manandaraj/angular.js/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/manandaraj/angular.js/downloads",
+        "issues_url": "https://api.github.com/repos/manandaraj/angular.js/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/manandaraj/angular.js/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/manandaraj/angular.js/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/manandaraj/angular.js/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/manandaraj/angular.js/labels{/name}",
+        "releases_url": "https://api.github.com/repos/manandaraj/angular.js/releases{/id}",
+        "created_at": "2014-03-20T17:28:47Z",
+        "updated_at": "2014-03-20T16:27:33Z",
+        "pushed_at": "2014-03-20T16:27:33Z",
+        "git_url": "git://github.com/manandaraj/angular.js.git",
+        "ssh_url": "git@github.com:manandaraj/angular.js.git",
+        "clone_url": "https://github.com/manandaraj/angular.js.git",
+        "svn_url": "https://github.com/manandaraj/angular.js",
+        "homepage": "http://angularjs.org",
+        "size": 140048,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": "JavaScript",
+        "has_issues": false,
+        "has_downloads": true,
+        "has_wiki": true,
+        "forks_count": 0,
+        "mirror_url": null,
+        "open_issues_count": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "watchers": 0,
+        "default_branch": "master",
+        "master_branch": "master",
+        "public": true
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:28:47Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023942550",
+    "type": "PushEvent",
+    "actor": {
+      "id": 502633,
+      "login": "jbdeboer",
+      "gravatar_id": "56550177c394ec1202c746750ba3f270",
+      "url": "https://api.github.com/users/jbdeboer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/502633?"
+    },
+    "repo": {
+      "id": 9505974,
+      "name": "angular/angular.dart",
+      "url": "https://api.github.com/repos/angular/angular.dart"
+    },
+    "payload": {
+      "push_id": 330669353,
+      "size": 14,
+      "distinct_size": 1,
+      "ref": "refs/heads/presubmit-jbdeboer",
+      "head": "ea12e7e4fed0955478de48472b0e82a44686e865",
+      "before": "3ed50b5ebdf8013a3f9d354846770c1e9f75497a",
+      "commits": [
+        {
+          "sha": "1571459419e7a449ce88b91bd5cd88d4a3eb8d7d",
+          "author": {
+            "email": "pavelgj@gmail.com",
+            "name": "Pavel Jbanov"
+          },
+          "message": "chore(pubspec.lock): upgraded route_hierarchical to 0.4.15",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/1571459419e7a449ce88b91bd5cd88d4a3eb8d7d"
+        },
+        {
+          "sha": "40ec82e170501c094ae8fd2ed3b6519c834eb7b1",
+          "author": {
+            "email": "pchalin@gmail.com",
+            "name": "Patrice Chalin"
+          },
+          "message": "chore(CONTRIBUTING): merge relevant updates from Angular.js\n\nPort changes to Angular.js CONTRIBUTING.md since AngularDart version\nwas forked.\n\nCloses #748",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/40ec82e170501c094ae8fd2ed3b6519c834eb7b1"
+        },
+        {
+          "sha": "9891f3339207e921a0a50cac3d855eb4606b41bb",
+          "author": {
+            "email": "misko@hevery.com",
+            "name": "Misko Hevery"
+          },
+          "message": "fix(animation): correct broken build http://dartbug.com/17634",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/9891f3339207e921a0a50cac3d855eb4606b41bb"
+        },
+        {
+          "sha": "e6689e37c800682a81d7690c3b05baf732c307c6",
+          "author": {
+            "email": "misko@hevery.com",
+            "name": "Misko Hevery"
+          },
+          "message": "fix(scope): allow concurrent fire/add/remove on listeners",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/e6689e37c800682a81d7690c3b05baf732c307c6"
+        },
+        {
+          "sha": "1954e9e293203466a50f3931126ebde0335b885d",
+          "author": {
+            "email": "misko@hevery.com",
+            "name": "Misko Hevery"
+          },
+          "message": "feat(Scope): Improve ScopeStats reporting\n\nCloses #744",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/1954e9e293203466a50f3931126ebde0335b885d"
+        },
+        {
+          "sha": "0622f3a969b99b06c5f07da10ceb756b720a3331",
+          "author": {
+            "email": "matias@yearofmoo.com",
+            "name": "Matias Niemelä"
+          },
+          "message": "fix(forms): ensure models are validated when validator attributes change",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/0622f3a969b99b06c5f07da10ceb756b720a3331"
+        },
+        {
+          "sha": "98143034287f4a6adfd08f4064e4a751c569b108",
+          "author": {
+            "email": "matias@yearofmoo.com",
+            "name": "Matias Niemelä"
+          },
+          "message": "fix(NgModelValidators): ensure all validators can properly toggle attribute values",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/98143034287f4a6adfd08f4064e4a751c569b108"
+        },
+        {
+          "sha": "dd2e55381ad14be90280d42b9ac9c9f9d10a4eb7",
+          "author": {
+            "email": "matias@yearofmoo.com",
+            "name": "Matias Niemelä"
+          },
+          "message": "chore(forms): cleanup unused code\n\nCloses #761",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/dd2e55381ad14be90280d42b9ac9c9f9d10a4eb7"
+        },
+        {
+          "sha": "4e4415e735a650d5b62b9dab0010649279dd765c",
+          "author": {
+            "email": "markovuksanovic@gmail.com",
+            "name": "Marko Vuksanovic"
+          },
+          "message": "docs(EventHandler): Add EventHandler documentation.\n\nAdd documentation to EventHandler. This change also makes fields and methods within EventHandler, which are not intended for public use, private.\n\nCloses #764",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/4e4415e735a650d5b62b9dab0010649279dd765c"
+        },
+        {
+          "sha": "d9fc724e56e99b26192e41eaef46607760f4ac2a",
+          "author": {
+            "email": "misko@hevery.com",
+            "name": "Misko Hevery"
+          },
+          "message": "fix(component): revert regression of injecting Element/Node into Component",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/d9fc724e56e99b26192e41eaef46607760f4ac2a"
+        },
+        {
+          "sha": "66cda2046ea84d29edd7a478509565989834e391",
+          "author": {
+            "email": "misko@hevery.com",
+            "name": "Misko Hevery"
+          },
+          "message": "feat(filters): revert filter being restricted to top level\n\nSee: 5bcea6492f6d0fd39ba316fa3b241c50bb94de8d",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/66cda2046ea84d29edd7a478509565989834e391"
+        },
+        {
+          "sha": "0576f27841c8842b0d84bfae8c4b202c39833beb",
+          "author": {
+            "email": "paul@paulrohde.com",
+            "name": "Paul Rohde"
+          },
+          "message": "feat(doc): Library description for angular.animate",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/0576f27841c8842b0d84bfae8c4b202c39833beb"
+        },
+        {
+          "sha": "613030a04c584040a09cade196945fde9fa830cc",
+          "author": {
+            "email": "paul@paulrohde.com",
+            "name": "Paul Rohde"
+          },
+          "message": "feat(doc): Animation library documentation updates and fixes.\n\nCloses #760",
+          "distinct": false,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/613030a04c584040a09cade196945fde9fa830cc"
+        },
+        {
+          "sha": "ea12e7e4fed0955478de48472b0e82a44686e865",
+          "author": {
+            "email": "james@huronbox.com",
+            "name": "James deBoer"
+          },
+          "message": "test(symbols): Track the symbols we export from the angular library\n\nCloses #398",
+          "distinct": true,
+          "url": "https://api.github.com/repos/angular/angular.dart/commits/ea12e7e4fed0955478de48472b0e82a44686e865"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:28:35Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023941625",
+    "type": "ForkEvent",
+    "actor": {
+      "id": 2317732,
+      "login": "VincentRen",
+      "gravatar_id": null,
+      "url": "https://api.github.com/users/VincentRen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2317732?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "forkee": {
+        "id": 17951733,
+        "name": "angular.js",
+        "full_name": "VincentRen/angular.js",
+        "owner": {
+          "login": "VincentRen",
+          "id": 2317732,
+          "avatar_url": "https://avatars.githubusercontent.com/u/2317732?",
+          "gravatar_id": null,
+          "url": "https://api.github.com/users/VincentRen",
+          "html_url": "https://github.com/VincentRen",
+          "followers_url": "https://api.github.com/users/VincentRen/followers",
+          "following_url": "https://api.github.com/users/VincentRen/following{/other_user}",
+          "gists_url": "https://api.github.com/users/VincentRen/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/VincentRen/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/VincentRen/subscriptions",
+          "organizations_url": "https://api.github.com/users/VincentRen/orgs",
+          "repos_url": "https://api.github.com/users/VincentRen/repos",
+          "events_url": "https://api.github.com/users/VincentRen/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/VincentRen/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "private": false,
+        "html_url": "https://github.com/VincentRen/angular.js",
+        "description": "",
+        "fork": true,
+        "url": "https://api.github.com/repos/VincentRen/angular.js",
+        "forks_url": "https://api.github.com/repos/VincentRen/angular.js/forks",
+        "keys_url": "https://api.github.com/repos/VincentRen/angular.js/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/VincentRen/angular.js/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/VincentRen/angular.js/teams",
+        "hooks_url": "https://api.github.com/repos/VincentRen/angular.js/hooks",
+        "issue_events_url": "https://api.github.com/repos/VincentRen/angular.js/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/VincentRen/angular.js/events",
+        "assignees_url": "https://api.github.com/repos/VincentRen/angular.js/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/VincentRen/angular.js/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/VincentRen/angular.js/tags",
+        "blobs_url": "https://api.github.com/repos/VincentRen/angular.js/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/VincentRen/angular.js/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/VincentRen/angular.js/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/VincentRen/angular.js/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/VincentRen/angular.js/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/VincentRen/angular.js/languages",
+        "stargazers_url": "https://api.github.com/repos/VincentRen/angular.js/stargazers",
+        "contributors_url": "https://api.github.com/repos/VincentRen/angular.js/contributors",
+        "subscribers_url": "https://api.github.com/repos/VincentRen/angular.js/subscribers",
+        "subscription_url": "https://api.github.com/repos/VincentRen/angular.js/subscription",
+        "commits_url": "https://api.github.com/repos/VincentRen/angular.js/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/VincentRen/angular.js/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/VincentRen/angular.js/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/VincentRen/angular.js/issues/comments/{number}",
+        "contents_url": "https://api.github.com/repos/VincentRen/angular.js/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/VincentRen/angular.js/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/VincentRen/angular.js/merges",
+        "archive_url": "https://api.github.com/repos/VincentRen/angular.js/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/VincentRen/angular.js/downloads",
+        "issues_url": "https://api.github.com/repos/VincentRen/angular.js/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/VincentRen/angular.js/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/VincentRen/angular.js/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/VincentRen/angular.js/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/VincentRen/angular.js/labels{/name}",
+        "releases_url": "https://api.github.com/repos/VincentRen/angular.js/releases{/id}",
+        "created_at": "2014-03-20T17:28:05Z",
+        "updated_at": "2014-03-20T16:27:33Z",
+        "pushed_at": "2014-03-20T16:27:33Z",
+        "git_url": "git://github.com/VincentRen/angular.js.git",
+        "ssh_url": "git@github.com:VincentRen/angular.js.git",
+        "clone_url": "https://github.com/VincentRen/angular.js.git",
+        "svn_url": "https://github.com/VincentRen/angular.js",
+        "homepage": "http://angularjs.org",
+        "size": 140048,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": "JavaScript",
+        "has_issues": false,
+        "has_downloads": true,
+        "has_wiki": true,
+        "forks_count": 0,
+        "mirror_url": null,
+        "open_issues_count": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "watchers": 0,
+        "default_branch": "master",
+        "master_branch": "master",
+        "public": true
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:28:05Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023941206",
+    "type": "IssuesEvent",
+    "actor": {
+      "id": 123696,
+      "login": "valtron",
+      "gravatar_id": "b90828a5515371fec4852d55920b528b",
+      "url": "https://api.github.com/users/valtron",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123696?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "opened",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/6776",
+        "labels_url": "https://api.github.com/repos/angular/angular.js/issues/6776/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.js/issues/6776/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.js/issues/6776/events",
+        "html_url": "https://github.com/angular/angular.js/issues/6776",
+        "id": 29839415,
+        "number": 6776,
+        "title": "alternate $watch for multiple values",
+        "user": {
+          "login": "valtron",
+          "id": 123696,
+          "avatar_url": "https://avatars.githubusercontent.com/u/123696?",
+          "gravatar_id": "b90828a5515371fec4852d55920b528b",
+          "url": "https://api.github.com/users/valtron",
+          "html_url": "https://github.com/valtron",
+          "followers_url": "https://api.github.com/users/valtron/followers",
+          "following_url": "https://api.github.com/users/valtron/following{/other_user}",
+          "gists_url": "https://api.github.com/users/valtron/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/valtron/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/valtron/subscriptions",
+          "organizations_url": "https://api.github.com/users/valtron/orgs",
+          "repos_url": "https://api.github.com/users/valtron/repos",
+          "events_url": "https://api.github.com/users/valtron/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/valtron/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+
+        ],
+        "state": "open",
+        "assignee": null,
+        "milestone": null,
+        "comments": 0,
+        "created_at": "2014-03-20T17:27:47Z",
+        "updated_at": "2014-03-20T17:27:47Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "I propose adding another syntax for `$watch`:\r\n\r\n```\r\n$scope.$watch(['prop', 'foo.bar'], fn);\r\n```\r\n\r\nwhich would mean the same thing as:\r\n\r\n```\r\n$scope.$watch('prop', fn);\r\n$scope.$watch('foo.bar', fn);\r\n```\r\n\r\nCurrently, it's possible to do the same thing using `$watchCollection`, however:\r\n\r\n- `$watchCollection` supports arbitrary collections; multi-`$watch` can be optimized better because it's always watching an array, whose size is fixed\r\n- writing the array inside of a string (`'[prop, foo.bar]'`) looks kludgy\r\n\r\nBut I think the reason for having multi-`$watch` is mainly semantics (i.e. better communication of intent):\r\n\r\n- `$watch(['a', 'b'], fn)`: fn depends on multiple things: `a` and `b`\r\n- `$watchCollection('collection', fn)`: fn depends on the _contents_ of one thing: `collection`\r\n"
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:27:49Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  },
+  {
+    "id": "2023940190",
+    "type": "IssueCommentEvent",
+    "actor": {
+      "id": 1153097,
+      "login": "Narretz",
+      "gravatar_id": "2338866d672defafeb4884410addf3d7",
+      "url": "https://api.github.com/users/Narretz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1153097?"
+    },
+    "repo": {
+      "id": 460078,
+      "name": "angular/angular.js",
+      "url": "https://api.github.com/repos/angular/angular.js"
+    },
+    "payload": {
+      "action": "created",
+      "issue": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/6769",
+        "labels_url": "https://api.github.com/repos/angular/angular.js/issues/6769/labels{/name}",
+        "comments_url": "https://api.github.com/repos/angular/angular.js/issues/6769/comments",
+        "events_url": "https://api.github.com/repos/angular/angular.js/issues/6769/events",
+        "html_url": "https://github.com/angular/angular.js/issues/6769",
+        "id": 29821493,
+        "number": 6769,
+        "title": "ngOptions can cause flickering/jumping highlight on Firefox",
+        "user": {
+          "login": "bvaughn",
+          "id": 29597,
+          "avatar_url": "https://avatars.githubusercontent.com/u/29597?",
+          "gravatar_id": "471eb3bb07e1a8ffa692e38ac6832232",
+          "url": "https://api.github.com/users/bvaughn",
+          "html_url": "https://github.com/bvaughn",
+          "followers_url": "https://api.github.com/users/bvaughn/followers",
+          "following_url": "https://api.github.com/users/bvaughn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/bvaughn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/bvaughn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/bvaughn/subscriptions",
+          "organizations_url": "https://api.github.com/users/bvaughn/orgs",
+          "repos_url": "https://api.github.com/users/bvaughn/repos",
+          "events_url": "https://api.github.com/users/bvaughn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/bvaughn/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [
+          {
+            "url": "https://api.github.com/repos/angular/angular.js/labels/gh%3A+issue",
+            "name": "gh: issue",
+            "color": "5319e7"
+          }
+        ],
+        "state": "open",
+        "assignee": null,
+        "milestone": null,
+        "comments": 1,
+        "created_at": "2014-03-20T14:13:05Z",
+        "updated_at": "2014-03-20T17:27:11Z",
+        "closed_at": null,
+        "pull_request": {
+          "html_url": null,
+          "diff_url": null,
+          "patch_url": null
+        },
+        "body": "**Request Type**: bug\r\n\r\n**How to reproduce**: http://plnkr.co/edit/ciOEcE9fidbeXzRrZ2HN?p=preview\r\n\r\n**Component(s)**: ngOptions\r\n\r\n**Impact**: medium\r\n\r\n**Complexity**: small\r\n\r\n**Detailed Description**:\r\nThe ngOptions directive causes a strange flickering behavior on Firefox when the digest loop is triggered. This issue does not occur for Safari or Chrome. I encountered this issue in version 1.2.14 but after researching, I believe it's been around since version 1.0.x.\r\n\r\n**Other Comments**:\r\nI was able to \"fix\" this issue by editing `src/ng/directive/select.js` line 534 as follows:\r\n```diff\r\n-                if (lastElement[0].selected !== option.selected) {\r\n+                if (existingOption.selected !== option.selected) {\r\n```\r\nUnfortunately this breaks on of the select unit tests, *should select correct input if previously selected option was \"?\"*.\r\n\r\nI'll play with it some more but would welcome any input from the community."
+      },
+      "comment": {
+        "url": "https://api.github.com/repos/angular/angular.js/issues/comments/38196210",
+        "html_url": "https://github.com/angular/angular.js/issues/6769#issuecomment-38196210",
+        "issue_url": "https://api.github.com/repos/angular/angular.js/issues/6769",
+        "id": 38196210,
+        "user": {
+          "login": "Narretz",
+          "id": 1153097,
+          "avatar_url": "https://avatars.githubusercontent.com/u/1153097?",
+          "gravatar_id": "2338866d672defafeb4884410addf3d7",
+          "url": "https://api.github.com/users/Narretz",
+          "html_url": "https://github.com/Narretz",
+          "followers_url": "https://api.github.com/users/Narretz/followers",
+          "following_url": "https://api.github.com/users/Narretz/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Narretz/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Narretz/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Narretz/subscriptions",
+          "organizations_url": "https://api.github.com/users/Narretz/orgs",
+          "repos_url": "https://api.github.com/users/Narretz/repos",
+          "events_url": "https://api.github.com/users/Narretz/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Narretz/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2014-03-20T17:27:11Z",
+        "updated_at": "2014-03-20T17:27:11Z",
+        "body": "Can you check with the latest master? It sounds like this was fixed with https://github.com/angular/angular.js/commit/f40f54c6da4a5399fe18a89d068634bb491e9f1a"
+      }
+    },
+    "public": true,
+    "created_at": "2014-03-20T17:27:12Z",
+    "org": {
+      "id": 139426,
+      "login": "angular",
+      "gravatar_id": "f0d91e5cf8ad1ce7972cc486baa20c42",
+      "url": "https://api.github.com/orgs/angular",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139426?"
+    }
+  }
+]

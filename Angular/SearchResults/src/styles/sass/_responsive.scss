@@ -1,0 +1,228 @@
+
+@media (max-width: 992px) {
+    
+    .supporting-info {
+        float: left;
+    }
+    
+    .footer-body-margin {
+        margin-bottom: $base-pixel * 12;
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    
+    .footer-body-margin {
+        margin-bottom: $base-pixel * 20;
+    }
+}
+
+
+/* Extra Small */
+@media (max-width: 767px) {
+    
+
+/*searchControls styles*/
+    
+.search-header {
+		padding-top: $base-pixel-x3;
+        border-bottom: 1px solid #eee;
+        margin-bottom: $base-pixel-x3;
+
+    .navbar-form {
+        margin: 0;
+        padding: 0;
+        border-bottom: 0px;
+        
+        .form-control, .btn {
+            font-size: 18px;
+			line-height:1.33em;
+            height: auto;
+        }
+        
+        .form-control {
+            padding: 8px 16px;
+            box-shadow: none;
+			border: 1px solid $sandia-border-grey;
+            -webkit-appearance: none;
+            height: 42px;
+			
+        }
+        
+        .input-group-btn {
+            width: 1%;
+        
+            .btn {
+                background: none;
+                border: 1px solid $sandia-border-grey;
+                padding: .35em .5em .44em;
+				width:42px;
+				height:42px;
+				line-height:1.38em;
+            }
+        }
+
+    }
+    
+    .nav {
+        
+        li {
+			width:auto !important;
+            float:left;
+            font-size: 14px;
+            line-height: 24px;
+            
+            a {   
+            border-bottom: 3px solid transparent;
+            color: $text-color;
+            padding:($base-pixel-x1-5) $base-pixel ($base-pixel-x1-5 - 3);
+            margin-bottom: 0px;
+              
+            }
+        }
+    }
+}
+    
+    #search-controls{
+    
+    #search-box {
+        margin: 0 0 $base-pixel 0;
+     
+      .dropdown-menu {
+            width: 100%;
+            font-size: 16px;
+            padding: $base-pixel 0;
+            margin-top: 0;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-top: none;
+            
+            li {
+                margin-bottom: 0;
+                padding: 0;
+                line-height: 1em;
+                &.active {
+                }
+                a {
+                    padding: $base-pixel $base-pixel-x2;
+                }
+            }
+        }
+    }
+    
+}
+ .techlib-select-mobile {   
+    display: block;
+ }
+    
+    
+ /* Search Results styles*/   
+    
+.search-list {
+    
+    .search-item {
+        margin-bottom: $base-pixel-x4;
+        
+        
+        .search-link {
+            font-size: 1em;
+            line-height: $base-pixel-x3;
+        }
+		.search-description {
+			word-break:break-all;
+		}
+		
+		em {
+			font-style:normal;
+			font-weight:700;
+		}
+        
+    }
+    
+}
+
+.search-list.tech-lib {
+    
+    .search-item-img-wrapper {
+        background: url(images/book-fold-back.svg) no-repeat bottom right;
+        border: 1px solid $sandia-border-grey;
+
+
+        img {
+            -webkit-box-shadow: 0 8px 8px -8px #777;
+            -moz-box-shadow: 0 8px 8px -8px #777;
+            box-shadow: 0 8px 8px -8px #777;
+            z-index: -1;
+            position: relative;  
+        }
+    }
+
+    .item-type {
+        color: $sandia-orange;
+        font-size: 0.75em;
+    }
+}
+    
+    
+    .atl.panel {
+        font-size: 0.85em;
+    
+        .panel-heading {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .panel-heading/*, .list-group-item*/ {
+
+            a {
+                font-size: 16px;
+                line-height: 24px;
+            }
+			
+        }
+    }
+	
+	.atl-org {
+		
+		.btn {
+				font-size: 1em;
+			}
+	}
+	
+	footer {
+    
+    	.nav {
+			font-size:14px;
+		}
+		
+		.supporting-info {
+        font-size:12px;
+		}
+	}
+    
+    .footer-body-margin {
+        margin-bottom: $base-pixel * 36;
+    }
+    
+}
+
+
+@media (max-width: 600px) {
+	
+	.footer-body-margin {
+        margin-bottom: $base-pixel * 38;
+    }
+	
+    footer {
+        margin-bottom: $base-pixel-x3;
+    }
+}
+
+@media (max-width: 480px) {
+	
+	.footer-body-margin {
+        margin-bottom: $base-pixel * 42;
+    }
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="example">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Workshop</title>
+  <script src="../vendor/angular.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="../vendor/bootstrap.css"/>
+</head>
+<body ng-controller="AppCtrl as app">
+
+  <donut flavor="chocolate" toppings="['peanuts', 'berries']"></donut>
+  <gray-box>
+    <book ng-repeat="book in app.books" action="app.reviewBook(title)" title="{{book.title}}" author="book.author"></book>
+  </gray-box>
+  <gray-box>
+    <h3>To Trash</h3>
+  </gray-box>
+  <gray-box>
+    <book ng-repeat="book in app.books" action="app.trashBook(title)" title="{{book.title}}" author="book.author"></book>
+  </gray-box>
+</body>
+</html>

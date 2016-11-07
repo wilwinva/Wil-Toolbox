@@ -1,0 +1,11 @@
+<div>
+  <inside-menu></inside-menu>
+  <div class="col-md-10 col-sm-9 category-content">
+    <ng-include src="'app/components/topRegion/topRegion.tpl.html'"></ng-include>
+    <h1 ng-bind="categoryCtrl.categoryTitle"></h1>
+    <div ng-bind-html="categoryCtrl.data | html"></div>
+  </div>
+  <script>
+    $(window).scrollTop(0)
+  </script>
+</div>

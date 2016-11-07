@@ -1,0 +1,152 @@
+var resources = {
+  "title": "Frequently Asked Questions",
+  "top10": [
+    {
+      "description": "Jury Duty",
+      "link": "juryduty/jury-duty.html"
+    },
+    {
+      "description": "Bereavement / Death of a family member ",
+      "link": "bereavement/bereavement--death-of-a-family-member-.html"
+    },
+    {
+      "description": "Expense of combined business and personal travel",
+      "link": "travel/combining-business-and-personal-travel/expense-of-combined-business-and-personal-travel.html"
+    },
+    {
+      "description": "Medical Leave",
+      "link": "absences/medical-leave/medical-leave.html"
+    },
+    {
+      "description": "Allowable Cost",
+      "link": "allowable-costs/allowable-cost.html"
+    },
+    {
+      "description": "Retirement Award",
+      "link": "awards-and-celebrations/retirement-award/retirement_award.html"
+    },
+    {
+      "description": "Conference Attendance",
+      "link": "business-meetings/conference-attendance/conference-attendance.html"
+    },
+    {
+      "description": "Solicitation and Fundraising",
+      "link": "fundraising/solicitation-and-fundraising/solicitation-and-fundraising.html"
+    },
+    {
+      "description": "Critical Skills Masterâ€™s Program (CSMP) and Masterâ€™s Fellowship Program (MFP)",
+      "link": "education/csmp/critical-skills-masters-program-csmp-and-masters-fellowship-program-mfp.html"
+    },
+    {
+      "description": "Unclassified Controlled Information (UCI)",
+      "link": "information/uci/unclassified-controlled-information.html"
+    }
+  ],
+  "policyTopics": [
+    {
+      "description": "Absences",
+      "link": "absences/index.html",
+      "blurb": ""
+    },
+    {
+      "description": "Allowable Costs?",
+      "link": "allowable-costs/index.html",
+      "blurb": ""
+    },
+    {
+      "description": "Awards and Celebrations?",
+      "link": "awards-and-celebrations/index.html",
+      "blurb": ""
+    },
+    {
+      "description": "Badge",
+      "link": "badge/index.html",
+      "blurb": ""
+    },
+    {
+      "description": "Bereavement - Death of a family member",
+      "link": "bereavement/index.html",
+      "blurb": ""
+    },
+    {
+      "description": "Business Meetings?",
+      "link": "business-meetings/index.html",
+      "blurb": ""
+    },
+    {
+      "description": "Compensation",
+      "link": "compensation/index.html",
+      "blurb": "For questions about non-base and overtime payment"
+    },
+    {
+      "description": "Education",
+      "link": "education/index.html",
+      "blurb": "For questions about the Critical Skills Master's Program and Tuition Assistance Program"
+    },
+    {
+      "description": "Electronic Devices",
+      "link": "electronic-devices/index.html",
+      "blurb": "For questions about the Critical Skills Master's Program and Tuition Assistance Program"
+    },
+    {
+      "description": "Expenses",
+      "link": "expenses/index.html",
+      "blurb": "For questions about the Critical Skills Master's Program and Tuition Assistance Program"
+    },
+    {
+      "description": "Fundraising",
+      "link": "fundraising/index.html",
+      "blurb": "For questions about conducting personal business and fundraising for not-for-profit groups"
+    },
+    {
+      "description": "Gifts and Business Courtesies",
+      "link": "gifts/index.html",
+      "blurb": "For questions about cost and ethics of giving and receiving gifts"
+    },
+    {
+      "description": "Information",
+      "link": "information/index.html",
+      "blurb": "For questions about the different types of information classification"
+    },
+    {
+      "description": "Information Technology Resources",
+      "link": "information-technology-resources/index.html",
+      "blurb": "For questions about the different types of information classification"
+    },
+    {
+      "description": "Jury Duty",
+      "link": "juryduty/index.html",
+      "blurb": "For questions about the different types of information classification"
+    },
+    {
+      "description": "Purchasing",
+      "link": "purchasing/index.html",
+      "blurb": "For questions about the different types of information classification"
+    },
+    {
+      "description": "Team Building Activities",
+      "link": "team-building/index.html",
+      "blurb": "For questions about team building activities and how to charge for related expenses"
+    },
+    {
+      "description": "Telecommuting",
+      "link": "telecommuting/index.html",
+      "blurb": "For questions about team building activities and how to charge for related expenses"
+    },
+    {
+      "description": "Travel",
+      "link": "travel/index.html",
+      "blurb": "For questions about travel logistics and expenses"
+    },
+    {
+      "description": "Vacation",
+      "link": "vacation/index.html",
+      "blurb": "For questions about travel logistics and expenses"
+    },
+    {
+      "description": "Work Schedules and Hours",
+      "link": "work-schedules/index.html",
+      "blurb": "For questions about the different types of work schedules and holidays"
+    }
+  ]
+}

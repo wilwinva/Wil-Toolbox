@@ -1,0 +1,92 @@
+<div id="changeReport" class="row">
+    <h1>Change Report</h1>
+
+    <snl-report-actions></snl-report-actions>
+
+    <div class="row" id="RelatedTermTop">
+        <label class="col-sm-3">Related Terms</label>
+        <span class="glyphicon glyphicon-asterisk clean"></span>
+        <!--
+                    <input type="button" ng-value="!findTerms ? 'Find Terms':'Hide Terms'" ng-click="findTerms = !findTerms"/>
+        -->
+        <input type="text" placeholder="Enter Term or Term ID" value="" ng-focus="findTerms = true"/>
+        <div ng-show="findTerms">
+            <div class="col-sm-offset-4 panel portlet panel-default">
+                <div class="table-responsive">
+                    <div class="table-filters">
+                        <label>Filter results by:</label>
+                        <input type="text" placeholder="TermID" ng-model="filterByTermID" value=""/>
+                        <input type="text" placeholder="Category" ng-model="filterByCategory" value=""/>
+                        <span class="glyphicon glyphicon-remove-sign pull-right"
+                              ng-click="findTerms = false;"></span>
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th ng-click="ctrl.sort('termID')">
+                                TermID
+                                <svg class="snl-icon snl-icon-16px" ng-show="ctrl.sortKey=='termID'"
+                                     ng-class="{'snl-icon-caret-up':!ctrl.reverse,'snl-icon-caret-down':ctrl.reverse}">
+                                    <use xlink:href="#snl-icon-caret"/>
+                                </svg>
+                            </th>
+                            <th ng-click="ctrl.sort('term')">
+                                Term
+                                <svg class="snl-icon snl-icon-16px" ng-show="ctrl.sortKey=='term'"
+                                     ng-class="{'snl-icon-caret-up':!ctrl.reverse,'snl-icon-caret-down':ctrl.reverse}">
+                                    <use xlink:href="#snl-icon-caret"/>
+                                </svg>
+                            </th>
+                            <th ng-click="ctrl.sort('category')">
+                                Category
+                                <svg class="snl-icon snl-icon-16px" ng-show="ctrl.sortKey=='category'"
+                                     ng-class="{'snl-icon-caret-up':!ctrl.reverse,'snl-icon-caret-down':ctrl.reverse}">
+                                    <use xlink:href="#snl-icon-caret"/>
+                                </svg>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr dir-paginate="termGroup in ctrl.availableTermsList|orderBy:ctrl.sortKey:ctrl.reverse|filter:filterByTermID|filter:filterByCategory|itemsPerPage:ctrl.pageSize"
+                            pagination-id="relatedTerms">
+                            <td><input type="checkbox" ng-click="ctrl.updateTermList(termGroup)"
+                                       ng-checked="ctrl.inList(termGroup.id)!=-1"/></td>
+                            <td ng-bind="termGroup.id"></td>
+                            <td ng-bind="termGroup.desc"></td>
+                            <td ng-bind="termGroup.category"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <snl-paginator pagination-id="relatedTerms" page-size="ctrl.pageSize"
+                                   page-options="ctrl.pageOptions" num-records="ctrl.numRecords"
+                                   scroll-to="#RelatedTermTop"
+                                   min-data-length="5"></snl-paginator>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-4">
+                    <span ng-repeat="term in ctrl.relatedTermsList">
+                        <a ng-click=""><span class="glyphicon glyphicon-remove-circle"></span> {{term.desc}}</a>
+                    </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="actions">
+        <hr/>
+        <button class="btn btn-link" ng-click="help = !help;" ng-attr-title="{{help?'Hide Help':'Show Help'}}">
+            <span>{{!help?'Show':'Hide'}}</span> Help
+        </button>
+        <span class="pull-right">
+                <button ng-click="ctrl.cancel();">
+                    Cancel
+                </button>
+                <button ng-click="answer('useful')">
+                    Submit
+                </button>
+            </span>
+    </div>
+
+</div>

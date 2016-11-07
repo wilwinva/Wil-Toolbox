@@ -1,0 +1,95 @@
+var data = {
+  "topic_title":"Work Schedules",
+  "topics":[
+    {
+      "subTopic_title":"",
+      "subTopics":[
+        {
+          "question_title":"",
+          "questions": [
+            {
+              "description": "Question 1",
+              "link": "/cps/faq/work-schedules/maq_example"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subTopic_title":"Related Questions",
+      "subTopics":[
+        {
+          "question_title":"Compressed work week schedule (9/80)",
+          "questions": [
+            {
+              "description": "What is a compressed work week schedule (9/80)?",
+              "link": "/cps/faq/work-schedules/maq_example"
+            },
+            {
+              "description": "Do I have to work a compressed work week schedule?",
+              "link": "/cps/faq/work-schedules/maq_example"
+            }
+          ]
+        },
+        {
+          "question_title":"Extended Workweek (EWW)",
+          "questions": [
+            {
+              "description": "What is a Extended Workweek (EWW)",
+              "link": "/cps/faq/work-schedules/maq_example"
+            }
+          ]
+        },
+        {
+          "question_title":"Flextime",
+          "questions": [
+            {
+              "description": "What is Flextime?",
+              "link": "/cps/faq/work-schedules/maq_example"
+            },
+            {
+              "description": "Can I use Flextime?",
+              "link": "/cps/faq/work-schedules/maq_example"
+            }
+          ]
+        },
+        {
+          "question_title":"Lunch time – Standard and alternative schedules",
+          "questions": [
+            {
+              "description": "What are the lunch time schedules?",
+              "link": "/cps/faq/work-schedules/maq_example"
+            },
+            {
+              "description": "Do I have to take lunch?",
+              "link": "/cps/faq/work-schedules/maq_example"
+            }
+          ]
+        },
+        {
+          "question_title":"Work on holidays",
+          "questions": [
+            {
+              "description": "Can I work on holidays?",
+              "link": "/cps/faq/work-schedules/maq_example"
+            },
+            {
+              "description": "What happens when I have to work on holidays?",
+              "link": "/cps/faq/work-schedules/maq_example"
+            }
+          ]
+        },
+        {
+        "question_title":"Sandia’s core hours of work",
+        "questions": [
+            {
+              "description": "What are Sandia’s core hours of work in New Mexico and other locations?",
+              "link": "/cps/faq/work-schedules/work-hours/hrs-of-work"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

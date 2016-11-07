@@ -1,0 +1,63 @@
+<div ng-show="apiCtrl.fetching" class="loader-container">
+  <div class="loaderbg"></div>
+  <div class="loader"></div>
+</div>
+<div ng-hide="apiCtrl.error" class="panel-body" ng-class="{'no-data':apiCtrl.data.length == 0}">
+  <div class="table-controls">
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="text" ng-model="filterBy" class="form-control" placeholder="Filter Results By:">
+      </div>
+    </form>
+  </div>
+  <div id="TrainingComplianceResults" class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th ng-click="apiCtrl.sort('course')" snl-click-tracking="ComplianceSortByCourse"> Course
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='course'"
+             ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('title')" snl-click-tracking="ComplianceSortByTitle"> Title
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='title'"
+             ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('due')" snl-click-tracking="ComplianceSortByDue"> Due
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='due'"
+             ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+        <th ng-click="apiCtrl.sort('status')" ng-init="apiCtrl.sort('due')" snl-click-tracking="ComplianceSortByStatus"> Status
+          <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='status'"
+             ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+            <use xlink:href="#snl-icon-caret"/>
+          </svg>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr dir-paginate="training in apiCtrl.data|orderBy:apiCtrl.sortKey:apiCtrl.reverse|filter:filterBy|itemsPerPage:apiCtrl.pageSize"
+        pagination-id="trainingCompliance" snl-on-finish-render="apiCtrl.renderPagination()">
+      <td ng-bind="training.course"></td>
+      <td>
+        <a ng-if="training.url.length > 0" ng-href="{{training.url}}" ng-bind="training.title"></a>
+        <span ng-if="training.url == null" ng-bind="training.title"></span>
+      </td>
+      <td ng-class="(training.due_in_2_weeks === true)?'text-danger':(training.due_in_1_month === true)?'text-warning':''"><span ng-attr-title={{title}} ng-init="title = (training.due_in_2_weeks === true)?'Class due in 2 weeks.':(training.due_in_1_month === true)?'Class due in 1 month.':''" ng-bind="training.due | reformatDate | date:'MM/dd/yyyy'"></span></td>
+      <td ng-bind="training.status"></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <snl-paginator pagination-id="trainingCompliance" page-size="apiCtrl.pageSize"
+                 page-options="apiCtrl.pageOptions" num-records="apiCtrl.numRecords" scroll-to="#TrainingComplianceResults"
+                 min-data-length="5" snl-click-tracking="CompliancePagination"></snl-paginator>
+</div>
+<div class="panel-footer">
+  <p>See <a ng-href="{{apiCtrl.tedsUrl}}">TEDS To Do List</a> for a complete list of required training.</p>
+</div>

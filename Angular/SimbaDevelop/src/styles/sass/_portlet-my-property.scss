@@ -1,0 +1,59 @@
+/* My Property Portlet */
+
+.portlet.panel.portlet-my-property {
+	
+	.panel-body {
+		/*border-bottom:none;*/
+	}
+	
+	.list-group {
+		border:none;
+		border-bottom:1px solid $sandia-border-grey;
+	
+		.list-group-item {
+			
+			.group-title {
+				display:inline;
+				width:auto;
+			}
+			
+				.date {
+					font-weight:400;
+				}
+			
+				.list-group {
+					margin:$base-pixel-x1-5 (-$base-pixel-x2) (-$base-pixel-x1-5) (-$base-pixel);
+					border-bottom:1px solid $sandia-border-grey;
+			
+					.list-group-item {
+						padding-left:($base-pixel-x4) + $base-pixel-half;
+						padding-top:$base-pixel;
+						padding-bottom:$base-pixel;
+						border-top:1px solid #eee;
+						border-bottom:1px solid #eee;
+                        
+                        span {
+                        width: 50%;
+                        display: inline-block;
+                        
+                            &.pull-right {
+                                text-align: right;
+                            }
+                        }
+						
+						&:last-child {
+							border-bottom:none;
+							
+						}
+					}
+				}
+		
+		}
+		
+	}
+
+}
+
+
+
+	

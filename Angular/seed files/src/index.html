@@ -1,0 +1,101 @@
+<!doctype html>
+<html ng-app="angularApp" lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title ng-bind="'[Project Name] - ' + ($title || 'Home')">[Project Name]</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="Keywords" content="search, results"/>
+    <meta name="description" content="The homepage for [Project Name].">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Inside Help Team | inside-help@sandia.gov" name="author"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent black">
+
+    <link href="mailto:inside-help@sandia.gov" title="Inside Help Team" rev="owns"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="images/manifest.json">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#00add0">
+    <meta name="msapplication-TileColor" content="#00add0">
+    <meta name="msapplication-TileImage" content="images/mstile-144x144.png">
+    <meta name="theme-color" content="#4d4d4d">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="https://@@PATTERN-LIBRARY.sandia.gov/common/current/css/snl-pl-main.css">
+    <link rel="stylesheet" href="https://@@PATTERN-LIBRARY.sandia.gov/common/current/css/snl-patternLibrary.css">
+
+    <!-- build:css({.tmp,src}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+
+<snl-site-header user-first-name="First Name" user-last-name="Last Name"\></snl-site-header>
+
+<div class="container-fluid">
+    <div ui-view></div>
+</div>
+
+<snl-site-footer></snl-site-footer>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,src}) scripts/scripts.js -->
+<script src="app/app.js"></script>
+<script src="app/config.js"></script>
+<script src="app/components/footer/footer.js"></script>
+<script src="app/components/header/header.js"></script>
+<!-- endbuild -->
+
+<script src="https://@@PATTERN-LIBRARY.sandia.gov/common/current/js/sticky-button.js"></script>
+
+<script type="text/javascript"
+        data-name="SandiaGlobalHeader"
+        data-id="20160602"
+        data-search="true"
+        data-nav="true"
+        data-footer="true"
+        data-cchd="true"
+        src="https://@@PATTERN-LIBRARY.sandia.gov/globalheader/current/js/header.min.js">
+</script>
+
+</body>
+</html>

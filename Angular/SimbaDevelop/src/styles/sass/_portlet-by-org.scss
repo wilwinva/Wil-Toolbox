@@ -1,0 +1,109 @@
+#computersByOrg {
+    
+    .table-striped, .panel-body, .table-controls {
+		@include tableColorize(desaturate($snl-medium-blue, 30%))
+	}
+    
+    .table-controls {
+        .pagination {
+          @include paginationColorize(desaturate($snl-medium-blue, 30%))
+        }
+        .records-per-page {
+            select {
+                border-color: tint($snl-medium-blue, 50%);
+            }
+        }
+        .form-control, .btn {
+            border-color: tint($snl-medium-blue, 50%);
+        }
+    }
+    
+    .panel-footer {
+        background: $snl-blue-grey-700;
+        
+        .computer-stats {
+            line-height: $base-pixel-x3;
+            font-weight: 600;
+            display: inline-block;
+            float: left;
+            color: white;
+            
+            &:first-of-type {
+               margin-right: $base-pixel-x2; 
+            }
+        }
+
+        .percentage-bar {
+            display: inline-block;
+            width: $base-pixel-x4; 
+            position: relative;
+            height: 14px;
+            border-radius: 3px;
+            vertical-align: middle;
+            z-index: 1;
+            overflow: hidden;
+            background: $snl-blue-grey-500;
+
+            div {
+                height: 100%;
+            }
+
+            .filled {
+                position: absolute;
+                background: $snl-light-blue-200;
+                z-index: 2;
+                overflow: hidden;
+            }
+        }
+        
+        .percentage-number {
+            color: $snl-light-blue-200;
+            vertical-align: middle;
+        }
+        
+        .percentage-age-label {
+            vertical-align: middle;
+            font-weight: 400;
+            color: $snl-blue-grey-200;
+        }
+    }
+}
+
+
+#trainingByOrg {
+    
+	
+	.table-responsive {
+			border:none;
+			/*margin-right:-$base-pixel-x2;
+			margin-left:-$base-pixel-x2;*/
+		}
+    
+	.table-striped, .panel-body {
+		@include tableColorize(desaturate($snl-yellow, 20%))
+	}
+    
+    .panel-footer {
+        text-align: center;
+        color: white;
+        background: $snl-blue-grey-700;
+    }
+    
+    .table-controls {
+        background: tint(desaturate($snl-yellow, 20%), 90%);
+        
+        .pagination {
+          @include paginationColorize(desaturate($snl-yellow, 20%))  
+        }
+        .records-per-page {
+            select {
+                border-color: tint(desaturate($snl-yellow, 20%), 55%);
+            }
+        }
+        
+        .form-control, .btn {
+            border-color: tint(desaturate($snl-yellow, 20%), 55%);
+        }
+    }
+	
+}

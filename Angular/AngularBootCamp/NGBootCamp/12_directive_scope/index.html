@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" ng-app="example">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Workshop</title>
+  <script src="../vendor/angular.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="../vendor/bootstrap.css"/>
+</head>
+<body ng-controller="AppCtrl as app">
+  <book ng-repeat="book in app.books" action="app.reviewBook(title)" title="{{book.title}}" author="book.author"></book>
+  <h3>To Trash</h3>
+  <book ng-repeat="book in app.books" action="app.trashBook(title)" title="{{book.title}}" author="book.author"></book>
+</body>
+</html>

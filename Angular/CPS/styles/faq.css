@@ -1,0 +1,43 @@
+#faq .main-navigation .nav li a {
+  color: #fff;
+  padding: 8px 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+#searches{margin-bottom:20px;}
+#searches button img {
+  display: block;
+  height: 16px;
+  margin: 7px;
+  opacity: 0.5;
+  padding: 0;
+  vertical-align: top;
+  width: 16px;
+}
+#searches .btn{padding:5px 10px 6px;background-color:#ddd;}
+
+#faq h4.group-heading{font-weight:400;font-size:1.50em;}
+#faq #questions ol,ol.questions{list-style:inside decimal;}
+
+#faq #policyTopics ul{list-style-type: none;}
+
+#faq #policyTopics li{border-bottom:solid 1px #ddd;}
+#faq #policyTopics h5,#faq #policyTopics p{margin-bottom:10px;}
+#faq #policyTopics a{display:block;}
+#faq #policyTopics svg{}
+#faq #policyTopics a svg.snl-icon-chevron-right polygon {fill: #06c;}
+#faq #policyTopics a:hover svg.snl-icon-chevron-right polygon {fill: #777;}
+
+#leftNav ul ul,#leftNav ul ul ul{margin-left:10px;}
+#leftNav li{padding-bottom:5px;margin-bottom:5px;border-bottom:solid 1px #ddd;}
+#leftNav ul:last-of-type, #leftNav li:last-of-type{border-bottom:none;margin-bottom:0}
+#leftNav span.group-title{display:inline-block;width:225px;}
+#leftNav li li span.group-title{width:215px;}
+#leftNav span, #leftNav svg{vertical-align:top;}
+
+#rightSidebar{}
+#rightSidebar ul{list-style-position: outside;list-style-type: disc;margin-left:17px;}
+#rightSidebar a{}
+
+#panelVote button{width:60px;height:45px;}
+

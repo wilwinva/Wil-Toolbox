@@ -1,0 +1,53 @@
+.error {
+    vertical-align: top;
+    padding: 15% $base-pixel-x2;
+    
+    .fourohfour-box {
+        display: relative;
+        height: 120px;
+        width: 120px;
+        overflow: hidden;
+        background: $snl-blue-grey-300;
+        float: left;
+        margin-right: $base-pixel-x3;
+        
+        &:hover {
+            animation: error-shake-big 0.5s ease-in-out 1;
+            
+            .fourohfour-text {
+                animation: error-shake-big 0.6s ease-out 1;
+            }
+        }
+    }
+
+    .fourohfour-text {
+        color: white;
+        position: relative;
+        right: 8px;
+        top: 25%;
+        text-align: right;
+        display: block;
+    }
+    
+    h1 {
+        font-weight: 700;
+        display: inline-block;
+        margin: 0;
+        line-height: 1em;
+    }
+    
+    .button-group {
+        
+        button {
+            margin-top: $base-pixel-x2;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .fourohfour-box {
+        display: inline-block;
+        text-align: center;
+    }
+}

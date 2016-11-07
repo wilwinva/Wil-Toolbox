@@ -1,0 +1,244 @@
+/*========= SNL Signature Color Base Variables ============*/
+
+$snl-dark-blue:           #1c355e;
+$snl-medium-blue:         #0076a9;
+$snl-light-blue:          #00ADD0;
+$snl-orange:              #fd5947;
+
+
+/*========= SNL Secondary (Grey) Base Color Variables ============*/
+
+$snl-grey:                 #999999;
+$snl-blue-grey:            #7d8ea0;
+
+
+/*========= SNL Tertiary Base Color Variables ============*/
+
+$snl-green:                 #6CB312;
+$snl-yellow:                #ffc200;
+$snl-amber:                 #ff8800;
+$snl-red-orange:            #f23f00;
+$snl-red:                   #cc0000;
+$snl-lavender:              #b312b1;
+$snl-periwinkle:            #5a3cbf;
+$snl-blue:                  #0066cc;
+
+
+/*========= SNL Signature Color Tint & Shades Variables ============*/
+
+$snl-dark-blue-900:         shade($snl-dark-blue, 60%);
+$snl-dark-blue-800:         shade($snl-dark-blue, 45%);
+$snl-dark-blue-700:         shade($snl-dark-blue, 30%);
+$snl-dark-blue-600:         shade($snl-dark-blue, 15%);
+$snl-dark-blue-500:         $snl-dark-blue;
+$snl-dark-blue-400:         tint($snl-dark-blue, 20%);
+$snl-dark-blue-300:         tint($snl-dark-blue, 40%);
+$snl-dark-blue-200:         tint($snl-dark-blue, 60%);
+$snl-dark-blue-100:         tint($snl-dark-blue, 80%);
+$snl-dark-blue-50:          tint($snl-dark-blue, 90%);
+
+$snl-medium-blue-900:         shade($snl-medium-blue, 60%);
+$snl-medium-blue-800:         shade($snl-medium-blue, 45%);
+$snl-medium-blue-700:         shade($snl-medium-blue, 30%);
+$snl-medium-blue-600:         shade($snl-medium-blue, 15%);
+$snl-medium-blue-500:         $snl-medium-blue;
+$snl-medium-blue-400:         tint($snl-medium-blue, 20%);
+$snl-medium-blue-300:         tint($snl-medium-blue, 40%);
+$snl-medium-blue-200:         tint($snl-medium-blue, 60%);
+$snl-medium-blue-100:         tint($snl-medium-blue, 80%);
+$snl-medium-blue-50:          tint($snl-medium-blue, 90%);
+
+$snl-light-blue-900:         shade($snl-light-blue, 60%);
+$snl-light-blue-800:         shade($snl-light-blue, 45%);
+$snl-light-blue-700:         shade($snl-light-blue, 30%);
+$snl-light-blue-600:         shade($snl-light-blue, 15%);
+$snl-light-blue-500:         $snl-light-blue;
+$snl-light-blue-400:         tint($snl-light-blue, 20%);
+$snl-light-blue-300:         tint($snl-light-blue, 40%);
+$snl-light-blue-200:         tint($snl-light-blue, 60%);
+$snl-light-blue-100:         tint($snl-light-blue, 80%);
+$snl-light-blue-50:          tint($snl-light-blue, 90%);
+
+$snl-orange-900:         shade($snl-orange, 60%);
+$snl-orange-800:         shade($snl-orange, 45%);
+$snl-orange-700:         shade($snl-orange, 30%);
+$snl-orange-600:         shade($snl-orange, 15%);
+$snl-orange-500:         $snl-orange;
+$snl-orange-400:         tint($snl-orange, 20%);
+$snl-orange-300:         tint($snl-orange, 40%);
+$snl-orange-200:         tint($snl-orange, 60%);
+$snl-orange-100:         tint($snl-orange, 80%);
+$snl-orange-50:          tint($snl-orange, 90%);
+
+
+/*========= SNL Secondary (Greys) Tint & Shades Variables ============*/
+
+$snl-grey-900:         shade($snl-grey, 60%);
+$snl-grey-800:         shade($snl-grey, 45%);
+$snl-grey-700:         shade($snl-grey, 30%);
+$snl-grey-600:         shade($snl-grey, 15%);
+$snl-grey-500:         $snl-grey;
+$snl-grey-400:         tint($snl-grey, 20%);
+$snl-grey-300:         tint($snl-grey, 40%);
+$snl-grey-200:         tint($snl-grey, 60%);
+$snl-grey-100:         tint($snl-grey, 80%);
+$snl-grey-50:          tint($snl-grey, 90%);
+
+
+$snl-blue-grey-900:         shade($snl-blue-grey, 60%);
+$snl-blue-grey-800:         shade($snl-blue-grey, 45%);
+$snl-blue-grey-700:         shade($snl-blue-grey, 30%);
+$snl-blue-grey-600:         shade($snl-blue-grey, 15%);
+$snl-blue-grey-500:         $snl-blue-grey;
+$snl-blue-grey-400:         tint($snl-blue-grey, 20%);
+$snl-blue-grey-300:         tint($snl-blue-grey, 40%);
+$snl-blue-grey-200:         tint($snl-blue-grey, 60%);
+$snl-blue-grey-100:         tint($snl-blue-grey, 80%);
+$snl-blue-grey-50:          tint($snl-blue-grey, 90%);
+
+
+/*========= SNL Tertiary Tint & Shades Variables ============*/
+
+
+$snl-green-900:         shade($snl-green, 60%);
+$snl-green-800:         shade($snl-green, 45%);
+$snl-green-700:         shade($snl-green, 30%);
+$snl-green-600:         shade($snl-green, 15%);
+$snl-green-500:         $snl-green;
+$snl-green-400:         tint($snl-green, 20%);
+$snl-green-300:         tint($snl-green, 40%);
+$snl-green-200:         tint($snl-green, 60%);
+$snl-green-100:         tint($snl-green, 80%);
+$snl-green-50:          tint($snl-green, 90%);
+
+$snl-yellow-900:         shade($snl-yellow, 60%);
+$snl-yellow-800:         shade($snl-yellow, 45%);
+$snl-yellow-700:         shade($snl-yellow, 30%);
+$snl-yellow-600:         shade($snl-yellow, 15%);
+$snl-yellow-500:         $snl-yellow;
+$snl-yellow-400:         tint($snl-yellow, 20%);
+$snl-yellow-300:         tint($snl-yellow, 40%);
+$snl-yellow-200:         tint($snl-yellow, 60%);
+$snl-yellow-100:         tint($snl-yellow, 80%);
+$snl-yellow-50:          tint($snl-yellow, 90%);
+
+$snl-amber-900:         shade($snl-amber, 60%);
+$snl-amber-800:         shade($snl-amber, 45%);
+$snl-amber-700:         shade($snl-amber, 30%);
+$snl-amber-600:         shade($snl-amber, 15%);
+$snl-amber-500:         $snl-amber;
+$snl-amber-400:         tint($snl-amber, 20%);
+$snl-amber-300:         tint($snl-amber, 40%);
+$snl-amber-200:         tint($snl-amber, 60%);
+$snl-amber-100:         tint($snl-amber, 80%);
+$snl-amber-50:          tint($snl-amber, 90%);
+
+$snl-red-orange-900:         shade($snl-red-orange, 60%);
+$snl-red-orange-800:         shade($snl-red-orange, 45%);
+$snl-red-orange-700:         shade($snl-red-orange, 30%);
+$snl-red-orange-600:         shade($snl-red-orange, 15%);
+$snl-red-orange-500:         $snl-red-orange;
+$snl-red-orange-400:         tint($snl-red-orange, 20%);
+$snl-red-orange-300:         tint($snl-red-orange, 40%);
+$snl-red-orange-200:         tint($snl-red-orange, 60%);
+$snl-red-orange-100:         tint($snl-red-orange, 80%);
+$snl-red-orange-50:          tint($snl-red-orange, 90%);
+
+$snl-red-900:         shade($snl-red, 60%);
+$snl-red-800:         shade($snl-red, 45%);
+$snl-red-700:         shade($snl-red, 30%);
+$snl-red-600:         shade($snl-red, 15%);
+$snl-red-500:         $snl-red;
+$snl-red-400:         tint($snl-red, 20%);
+$snl-red-300:         tint($snl-red, 40%);
+$snl-red-200:         tint($snl-red, 60%);
+$snl-red-100:         tint($snl-red, 80%);
+$snl-red-50:          tint($snl-red, 90%);
+
+$snl-lavender-900:         shade($snl-lavender, 60%);
+$snl-lavender-800:         shade($snl-lavender, 45%);
+$snl-lavender-700:         shade($snl-lavender, 30%);
+$snl-lavender-600:         shade($snl-lavender, 15%);
+$snl-lavender-500:         $snl-lavender;
+$snl-lavender-400:         tint($snl-lavender, 20%);
+$snl-lavender-300:         tint($snl-lavender, 40%);
+$snl-lavender-200:         tint($snl-lavender, 60%);
+$snl-lavender-100:         tint($snl-lavender, 80%);
+$snl-lavender-50:          tint($snl-lavender, 90%);
+
+$snl-periwinkle-900:         shade($snl-periwinkle, 60%);
+$snl-periwinkle-800:         shade($snl-periwinkle, 45%);
+$snl-periwinkle-700:         shade($snl-periwinkle, 30%);
+$snl-periwinkle-600:         shade($snl-periwinkle, 15%);
+$snl-periwinkle-500:         $snl-periwinkle;
+$snl-periwinkle-400:         tint($snl-periwinkle, 20%);
+$snl-periwinkle-300:         tint($snl-periwinkle, 40%);
+$snl-periwinkle-200:         tint($snl-periwinkle, 60%);
+$snl-periwinkle-100:         tint($snl-periwinkle, 80%);
+$snl-periwinkle-50:          tint($snl-periwinkle, 90%);
+
+$snl-blue-900:         shade($snl-blue, 60%);
+$snl-blue-800:         shade($snl-blue, 45%);
+$snl-blue-700:         shade($snl-blue, 30%);
+$snl-blue-600:         shade($snl-blue, 15%);
+$snl-blue-500:         $snl-blue;
+$snl-blue-400:         tint($snl-blue, 20%);
+$snl-blue-300:         tint($snl-blue, 40%);
+$snl-blue-200:         tint($snl-blue, 60%);
+$snl-blue-100:         tint($snl-blue, 80%);
+$snl-blue-50:          tint($snl-blue, 90%);
+
+
+$text-color:                #444;
+$base-pixel:                8px;
+
+$line-measure:              600px;
+
+
+$base-pixel-half: 			 $base-pixel / 2;
+$base-pixel-x1-5:            $base-pixel * 1.5;
+$base-pixel-x2:              $base-pixel * 2;
+$base-pixel-x3:              $base-pixel * 3;
+$base-pixel-x4:              $base-pixel * 4;
+$base-pixel-x5:              $base-pixel * 5;
+$base-pixel-x6:              $base-pixel * 6;
+$base-pixel-x8:              $base-pixel * 8;
+$base-pixel-x9:              $base-pixel * 9;
+$base-pixel-x10:             $base-pixel * 10;
+$base-pixel-x11:              $base-pixel * 11;
+$base-pixel-x12:             $base-pixel * 12;
+
+
+$sandia-blue:               $snl-light-blue;
+$sandia-orange:             $snl-orange;
+$inside-blue:                $snl-medium-blue;
+$sandia-border-grey:        $snl-grey-200;
+$sandia-border-grey-md:     $snl-grey-500;
+$sandia-border-grey-dk:     $snl-grey-800;
+
+
+$table-yellow:              #fcf7d3;
+
+/*-- Color Mixin Variables --*/
+
+$text-color-30:       lighten($text-color, 30%);
+$text-color-50:       lighten($text-color, 50%);
+
+/*-lighten-*/
+$brand-primary-400:   lighten($inside-blue, 2.5%);
+$brand-primary-300: lighten($inside-blue, 5%);
+$brand-primary-200: lighten($inside-blue, 10%);
+$brand-primary-100: lighten($inside-blue, 20%);
+$brand-primary-50: lighten($inside-blue, 30%);
+$brand-primary-40: lighten($inside-blue, 40%);
+
+/*-darken-*/
+$brand-primary-600:    darken($inside-blue, 5%);
+$brand-primary-700:  darken($inside-blue, 10%);
+$brand-primary-800: darken($inside-blue, 15%);
+
+
+/*-shade-*/
+$table-yellow-600: mix(black, $table-yellow, 6%);
+$table-yellow-border: mix(black, $table-yellow, 15%);
+

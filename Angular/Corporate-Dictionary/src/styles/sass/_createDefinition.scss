@@ -1,0 +1,38 @@
+#reasonforupdate {
+  h3 {
+    margin-bottom: 0 !important;
+  }
+}
+
+//Text Angular Toolbar
+.ta-toolbar {
+  .btn-group {
+    margin-bottom: 8px;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    .btn {
+      border: none;
+      &:hover {
+        background-color: transparent;
+        border-bottom: 4px solid $snl-blue;
+        color: $snl-dark-blue;
+        margin-top: -4px;
+      }
+    }
+  }
+}
+
+.form-group .col-sm-8 + .col-sm-2 {
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 9px;
+  }
+}

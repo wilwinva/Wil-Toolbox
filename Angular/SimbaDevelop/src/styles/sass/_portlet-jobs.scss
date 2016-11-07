@@ -1,0 +1,20 @@
+#jobs {
+    
+    .table-striped, .panel-body, .table-controls {
+		@include tableColorize(desaturate($snl-green, 30%))
+	}
+    
+    .table-controls {
+        .pagination {
+          @include paginationColorize(desaturate($snl-green, 30%))
+        }
+        .records-per-page {
+            select {
+                border-color: tint($snl-green, 50%);
+            }
+        }
+        .form-control, .btn {
+            border-color: tint($snl-green, 50%);
+        }
+    }
+}

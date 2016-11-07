@@ -1,0 +1,11 @@
+<div class="panel atl atl-teaser" ng-if="atl.source == 'JIT_ATL'">
+    <div class="panel-heading">
+      <a class="searchLink" ng-href="{{atl.link | decode | replaceSpaces}}"
+         ng-bind-html="atl.title | decode | replaceSpaces"></a>
+    </div>
+  <table id="atlTeasers" class="table" data-ng-repeat="payload in atl.payload">
+    <tbody ng-bind-html="payload.content | decode | decode | replaceSpaces | trustAsHtml">
+    </tbody>
+  </table>
+</div>
+

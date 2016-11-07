@@ -1,0 +1,3 @@
+select * from lnk.lnk_node WHERE pub_id = 2 and node_type_id = 2 order by name;
+
+select * from lnk.lnk_node WHERE pub_id = 2 and node_type_id = 2 order by name;

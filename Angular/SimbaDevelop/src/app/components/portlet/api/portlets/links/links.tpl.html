@@ -1,0 +1,194 @@
+<div ng-show="apiCtrl.fetching" class="loader-container">
+    <div class="loaderbg"></div>
+    <div class="loader"></div>
+</div>
+
+<div id="LinksReport" ng-hide="apiCtrl.error" ng-model="apiCtrl.data">
+    <ul class="list-group">
+        <li class="panel-body" ng-init="headingAdd=false; linkAddTop=false; headingEditing=false;"  >
+            <button class="btn" ng-click="linkAddTop=true; headingAdd=false; linkTop.description=''; linkTop.url=''; linkTop.new_window='';"> + Add New Link</button>
+            <button class="btn" ng-click="headingAdd=true; linkAddTop=false; linkGroup.name=''"> + Add Group</button>
+            <!-- TODO: hiding for now  <span class="pull-right">
+                <label class="toggle">
+                  <input type="checkbox" onclick="toggleCompact();" />
+                    <div class="checkbox"></div>
+                </label><span class="toggle-label">Compacted</span></span> -->
+            <div class="link-name-edit" ng-show="linkAddTop" >
+                <div class="input-group">
+                    <span class="input-group-addon">Link URL</span>
+                    <input type="url" class="form-control" title="Link URL" placeholder="https://www.google.com" ng-model="linkTop.url">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Link Text</span>
+                    <input type="text" class="form-control" ng-model="linkTop.description" title="Link Text"
+                           placeholder="Google" ng-show="linkAddTop" snl-focus-on-show maxlength="100">
+                </div>
+                <div class="checkbox checkbox-inline">
+                    <label>
+                        <input type="checkbox" ng-model="linkTop.new_window" ng-true-value="1" ng-false-value="0"> Open in New Window
+                    </label>
+                </div>
+                <span class="edit-actions">
+                                    <a class="" title="Save" ng-click="linkEditClass='show-pencil'; linkAddTop = apiCtrl.addLinkWithoutGroup(linkTop.description, linkTop.url, linkTop.new_window);" >Save</a>
+                    <!--<svg class="snl-icon snl-icon-check" title="Save" ng-click="linkAddTop = false; linkEditClass='show-pencil'; apiCtrl.addLinkWithoutGroup(linkTop.description, linkTop.url, linkTop.new_window);" >
+                    <use xlink:href="#snl-icon-check"></use>
+                    </svg>-->
+                </span>
+            </div>
+
+            <div class="group-name-edit" ng-show="headingAdd">
+                <input type="text" class="form-control" ng-model="linkGroup.name" placeholder="Group name"
+                       ng-show="headingAdd" snl-focus-on-show maxlength="100">
+                <span class="edit-actions">
+                    <a class="" title="Save New Group" ng-click="headingEditClass='show-pencil'; headingAdd=apiCtrl.groupAdd(linkGroup.name, 'new');" >Save</a>
+                    <a class="text-danger"  title="Delete New Group" ng-click="headingAdd = false; headingEditClass='show-pencil';">Delete</a>
+                </span>
+            </div>
+
+            <!-- Ungrouped links holder -->
+            <ul class="ungrouped-links" id="ungroupedLinksHolder">
+                <li class="list-group-item" ng-repeat="linkGroup in apiCtrl.data"
+                    ng-if="linkGroup.name == 'tempHoldingGroup'" ui-tree-node
+                    ng-init="linkEditing=false; show=false;editing=false;headingEditClass='';headingDragClass='';"
+                    snl-links-render-on-finish
+                    groupid="{{linkGroup.id}}">
+                    <ul class="mylinks-list fadeIt linksSortable"  ng-model="apiCtrl.data">
+                        <li ng-repeat="link in linkGroup.links"
+                            ng-mouseenter="linkEditClass='show-pencil';linkDragClass='show-drag'"
+                            ng-mouseleave="linkEditClass = '';linkDragClass=''" ng-init="linkEditClass='';linkDragClass=''"
+                            linkid="{{link.id}}" groupid="{{linkGroup.id}}">
+                            <svg ng-show="!linkEditing" title="Drag to sort link order" class="snl-icon snl-icon-draggable-sm {{linkDragClass}}" viewBox="0 0 24 24">
+                                <circle cx="10.4" cy="12.5" r="1"/> <circle cx="10.4" cy="7.5" r="1"/> <circle cx="10.4" cy="17.5" r="1"/> <circle cx="14.4" cy="12.5" r="1"/> <circle cx="14.4" cy="7.5" r="1"/> <circle cx="14.4" cy="17.5" r="1"/>
+                            </svg>
+                            <a ng-hide="linkEditing"  ng-href="{{link.url}}" target="{{link.new_window ? '_blank' : '_self'}}" >
+                                {{link.description}}
+                            </a>
+                            <svg class="snl-icon snl-icon-edit {{linkEditClass}}" title="Edit Link" ng-show="!linkEditing" ng-click="linkEditClass = ''; linkEditing = true; " viewBox="0 0 24 24">
+                                <g class="pencil-shape"><path d="M19.1,9.1l0.7-0.7c1.4-1.4,1.4-2.8,0-4.2c-1.4-1.4-2.9-1.4-4.3,0l-0.6,0.6L19.1,9.1z"/> <path d="M3.4,20.6c0.2,0.2,0.5,0.3,0.9,0.2l4.2-1.1l-0.7-3.5l-3.5-0.7l-1.1,4.2C3.1,20,3.2,20.4,3.4,20.6z"/> <polygon points="17.7,10.6 13.4,6.3 5.5,14.2 9.2,14.8 9.9,18.3 	"/> </g>
+                            </svg>
+                            <div class="link-name-edit" ng-show="linkEditing">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Link URL</span>
+                                    <input type="url" class="form-control" title="Link URL" placeholder="https://www.google.com" ng-model="link.url">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Link Text</span>
+                                    <input type="text" class="form-control" ng-model="link.description" title="Link Text"
+                                           placeholder="Google" ng-show="linkEditing" snl-focus-on-show maxlength="100">
+                                </div>
+                                <div class="checkbox checkbox-inline">
+                                    <label>
+                                        <input type="checkbox" ng-model="link.new_window"  ng-true-value="1" ng-false-value="0"> Open in New Window
+                                    </label>
+                                </div>
+                                <span class="edit-actions">
+                                    <a class="" title="Save Edits" ng-click="linkEditClass='show-pencil'; linkEditing=apiCtrl.linkEdit(link.id, link.description, link.new_window, link.url, linkGroup.id, linkGroup.id);" >Save</a>
+                                    <a class="text-danger" title="Delete Link" ng-click="linkEditing = false; linkEditClass='show-pencil'; apiCtrl.linkDelete(link.id, linkGroup.id, apiCtrl.data, $event);">Delete</a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- End Ungrouped links holder -->
+        </li>
+    </ul>
+    <ul  class="groupsSortable list-group">
+        <li class="list-group-item" ng-repeat="linkGroup in apiCtrl.data" ng-if="linkGroup.name != 'tempHoldingGroup'"
+            ui-tree-node
+            ng-init="show=linkGroup.expanded==1?true:false; headingEditing=false; editing=false;headingEditClass='';headingDragClass=''; "
+            snl-links-render-on-finish
+            groupid="{{linkGroup.id}}" >
+            <h3 class="group-name" ng-mouseenter="headingEditClass='show-pencil';headingDragClass='show-drag'" ng-mouseleave="headingEditClass = '';headingDragClass=''" >
+                    <span class="group-header-table" ng-hide="headingEditing">
+                        <div class="group-header-left">
+                            <svg class="snl-icon snl-icon-draggable-lg {{headingDragClass}}" title="Drag to sort group order" ng-show="!editing" viewBox="0 0 24 24">
+                            <circle cx="11.8" cy="14.5" r="1"/> <circle cx="11.8" cy="19.5" r="1"/> <circle cx="11.8" cy="9.5" r="1"/> <circle cx="7.8" cy="14.5" r="1"/> <circle cx="7.8" cy="19.5" r="1"/> <circle cx="7.8" cy="9.5" r="1"/> <circle cx="11.8" cy="4.5" r="1"/> <circle cx="7.8" cy="4.5" r="1"/> <circle cx="15.8" cy="14.5" r="1"/> <circle cx="15.8" cy="19.5" r="1"/> <circle cx="15.8" cy="9.5" r="1"/> <circle cx="15.8" cy="4.5" r="1"/>
+                            </svg>
+                            <link-group-expander show="show"></link-group-expander>
+                        </div>
+                        <div class="group-header-right">
+                            <div class="group-name-text">
+                                <span class=".unsortable" ng-click="show = !show; apiCtrl.updateGroupExpanded(linkGroup.id, show);">{{linkGroup.name}}</span>
+                                <svg class="snl-icon snl-icon-edit {{headingEditClass}}" title="Edit Group Name" ng-show="!headingEditing" ng-click="headingEditing=true; headingEditClass = '';" viewBox="0 0 24 24">
+                                <g class="pencil-shape"><path d="M19.1,9.1l0.7-0.7c1.4-1.4,1.4-2.8,0-4.2c-1.4-1.4-2.9-1.4-4.3,0l-0.6,0.6L19.1,9.1z"/> <path d="M3.4,20.6c0.2,0.2,0.5,0.3,0.9,0.2l4.2-1.1l-0.7-3.5l-3.5-0.7l-1.1,4.2C3.1,20,3.2,20.4,3.4,20.6z"/> <polygon points="17.7,10.6 13.4,6.3 5.5,14.2 9.2,14.8 9.9,18.3 	"/> </g>
+                                </svg>
+                            </div>
+                            <span class="addNewLinkNested" ng-show="show" ng-click="linkAdd=true; headingAdd=false; link.description=''; link.url=''; link.new_window='';" >+ Add New Link</span>
+                        </div>
+                    </span>
+
+
+                    <div class="link-name-edit group-link-add" ng-show="linkAdd">
+                        <div class="input-group">
+                            <span class="input-group-addon">Link URL</span>
+                            <input type="url" class="form-control" title="Link URL" placeholder="https://www.google.com" ng-model="link.url">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">Link Text</span>
+                            <input type="text" class="form-control" ng-model="link.description" title="Link Text"
+                                   placeholder="Google" ng-show="linkAdd" snl-focus-on-show maxlength="100">
+                        </div>
+                        <div class="checkbox checkbox-inline">
+                            <label>
+                                <input type="checkbox" ng-model="link.new_window"  ng-true-value="1" ng-false-value="0"> Open in New Window
+                            </label>
+                        </div>
+                        <span class="edit-actions">
+                            <a class="" title="Save New Link" ng-click="linkEditClass='show-pencil';  linkAdd = apiCtrl.linkAdd(link.description, link.url, link.new_window, linkGroup.id, 1);" >Save</a>
+                        <!--<svg class="snl-icon snl-icon-check" title="Save New Link" ng-click="linkAdd = false; linkEditClass='show-pencil'; apiCtrl.linkAdd(link.description, link.url, link.new_window, linkGroup.id, 1);" >
+                            <use xlink:href="#snl-icon-check"></use>
+                        </svg>-->
+                        </span>
+                    </div>
+
+
+                    <div class="group-name-edit" ng-show="headingEditing">
+                        <input type="text" class="form-control" ng-model="linkGroup.name" snl-focus-on-show maxlength="100">
+                        <span class="edit-actions">
+                                    <a class="" title="Save Group Name" ng-click="headingEditClass='show-pencil'; headingEditing=apiCtrl.groupEdit(linkGroup.id, linkGroup.name);">Save</a>
+                                    <a class="text-danger" title="Delete Group" ng-click="headingEditing = false; headingEditClass='show-pencil'; apiCtrl.groupDelete(linkGroup.id, false);">Delete</a>
+                        </span>
+                    </div>
+            </h3>
+            <ul class="mylinks-list fadeIt linksSortable" ng-show="show" ng-model="apiCtrl.data">
+                <li ng-repeat="link in linkGroup.links"
+                    ng-mouseenter="linkEditClass='show-pencil';linkDragClass='show-drag'"
+                    ng-mouseleave="linkEditClass = '';linkDragClass=''" ng-init="linkEditClass='';linkDragClass=''"
+                    linkid="{{link.id}}"  groupid="{{linkGroup.id}}">
+                    <svg ng-show="!linkEditing" title="Drag to sort link order"
+                         class="snl-icon snl-icon-draggable-sm {{linkDragClass}}" viewBox="0 0 24 24">
+                        <circle cx="10.4" cy="12.5" r="1"/> <circle cx="10.4" cy="7.5" r="1"/> <circle cx="10.4" cy="17.5" r="1"/> <circle cx="14.4" cy="12.5" r="1"/> <circle cx="14.4" cy="7.5" r="1"/> <circle cx="14.4" cy="17.5" r="1"/>
+                    </svg>
+                    <a ng-hide="linkEditing"  ng-href="{{link.url}}" target="{{link.new_window ? '_blank' : '_self'}}" ng-bind-html="link.description">
+
+                    </a>
+                    <svg class="snl-icon snl-icon-edit {{linkEditClass}}" title="Edit Link"  ng-show="!linkEditing" ng-click="linkEditClass = ''; linkEditing = true; " viewBox="0 0 24 24">
+                        <g class="pencil-shape"><path d="M19.1,9.1l0.7-0.7c1.4-1.4,1.4-2.8,0-4.2c-1.4-1.4-2.9-1.4-4.3,0l-0.6,0.6L19.1,9.1z"/> <path d="M3.4,20.6c0.2,0.2,0.5,0.3,0.9,0.2l4.2-1.1l-0.7-3.5l-3.5-0.7l-1.1,4.2C3.1,20,3.2,20.4,3.4,20.6z"/> <polygon points="17.7,10.6 13.4,6.3 5.5,14.2 9.2,14.8 9.9,18.3 	"/> </g>
+                        </svg>
+                    <div class="link-name-edit" ng-show="linkEditing">
+                        <div class="input-group">
+                            <span class="input-group-addon">Link URL</span>
+                            <input type="url" class="form-control" title="Link URL" placeholder="https://www.google.com" ng-model="link.url">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">Link Text</span>
+                            <input type="text" class="form-control" ng-model="link.description" title="Link Text"
+                                   placeholder="Google" ng-show="linkEditing" snl-focus-on-show maxlength="100">
+                        </div>
+                        <div class="checkbox checkbox-inline">
+                            <label>
+                                <input type="checkbox"   ng-true-value="1" ng-false-value="0" ng-model="link.new_window" ng-checked="{{link.new_window}}" >
+                                Open in New Window
+                            </label>
+                        </div>
+                        <span class="edit-actions">
+                                    <a class="" title="Save Link Edits" ng-click="linkEditClass='show-pencil'; linkEditing = apiCtrl.linkEdit(link.id, link.description, link.new_window, link.url, linkGroup.id, linkGroup.id);">Save</a>
+                                    <a class="text-danger" title="Delete Link"  ng-click="linkEditing = false; linkEditClass='show-pencil'; apiCtrl.linkDelete(link.id, linkGroup.id, apiCtrl.data, $event);">Delete</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

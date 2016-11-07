@@ -1,0 +1,32 @@
+<div class="table-controls">
+  <div class="range-label" ng-show="numRecords==0"
+       ng-init="noRecordsText=noRecords==null?'No Records Returned':noRecords" ng-bind="noRecordsText"></div>
+  <!-- Displaying x of y records -->
+  <div ng-show="numRecords > 0">
+    <!-- Show x records per page -->
+    <snl-page-sizer
+        page-size="pageSize"
+        page-options="pageOptions"
+        num-records="numRecords"
+        min-data-length="minDataLength"
+        scroll-to="{{scrollTo}}">
+    </snl-page-sizer>
+    <dir-pagination-controls
+        max-size="minDataLength"
+        pagination-id="paginationId"
+        template-url="app/components/pagination/dirPaginationRange.tpl.html"
+        class="paginationRange pull-right">
+    </dir-pagination-controls>
+    <!-- Page nav controls -->
+    <snl-scroll-on-click scroll-to="{{scrollTo}}">
+      <dir-pagination-controls
+          max-size="minDataLength"
+          direction-links="true"
+          boundary-links="true"
+          pagination-id="paginationId"
+          template-url="app/components/pagination/dirPagination.tpl.html"
+          class="clearfix">
+      </dir-pagination-controls>
+    </snl-scroll-on-click>
+  </div>
+</div>

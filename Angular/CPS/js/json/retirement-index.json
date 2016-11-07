@@ -1,0 +1,39 @@
+var data = {
+  "topic_title": "Retirement Award",
+  "topics":[
+    {
+      "subTopic_title":"",
+      "subTopics":[
+        {
+          "question_title":"",
+          "questions": [
+            {
+              "description": "${question}",
+              "link": "/cps/faq/retirement-award/index"
+            },
+            {
+              "description": "What are retirement awards?",
+              "link": "/cps/faq/retirement-award/definition"
+            },
+            {
+              "description": "Who presents retirement awards?",
+              "link": "/cps/faq/retirement-award/presenter"
+            },
+            {
+              "description": "Where do the funds come from for retirement awards?",
+              "link": "/cps/faq/retirement-award/funds"
+            },
+            {
+              "description": "Can my retirement celebration be combined with my service anniversary?",
+              "link": "/cps/faq/retirement-award/combine-anniversary"
+            },
+            {
+              "description": "Can my family attend my retirement celebration?",
+              "link": "/cps/faq/retirement-award/guests"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

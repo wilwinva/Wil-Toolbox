@@ -1,0 +1,6 @@
+<div class="termcontainer" ng-repeat="term in terms" style="display:none;">
+	<div id="dialog-{{parent}}-{{term.term_id}}" >
+		<p><strong><span ng-bind-html="term.term_name |decode|replaceSpaces"></span></strong>&nbsp;-&nbsp;<span ng-bind-html="term.term_definition |decode|replaceSpaces"></span></p>
+		<p><strong>Policy:&nbsp;</strong><span ng-bind-html="term.categories[0].category |decode|replaceSpaces"></span><br></p>			
+	</div>
+</div>

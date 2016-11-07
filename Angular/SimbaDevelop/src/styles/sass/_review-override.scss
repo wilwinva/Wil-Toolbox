@@ -1,0 +1,34 @@
+#dirQuickSearch .table, .ng-table-filters, #SNLDirectoryInputDiv .btn, .row.alerts, .row.teaser-index {
+    display:none;
+}
+
+.AdvSearchLink {
+    color: white;
+    margin-bottom: 0;
+    margin-top: $base-pixel;
+}
+
+#SNLDirectoryInput {
+    width: 100%;
+}
+
+th.header {
+    background: transparent;
+    
+}
+
+.row.portlets {
+    margin-top: $base-pixel-x3;
+}
+
+#myLinks {
+    .list-group {
+        margin-bottom: 0;
+    }
+    
+    .list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    }
+}
+

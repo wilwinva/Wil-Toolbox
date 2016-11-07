@@ -1,0 +1,28 @@
+var topicData =
+{
+  "title": "Badge",
+  "subTopics": [
+    {
+      "title": "DBIDS Pass",
+      "questions": [
+        {
+          "description": "Who needs a DBIDS pass and how do you get one?",
+          "link": "/cps/faq/badge/dbids-pass/dbids"
+        }
+      ]
+    },
+    {
+      "title": "Lost, Stolen, Forgotten Sandia Badge",
+      "questions": [
+        {
+          "description": "How do I report a lost Sandia badge?",
+          "link": "/cps/faq/badge/lost-stolen-forgotten-badge/lost-badge"
+        },
+        {
+          "description": "  How to Report a Stolen Sandia Badge",
+          "link": "/cps/faq/badge/lost-stolen-forgotten-badge/stolen-badge"
+        }
+      ]
+    }
+  ]
+}

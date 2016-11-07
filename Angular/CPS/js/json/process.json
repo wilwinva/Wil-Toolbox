@@ -1,0 +1,164 @@
+/**
+ * Created by wbweath on 6/28/2016.
+ */
+/*var data =*/
+{
+  "page_title": "Hiring Process",
+  "step_content": [
+    {
+      "crumb": "Process Overview",
+      "link": "http://whatever.com",
+      "link_title":"Identify need for talent &amp; what type"
+    },
+    {
+      "crumb": "Requisition",
+      "link": "http://whatever.com",
+      "link_title":""
+    },
+    {
+      "crumb": "Post",
+      "link": "http://whatever.com",
+      "link_title":""
+    },
+    {
+      "crumb": "Source",
+      "link": "http://whatever.com",
+      "link_title":""
+    },
+    {
+      "crumb": "Apply",
+      "link": "http://whatever.com",
+      "link_title":""
+    },
+    {
+      "crumb": "Screen",
+      "link": "http://whatever.com",
+      "link_title":""
+    },
+    {
+      "crumb": "Interview",
+      "link": "http://whatever.com",
+      "link_title":""
+    },
+    {
+      "crumb": "Offer",
+      "link": "http://whatever.com",
+      "link_title":""
+    },
+    {
+      "crumb": "Verification &amp; Hire",
+      "link": "http://whatever.com",
+      "link_title":""
+    },
+    {
+      "crumb": "Onboard",
+      "link": "http://whatever.com",
+      "link_title":""
+    }
+  ],
+  "left_aside":[],
+  "right_aside":[
+    {
+      "aside_title":"Step Resources",
+      "aside_content":[
+        {
+          "link_title":"Policy Categories",
+          "link_url":"http://whateves.com",
+          "link_children":[
+            {
+              "link_title": "Human Resources",
+              "link_url": "http://whateves.com"
+            }
+          ]
+        },
+        {
+          "link_title":"Policies",
+          "link_url":"http://whateves.com",
+          "link_children":[
+            {
+              "link_title": "Policy 1",
+              "link_url": "http://whateves.com"
+            },
+            {
+              "link_title": "Policy 2",
+              "link_url": "http://whateves.com"
+            }
+
+          ]
+        },
+        {
+          "link_title":"Replated Processes",
+          "link_url":"http://whateves.com",
+          "link_children":[
+            {
+              "link_title": "Maintain a Non-Discriminatory Workplace - Equal Employment Opportunity (EEO) and Affirmative Action (AA)",
+              "link_url": "https://infoq.sandia.gov/cps/human_resources/policy/processes/procedures/HR100.5.4.html"
+            },
+            {
+              "link_title": "Human Resources & Communications",
+              "link_url": "../policy/HR.html"
+            }
+
+          ]
+        },
+        {
+          "link_title":"Drivers",
+          "link_url":"http://whateves.com",
+          "link_children":[
+            {
+              "link_title": "Driver 1",
+              "link_url": "http://whateves.com"
+            }
+          ]
+        },
+        {
+          "link_title":"Reference Documents",
+          "link_url":"http://whateves.com",
+          "link_children":[
+            {
+              "link_title": "Reference Document 1",
+              "link_url": "http://whateves.com"
+            }
+          ]
+        },
+        {
+          "link_title":"Websites",
+          "link_url":"http://whateves.com",
+          "link_children":[
+            {
+              "link_title": "Website 1",
+              "link_url": "http://whateves.com"
+            }
+          ]
+        },
+        {
+          "link_title":"Training Requirements",
+          "link_url":"http://whateves.com",
+          "link_children":[
+            {
+              "link_title": "Training Requirement1",
+              "link_url": "http://whateves.com"
+            }
+          ]
+        },
+        {
+          "link_title":"Required Reviews",
+          "link_url":"http://whateves.com",
+          "link_children":[
+            {
+              "link_title": "Required Review 1",
+              "link_url": "http://whateves.com"
+            }
+          ]
+        }
+
+      ]
+    }
+  ],
+  "main_content":[
+    {
+      "content_title":"Process Overview",
+      "content_encoded":"The%20Unified%20Hire%20Procedure%20(UHP)%20provides%20direction%20for%20hiring%20individuals%20into%20Sandia.%20External%20hires%20into%20the%20Laboratories%20normally%20occur%20through%20the%20UHP%20post%20and%20bid%20process%20and%20in%20certain%20circumstances%20through%20the%20no-post%20process.%26nbsp%3B%20Internal%20movement%20primarily%20occurs%20through%20the%20UHP%20post%20and%20bid%20process%2C%20and%20secondarily%20through%20lateral%20transfers.%20(See%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22https%3A%2F%2Finfoq.sandia.gov%2Fcps%2Fhuman_resources%2Fpolicy%2Fprocesses%2Fprocedures%2FHR100.1.10.html%22%3EHR100.1.10%3C%2Fa%3E%2C%20%3Cem%3EMove%20Employees%20Outside%20of%20Post%20%26amp%3B%20Bid%3C%2Fem%3E.)%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20Sandia%2C%20an%20equal%20opportunity%20employer%2C%20makes%20employment%20decisions%20on%20the%20basis%20of%20business%20needs%20and%20candidate%20qualifications.%20See%20Sandia%E2%80%99s%20Corporate%20procedure%2C%20%3Ca%20href%3D%22https%3A%2F%2Finfoq.sandia.gov%2Fcps%2Fhuman_resources%2Fpolicy%2Fprocesses%2Fprocedures%2FHR100.5.4.html%22%3EHR100.5.4%3C%2Fa%3E%2C%20%3Cem%3EMaintain%20a%20Non-Discriminatory%20Workplace%20-%20Equal%20Employment%20Opportunity%20(EEO)%20and%20Affirmative%20Action%20(AA)%3C%2Fem%3E%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20or%20%3Ca%20href%3D%22https%3A%2F%2Fsharepoint.sandia.gov%2Fsites%2FEEO_and_AA_Management_Resources%2Fdefault.aspx%22%3EEEO%20and%20AA%20Management%20Resources%20SharePoint%3C%2Fa%3E%20site%26mdash%3BManager%20Access%20Only.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20The%20employment%20relationship%20at%20Sandia%20is%20employment-at-will.%20As%20such%2C%20both%20Sandia%20and%20employees%20have%20the%20right%20to%20discontinue%20employment%20with%20or%20without%20cause%2C%20at%20any%20time%2C%20and%20for%20any%20reason.%20Any%20verbal%20or%20written%20representations%20regarding%20the%20duration%20or%20permanence%20of%20employment%20with%20Sandia%20are%20superseded%20by%20this%20policy%20and%2C%20if%20applicable%2C%20the%20appropriate%20collective%20bargaining%0A%20%20%20%20%20%20%20%20%20%20%20%20agreement.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20Offers%20of%20employment%20are%20not%20employment%20contracts%20and%20therefore%20are%20not%20to%20be%20construed%20or%20interpreted%20as%20a%20guarantee%20of%20continued%20employment.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20Hiring%20actions%20are%20initiated%20by%20management%20in%20accordance%20with%20an%20approved%20Workforce%20Acquisition%20Plan%20(WAP).%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20Recruiting%20talent%20is%20coordinated%20through%20the%20Recruiting%20%26amp%3B%20Student%20Intern%20Programs%20organization%3B%20hiring%20is%20coordinated%20by%20the%20Workforce%20Acquisition%20%26amp%3B%20Relocation%20Services%20organization.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20Staff%20Augmentation%20and%20procurement%20contractors%20are%20not%20Sandia%20employees.%26nbsp%3BTherefore%2C%20they%20may%20only%20apply%20to%20externally%20posted%20job%20openings.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20Applications%20of%20this%20procedure%20will%20not%20supersede%20the%20Laboratories%20collective%20bargaining%20agreements.%26nbsp%3BSee%20the%20%3Ca%20href%3D%22http%3A%2F%2Finfo.sandia.gov%2Fhr%2Flabor%2Fagreements.htm%22%3Ecollective%20labor%20bargaining%20agreements%3C%2Fa%3E%20for%20represented%20employee%20requirements."
+    }
+  ]
+}

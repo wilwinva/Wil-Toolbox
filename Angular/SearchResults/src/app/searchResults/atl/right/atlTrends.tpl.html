@@ -1,0 +1,10 @@
+<div id="atlTrends" class="atlStyleTwo" ng-if="atl.source == 'HOTTOPICS_ATL'">
+  <a class="searchLink" ng-href="{{atl.link | decode | replaceSpaces}}" ng-bind-html="atl.title | decode | replaceSpaces"></a>
+  <label>A list of the currently {{atl.payload.length}} trending searches in SearchPoint</label>
+  <ul>
+    <li data-ng-repeat="payload in atl.payload">
+      <a  href="https://inside.sandia.gov/search/#/results?topic=web&pageBegin=0&numResults=25&terms={{payload}}"><span ng-bind-html="payload"></span></a>
+    </li>
+  </ul>
+</div>
+

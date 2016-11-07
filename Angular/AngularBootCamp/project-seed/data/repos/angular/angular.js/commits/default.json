@@ -1,0 +1,2102 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/dca9a1ae9cefbfd82bdf84beb98fa62f?d=https%3A%2F%2Fidenticons.github.com%2F36154a0d790fe686230b530afb9ed043.png&r=x",
+      "events_url": "https://api.github.com/users/clark-pan/events{/privacy}",
+      "followers_url": "https://api.github.com/users/clark-pan/followers",
+      "following_url": "https://api.github.com/users/clark-pan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/clark-pan/gists{/gist_id}",
+      "gravatar_id": "dca9a1ae9cefbfd82bdf84beb98fa62f",
+      "html_url": "https://github.com/clark-pan",
+      "id": 1161431,
+      "login": "clark-pan",
+      "organizations_url": "https://api.github.com/users/clark-pan/orgs",
+      "received_events_url": "https://api.github.com/users/clark-pan/received_events",
+      "repos_url": "https://api.github.com/users/clark-pan/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/clark-pan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/clark-pan/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/clark-pan"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/e2173f9101545b60367fd95524232fb8cf2eabca/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-28T00:53:25Z",
+        "email": "clark.y.pan@gmail.com",
+        "name": "Clark Pan"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-29T14:10:01Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "docs($provide): return instance of Ping, rather than constructor\n\nUpdating $provide.service method docs\n\nThe previous example provided for the service method did not work.  I've updated the example to a working example.\n\nI think this version of the example will probably make more sense to most people, and the factory method would be\na better place for this sort of example.\n\nCloses #6008",
+      "tree": {
+        "sha": "10a6732d6bbfe763a04735f2ba91da033ab1a5fd",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/10a6732d6bbfe763a04735f2ba91da033ab1a5fd"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/e2173f9101545b60367fd95524232fb8cf2eabca"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/e2173f9101545b60367fd95524232fb8cf2eabca",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/7a78aed1603ca7f60f2f70ba27f0102e08862550",
+        "sha": "7a78aed1603ca7f60f2f70ba27f0102e08862550",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/7a78aed1603ca7f60f2f70ba27f0102e08862550"
+      }
+    ],
+    "sha": "e2173f9101545b60367fd95524232fb8cf2eabca",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/e2173f9101545b60367fd95524232fb8cf2eabca"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/9151d3e01bd97f0d2df5a43dd950448f?d=https%3A%2F%2Fidenticons.github.com%2Fa44f28cd3f43dab3cf7537972dec6811.png&r=x",
+      "events_url": "https://api.github.com/users/mananbharara/events{/privacy}",
+      "followers_url": "https://api.github.com/users/mananbharara/followers",
+      "following_url": "https://api.github.com/users/mananbharara/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mananbharara/gists{/gist_id}",
+      "gravatar_id": "9151d3e01bd97f0d2df5a43dd950448f",
+      "html_url": "https://github.com/mananbharara",
+      "id": 1958483,
+      "login": "mananbharara",
+      "organizations_url": "https://api.github.com/users/mananbharara/orgs",
+      "received_events_url": "https://api.github.com/users/mananbharara/received_events",
+      "repos_url": "https://api.github.com/users/mananbharara/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/mananbharara/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mananbharara/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/mananbharara"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/7a78aed1603ca7f60f2f70ba27f0102e08862550/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-29T06:33:15Z",
+        "email": "manan.bharara@gmail.com",
+        "name": "Manan"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-29T13:51:02Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "docs(compile/nodomevents): fix typo ng-mode -> ng-model\n\ncorrecting directive name to ng-model instead of ng-mode in nodomevents.ngdoc\n\nCorrecting use of ng-model directive\n\nCloses #6036",
+      "tree": {
+        "sha": "ecfd19cb747e2d80aeac93c60ac4949a7b433b1a",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/ecfd19cb747e2d80aeac93c60ac4949a7b433b1a"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/7a78aed1603ca7f60f2f70ba27f0102e08862550"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/7a78aed1603ca7f60f2f70ba27f0102e08862550",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/7aef2d54e0a48fae18a289813f699962d8310565",
+        "sha": "7aef2d54e0a48fae18a289813f699962d8310565",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/7aef2d54e0a48fae18a289813f699962d8310565"
+      }
+    ],
+    "sha": "7a78aed1603ca7f60f2f70ba27f0102e08862550",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/7a78aed1603ca7f60f2f70ba27f0102e08862550"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/ec8150609d2d6616944b3751ef3309ec?d=https%3A%2F%2Fidenticons.github.com%2Ff1a5b527abe53c011e27c7c659d69267.png&r=x",
+      "events_url": "https://api.github.com/users/juliemr/events{/privacy}",
+      "followers_url": "https://api.github.com/users/juliemr/followers",
+      "following_url": "https://api.github.com/users/juliemr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/juliemr/gists{/gist_id}",
+      "gravatar_id": "ec8150609d2d6616944b3751ef3309ec",
+      "html_url": "https://github.com/juliemr",
+      "id": 2081709,
+      "login": "juliemr",
+      "organizations_url": "https://api.github.com/users/juliemr/orgs",
+      "received_events_url": "https://api.github.com/users/juliemr/received_events",
+      "repos_url": "https://api.github.com/users/juliemr/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/juliemr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/juliemr/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/juliemr"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/7aef2d54e0a48fae18a289813f699962d8310565/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-12T00:59:15Z",
+        "email": "ju.ralph@gmail.com",
+        "name": "Julie"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-28T19:14:20Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "test(docs): convert example end to end doc tests from scenario runner to protractor\n\nThanks to jeffbcross, petebacondarwin, btford, jdeboer, tbosch for contributions!\n\nCloses #6023",
+      "tree": {
+        "sha": "60d1d559510c17e879aff798f298e6bcc262d3ab",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/60d1d559510c17e879aff798f298e6bcc262d3ab"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/7aef2d54e0a48fae18a289813f699962d8310565"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/7aef2d54e0a48fae18a289813f699962d8310565",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/ce37ae28687167f7b4274ba547f013980126a219",
+        "sha": "ce37ae28687167f7b4274ba547f013980126a219",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/ce37ae28687167f7b4274ba547f013980126a219"
+      }
+    ],
+    "sha": "7aef2d54e0a48fae18a289813f699962d8310565",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/7aef2d54e0a48fae18a289813f699962d8310565"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/ec8150609d2d6616944b3751ef3309ec?d=https%3A%2F%2Fidenticons.github.com%2Ff1a5b527abe53c011e27c7c659d69267.png&r=x",
+      "events_url": "https://api.github.com/users/juliemr/events{/privacy}",
+      "followers_url": "https://api.github.com/users/juliemr/followers",
+      "following_url": "https://api.github.com/users/juliemr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/juliemr/gists{/gist_id}",
+      "gravatar_id": "ec8150609d2d6616944b3751ef3309ec",
+      "html_url": "https://github.com/juliemr",
+      "id": 2081709,
+      "login": "juliemr",
+      "organizations_url": "https://api.github.com/users/juliemr/orgs",
+      "received_events_url": "https://api.github.com/users/juliemr/received_events",
+      "repos_url": "https://api.github.com/users/juliemr/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/juliemr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/juliemr/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/juliemr"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/ce37ae28687167f7b4274ba547f013980126a219/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-23T23:14:02Z",
+        "email": "ju.ralph@gmail.com",
+        "name": "Julie"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-28T19:12:52Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "docs(cookbook): remove the cookbook docs\n\nThe cookbook docs are now superceded by the guide. They are no longer available\nin any menus and the only way to find them is to search for them. Remove!\n\nCloses #5967",
+      "tree": {
+        "sha": "b6e3164a0edad4a19f4afe298896178e6772103f",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/b6e3164a0edad4a19f4afe298896178e6772103f"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/ce37ae28687167f7b4274ba547f013980126a219"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/ce37ae28687167f7b4274ba547f013980126a219",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/95f0bf9b526fda8964527c6d4aef1ad50a47f1f3",
+        "sha": "95f0bf9b526fda8964527c6d4aef1ad50a47f1f3",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/95f0bf9b526fda8964527c6d4aef1ad50a47f1f3"
+      }
+    ],
+    "sha": "ce37ae28687167f7b4274ba547f013980126a219",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/ce37ae28687167f7b4274ba547f013980126a219"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/0d3794fe37746ea54926ca6878712721?d=https%3A%2F%2Fidenticons.github.com%2F998e3d55f30698ba2b9b1afeed5a89c4.png&r=x",
+      "events_url": "https://api.github.com/users/johnpapa/events{/privacy}",
+      "followers_url": "https://api.github.com/users/johnpapa/followers",
+      "following_url": "https://api.github.com/users/johnpapa/following{/other_user}",
+      "gists_url": "https://api.github.com/users/johnpapa/gists{/gist_id}",
+      "gravatar_id": "0d3794fe37746ea54926ca6878712721",
+      "html_url": "https://github.com/johnpapa",
+      "id": 1202528,
+      "login": "johnpapa",
+      "organizations_url": "https://api.github.com/users/johnpapa/orgs",
+      "received_events_url": "https://api.github.com/users/johnpapa/received_events",
+      "repos_url": "https://api.github.com/users/johnpapa/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/johnpapa/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/johnpapa/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/johnpapa"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/95f0bf9b526fda8964527c6d4aef1ad50a47f1f3/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-07T12:33:39Z",
+        "email": "john@johnpapa.net",
+        "name": "John Papa"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-28T06:26:18Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "fix(mocks): refactor currentSpec to work w/ Jasmine 2\n\nCloses #5662",
+      "tree": {
+        "sha": "f384e15c4b90e87ea75450acb1104e6dca0b2cb5",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/f384e15c4b90e87ea75450acb1104e6dca0b2cb5"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/95f0bf9b526fda8964527c6d4aef1ad50a47f1f3"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/95f0bf9b526fda8964527c6d4aef1ad50a47f1f3",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/8a0be355a9685d9fbdb4989513c4374c2b5470d7",
+        "sha": "8a0be355a9685d9fbdb4989513c4374c2b5470d7",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/8a0be355a9685d9fbdb4989513c4374c2b5470d7"
+      }
+    ],
+    "sha": "95f0bf9b526fda8964527c6d4aef1ad50a47f1f3",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/95f0bf9b526fda8964527c6d4aef1ad50a47f1f3"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/8a0be355a9685d9fbdb4989513c4374c2b5470d7/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-27T20:05:18Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-28T05:17:53Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "docs(triaging.md): update the 'PRs plz!' label name",
+      "tree": {
+        "sha": "b1251fd75b067580d0bd7ca3e5e8fc45853c0080",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/b1251fd75b067580d0bd7ca3e5e8fc45853c0080"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/8a0be355a9685d9fbdb4989513c4374c2b5470d7"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/8a0be355a9685d9fbdb4989513c4374c2b5470d7",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/849a1489c7d676c921e7a1eaf6011cf49494dd3a",
+        "sha": "849a1489c7d676c921e7a1eaf6011cf49494dd3a",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/849a1489c7d676c921e7a1eaf6011cf49494dd3a"
+      }
+    ],
+    "sha": "8a0be355a9685d9fbdb4989513c4374c2b5470d7",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/8a0be355a9685d9fbdb4989513c4374c2b5470d7"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/849a1489c7d676c921e7a1eaf6011cf49494dd3a/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-27T20:04:32Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-27T20:06:17Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "style(triaging.md): removing ws",
+      "tree": {
+        "sha": "386343210bf3365216683cd79ccb49a3aa842f2d",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/386343210bf3365216683cd79ccb49a3aa842f2d"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/849a1489c7d676c921e7a1eaf6011cf49494dd3a"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/849a1489c7d676c921e7a1eaf6011cf49494dd3a",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/f54f0f98a095a2d4666273cd2068e56c66b2d44d",
+        "sha": "f54f0f98a095a2d4666273cd2068e56c66b2d44d",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/f54f0f98a095a2d4666273cd2068e56c66b2d44d"
+      }
+    ],
+    "sha": "849a1489c7d676c921e7a1eaf6011cf49494dd3a",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/849a1489c7d676c921e7a1eaf6011cf49494dd3a"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/721cc7667947af96cc416729fc497107?d=https%3A%2F%2Fidenticons.github.com%2F911eafaf782fbdf8f95ca3a4a5ac8ae6.png&r=x",
+      "events_url": "https://api.github.com/users/btford/events{/privacy}",
+      "followers_url": "https://api.github.com/users/btford/followers",
+      "following_url": "https://api.github.com/users/btford/following{/other_user}",
+      "gists_url": "https://api.github.com/users/btford/gists{/gist_id}",
+      "gravatar_id": "721cc7667947af96cc416729fc497107",
+      "html_url": "https://github.com/btford",
+      "id": 474988,
+      "login": "btford",
+      "organizations_url": "https://api.github.com/users/btford/orgs",
+      "received_events_url": "https://api.github.com/users/btford/received_events",
+      "repos_url": "https://api.github.com/users/btford/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/btford/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/btford/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/btford"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/f54f0f98a095a2d4666273cd2068e56c66b2d44d/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-27T19:46:18Z",
+        "email": "btford@umich.edu",
+        "name": "Brian Ford"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-27T19:46:18Z",
+        "email": "btford@umich.edu",
+        "name": "Brian Ford"
+      },
+      "message": "chore(docs): remove note about removing disqus",
+      "tree": {
+        "sha": "6c87e25bdc31109741fa39601aef0123b4886454",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/6c87e25bdc31109741fa39601aef0123b4886454"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/f54f0f98a095a2d4666273cd2068e56c66b2d44d"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/721cc7667947af96cc416729fc497107?d=https%3A%2F%2Fidenticons.github.com%2F911eafaf782fbdf8f95ca3a4a5ac8ae6.png&r=x",
+      "events_url": "https://api.github.com/users/btford/events{/privacy}",
+      "followers_url": "https://api.github.com/users/btford/followers",
+      "following_url": "https://api.github.com/users/btford/following{/other_user}",
+      "gists_url": "https://api.github.com/users/btford/gists{/gist_id}",
+      "gravatar_id": "721cc7667947af96cc416729fc497107",
+      "html_url": "https://github.com/btford",
+      "id": 474988,
+      "login": "btford",
+      "organizations_url": "https://api.github.com/users/btford/orgs",
+      "received_events_url": "https://api.github.com/users/btford/received_events",
+      "repos_url": "https://api.github.com/users/btford/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/btford/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/btford/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/btford"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/f54f0f98a095a2d4666273cd2068e56c66b2d44d",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/766b3d5c874a9c53fe6bfcf17e498e1dcf42c3a9",
+        "sha": "766b3d5c874a9c53fe6bfcf17e498e1dcf42c3a9",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/766b3d5c874a9c53fe6bfcf17e498e1dcf42c3a9"
+      }
+    ],
+    "sha": "f54f0f98a095a2d4666273cd2068e56c66b2d44d",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/f54f0f98a095a2d4666273cd2068e56c66b2d44d"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/d31926174a8fdd6cbfe708ff31836b31?d=https%3A%2F%2Fidenticons.github.com%2F8890926433a0fba0613b43dcea06fcfb.png&r=x",
+      "events_url": "https://api.github.com/users/davidjnelson/events{/privacy}",
+      "followers_url": "https://api.github.com/users/davidjnelson/followers",
+      "following_url": "https://api.github.com/users/davidjnelson/following{/other_user}",
+      "gists_url": "https://api.github.com/users/davidjnelson/gists{/gist_id}",
+      "gravatar_id": "d31926174a8fdd6cbfe708ff31836b31",
+      "html_url": "https://github.com/davidjnelson",
+      "id": 381633,
+      "login": "davidjnelson",
+      "organizations_url": "https://api.github.com/users/davidjnelson/orgs",
+      "received_events_url": "https://api.github.com/users/davidjnelson/received_events",
+      "repos_url": "https://api.github.com/users/davidjnelson/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/davidjnelson/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/davidjnelson/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/davidjnelson"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/766b3d5c874a9c53fe6bfcf17e498e1dcf42c3a9/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-26T20:28:06Z",
+        "email": "david.jonathan.nelson@gmail.com",
+        "name": "David Nelson"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-26T20:45:04Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "docs(select): rephase note on ngOptions\n\nadded 'an' and 'the' to ngOptions sentence\n\nCloses #5993",
+      "tree": {
+        "sha": "dcc3ebb7cd59016e7a8d5a07e665ef377ee5c730",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/dcc3ebb7cd59016e7a8d5a07e665ef377ee5c730"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/766b3d5c874a9c53fe6bfcf17e498e1dcf42c3a9"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/766b3d5c874a9c53fe6bfcf17e498e1dcf42c3a9",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/4f735b060563463d40711180beda6527722482b3",
+        "sha": "4f735b060563463d40711180beda6527722482b3",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/4f735b060563463d40711180beda6527722482b3"
+      }
+    ],
+    "sha": "766b3d5c874a9c53fe6bfcf17e498e1dcf42c3a9",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/766b3d5c874a9c53fe6bfcf17e498e1dcf42c3a9"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/d31926174a8fdd6cbfe708ff31836b31?d=https%3A%2F%2Fidenticons.github.com%2F8890926433a0fba0613b43dcea06fcfb.png&r=x",
+      "events_url": "https://api.github.com/users/davidjnelson/events{/privacy}",
+      "followers_url": "https://api.github.com/users/davidjnelson/followers",
+      "following_url": "https://api.github.com/users/davidjnelson/following{/other_user}",
+      "gists_url": "https://api.github.com/users/davidjnelson/gists{/gist_id}",
+      "gravatar_id": "d31926174a8fdd6cbfe708ff31836b31",
+      "html_url": "https://github.com/davidjnelson",
+      "id": 381633,
+      "login": "davidjnelson",
+      "organizations_url": "https://api.github.com/users/davidjnelson/orgs",
+      "received_events_url": "https://api.github.com/users/davidjnelson/received_events",
+      "repos_url": "https://api.github.com/users/davidjnelson/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/davidjnelson/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/davidjnelson/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/davidjnelson"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/4f735b060563463d40711180beda6527722482b3/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-26T19:34:39Z",
+        "email": "david.jonathan.nelson@gmail.com",
+        "name": "David Nelson"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-26T20:42:27Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "docs(ngSwitch): fixed typo 'choses' to 'chooses'\n\nCloses #5992",
+      "tree": {
+        "sha": "193b4058f8fa83e9442c314ed9a85a9d4ee40e71",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/193b4058f8fa83e9442c314ed9a85a9d4ee40e71"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/4f735b060563463d40711180beda6527722482b3"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/4f735b060563463d40711180beda6527722482b3",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/319dd1a449f952c9204addab536d41cc5ba54290",
+        "sha": "319dd1a449f952c9204addab536d41cc5ba54290",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/319dd1a449f952c9204addab536d41cc5ba54290"
+      }
+    ],
+    "sha": "4f735b060563463d40711180beda6527722482b3",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/4f735b060563463d40711180beda6527722482b3"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/ea7155347bd759897c7133b8dd93d298?d=https%3A%2F%2Fidenticons.github.com%2F973743552fd866d9947794c257276d9e.png&r=x",
+      "events_url": "https://api.github.com/users/NgDashboard/events{/privacy}",
+      "followers_url": "https://api.github.com/users/NgDashboard/followers",
+      "following_url": "https://api.github.com/users/NgDashboard/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NgDashboard/gists{/gist_id}",
+      "gravatar_id": "ea7155347bd759897c7133b8dd93d298",
+      "html_url": "https://github.com/NgDashboard",
+      "id": 6013193,
+      "login": "NgDashboard",
+      "organizations_url": "https://api.github.com/users/NgDashboard/orgs",
+      "received_events_url": "https://api.github.com/users/NgDashboard/received_events",
+      "repos_url": "https://api.github.com/users/NgDashboard/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/NgDashboard/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NgDashboard/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/NgDashboard"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/319dd1a449f952c9204addab536d41cc5ba54290/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-25T03:27:18Z",
+        "email": "ci-bot@angularjs.org",
+        "name": "jenkins"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-25T03:27:18Z",
+        "email": "ci-bot@angularjs.org",
+        "name": "jenkins"
+      },
+      "message": "chore(release): update cdn version",
+      "tree": {
+        "sha": "65ccaac3fdd82f2fcfa7785c9ee877b7ed1a4fa4",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/65ccaac3fdd82f2fcfa7785c9ee877b7ed1a4fa4"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/319dd1a449f952c9204addab536d41cc5ba54290"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/ea7155347bd759897c7133b8dd93d298?d=https%3A%2F%2Fidenticons.github.com%2F973743552fd866d9947794c257276d9e.png&r=x",
+      "events_url": "https://api.github.com/users/NgDashboard/events{/privacy}",
+      "followers_url": "https://api.github.com/users/NgDashboard/followers",
+      "following_url": "https://api.github.com/users/NgDashboard/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NgDashboard/gists{/gist_id}",
+      "gravatar_id": "ea7155347bd759897c7133b8dd93d298",
+      "html_url": "https://github.com/NgDashboard",
+      "id": 6013193,
+      "login": "NgDashboard",
+      "organizations_url": "https://api.github.com/users/NgDashboard/orgs",
+      "received_events_url": "https://api.github.com/users/NgDashboard/received_events",
+      "repos_url": "https://api.github.com/users/NgDashboard/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/NgDashboard/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NgDashboard/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/NgDashboard"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/319dd1a449f952c9204addab536d41cc5ba54290",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/88a14b4e25c50bed58a3b5d5a0e04ecb73fdfad9",
+        "sha": "88a14b4e25c50bed58a3b5d5a0e04ecb73fdfad9",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/88a14b4e25c50bed58a3b5d5a0e04ecb73fdfad9"
+      }
+    ],
+    "sha": "319dd1a449f952c9204addab536d41cc5ba54290",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/319dd1a449f952c9204addab536d41cc5ba54290"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/ea7155347bd759897c7133b8dd93d298?d=https%3A%2F%2Fidenticons.github.com%2F973743552fd866d9947794c257276d9e.png&r=x",
+      "events_url": "https://api.github.com/users/NgDashboard/events{/privacy}",
+      "followers_url": "https://api.github.com/users/NgDashboard/followers",
+      "following_url": "https://api.github.com/users/NgDashboard/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NgDashboard/gists{/gist_id}",
+      "gravatar_id": "ea7155347bd759897c7133b8dd93d298",
+      "html_url": "https://github.com/NgDashboard",
+      "id": 6013193,
+      "login": "NgDashboard",
+      "organizations_url": "https://api.github.com/users/NgDashboard/orgs",
+      "received_events_url": "https://api.github.com/users/NgDashboard/received_events",
+      "repos_url": "https://api.github.com/users/NgDashboard/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/NgDashboard/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NgDashboard/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/NgDashboard"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/88a14b4e25c50bed58a3b5d5a0e04ecb73fdfad9/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-24T23:42:49Z",
+        "email": "ci-bot@angularjs.org",
+        "name": "jenkins"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-24T23:42:49Z",
+        "email": "ci-bot@angularjs.org",
+        "name": "jenkins"
+      },
+      "message": "chore(release): start v1.2.11 (1.2.11)",
+      "tree": {
+        "sha": "99ba5b4c93fc1cfc4e7afb2bfe9a0a8d612f5df9",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/99ba5b4c93fc1cfc4e7afb2bfe9a0a8d612f5df9"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/88a14b4e25c50bed58a3b5d5a0e04ecb73fdfad9"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/ea7155347bd759897c7133b8dd93d298?d=https%3A%2F%2Fidenticons.github.com%2F973743552fd866d9947794c257276d9e.png&r=x",
+      "events_url": "https://api.github.com/users/NgDashboard/events{/privacy}",
+      "followers_url": "https://api.github.com/users/NgDashboard/followers",
+      "following_url": "https://api.github.com/users/NgDashboard/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NgDashboard/gists{/gist_id}",
+      "gravatar_id": "ea7155347bd759897c7133b8dd93d298",
+      "html_url": "https://github.com/NgDashboard",
+      "id": 6013193,
+      "login": "NgDashboard",
+      "organizations_url": "https://api.github.com/users/NgDashboard/orgs",
+      "received_events_url": "https://api.github.com/users/NgDashboard/received_events",
+      "repos_url": "https://api.github.com/users/NgDashboard/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/NgDashboard/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NgDashboard/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/NgDashboard"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/88a14b4e25c50bed58a3b5d5a0e04ecb73fdfad9",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/451bde124497a4fdae19a4f7e89c42cd3715ac09",
+        "sha": "451bde124497a4fdae19a4f7e89c42cd3715ac09",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/451bde124497a4fdae19a4f7e89c42cd3715ac09"
+      }
+    ],
+    "sha": "88a14b4e25c50bed58a3b5d5a0e04ecb73fdfad9",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/88a14b4e25c50bed58a3b5d5a0e04ecb73fdfad9"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/ea7155347bd759897c7133b8dd93d298?d=https%3A%2F%2Fidenticons.github.com%2F973743552fd866d9947794c257276d9e.png&r=x",
+      "events_url": "https://api.github.com/users/NgDashboard/events{/privacy}",
+      "followers_url": "https://api.github.com/users/NgDashboard/followers",
+      "following_url": "https://api.github.com/users/NgDashboard/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NgDashboard/gists{/gist_id}",
+      "gravatar_id": "ea7155347bd759897c7133b8dd93d298",
+      "html_url": "https://github.com/NgDashboard",
+      "id": 6013193,
+      "login": "NgDashboard",
+      "organizations_url": "https://api.github.com/users/NgDashboard/orgs",
+      "received_events_url": "https://api.github.com/users/NgDashboard/received_events",
+      "repos_url": "https://api.github.com/users/NgDashboard/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/NgDashboard/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NgDashboard/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/NgDashboard"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/451bde124497a4fdae19a4f7e89c42cd3715ac09/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-24T23:28:28Z",
+        "email": "ci-bot@angularjs.org",
+        "name": "jenkins"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-24T23:28:28Z",
+        "email": "ci-bot@angularjs.org",
+        "name": "jenkins"
+      },
+      "message": "chore(release): cut v1.2.10 release",
+      "tree": {
+        "sha": "0de0f4d555f2648e490a43c48d3540ca2edc43df",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/0de0f4d555f2648e490a43c48d3540ca2edc43df"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/451bde124497a4fdae19a4f7e89c42cd3715ac09"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/ea7155347bd759897c7133b8dd93d298?d=https%3A%2F%2Fidenticons.github.com%2F973743552fd866d9947794c257276d9e.png&r=x",
+      "events_url": "https://api.github.com/users/NgDashboard/events{/privacy}",
+      "followers_url": "https://api.github.com/users/NgDashboard/followers",
+      "following_url": "https://api.github.com/users/NgDashboard/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NgDashboard/gists{/gist_id}",
+      "gravatar_id": "ea7155347bd759897c7133b8dd93d298",
+      "html_url": "https://github.com/NgDashboard",
+      "id": 6013193,
+      "login": "NgDashboard",
+      "organizations_url": "https://api.github.com/users/NgDashboard/orgs",
+      "received_events_url": "https://api.github.com/users/NgDashboard/received_events",
+      "repos_url": "https://api.github.com/users/NgDashboard/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/NgDashboard/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NgDashboard/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/NgDashboard"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/451bde124497a4fdae19a4f7e89c42cd3715ac09",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/4f827f587b340ff7563ca01fe68c244a6cd0d5c4",
+        "sha": "4f827f587b340ff7563ca01fe68c244a6cd0d5c4",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/4f827f587b340ff7563ca01fe68c244a6cd0d5c4"
+      }
+    ],
+    "sha": "451bde124497a4fdae19a4f7e89c42cd3715ac09",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/451bde124497a4fdae19a4f7e89c42cd3715ac09"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/3c0ca2c60c5cc418c6b3dbed47b23b69?d=https%3A%2F%2Fidenticons.github.com%2F7998540c659c975a9e7826ba4efa2a0f.png&r=x",
+      "events_url": "https://api.github.com/users/matsko/events{/privacy}",
+      "followers_url": "https://api.github.com/users/matsko/followers",
+      "following_url": "https://api.github.com/users/matsko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matsko/gists{/gist_id}",
+      "gravatar_id": "3c0ca2c60c5cc418c6b3dbed47b23b69",
+      "html_url": "https://github.com/matsko",
+      "id": 93018,
+      "login": "matsko",
+      "organizations_url": "https://api.github.com/users/matsko/orgs",
+      "received_events_url": "https://api.github.com/users/matsko/received_events",
+      "repos_url": "https://api.github.com/users/matsko/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/matsko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matsko/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/matsko"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/4f827f587b340ff7563ca01fe68c244a6cd0d5c4/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-24T18:33:00Z",
+        "email": "matias@yearofmoo.com",
+        "name": "Matias Niemel\u00e4"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-24T18:34:45Z",
+        "email": "matias@yearofmoo.com",
+        "name": "Matias Niemel\u00e4"
+      },
+      "message": "docs(changelog): release notes for 1.2.10",
+      "tree": {
+        "sha": "6c60b8ee647bcfd3583346e61fba6bbd2ff5656c",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/6c60b8ee647bcfd3583346e61fba6bbd2ff5656c"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/4f827f587b340ff7563ca01fe68c244a6cd0d5c4"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/3c0ca2c60c5cc418c6b3dbed47b23b69?d=https%3A%2F%2Fidenticons.github.com%2F7998540c659c975a9e7826ba4efa2a0f.png&r=x",
+      "events_url": "https://api.github.com/users/matsko/events{/privacy}",
+      "followers_url": "https://api.github.com/users/matsko/followers",
+      "following_url": "https://api.github.com/users/matsko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matsko/gists{/gist_id}",
+      "gravatar_id": "3c0ca2c60c5cc418c6b3dbed47b23b69",
+      "html_url": "https://github.com/matsko",
+      "id": 93018,
+      "login": "matsko",
+      "organizations_url": "https://api.github.com/users/matsko/orgs",
+      "received_events_url": "https://api.github.com/users/matsko/received_events",
+      "repos_url": "https://api.github.com/users/matsko/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/matsko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matsko/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/matsko"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/4f827f587b340ff7563ca01fe68c244a6cd0d5c4",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/131410b61bfca0c21714c1a9e1b3fdc514e21d3a",
+        "sha": "131410b61bfca0c21714c1a9e1b3fdc514e21d3a",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/131410b61bfca0c21714c1a9e1b3fdc514e21d3a"
+      }
+    ],
+    "sha": "4f827f587b340ff7563ca01fe68c244a6cd0d5c4",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/4f827f587b340ff7563ca01fe68c244a6cd0d5c4"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/3c0ca2c60c5cc418c6b3dbed47b23b69?d=https%3A%2F%2Fidenticons.github.com%2F7998540c659c975a9e7826ba4efa2a0f.png&r=x",
+      "events_url": "https://api.github.com/users/matsko/events{/privacy}",
+      "followers_url": "https://api.github.com/users/matsko/followers",
+      "following_url": "https://api.github.com/users/matsko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matsko/gists{/gist_id}",
+      "gravatar_id": "3c0ca2c60c5cc418c6b3dbed47b23b69",
+      "html_url": "https://github.com/matsko",
+      "id": 93018,
+      "login": "matsko",
+      "organizations_url": "https://api.github.com/users/matsko/orgs",
+      "received_events_url": "https://api.github.com/users/matsko/received_events",
+      "repos_url": "https://api.github.com/users/matsko/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/matsko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matsko/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/matsko"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/131410b61bfca0c21714c1a9e1b3fdc514e21d3a/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-24T17:29:20Z",
+        "email": "matias@yearofmoo.com",
+        "name": "Matias Niemel\u00e4"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-24T18:02:50Z",
+        "email": "matias@yearofmoo.com",
+        "name": "Matias Niemel\u00e4"
+      },
+      "message": "docs(search): make sure the forward slash doesn't focus on search while on another input element\n\nCloses #5969",
+      "tree": {
+        "sha": "40f2ccf56c09a9f7c686dc12776f9d26ea3a85c7",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/40f2ccf56c09a9f7c686dc12776f9d26ea3a85c7"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/131410b61bfca0c21714c1a9e1b3fdc514e21d3a"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/3c0ca2c60c5cc418c6b3dbed47b23b69?d=https%3A%2F%2Fidenticons.github.com%2F7998540c659c975a9e7826ba4efa2a0f.png&r=x",
+      "events_url": "https://api.github.com/users/matsko/events{/privacy}",
+      "followers_url": "https://api.github.com/users/matsko/followers",
+      "following_url": "https://api.github.com/users/matsko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matsko/gists{/gist_id}",
+      "gravatar_id": "3c0ca2c60c5cc418c6b3dbed47b23b69",
+      "html_url": "https://github.com/matsko",
+      "id": 93018,
+      "login": "matsko",
+      "organizations_url": "https://api.github.com/users/matsko/orgs",
+      "received_events_url": "https://api.github.com/users/matsko/received_events",
+      "repos_url": "https://api.github.com/users/matsko/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/matsko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matsko/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/matsko"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/131410b61bfca0c21714c1a9e1b3fdc514e21d3a",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/ca6b7d0fa2e355ebd764230260758cee9a4ebe1e",
+        "sha": "ca6b7d0fa2e355ebd764230260758cee9a4ebe1e",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/ca6b7d0fa2e355ebd764230260758cee9a4ebe1e"
+      }
+    ],
+    "sha": "131410b61bfca0c21714c1a9e1b3fdc514e21d3a",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/131410b61bfca0c21714c1a9e1b3fdc514e21d3a"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/3c0ca2c60c5cc418c6b3dbed47b23b69?d=https%3A%2F%2Fidenticons.github.com%2F7998540c659c975a9e7826ba4efa2a0f.png&r=x",
+      "events_url": "https://api.github.com/users/matsko/events{/privacy}",
+      "followers_url": "https://api.github.com/users/matsko/followers",
+      "following_url": "https://api.github.com/users/matsko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matsko/gists{/gist_id}",
+      "gravatar_id": "3c0ca2c60c5cc418c6b3dbed47b23b69",
+      "html_url": "https://github.com/matsko",
+      "id": 93018,
+      "login": "matsko",
+      "organizations_url": "https://api.github.com/users/matsko/orgs",
+      "received_events_url": "https://api.github.com/users/matsko/received_events",
+      "repos_url": "https://api.github.com/users/matsko/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/matsko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matsko/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/matsko"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/ca6b7d0fa2e355ebd764230260758cee9a4ebe1e/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-22T17:38:26Z",
+        "email": "matias@yearofmoo.com",
+        "name": "Matias Niemel\u00e4"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-24T17:21:29Z",
+        "email": "matias@yearofmoo.com",
+        "name": "Matias Niemel\u00e4"
+      },
+      "message": "feat($animate): provide support for a close callback\n\nCloses #5685\nCloses #5053\nCloses #4993",
+      "tree": {
+        "sha": "98992bed78ed529da0617fd94c0d1f1573ff7078",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/98992bed78ed529da0617fd94c0d1f1573ff7078"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/ca6b7d0fa2e355ebd764230260758cee9a4ebe1e"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/3c0ca2c60c5cc418c6b3dbed47b23b69?d=https%3A%2F%2Fidenticons.github.com%2F7998540c659c975a9e7826ba4efa2a0f.png&r=x",
+      "events_url": "https://api.github.com/users/matsko/events{/privacy}",
+      "followers_url": "https://api.github.com/users/matsko/followers",
+      "following_url": "https://api.github.com/users/matsko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matsko/gists{/gist_id}",
+      "gravatar_id": "3c0ca2c60c5cc418c6b3dbed47b23b69",
+      "html_url": "https://github.com/matsko",
+      "id": 93018,
+      "login": "matsko",
+      "organizations_url": "https://api.github.com/users/matsko/orgs",
+      "received_events_url": "https://api.github.com/users/matsko/received_events",
+      "repos_url": "https://api.github.com/users/matsko/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/matsko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matsko/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/matsko"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/ca6b7d0fa2e355ebd764230260758cee9a4ebe1e",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/40dc806e03b81cf8bdbb24d67c8e8e3c8af42324",
+        "sha": "40dc806e03b81cf8bdbb24d67c8e8e3c8af42324",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/40dc806e03b81cf8bdbb24d67c8e8e3c8af42324"
+      }
+    ],
+    "sha": "ca6b7d0fa2e355ebd764230260758cee9a4ebe1e",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/ca6b7d0fa2e355ebd764230260758cee9a4ebe1e"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/721cc7667947af96cc416729fc497107?d=https%3A%2F%2Fidenticons.github.com%2F911eafaf782fbdf8f95ca3a4a5ac8ae6.png&r=x",
+      "events_url": "https://api.github.com/users/btford/events{/privacy}",
+      "followers_url": "https://api.github.com/users/btford/followers",
+      "following_url": "https://api.github.com/users/btford/following{/other_user}",
+      "gists_url": "https://api.github.com/users/btford/gists{/gist_id}",
+      "gravatar_id": "721cc7667947af96cc416729fc497107",
+      "html_url": "https://github.com/btford",
+      "id": 474988,
+      "login": "btford",
+      "organizations_url": "https://api.github.com/users/btford/orgs",
+      "received_events_url": "https://api.github.com/users/btford/received_events",
+      "repos_url": "https://api.github.com/users/btford/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/btford/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/btford/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/btford"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/40dc806e03b81cf8bdbb24d67c8e8e3c8af42324/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-23T21:41:43Z",
+        "email": "btford@umich.edu",
+        "name": "Brian Ford"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-23T21:43:31Z",
+        "email": "btford@umich.edu",
+        "name": "Brian Ford"
+      },
+      "message": "docs(guide/filter): link to an example of a filter unit test",
+      "tree": {
+        "sha": "f5939812f8cd283cf194006bbdb56e271e17d9cc",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/f5939812f8cd283cf194006bbdb56e271e17d9cc"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/40dc806e03b81cf8bdbb24d67c8e8e3c8af42324"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/721cc7667947af96cc416729fc497107?d=https%3A%2F%2Fidenticons.github.com%2F911eafaf782fbdf8f95ca3a4a5ac8ae6.png&r=x",
+      "events_url": "https://api.github.com/users/btford/events{/privacy}",
+      "followers_url": "https://api.github.com/users/btford/followers",
+      "following_url": "https://api.github.com/users/btford/following{/other_user}",
+      "gists_url": "https://api.github.com/users/btford/gists{/gist_id}",
+      "gravatar_id": "721cc7667947af96cc416729fc497107",
+      "html_url": "https://github.com/btford",
+      "id": 474988,
+      "login": "btford",
+      "organizations_url": "https://api.github.com/users/btford/orgs",
+      "received_events_url": "https://api.github.com/users/btford/received_events",
+      "repos_url": "https://api.github.com/users/btford/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/btford/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/btford/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/btford"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/40dc806e03b81cf8bdbb24d67c8e8e3c8af42324",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/5e9835b4f245346b3c79f5e4927c9accfb57a50d",
+        "sha": "5e9835b4f245346b3c79f5e4927c9accfb57a50d",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/5e9835b4f245346b3c79f5e4927c9accfb57a50d"
+      }
+    ],
+    "sha": "40dc806e03b81cf8bdbb24d67c8e8e3c8af42324",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/40dc806e03b81cf8bdbb24d67c8e8e3c8af42324"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/9a952bcf6fd701bb1303cd9f64cf9620?d=https%3A%2F%2Fidenticons.github.com%2F128482b5773c09ed87e7630fd24d9e6f.png&r=x",
+      "events_url": "https://api.github.com/users/petebacondarwin/events{/privacy}",
+      "followers_url": "https://api.github.com/users/petebacondarwin/followers",
+      "following_url": "https://api.github.com/users/petebacondarwin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/petebacondarwin/gists{/gist_id}",
+      "gravatar_id": "9a952bcf6fd701bb1303cd9f64cf9620",
+      "html_url": "https://github.com/petebacondarwin",
+      "id": 15655,
+      "login": "petebacondarwin",
+      "organizations_url": "https://api.github.com/users/petebacondarwin/orgs",
+      "received_events_url": "https://api.github.com/users/petebacondarwin/received_events",
+      "repos_url": "https://api.github.com/users/petebacondarwin/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/petebacondarwin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/petebacondarwin/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/petebacondarwin"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/5e9835b4f245346b3c79f5e4927c9accfb57a50d/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-23T17:26:23Z",
+        "email": "pete@bacondarwin.com",
+        "name": "Peter Bacon Darwin"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-23T17:27:30Z",
+        "email": "pete@bacondarwin.com",
+        "name": "Peter Bacon Darwin"
+      },
+      "message": "docs(ngdoc): ensure module installation docs are accurate\n\nThe ngMock module is built into a package called angular-mocks, which is\nnot named consistently and the docs were giving invalid info.\n\nCloses #5810",
+      "tree": {
+        "sha": "bc38fab4fabcb80c8672d370576a434f5daae42d",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/bc38fab4fabcb80c8672d370576a434f5daae42d"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/5e9835b4f245346b3c79f5e4927c9accfb57a50d"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/9a952bcf6fd701bb1303cd9f64cf9620?d=https%3A%2F%2Fidenticons.github.com%2F128482b5773c09ed87e7630fd24d9e6f.png&r=x",
+      "events_url": "https://api.github.com/users/petebacondarwin/events{/privacy}",
+      "followers_url": "https://api.github.com/users/petebacondarwin/followers",
+      "following_url": "https://api.github.com/users/petebacondarwin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/petebacondarwin/gists{/gist_id}",
+      "gravatar_id": "9a952bcf6fd701bb1303cd9f64cf9620",
+      "html_url": "https://github.com/petebacondarwin",
+      "id": 15655,
+      "login": "petebacondarwin",
+      "organizations_url": "https://api.github.com/users/petebacondarwin/orgs",
+      "received_events_url": "https://api.github.com/users/petebacondarwin/received_events",
+      "repos_url": "https://api.github.com/users/petebacondarwin/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/petebacondarwin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/petebacondarwin/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/petebacondarwin"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/5e9835b4f245346b3c79f5e4927c9accfb57a50d",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/e0209169bf1463465ad07484421620748a4d3908",
+        "sha": "e0209169bf1463465ad07484421620748a4d3908",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/e0209169bf1463465ad07484421620748a4d3908"
+      }
+    ],
+    "sha": "5e9835b4f245346b3c79f5e4927c9accfb57a50d",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/5e9835b4f245346b3c79f5e4927c9accfb57a50d"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/e0209169bf1463465ad07484421620748a4d3908/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-20T16:21:50Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T19:51:47Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "fix(a): don't preventDefault on click when SVGAElement has an xlink:href attribute\n\nBefore this change, an SVGAElement with an xlink:href attribute and no href or name attribute which\nwas compiled by the angular HTML compiler would never be clickable, due to the htmlAnchorDirective\ncalling event.preventDefault() due to the missing href attribute.\n\nThis change corrects this behaviour by also testing the xlink:href attribute if the element in\nquestion is determined to be an SVG anchor tag (with the href property having type SVGAnimatedString)\n\nCloses #5896\nCloses #5897",
+      "tree": {
+        "sha": "019e3863a8ae8fca21910f0073fdd2e418c5e503",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/019e3863a8ae8fca21910f0073fdd2e418c5e503"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/e0209169bf1463465ad07484421620748a4d3908"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/e0209169bf1463465ad07484421620748a4d3908",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/b07afa0465b73c00e7f6d7a9479011360eb29b82",
+        "sha": "b07afa0465b73c00e7f6d7a9479011360eb29b82",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/b07afa0465b73c00e7f6d7a9479011360eb29b82"
+      }
+    ],
+    "sha": "e0209169bf1463465ad07484421620748a4d3908",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/e0209169bf1463465ad07484421620748a4d3908"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/e069673fdf5318e28e65a315469ca155?d=https%3A%2F%2Fidenticons.github.com%2F57e5160780cfcee39360cc96245a0d1e.png&r=x",
+      "events_url": "https://api.github.com/users/martinprobst/events{/privacy}",
+      "followers_url": "https://api.github.com/users/martinprobst/followers",
+      "following_url": "https://api.github.com/users/martinprobst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/martinprobst/gists{/gist_id}",
+      "gravatar_id": "e069673fdf5318e28e65a315469ca155",
+      "html_url": "https://github.com/martinprobst",
+      "id": 2803447,
+      "login": "martinprobst",
+      "organizations_url": "https://api.github.com/users/martinprobst/orgs",
+      "received_events_url": "https://api.github.com/users/martinprobst/received_events",
+      "repos_url": "https://api.github.com/users/martinprobst/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/martinprobst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/martinprobst/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/martinprobst"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/b07afa0465b73c00e7f6d7a9479011360eb29b82/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-21T10:07:47Z",
+        "email": "martinprobst@google.com",
+        "name": "Martin Probst"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T19:38:14Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "refactor(externs): move Closure Externs back to Closure code repository\n\nWhile Closure Compiler generally recommends to maintain the externs for\nprojects together with their source, this has not worked well for\nAngularJS:\n- Changes to externs must be tested; they can break clients. AngularJS\n  has no testing infrastructure for this.\n- Changes mostly come from users inside of Google and are much more\n  easily submitted together with the code using them within Google's\n  repository.\n\nThis change deletes the externs here and adds a README.closure.md to\ndocument the change. They will be added back to Closure Compiler in a\nseparate submit.\n\nCloses #5906",
+      "tree": {
+        "sha": "15963a567066143543444ef200dd20e8434188af",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/15963a567066143543444ef200dd20e8434188af"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/b07afa0465b73c00e7f6d7a9479011360eb29b82"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/b07afa0465b73c00e7f6d7a9479011360eb29b82",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/c3b5e16d8441ad0b417eceaf7fc6e64703f05882",
+        "sha": "c3b5e16d8441ad0b417eceaf7fc6e64703f05882",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/c3b5e16d8441ad0b417eceaf7fc6e64703f05882"
+      }
+    ],
+    "sha": "b07afa0465b73c00e7f6d7a9479011360eb29b82",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/b07afa0465b73c00e7f6d7a9479011360eb29b82"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/00968f479de42d71375ef5e3e6e42575?d=https%3A%2F%2Fidenticons.github.com%2F3a70e9d7a17163002ca29b6752ea7105.png&r=x",
+      "events_url": "https://api.github.com/users/allonhadaya/events{/privacy}",
+      "followers_url": "https://api.github.com/users/allonhadaya/followers",
+      "following_url": "https://api.github.com/users/allonhadaya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/allonhadaya/gists{/gist_id}",
+      "gravatar_id": "00968f479de42d71375ef5e3e6e42575",
+      "html_url": "https://github.com/allonhadaya",
+      "id": 704531,
+      "login": "allonhadaya",
+      "organizations_url": "https://api.github.com/users/allonhadaya/orgs",
+      "received_events_url": "https://api.github.com/users/allonhadaya/received_events",
+      "repos_url": "https://api.github.com/users/allonhadaya/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/allonhadaya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/allonhadaya/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/allonhadaya"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/c3b5e16d8441ad0b417eceaf7fc6e64703f05882/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-22T17:43:55Z",
+        "email": "allonhadaya@hotmail.com",
+        "name": "Allon Hadaya"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T19:26:33Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "docs(ngRoute): grammar correction\n\ngrammar: occurs -> occur\n\nCloses #5937",
+      "tree": {
+        "sha": "7b5c9ffacf4e1eeb5d2b14aad2149ae794e86322",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/7b5c9ffacf4e1eeb5d2b14aad2149ae794e86322"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/c3b5e16d8441ad0b417eceaf7fc6e64703f05882"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/c3b5e16d8441ad0b417eceaf7fc6e64703f05882",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/7f444a205e87bff66c924040a102e5442bbc61c6",
+        "sha": "7f444a205e87bff66c924040a102e5442bbc61c6",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/7f444a205e87bff66c924040a102e5442bbc61c6"
+      }
+    ],
+    "sha": "c3b5e16d8441ad0b417eceaf7fc6e64703f05882",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/c3b5e16d8441ad0b417eceaf7fc6e64703f05882"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/7f444a205e87bff66c924040a102e5442bbc61c6/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-22T19:13:36Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T19:14:59Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "style($interval): remove ws and replace comma with semicolon",
+      "tree": {
+        "sha": "3eb025110e2cd8bc3bd45ae201456d897d664ace",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/3eb025110e2cd8bc3bd45ae201456d897d664ace"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/7f444a205e87bff66c924040a102e5442bbc61c6"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/7f444a205e87bff66c924040a102e5442bbc61c6",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/82213efff23a71ca37e1a99c11ef6bc49b1af1eb",
+        "sha": "82213efff23a71ca37e1a99c11ef6bc49b1af1eb",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/82213efff23a71ca37e1a99c11ef6bc49b1af1eb"
+      }
+    ],
+    "sha": "7f444a205e87bff66c924040a102e5442bbc61c6",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/7f444a205e87bff66c924040a102e5442bbc61c6"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/ec8150609d2d6616944b3751ef3309ec?d=https%3A%2F%2Fidenticons.github.com%2Ff1a5b527abe53c011e27c7c659d69267.png&r=x",
+      "events_url": "https://api.github.com/users/juliemr/events{/privacy}",
+      "followers_url": "https://api.github.com/users/juliemr/followers",
+      "following_url": "https://api.github.com/users/juliemr/following{/other_user}",
+      "gists_url": "https://api.github.com/users/juliemr/gists{/gist_id}",
+      "gravatar_id": "ec8150609d2d6616944b3751ef3309ec",
+      "html_url": "https://github.com/juliemr",
+      "id": 2081709,
+      "login": "juliemr",
+      "organizations_url": "https://api.github.com/users/juliemr/orgs",
+      "received_events_url": "https://api.github.com/users/juliemr/received_events",
+      "repos_url": "https://api.github.com/users/juliemr/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/juliemr/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/juliemr/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/juliemr"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/82213efff23a71ca37e1a99c11ef6bc49b1af1eb/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-13T23:20:44Z",
+        "email": "ju.ralph@gmail.com",
+        "name": "Julie"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T17:41:35Z",
+        "email": "matias@yearofmoo.com",
+        "name": "Matias Niemel\u00e4"
+      },
+      "message": "test(doc:protractor): turn off animation for doc end to end tests to speed things up",
+      "tree": {
+        "sha": "767c32160c83b28022523d85fa620ceb920089b2",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/767c32160c83b28022523d85fa620ceb920089b2"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/82213efff23a71ca37e1a99c11ef6bc49b1af1eb"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/3c0ca2c60c5cc418c6b3dbed47b23b69?d=https%3A%2F%2Fidenticons.github.com%2F7998540c659c975a9e7826ba4efa2a0f.png&r=x",
+      "events_url": "https://api.github.com/users/matsko/events{/privacy}",
+      "followers_url": "https://api.github.com/users/matsko/followers",
+      "following_url": "https://api.github.com/users/matsko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matsko/gists{/gist_id}",
+      "gravatar_id": "3c0ca2c60c5cc418c6b3dbed47b23b69",
+      "html_url": "https://github.com/matsko",
+      "id": 93018,
+      "login": "matsko",
+      "organizations_url": "https://api.github.com/users/matsko/orgs",
+      "received_events_url": "https://api.github.com/users/matsko/received_events",
+      "repos_url": "https://api.github.com/users/matsko/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/matsko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matsko/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/matsko"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/82213efff23a71ca37e1a99c11ef6bc49b1af1eb",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/ec59be67bc1ffd8a75d7b18bf5891a49450a5763",
+        "sha": "ec59be67bc1ffd8a75d7b18bf5891a49450a5763",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/ec59be67bc1ffd8a75d7b18bf5891a49450a5763"
+      }
+    ],
+    "sha": "82213efff23a71ca37e1a99c11ef6bc49b1af1eb",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/82213efff23a71ca37e1a99c11ef6bc49b1af1eb"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/61627fc0938698bafa688d1f2c0d2521?d=https%3A%2F%2Fidenticons.github.com%2Fc1e75a07529170ef95e8dc6ac43550ba.png&r=x",
+      "events_url": "https://api.github.com/users/gabrielbrasil/events{/privacy}",
+      "followers_url": "https://api.github.com/users/gabrielbrasil/followers",
+      "following_url": "https://api.github.com/users/gabrielbrasil/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gabrielbrasil/gists{/gist_id}",
+      "gravatar_id": "61627fc0938698bafa688d1f2c0d2521",
+      "html_url": "https://github.com/gabrielbrasil",
+      "id": 6472145,
+      "login": "gabrielbrasil",
+      "organizations_url": "https://api.github.com/users/gabrielbrasil/orgs",
+      "received_events_url": "https://api.github.com/users/gabrielbrasil/received_events",
+      "repos_url": "https://api.github.com/users/gabrielbrasil/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/gabrielbrasil/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gabrielbrasil/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/gabrielbrasil"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/ec59be67bc1ffd8a75d7b18bf5891a49450a5763/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-22T14:48:10Z",
+        "email": "gabriel.usaexchange@gmail.com",
+        "name": "gabrielbrasil"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T16:34:56Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "docs(ngMock): $log.error property contains messages from $log.error, not $log.log\n\nCloses #5932",
+      "tree": {
+        "sha": "e6524c3a0d4b792a91ec6681d310ccc95df32a3d",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/e6524c3a0d4b792a91ec6681d310ccc95df32a3d"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/ec59be67bc1ffd8a75d7b18bf5891a49450a5763"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/ec59be67bc1ffd8a75d7b18bf5891a49450a5763",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/79e519fedaec54390a8bdacfb1926bfce57a1eb6",
+        "sha": "79e519fedaec54390a8bdacfb1926bfce57a1eb6",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/79e519fedaec54390a8bdacfb1926bfce57a1eb6"
+      }
+    ],
+    "sha": "ec59be67bc1ffd8a75d7b18bf5891a49450a5763",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/ec59be67bc1ffd8a75d7b18bf5891a49450a5763"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/79e519fedaec54390a8bdacfb1926bfce57a1eb6/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-22T02:19:31Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T02:40:55Z",
+        "email": "caitpotter88@gmail.com",
+        "name": "Caitlin Potter"
+      },
+      "message": "fix(input): use Chromium's email validation regexp\n\nThis change uses the regexp from Chromium/Blink to validate emails, and corrects\nan error in the validation engine, which previously considered an invalid email\nto be valid. Additionally, the regexp was invalidating emails with capital\nletters, however this is not the behaviour recomended in the spec, or implemented\nin Chromium.\n\nCloses #5899\nCloses #5924",
+      "tree": {
+        "sha": "c26cecaf9a3c91d41cc069771ee116bb88a337bf",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/c26cecaf9a3c91d41cc069771ee116bb88a337bf"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/79e519fedaec54390a8bdacfb1926bfce57a1eb6"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/bf1b0db965c4015382f468b96b72d87e?d=https%3A%2F%2Fidenticons.github.com%2F7a9c619f4cd7c3e14cff71a41a006060.png&r=x",
+      "events_url": "https://api.github.com/users/caitp/events{/privacy}",
+      "followers_url": "https://api.github.com/users/caitp/followers",
+      "following_url": "https://api.github.com/users/caitp/following{/other_user}",
+      "gists_url": "https://api.github.com/users/caitp/gists{/gist_id}",
+      "gravatar_id": "bf1b0db965c4015382f468b96b72d87e",
+      "html_url": "https://github.com/caitp",
+      "id": 2294695,
+      "login": "caitp",
+      "organizations_url": "https://api.github.com/users/caitp/orgs",
+      "received_events_url": "https://api.github.com/users/caitp/received_events",
+      "repos_url": "https://api.github.com/users/caitp/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/caitp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/caitp/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/caitp"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/79e519fedaec54390a8bdacfb1926bfce57a1eb6",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/7cf5544a9f5bea443ccac2143765154760ceaff9",
+        "sha": "7cf5544a9f5bea443ccac2143765154760ceaff9",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/7cf5544a9f5bea443ccac2143765154760ceaff9"
+      }
+    ],
+    "sha": "79e519fedaec54390a8bdacfb1926bfce57a1eb6",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/79e519fedaec54390a8bdacfb1926bfce57a1eb6"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/9023f7f09b04b3a1ed7548448fd81f2a?d=https%3A%2F%2Fidenticons.github.com%2F9a8a7ff0a00a7a34ca1ee2b75cfca726.png&r=x",
+      "events_url": "https://api.github.com/users/matthewhintzen/events{/privacy}",
+      "followers_url": "https://api.github.com/users/matthewhintzen/followers",
+      "following_url": "https://api.github.com/users/matthewhintzen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthewhintzen/gists{/gist_id}",
+      "gravatar_id": "9023f7f09b04b3a1ed7548448fd81f2a",
+      "html_url": "https://github.com/matthewhintzen",
+      "id": 1276343,
+      "login": "matthewhintzen",
+      "organizations_url": "https://api.github.com/users/matthewhintzen/orgs",
+      "received_events_url": "https://api.github.com/users/matthewhintzen/received_events",
+      "repos_url": "https://api.github.com/users/matthewhintzen/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/matthewhintzen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthewhintzen/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/matthewhintzen"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/7cf5544a9f5bea443ccac2143765154760ceaff9/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-22T01:19:00Z",
+        "email": "mch.msdn@longcloudtech.com",
+        "name": "matthewhintzen"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T01:23:05Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "docs(tutorial): update step_12.ngdoc\n\nThis time I feel good about this modification to the document, the code listing\non the tutorial page for the animation.js DID NOT match what was actually IN the\nfile for that branch.  Updated tutorial to reflect actual contents of file\n\nCloses #5922",
+      "tree": {
+        "sha": "b061bf6d5154cd3fbc16bed2769bb242980ac1d2",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/b061bf6d5154cd3fbc16bed2769bb242980ac1d2"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/7cf5544a9f5bea443ccac2143765154760ceaff9"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/7cf5544a9f5bea443ccac2143765154760ceaff9",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/030a9b8d33767d0b27104b6208797ab837f4b892",
+        "sha": "030a9b8d33767d0b27104b6208797ab837f4b892",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/030a9b8d33767d0b27104b6208797ab837f4b892"
+      }
+    ],
+    "sha": "7cf5544a9f5bea443ccac2143765154760ceaff9",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/7cf5544a9f5bea443ccac2143765154760ceaff9"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/2338866d672defafeb4884410addf3d7?d=https%3A%2F%2Fidenticons.github.com%2F22778e22076dd7810b2c772ceb4b2486.png&r=x",
+      "events_url": "https://api.github.com/users/Narretz/events{/privacy}",
+      "followers_url": "https://api.github.com/users/Narretz/followers",
+      "following_url": "https://api.github.com/users/Narretz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Narretz/gists{/gist_id}",
+      "gravatar_id": "2338866d672defafeb4884410addf3d7",
+      "html_url": "https://github.com/Narretz",
+      "id": 1153097,
+      "login": "Narretz",
+      "organizations_url": "https://api.github.com/users/Narretz/orgs",
+      "received_events_url": "https://api.github.com/users/Narretz/received_events",
+      "repos_url": "https://api.github.com/users/Narretz/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/Narretz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Narretz/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/Narretz"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/030a9b8d33767d0b27104b6208797ab837f4b892/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-17T21:26:59Z",
+        "email": "mjstaffa@googlemail.com",
+        "name": "Narretz"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T01:17:14Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "docs(changelog): remove reverted commit from 1.2.9\n\nCloses #5868",
+      "tree": {
+        "sha": "d8f62bfbc688d8b06759171b34a2d395ba39383d",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/d8f62bfbc688d8b06759171b34a2d395ba39383d"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/030a9b8d33767d0b27104b6208797ab837f4b892"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/030a9b8d33767d0b27104b6208797ab837f4b892",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/310f129c1d5d54f68074000d7b12ec0258e6fc4f",
+        "sha": "310f129c1d5d54f68074000d7b12ec0258e6fc4f",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/310f129c1d5d54f68074000d7b12ec0258e6fc4f"
+      }
+    ],
+    "sha": "030a9b8d33767d0b27104b6208797ab837f4b892",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/030a9b8d33767d0b27104b6208797ab837f4b892"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/310f129c1d5d54f68074000d7b12ec0258e6fc4f/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-22T01:13:56Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T01:14:00Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "docs(guide/directive): clarify attr object definition\n\nCloses #5884",
+      "tree": {
+        "sha": "2301b4db1c6a645a619dfb874be5b83cba1bbec6",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/2301b4db1c6a645a619dfb874be5b83cba1bbec6"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/310f129c1d5d54f68074000d7b12ec0258e6fc4f"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/310f129c1d5d54f68074000d7b12ec0258e6fc4f",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/0fc64ad8a111bd376de98035ec118fad6aafcb61",
+        "sha": "0fc64ad8a111bd376de98035ec118fad6aafcb61",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/0fc64ad8a111bd376de98035ec118fad6aafcb61"
+      }
+    ],
+    "sha": "310f129c1d5d54f68074000d7b12ec0258e6fc4f",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/310f129c1d5d54f68074000d7b12ec0258e6fc4f"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/0fc64ad8a111bd376de98035ec118fad6aafcb61/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-22T01:12:34Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T01:12:34Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "style(guide/directive): remove ws",
+      "tree": {
+        "sha": "1408a89bbac428a8e1ff4abd0aaa760053c750c6",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/1408a89bbac428a8e1ff4abd0aaa760053c750c6"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/0fc64ad8a111bd376de98035ec118fad6aafcb61"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/0fc64ad8a111bd376de98035ec118fad6aafcb61",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/12d1f5700d6dd150065002f65398e51447e6dddc",
+        "sha": "12d1f5700d6dd150065002f65398e51447e6dddc",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/12d1f5700d6dd150065002f65398e51447e6dddc"
+      }
+    ],
+    "sha": "0fc64ad8a111bd376de98035ec118fad6aafcb61",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/0fc64ad8a111bd376de98035ec118fad6aafcb61"
+  },
+  {
+    "author": {
+      "avatar_url": "https://gravatar.com/avatar/0eb4ccba69be2c3abb93d0df80f46449?d=https%3A%2F%2Fidenticons.github.com%2F433f9c00afdadf7c764ce2b1f0c3c710.png&r=x",
+      "events_url": "https://api.github.com/users/janhancic/events{/privacy}",
+      "followers_url": "https://api.github.com/users/janhancic/followers",
+      "following_url": "https://api.github.com/users/janhancic/following{/other_user}",
+      "gists_url": "https://api.github.com/users/janhancic/gists{/gist_id}",
+      "gravatar_id": "0eb4ccba69be2c3abb93d0df80f46449",
+      "html_url": "https://github.com/janhancic",
+      "id": 356488,
+      "login": "janhancic",
+      "organizations_url": "https://api.github.com/users/janhancic/orgs",
+      "received_events_url": "https://api.github.com/users/janhancic/received_events",
+      "repos_url": "https://api.github.com/users/janhancic/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/janhancic/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/janhancic/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/janhancic"
+    },
+    "comments_url": "https://api.github.com/repos/angular/angular.js/commits/12d1f5700d6dd150065002f65398e51447e6dddc/comments",
+    "commit": {
+      "author": {
+        "date": "2014-01-20T21:04:25Z",
+        "email": "jan.hancic@gmail.com",
+        "name": "Jan Hancic"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2014-01-22T01:04:49Z",
+        "email": "igor@angularjs.org",
+        "name": "Igor Minar"
+      },
+      "message": "chore(docs): add spacing to tutorial buttons\n\nAdded 5px of right margin to tutorial buttons (Previous, Live demom ...).\n\nCloses #5901",
+      "tree": {
+        "sha": "33fc6ebdd4f9cc8e8d913b170cec1f689ab97cfd",
+        "url": "https://api.github.com/repos/angular/angular.js/git/trees/33fc6ebdd4f9cc8e8d913b170cec1f689ab97cfd"
+      },
+      "url": "https://api.github.com/repos/angular/angular.js/git/commits/12d1f5700d6dd150065002f65398e51447e6dddc"
+    },
+    "committer": {
+      "avatar_url": "https://gravatar.com/avatar/fc5dc0d579fb554752763792a2d5f449?d=https%3A%2F%2Fidenticons.github.com%2Faa9c063177ca69eec92c9dda4e7aec59.png&r=x",
+      "events_url": "https://api.github.com/users/IgorMinar/events{/privacy}",
+      "followers_url": "https://api.github.com/users/IgorMinar/followers",
+      "following_url": "https://api.github.com/users/IgorMinar/following{/other_user}",
+      "gists_url": "https://api.github.com/users/IgorMinar/gists{/gist_id}",
+      "gravatar_id": "fc5dc0d579fb554752763792a2d5f449",
+      "html_url": "https://github.com/IgorMinar",
+      "id": 216296,
+      "login": "IgorMinar",
+      "organizations_url": "https://api.github.com/users/IgorMinar/orgs",
+      "received_events_url": "https://api.github.com/users/IgorMinar/received_events",
+      "repos_url": "https://api.github.com/users/IgorMinar/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/IgorMinar/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/IgorMinar/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/IgorMinar"
+    },
+    "html_url": "https://github.com/angular/angular.js/commit/12d1f5700d6dd150065002f65398e51447e6dddc",
+    "parents": [
+      {
+        "html_url": "https://github.com/angular/angular.js/commit/60e80509a8f69a7fa750c3399b84bd0d4cc53855",
+        "sha": "60e80509a8f69a7fa750c3399b84bd0d4cc53855",
+        "url": "https://api.github.com/repos/angular/angular.js/commits/60e80509a8f69a7fa750c3399b84bd0d4cc53855"
+      }
+    ],
+    "sha": "12d1f5700d6dd150065002f65398e51447e6dddc",
+    "url": "https://api.github.com/repos/angular/angular.js/commits/12d1f5700d6dd150065002f65398e51447e6dddc"
+  }
+]

@@ -1,0 +1,50 @@
+/*-- site footer --*/
+
+footer {
+	
+	background: $snl-grey-100;
+    
+    .nav {
+		margin-left:-$base-pixel-x2;
+		
+        > li {
+            
+            > a {
+              padding: $base-pixel-x1-5 $base-pixel-x2;  
+            }
+        }
+    }
+    
+    .supporting-info {
+        float: right;
+        font-size:12px;
+        line-height:24px;
+        padding: 0;
+        margin:0;
+        
+        
+        li {
+            padding: 12px 0;
+            margin:0;
+			
+			a {
+				padding:0;
+				/*color:$snl-grey-800;*/
+				&:hover {
+					/*color:$snl-grey-900;*/
+					text-decoration:underline;
+				}
+			}
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    
+    footer {
+        .supporting-info {
+            float: left;
+        }
+    }
+}

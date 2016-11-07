@@ -1,0 +1,33 @@
+[
+  {
+    "login": "obbysox",
+    "id": 139426,
+    "avatar_url": "https://gravatar.com/avatar/f0d91e5cf8ad1ce7972cc486baa20c42?d=https%3A%2F%2Fidenticons.github.com%2Ff3377e1ac5fdd9183c13129960faedd7.png&r=x",
+    "url": "/api/users/angular",
+    "html_url": "https://github.com/angular",
+    "repos_url": "https://api.github.com/users/angular/repos",
+    "events_url": "https://api.github.com/users/angular/events{/privacy}",
+    "public_repos": 43,
+    "type": "Organization",
+    "site_admin": false
+  },
+  {
+    "login": "mojombo",
+    "id": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/1?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mojombo",
+    "html_url": "https://github.com/mojombo",
+    "followers_url": "https://api.github.com/users/mojombo/followers",
+    "following_url": "https://api.github.com/users/mojombo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mojombo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mojombo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mojombo/subscriptions",
+    "organizations_url": "https://api.github.com/users/mojombo/orgs",
+    "repos_url": "https://api.github.com/users/mojombo/repos",
+    "events_url": "https://api.github.com/users/mojombo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mojombo/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+]

@@ -1,0 +1,141 @@
+.teaser-index {
+	margin: 0px (-$base-pixel-x3) ($base-pixel-x3);
+	padding: $base-pixel-x2 0 $base-pixel-half;
+    border-bottom: 1px solid $snl-grey-100;
+    display: table;
+    
+    .teasers {
+        display: table-cell;
+        width: 99%;
+        vertical-align: bottom;
+        white-space: nowrap;
+		height:95px;
+    }
+        
+        .teasers-table {
+            display: table;
+            width: 100%;
+            }
+ 
+    .index {
+        margin: $base-pixel-x1-5 0;
+        /*padding-left: $base-pixel-x1-5;
+        border-left: 1px solid $sandia-border-grey;*/
+        display: table-cell;
+        width: 1px;
+        white-space: nowrap;
+		
+		padding-left: $base-pixel-x2;
+		border-left:1px solid $snl-grey-100;
+
+    
+        h3 {
+            color: #999;
+            font-size: 18px;
+            font-weight: 400;
+			line-height:1em;
+            /*margin: 0 0 $base-pixel;
+            padding: 0 0 2px 4px;*/
+			margin:0;
+            padding: 0 0 6px 2px;
+
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .index-buttons {
+            width: 148px;
+            
+            ul {
+                /*display: inline-block;
+                margin: 0;*/
+                padding: 0;
+                list-style: outside none none;
+                display: block;
+                margin: 0 0 0 -2px;
+
+
+                li {
+                    float: left;
+                    /*font-size: 12px;*/
+                    /*height: $base-pixel-x2;*/
+                    /*line-height: 1em;*/
+                    list-style-type: none;
+                    text-align: center;
+                    width: 16px;
+                    /*margin: 0;*/
+					
+                    font-size: 14px;
+                    
+                    line-height: 100%;
+					margin:0 0 .1em 0;
+
+
+                    a, a:visited {
+                        border-radius: 2px;
+                        /*color: #666;*/
+						color:#888;
+                        display: block;
+                        /*height: $base-pixel-x2;*/
+						height: ($base-pixel-x2)+2;
+                        margin: 0;
+                        padding: 2px;
+                        text-align: center;
+                        text-decoration: none;
+                        /*width: $base-pixel-x2;*/
+                        width: ($base-pixel-x2)+2;
+
+                        
+                        &:hover {
+                            background: $snl-blue-grey-700;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    
+    .teaser {
+        display: table-cell;
+        /*margin: $base-pixel-x2 $base-pixel-x1-5 $base-pixel-half;*/
+		padding:0;
+		/*float: none;*/
+    	width: 1%;
+		text-align: center;
+
+    }
+    
+    .past-teasers-btn {
+        font-size: 0.85em;
+        display: block;
+        
+        a {
+            color: $snl-grey;
+        }
+       
+    }
+}
+
+
+@media (max-width: 767px) {
+    
+    .teaser-index-container {
+        position: absolute;
+        right: $base-pixel-x2;
+        top: (-$base-pixel-x8 - 1px);
+        
+    }
+    .teaser-index {
+        border: none;
+        
+        .teasers {
+            display: none!important;
+        }
+        
+        .index {
+            border-left: none;
+        }
+    }
+}

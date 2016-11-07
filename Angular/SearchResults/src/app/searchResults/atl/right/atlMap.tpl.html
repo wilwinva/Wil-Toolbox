@@ -1,0 +1,8 @@
+<div class="panel atl atl-maps" id="maps" ng-if="atl.source == 'ATL_MAP'">
+  <div class="panel-heading">
+    <a class="searchLink" ng-href="https://map.sandia.gov/apps/map/?bldg={{atl.title}}">Go to Sandia Maps</a>
+  </div>
+  <div class="panel-body">
+    <snl-atl-map room="atl.title" username="null" mapon="true"></snl-atl-map>
+  </div>
+</div>

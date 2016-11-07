@@ -1,0 +1,28 @@
+#trainingEnrollments {
+	
+	.table-responsive {
+			border:none;
+			/*margin-right:-$base-pixel-x2;
+			margin-left:-$base-pixel-x2;*/
+		}
+    
+	.table-striped, .panel-body, .panel-footer {
+		@include tableColorize(desaturate($snl-yellow, 20%))
+	}
+    
+    .table-controls {
+        .pagination {
+          @include paginationColorize(desaturate($snl-yellow, 20%))  
+        }
+        .records-per-page {
+            select {
+                border-color: tint(desaturate($snl-yellow, 20%), 55%);
+            }
+        }
+        
+        .form-control {
+            border-color: tint(desaturate($snl-yellow, 20%), 55%);
+        }
+    }
+	
+}

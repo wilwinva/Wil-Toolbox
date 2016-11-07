@@ -1,0 +1,320 @@
+/*var resources =*/ {
+  "resources_title": "Step Resources",
+  "resources": [
+    {
+      "resource_title": "Policy Categories",
+      "links": [
+        {
+          "link_title": "human Resources",
+          "link": "https://whatever.com"
+        },
+          ]
+        }
+      ]
+    },
+    {
+      "subTopic_title": "Family Medical Leave Act (FLMA)",
+      "subTopics": [
+        {
+          "question_title": "",
+          "questions": [
+            {
+              "description": "How do I request Family Medical Leave Act?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "How do I request FMLA?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What can I use Family Medical Leave Act for?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What can I use FMLA for?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I use FMLA?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I use Family Medical Leave Act?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I use FMLA for military reasons?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I use FMLA for the birth of a child or adoption?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I use FMLA when I have a serious health condition?",
+              "link": "https://whatever.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subTopic_title": "Flextime",
+      "subTopics": [
+        {
+          "question_title": "",
+          "questions": [
+            {
+              "description": "How do I record flextime on my timesheet?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I use flextime?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I earn flextime?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "How is flextime recorded on my timesheet?",
+              "link": "https://whatever.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subTopic_title": "Jury Duty",
+      "subTopics": [
+        {
+          "question_title": "",
+          "questions": [
+            {
+              "description": "How do I record jury duty on my timesheet?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I get paid for jury duty?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What can I accept as payment for jury duty?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What if I'm called for jury duty during a holiday?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What should I do if I'm paid for jury duty?",
+              "link": "https://whatever.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subTopic_title": "Leave of Absence",
+      "subTopics": [
+        {
+          "question_title": "",
+          "questions": [
+            {
+              "description": "What are the types of leave of absence?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Is there a leave of absence for child care?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Is there an educational leave of absence?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "How do I request a leave of absence?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What can a personal leave of absence be used for?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Is ther a leave of absence for the military?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Is there a leave of absence for Trival Government appointments?",
+              "link": "https://whatever.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subTopic_title": "Medical Leave",
+      "subTopics": [
+        {
+          "question_title": "",
+          "questions": [
+            {
+              "description": "What do I do if I am going to be out due to a medical condition?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Do I need a Physican's Certificate of Illness/Injury (PCII) for a medical leave?",
+              "link": "https://whatever.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subTopic_title": "Personal Absence (TRC 271)",
+      "subTopics": [
+        {
+          "question_title": "",
+          "questions": [
+            {
+              "description": "What is personal absence (PA) time?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Who can use personal absence?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I use personal absence for a death in my family?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I use personal absence for doctor's appointments?",
+              "link": "https://whatever.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subTopic_title": "Sickness Absence (Non-FLMA) - (ILL)",
+      "subTopics": [
+        {
+          "question_title": "",
+          "questions": [
+            {
+              "description": "When can I use sickness absence?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Do I need a Physican's Ceterficate of Injury/Illness to charge sickness absence?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I use sickness absence for a dorctor's appointment?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What is sickness absence used for?",
+              "link": "https://whatever.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subTopic_": "Vacation",
+      "subTopics": [
+        {
+          "question_title": "Purchase Vacation (TRC 310)",
+          "questions": [
+            {
+              "description": "How ca I buy advance vacation?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "How can I purchase vacation?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "How can I get vacation in advance?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "Can I buy additional vacation?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "When can I purchase vacation?",
+              "link": "https://whatever.com"
+            }
+          ]
+        },
+        {
+          "question_title": "Schedule and Use Vacation",
+          "questions": [
+            {
+              "description": "How do I schedule and use vacation?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What code do I put on my timesheet to use vacation?",
+              "link": "https://whatever.com"
+            }
+          ]
+        },
+        {
+          "question_title": "Unused Accrued Vacation",
+          "questions": [
+            {
+              "description": "I have close to 240 hours of hours; when do I need to take accrued vacation before I lose it?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "How many vacation hours can I carry over?",
+              "link": "https://whatever.com"
+            }
+          ]
+        },
+        {
+          "question_title": "Use Purchased Vacation",
+          "questions": [
+            {
+              "description": "How do I purchase vacation?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What code do I put on my timecard to use purchased vacation?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What is the cost of using purchased vacation?",
+              "link": "https://whatever.com"
+            }
+          ]
+        },
+        {
+          "question_title": "Vacation Settlement at Separation from Sandia",
+          "questions": [
+            {
+              "description": "What happens to my vacation balance when I leave Sandia?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What happens to my vacation balance when terminated from Sandia?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "What happens to my vacation when I retire from Sandia?",
+              "link": "https://whatever.com"
+            },
+            {
+              "description": "How is vacation settled when I leave Sandia?",
+              "link": "https://whatever.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

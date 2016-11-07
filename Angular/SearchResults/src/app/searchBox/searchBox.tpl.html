@@ -1,0 +1,48 @@
+  <div class="row search-header">   
+    <div class="col-md-6 col-md-offset-2">
+
+    <form id="search-controls" ng-submit="searchBox.showResults(searchResults.searchTerm, searchResults.searchType, 0, 25, searchResults.currentPage, searchResults.resourceType,null)"
+          class="navbar-form" role="search">
+
+      <div id="search-box" ng-init="searchResults.searchType = searchResults.searchType || 'web'">
+        <div class="input-group">
+          <input type="text" ng-model="searchResults.searchTerm" id="searchInput" value="" placeholder="Enter search term"
+                 class="form-control" autocomplete="off" uib-typeahead="attribute.term for attribute in searchBox.fetchAutocompleteResults($viewValue)" typeahead-focus-first="false"
+                 typeahead-on-select="searchBox.onSelect($item,$model,$label,searchResults.searchType,0, 25, searchResults.currentPage, null, searchResults.searchTerm)"/>
+
+          <span class="input-group-btn">
+            <button type="submit" id="searchButton" class="btn">
+              <img alt="Sandia search icon" src="//pl.sandia.gov/globalheader/current/img/search-icon.svg">
+            </button>
+          </span>
+        </div>
+      </div>
+      <ul class="nav nav-justified">
+            <li ng-class="{active: searchResults.searchType == 'web'}">
+              <a href="" id="webLink" ng-model="searchResults.searchType"
+                 ng-click="searchResults.searchType='web';searchBox.showResults(searchResults.searchTerm, searchResults.searchType,0, 25, searchResults.currentPage, null)">Sandia</a>
+            </li>
+            <li ng-class="{active: searchResults.searchType == 'cps'}">
+              <a href="" id="cpsLink" ng-model="searchResults.searchType"
+                 ng-click="searchResults.searchType='cps';searchBox.showResults(searchResults.searchTerm, searchResults.searchType,0, 25, searchResults.currentPage, null)">Policies</a>
+            </li>
+            <li class="hide" ng-class="{active: searchResults.searchType == 'techlib'}">
+              <a href="" id="techLibLink" ng-model="searchResults.searchType"
+                 ng-click="searchResults.searchType='techlib';searchBox.showResults(searchResults.searchTerm, searchResults.searchType,0, 25, searchResults.currentPage, null)">Technical
+                Library</a>
+            </li>
+            <li ng-class="{active: searchResults.searchType == 'filenet'}">
+              <a href="" id="filenetLink" ng-model="searchResults.searchType"
+                 ng-click="searchResults.searchType='filenet';searchBox.showResults(searchResults.searchTerm, searchResults.searchType,0, 25, searchResults.currentPage, null)">FileNet</a>
+
+            </li>
+      </ul>
+    </form>
+  </div>
+</div>
+
+
+<div class="search-svg-container" ng-show="searching">
+      <div class="searching" >
+      </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container-fluid" id="main-content" tabindex="-1">
+
+    <div class="row portlets">
+
+        <!-- Left Column -->
+        <div class="col-md-7 layout-col-1">
+            <snl-portlet id="aroundSandia" portlet-name="Around Sandia" portlet-class=""
+                         expanded="{{prefCtrl.portletExpanded.aroundSandia}}">
+                <ng-include src="'app/components/portlet/aroundSandia/aroundSandia.tpl.html'"></ng-include>
+            </snl-portlet>
+            <snl-portlet id="browseTechweb" portlet-name="Browse Techweb" portlet-class="portlet-browse-techweb"
+                         expanded="{{prefCtrl.portletExpanded.browseTechweb}}">
+                <snl-browse-techweb></snl-browse-techweb>
+            </snl-portlet>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-5 layout-col-2">
+            <snl-portlet id="dirQuickSearch" portlet-name="Directory Quick Search" portlet-class=""
+                         expanded="{{prefCtrl.portletExpanded.dirQuickSearch}}">
+                <snl-directory error="error"></snl-directory>
+                <snl-portlet-error error="error"></snl-portlet-error>
+            </snl-portlet>
+        </div>
+    </div>
+</div>

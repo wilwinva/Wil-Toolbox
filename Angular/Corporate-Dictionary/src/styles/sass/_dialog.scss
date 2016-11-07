@@ -1,0 +1,15 @@
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+  font-family:"Source Sans Pro","Helvetica Neue","Helvetica",Arial,sans-serif;
+  font-size: 1.125em;
+  line-height: 1.5em;
+}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+  background-color: #fff;
+  color: #3c4f59;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.layout-row {
+  border-top: 1px solid #e5e5e5;
+}

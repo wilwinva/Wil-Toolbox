@@ -1,0 +1,359 @@
+.portlet.panel {
+    border: 0px;
+    @include shadow(1);
+    
+    &:last-child {
+        .list-group-item {
+            &:last-of-type {
+                border-bottom-width: 0;
+            }
+        }
+     } 
+        .panel-body{
+            &:last-of-type {
+                border-bottom-width: 0;
+            }
+        }
+    
+    
+    .snl-icon:focus {
+            border-radius: 3px!important;
+            outline: 3px solid $snl-grey-200!important;
+        }
+    
+	
+	iframe {
+		margin:0;
+		padding:0;
+	}
+    
+    ul, ol, li {
+        max-width: none;
+        list-style: none;
+    }
+    
+    .loader-container {
+        height: 120px;
+        position: relative;
+        transition: height 0.3s;
+        float: left;
+        width: 100%;
+        background: white;
+
+        
+        &.ng-hide {
+            height: 0px;
+            opacity: 0;
+            animation: bye-spinner 0.5s 1;
+            
+            .loader {
+                opacity: 0;
+            }
+
+        }
+    }
+    .loader {
+//      animation: animate 1.6s linear infinite;
+      clip: rect(0, 20px, 20px, 10px); 
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      left: calc(50% - 10px);
+      top: calc(50% - 10px);
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .loaderbg {
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      left: calc(50% - 10px);
+      top: calc(50% - 10px);
+      box-shadow: inset #eeeeee 0 0 0 2px;
+      border-radius: 50%; 
+    }
+    
+    .loader:after {
+//      animation: animate2 1.6s cubic-bezier(.53,.12,.48,.95) infinite;
+      clip: rect(0, 20px, 20px, 10px);
+      content:'';
+      border-radius: 50%; 
+      height: 20px;
+      width: 20px;
+      position: absolute; 
+    }
+    
+    .max-height-reached {
+        position: absolute;
+        width: 100%;
+        height: ($base-pixel * 12);
+        top: 3000 - ($base-pixel * 12);
+        left: 0;
+        background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,1) );
+        text-align: center;
+        
+        p {
+            margin-top: $base-pixel-x8;
+            max-width: none!important;
+        }
+    }
+    
+    .panel-heading {
+        background: white;
+        color: $sandia-orange;
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 400;
+        padding: $base-pixel $base-pixel-x2;
+        border-bottom-width: 0;
+		border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        
+        h2 {
+            display: inline-block;
+            margin: 0;
+            font-size: 22px;
+            line-height: 24px;
+            font-weight: 400;
+            
+            &:focus {
+                text-decoration:underline;
+            }
+            
+            &:hover {
+                color: $snl-orange-600
+            }
+        }
+        
+        & + .fadeIt {
+            border-top: 1px solid $sandia-border-grey;
+        }
+    }
+    
+    .portlet-controls {
+        float: right;
+        
+        .snl-icon:hover {
+            
+            #snl-icon-chevron {
+                fill: $snl-grey-900!important
+            }
+        }
+    }
+	
+	.panel-body {
+		padding:0;
+        border-bottom: 1px solid $sandia-border-grey;
+        
+        &.no-data {
+            > .table-controls:first-child, .table-responsive {
+                display: none!important;
+            }
+        }
+	}
+	
+	.panel-footer {
+		padding:$base-pixel-x1-5 $base-pixel-x2;
+		background:transparent;
+		font-size:14px;
+		border:none;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        
+        p:last-child, .inline-list:last-child {
+            margin-bottom: 0;
+			padding-bottom:0;
+        }
+		
+		p + .inline-list {
+			margin-top:-($base-pixel-x2); 
+		}
+	}
+    
+    .list-group {
+        margin-bottom: 0;
+        -webkit-transform: translateZ(0);
+	
+        .list-group-item {
+            border-color: $sandia-border-grey;
+            padding: $base-pixel-x1-5 $base-pixel-x2 $base-pixel-x1-5 $base-pixel;
+            border-radius: 0;
+            border-width: 1px 0;
+            
+            &:last-of-type {
+                /*border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;*/
+                border-bottom-width: 0;
+            }
+            
+            &:first-child {
+                border-top-width: 0;
+            }
+            
+            .group-title, .group-name {
+				font-size: 1em;
+    			font-weight: 600;
+    			line-height: 1.5em;
+				cursor: pointer;
+				display: inline-block;
+                max-width: 85%;
+				margin: 0;
+			}
+            
+        }
+		
+		.expander-info {
+			padding:$base-pixel $base-pixel-x2 0 ($base-pixel-x3)+3px;
+			
+			> * {
+			 	&:last-child {
+					margin-bottom:0;
+				}
+			}
+		}
+    }
+    
+    .date, thead th, .label {
+        opacity: 0.75;
+    }
+    
+    th.header {
+        background: transparent;
+    }
+    
+    td {
+    line-height: $base-pixel-x2;
+    /*font-size: 14px;*/
+    padding: $base-pixel-x1-5 $base-pixel-x2;
+    }
+    
+    thead th, .label {
+        color: $text-color;
+        font-size: 14px;
+		/*line-height:1.65em;*/
+    }
+    
+    thead th {
+        padding: $base-pixel+2px $base-pixel-half $base-pixel $base-pixel-x2 !important;
+    }
+
+    thead td {
+    line-height: $base-pixel-x2;
+    padding: $base-pixel $base-pixel-x2!important;
+    }
+    
+    .table {
+        margin-bottom: 0;
+        
+        tbody + tbody {
+            border:none;
+        }
+    }
+    
+	.table-controls {
+		padding:$base-pixel-x2;
+		font-size:14px;
+        
+        .form-control, .input-group-btn button {
+		  padding:$base-pixel-half $base-pixel;
+		  line-height: (($base-pixel-x3)-2);
+		  height:auto;
+            
+            &.ng-invalid {
+                border-color: $snl-red-600;
+            }
+	   }
+        
+        .range-label {
+            padding: 0 $base-pixel-half 0 0;
+            display: inline-block;
+        }
+        .records-per-page {
+            padding: 0 $base-pixel-half 0 0;
+            display: inline-block;
+            
+            select {
+                padding: (($base-pixel-half)-2) $base-pixel-x2 (($base-pixel-half)-2) $base-pixel-half;
+				margin-right:.08em;
+            }
+        }
+        .pagination {
+            margin: $base-pixel-x1-5 auto 0;
+			overflow:hidden;
+            display: block;
+            
+            > li {
+                
+                > a, > span {
+                    padding: $base-pixel-half $base-pixel-x1-5;
+                }
+            }
+        }  
+	}
+	
+	.portlet-error-message {
+		padding: $base-pixel $base-pixel-x2;
+		font-size:14px;
+		color:$text-color-30;
+	}
+	
+	> :last-child {
+		border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+	}
+    
+}
+
+.form-control.ng-invalid {
+    border-color: $snl-red-600;
+    box-shadow: 0 0 $base-pixel rgba($snl-red, 0.6);
+    
+    &.ng-invalid-url:after {
+        content: 'Invalid URL';
+        color: $snl-red-600;
+        position: absolute;
+        z-index: 100;
+        
+    }
+}
+
+.portlet.panel.expanded {
+		
+		.panel-heading {
+			border-radius:none;
+		}
+	}
+
+
+@media (max-width: 767px) {
+    
+    .panel-footer, .panel-header, .panel-body {
+        border-radius: 0px !important;
+    }
+	
+	.portlet.panel {
+		box-shadow:none;
+		border-bottom:1px solid $snl-grey-200;
+		border-radius:0px;
+		
+		.panel-heading {
+			background:#f9f9f9;
+			transition: all .35s;
+            @include smi-ease(1);
+		}
+		
+		> :last-child {
+			border-radius:0;
+		}
+	}
+	
+	.portlet.panel.expanded {
+		border-bottom:none;
+		@include shadow(1);
+		
+		.panel-heading {
+			background:#fff;
+		}
+	}
+    
+}

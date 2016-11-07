@@ -1,0 +1,19 @@
+<header role="banner">
+    <div class="container-fluid">
+        <div class="navbar-header"><a ui-sref="inside.home" class="brand">Techweb</a></div>
+        <ul class="nav navbar-nav navbar-right pull-right">
+
+            <li class="hidden-xs"><a href="mailto:inside-help@sandia.gov?subject=Techweb 3.0 Feedback">Provide
+                Feedback</a></li>
+            <li class="hidden-xs"><a ui-sref="inside.contact">Contact Us</a></li>
+            <li class="user-name">
+                <span ng-bind="userFirstName"></span>
+                <span ng-bind="userLastName" class="hidden-xs"></span>
+               <!--<div class="user-photo-container">
+                    <img class="user-photo" ng-src="{{userBadgePhoto}}"
+                         alt="{{userFirstName}}'s badge photo"/>
+                </div>-->
+            </li>
+        </ul>
+    </div>
+</header>

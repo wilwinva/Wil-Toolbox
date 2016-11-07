@@ -1,0 +1,23 @@
+<div class="col-md-12 main-content category-page">
+    <div class="container-fluid">
+        <div class="row">
+            <ng-include src="'app/components/topRegion/topRegion.tpl.html'"></ng-include>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-sm-push-3">
+                <h1 ng-bind="categoryCtrl.categoryTitle"></h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 category-menu hidden-xs">
+                <div ng-bind-html="categoryCtrl.menuData | html"></div>
+            </div>
+            <div class="col-sm-9 category-content">
+                <div ng-bind-html="categoryCtrl.data | html"></div>
+            </div>
+        </div>
+    </div>
+</div>

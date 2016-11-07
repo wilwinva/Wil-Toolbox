@@ -1,0 +1,8 @@
+{
+  "config": {
+    "isDev": false,
+    "authToken": false,
+    "baseApiUrl": "https://api.github.com",
+    "companyName": "Project Seed"
+  }
+}

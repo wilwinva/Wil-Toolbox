@@ -1,0 +1,68 @@
+<div class="container-fluid" id="main-content" tabindex="-1">
+  <div class="col-sm-12" id="SOMA">
+    <div class="panel portlet panel-default portlet-soma">
+      <div class="panel-heading">
+        <h2>SOMA - State Of My Application</h2>
+        <div class="portlet-controls"></div>
+            </div>
+      <div class="panel-body">
+        <div class="table-controls">
+          <form class="form-inline">
+            <div class="form-group">
+              <input type="text" ng-model="filterBy" class="form-control" placeholder="Filter Results By:">
+            </div>
+          </form>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover table-blue clearfix">
+            <thead>
+            <tr>
+              <th class="status" ng-click="apiCtrl.sort('status')" ng-init="apiCtrl.sort('status')">Status
+                <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='status'"
+                     ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+                  <use xlink:href="#snl-icon-caret"/>
+                </svg>
+              </th>
+              <th class="name" ng-click="apiCtrl.sort('name')">Name
+                <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='name'"
+                     ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+                  <use xlink:href="#snl-icon-caret"/>
+                </svg>
+              </th>
+              </th>
+              <th class="type" ng-click="apiCtrl.sort('type')">Type
+                <svg class="snl-icon snl-icon-16px" ng-show="apiCtrl.sortKey=='type'"
+                     ng-class="{'snl-icon-caret-up':!apiCtrl.reverse,'snl-icon-caret-down':apiCtrl.reverse}">
+                  <use xlink:href="#snl-icon-caret"/>
+                </svg>
+              </th>
+              </th>
+              <th class="affected-resources">Affected Resources</th>
+              <th class="normal-downtime">Normal downtime</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr dir-paginate="resource in apiCtrl.data|orderBy:apiCtrl.sortKey:apiCtrl.reverse|filter:filterBy|itemsPerPage:apiCtrl.pageSize"
+                pagination-id="soma" snl-on-finish-render="apiCtrl.renderPagination()">
+              <td class="status" ng-class="{'red':!resource.status,'green':resource.status}">
+                <!--
+                                                <img ng-if="resource.status" src="images/orb_green.png" style="width:25px">
+                                                <img ng-if="!resource.status" src="images/orb_red.png" style="width:25px">
+                -->
+              </td>
+              <td class="name" ng-bind="resource.name"></td>
+              <td class="type" ng-bind="resource.type"></td>
+              <td class="affected-resources" ng-bind="resource.affected_resources"></td>
+              <td class="normal-downtime" ng-bind="resource.normal_downtime"></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <snl-paginator pagination-id="soma" page-size="apiCtrl.pageSize"
+                       page-options="apiCtrl.pageOptions" num-records="apiCtrl.numRecords" scroll-to="#SOMA"
+                       min-data-length="5" snl-click-tracking="SOMA">
+        </snl-paginator>
+      </div>
+    </div>
+    </div>
+</div>

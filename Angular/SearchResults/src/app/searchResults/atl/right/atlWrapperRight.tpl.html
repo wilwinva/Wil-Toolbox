@@ -1,0 +1,13 @@
+<div class="atlWrapper" ng-if="searchType == 'web' || searchType == 'cps'">
+<!--since the url is a string constant it has to be wrapped in single quotes-->
+  <ng-include src="'app/searchResults/atl/right/atlPolicyFaq.tpl.html'" ng-if="atl.source == 'ATL_FAQ'"></ng-include>
+  <ng-include src="'app/searchResults/atl/right/atlHolidays.tpl.html'" ng-if="atl.source == 'HOLIDAYS_ATL' && searchType == 'web'"></ng-include>
+  <ng-include src="'app/searchResults/atl/right/atlVacation.tpl.html'" ng-if="atl.source == 'ATL_VB' && searchType == 'web'"></ng-include>
+  <ng-include src="'app/searchResults/atl/right/atlTeasers.tpl.html'" ng-if="atl.source == 'JIT_ATL' && searchType == 'web'"></ng-include>
+  <ng-include src="'app/searchResults/atl/right/atlMetaGroups.tpl.html'" ng-if="atl.source == 'ATL_MG' && searchType == 'web'"></ng-include>
+  <ng-include src="'app/searchResults/atl/right/atlTrends.tpl.html'" ng-if="atl.source == 'HOTTOPICS_ATL' && searchType == 'web'"></ng-include>
+  <ng-include src="'app/searchResults/atl/right/atlMap.tpl.html'" ng-if="atl.source == 'ATL_MAP' && searchType == 'web'"></ng-include>
+  <ng-include src="'app/searchResults/atl/right/atlPlug.tpl.html'" ng-if="atl.source == 'PLUG_ATL' && searchType == 'web'"></ng-include>
+  <ng-include src="'app/searchResults/atl/right/saple/atlSaplePeople.tpl.html'" ng-if="(atl.source == 'SAPLE' && atl.totalResults > 1 && searchType == 'web')"></ng-include>
+  <ng-include src="'app/searchResults/atl/right/saple/atlSaplePerson.tpl.html'" ng-if="(atl.source == 'SAPLE' && atl.totalResults == 1 && searchType == 'web')"></ng-include>
+</div>

@@ -1,0 +1,225 @@
+<!--  Browse Techweb portlet -->
+<div>
+<div ng-show="apiCtrl.fetching" class="loader-container"> <!-- ng-show="apiCtrl.fetching" -->
+    <div class="loaderbg"></div>
+    <div class="loader"></div>
+</div>
+<div class="panel-body" class="ng-scope" ng-hide="apiCtrl.error">
+    <ul class="list-group">
+        <li class="list-group-item" snl-render-on-finish ng-init="show1 = prefCtrl.portletExpanded['browseTechweb-aboutMeAtSandia']">
+            <snl-expander-data show="show1"
+                               ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-aboutMeAtSandia', show1);"
+                               snl-click-tracking="AroundSandiaAboutMeExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "aboutmeatsandia"})'>About Me at Sandia</a></h3>
+            <div class='group-links fadeIt' ng-show="show1">
+                <a ui-sref='inside.categories({page: "aboutmeatsandia", section: "awards"})'>Awards</a>,
+                <a ui-sref='inside.categories({page: "aboutmeatsandia", section: "benefits"})'>Benefits</a>,
+                <a ui-sref='inside.categories({page: "aboutmeatsandia", section: "employeeconcerns"})'>Employee Concerns</a>,
+                <a ui-sref='inside.categories({page: "aboutmeatsandia", section: "health_medical"})'>Health &amp; Medical</a>,
+                <a ui-sref='inside.categories({page: "aboutmeatsandia", section: "humanresources"})'>Human Resources</a>,
+                <a ui-sref='inside.categories({page: "aboutmeatsandia", section: "jobs_resumes"})'>Jobs &amp; Resumes</a>,
+                <a ui-sref='inside.categories({page: "aboutmeatsandia", section: "payroll_timekeeping"})'>Payroll &amp;
+                    Timekeeping</a>,
+                <a ui-sref='inside.categories({page: "aboutmeatsandia", section: "performancemanagement"})'>Perform. Mgmt.</a>,
+                <a ui-sref='inside.categories({page: "aboutmeatsandia", section: "volunteer_communityprograms"})'>Volunteer
+                    &amp; Community Programs</a>,
+                <a ui-sref='inside.categories({page: "aboutmeatsandia"})'>more</a>&hellip;
+            </div>
+        </li>
+
+
+        <!--BUDGET-->
+        <li class="list-group-item" snl-render-on-finish ng-init="show2 = prefCtrl.portletExpanded['browseTechweb-budgetAndFinancial']">
+            <snl-expander-data show="show2" ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-budgetAndFinancial', show2);"
+                               snl-click-tracking="AroundSandiaFinancialExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "budgetandfinancial"})'>Budget &amp; Financial</a></h3>
+            <div class='group-links fadeIt' ng-show="show2">
+                <a ui-sref='inside.categories({page: "budgetandfinancial", section: "costestimatingtools(cet_pet)"})'>Cost/Spend
+                    Plan Tools</a>,
+                <a ui-sref='inside.categories({page: "budgetandfinancial", section: "financialprocesses_manuals_guides"})'>Financial
+                    Processes</a>,
+                <a ui-sref='inside.categories({page: "budgetandfinancial", section: "financialreporting"})'>Financial
+                    Reporting</a>,
+                <a ui-sref='inside.categories({page: "budgetandfinancial", section: "oracle"})'>Oracle</a>,
+                <a ui-sref='inside.categories({page: "budgetandfinancial", section: "servicecenters"})'>Service Centers</a>,
+                <a ui-sref='inside.categories({page: "budgetandfinancial"})'>more</a>&hellip;
+            </div>
+        </li>
+
+        <!--BUY IT-->
+        <li class="list-group-item" snl-render-on-finish ng-init="show3 = prefCtrl.portletExpanded['browseTechweb-buyItShipItTrackItMoveIt']">
+            <snl-expander-data show="show3" ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-buyItShipItTrackItMoveIt', show3);"
+                               snl-click-tracking="AroundSandiaBuyShipTrackExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "buyit-shipit-trackit-moveit"})'>Buy It - Ship It - Track It - Move It</a>
+            </h3>
+            <div class='group-links fadeIt' ng-show="show3">
+                <a ui-sref='inside.categories({page: "buyit-shipit-trackit-moveit", section: "computerhardware_software"})'>Computer
+                    Hardware &amp; Software</a>,
+                <a ui-sref='inside.categories({page: "buyit-shipit-trackit-moveit", section: "jit"})'>JIT</a>,
+                <a ui-sref='inside.categories({page: "buyit-shipit-trackit-moveit", section: "move"})'>Move</a>,
+                <a ui-sref='inside.categories({page: "buyit-shipit-trackit-moveit", section: "procurement"})'>Procurement</a>,
+                <a ui-sref='inside.categories({page: "buyit-shipit-trackit-moveit", section: "property_reapplication"})'>Property
+                    (Assets)</a>,
+                <a ui-sref='inside.categories({page: "buyit-shipit-trackit-moveit", section: "property_reapplication"})'>Reapp
+                    (Reutilization)</a>,
+                <a ui-sref='inside.categories({page: "buyit-shipit-trackit-moveit", section: "receive-ship-store"})'>Receive/Ship/Store</a>,
+                <a ui-sref='inside.categories({page: "buyit-shipit-trackit-moveit"})'>more</a>&hellip;
+            </div>
+        </li>
+
+        <!--Communities - info.sandia.gov-->
+        <li class="list-group-item" snl-render-on-finish ng-init="show4 = prefCtrl.portletExpanded['browseTechweb-communities']">
+            <snl-expander-data show="show4" ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-communities', show4);"
+                               snl-click-tracking="AroundSandiaCommunitiesExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "communities"})'>Communities</a></h3>
+            <div class='group-links fadeIt' ng-show="show4">
+                <a ui-sref='inside.categories({page: "communities", section: "adminprof"})'>Administrative Professionals</a>,
+                <a ui-sref='inside.categories({page: "communities", section: "managers"})'>Managers</a>,
+                <a ui-sref='inside.categories({page: "communities", section: "new_employees"})'>New Employees</a>,
+                <a ui-sref='inside.categories({page: "communities", section: "postdocs"})'>Postdocs</a>,
+                <a ui-sref='inside.categories({page: "communities", section: "sharepoint"})'>SharePoint</a>,
+                <a ui-sref='inside.categories({page: "communities", section: "student_interns"})'>Student Interns</a>
+            </div>
+        </li>
+
+        <!--CORPORATE-->
+        <li class="list-group-item" snl-render-on-finish ng-init="show5 = prefCtrl.portletExpanded['browseTechweb-corporatePerspective']">
+            <snl-expander-data show="show5" ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-corporatePerspective', show5);"
+                               snl-click-tracking="AroundSandiaCorporatePerspectiveExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "corporateperspective"})'>Corporate Perspective</a></h3>
+            <div class='group-links fadeIt' ng-show="show5">
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "corporateidentity"})'>Corp. Identity</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "corporatevision"})'>Corp. Vision</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "counterintelligence"})'>Counterintelligence</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "diversity"})'>Diversity</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "eeo/aa"})'>EEO/AA</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "ethics"})'>Ethics</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "legalandpatent"})'>Legal &amp;
+                    Patents</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "lockheedmartin"})'>Lockheed Martin</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "nnsa_nationalnuclearsecurityadministration"})'>NNSA</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "ombuds"})'>Ombuds</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "sandiamanagement_operatingcontract_primecontract"})'>Prime
+                    Contract</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "qualityandassessments"})'>Quality &amp;
+                    Assessments</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective", section: "pmusandprograms"})'>PMUs &amp;
+                    Programs</a>,
+                <a ui-sref='inside.categories({page: "corporateperspective"})'>more</a>&hellip;
+            </div>
+        </li>
+    </ul>
+
+    <ul class="list-group">
+        <!--ENGINEERING & MANUFACTURING-->
+        <li class="list-group-item" snl-render-on-finish ng-init="show6 = prefCtrl.portletExpanded['browseTechweb-engineeringAndManufacturing']">
+            <snl-expander-data show="show6" ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-engineeringAndManufacturing', show6);"
+                               snl-click-tracking="AroundSandiaEngineeringManufacExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "engineeringandmanufacturing"})'>Engineering &amp; Manufacturing</a></h3>
+            <div class='group-links fadeIt' ng-show="show6">
+                <a ui-sref='inside.categories({page: "engineeringandmanufacturing", section: "calibration"})'>Calibration</a>,
+                <a ui-sref='inside.categories({page: "engineeringandmanufacturing", section: "chemicals"})'>Chemicals</a>,
+                <a ui-sref='inside.categories({page: "engineeringandmanufacturing", section: "design-drawings_models_simulations"})'>Design</a>,
+                <a ui-sref='inside.categories({page: "engineeringandmanufacturing", section: "directivesandprocedures"})'>Directives
+                    &amp; Procedures</a>,
+                <a ui-sref='inside.categories({page: "engineeringandmanufacturing", section: "informationsystems_databases"})'>Info
+                    Sys &amp; Databases</a>,
+                <a ui-sref='inside.categories({page: "engineeringandmanufacturing", section: "manufacturingandproduction"})'>Manufacturing
+                    &amp; Production</a>,
+                <a ui-sref='inside.categories({page: "engineeringandmanufacturing", section: "testfacilities"})'>Test
+                    Facilities</a>,
+                <a ui-sref='inside.categories({page: "engineeringandmanufacturing", section: "vendorandcatalogs"})'>Vendor
+                    &amp; Catalogs</a>,
+                <a ui-sref='inside.categories({page: "engineeringandmanufacturing"})'>more</a>&hellip;
+            </div>
+        </li>
+
+        <!--INFO SHARING & PUBLISHING-->
+        <li class="list-group-item" snl-render-on-finish ng-init="show7 = prefCtrl.portletExpanded['browseTechweb-infoSharingAndPublishing']">
+            <snl-expander-data show="show7" ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-infoSharingAndPublishing', show7);"
+                               snl-click-tracking="AroundSandiaInfoSharePubExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "informationsharingandpublishing"})'>Info Sharing & Publishing</a></h3>
+            <div class='group-links fadeIt' ng-show="show7">
+                <a ui-sref='inside.categories({page: "informationsharingandpublishing", section: "calendarsandevents(job-related)"})'>Calendars
+                    &amp; Events</a>,
+                <a ui-sref='inside.categories({page: "informationsharingandpublishing", section: "classification_classifiedmatter"})'>Classification
+                    &amp; Classified Matter</a>,
+                <a ui-sref='inside.categories({page: "informationsharingandpublishing", section: "collaboration-collaborationenvironments-filesharing-managingdocuments"})'>Collaboration</a>,
+                <a ui-sref='inside.categories({page: "informationsharingandpublishing", section: "imagesandimageservices"})'>Image
+                    Services</a>,
+                <a ui-sref='inside.categories({page: "informationsharingandpublishing", section: "labcommunications"})'>Lab
+                    Communications Groups</a>,
+                <a ui-sref='inside.categories({page: "informationsharingandpublishing", section: "snl_stechnicallibrary"})'>Library</a>,
+                <a ui-sref='inside.categories({page: "informationsharingandpublishing", section: "employeesandrelationshipswithoutsideorganizations"})'>Outside
+                    Relations</a>,
+                <a ui-sref='inside.categories({page: "informationsharingandpublishing", section: "recordsmanagement"})'>Records
+                    Mgmt.</a>,
+                <a ui-sref='inside.categories({page: "informationsharingandpublishing"})'>more</a>&hellip;
+            </div>
+        </li>
+
+        <!--INFRA-->
+        <li class="list-group-item" snl-render-on-finish ng-init="show8 = prefCtrl.portletExpanded['browseTechweb-infrastructureUtilities']">
+            <snl-expander-data show="show8" ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-infrastructureUtilities', show8);"
+                               snl-click-tracking="AroundSandiaInfraUtilExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "infrastructureutilities"})'>Infrastructure Utilities</a></h3>
+            <div class='group-links fadeIt' ng-show="show8">
+                <a ui-sref='inside.categories({page: "infrastructureutilities", section: "computing/csus/networks"})'>Computing/CSUs/Networks</a>,
+                <a ui-sref='inside.categories({page: "infrastructureutilities", section: "coeformycomputer"})'>COE for My
+                    Computer</a>,
+                <a ui-sref='inside.categories({page: "infrastructureutilities", section: "email"})'>Email</a>,
+                <!--<a ui-sref='inside.categories({page: "es_h"})'>ES&amp;H</a>,-->
+                <a ui-sref='inside.categories({page: "infrastructureutilities", section: "facilities/buildingservices"})'>Facilities</a>,
+                <a ui-sref='inside.categories({page: "infrastructureutilities", section: "mail"})'>Mail</a>,
+                <a ui-sref='inside.categories({page: "infrastructureutilities", section: "phones/pagers/voicemail"})'>Phones/Pagers/Voicemail</a>,
+                <a ui-sref='inside.categories({page: "infrastructureutilities", section: "vehicles"})'>Vehicles</a>,
+                <a ui-sref='inside.categories({page: "infrastructureutilities", section: "webuseandauthoring"})'>Web Use &amp;
+                    Authoring</a>,
+                <a ui-sref='inside.categories({page: "infrastructureutilities"})'>more</a>&hellip;
+            </div>
+        </li>
+
+        <!--MANUALS & GUIDES-->
+        <li class="list-group-item" snl-render-on-finish ng-init="show9 = prefCtrl.portletExpanded['browseTechweb-manualsAndGuides']">
+            <snl-expander-data show="show9" ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-manualsAndGuides', show9);"
+                               snl-click-tracking="AroundSandiaGuidesExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "manualsandguides"})'>Manuals &amp; Guides</a></h3>
+            <div class='group-links fadeIt' ng-show="show9">
+                <a ui-sref='inside.categories({page: "manualsandguides", section: "aa/ma"})'>AA/MA</a>,
+                <a ui-sref='inside.categories({page: "manualsandguides", section: "business"})'>Business</a>,
+                <a ui-sref='inside.categories({page: "manualsandguides", section: "computing"})'>Computing</a>,
+                <a ui-sref='inside.categories({page: "manualsandguides", section: "es_h"})'>ES&amp;H</a>,
+                <a ui-sref='inside.categories({page: "manualsandguides", section: "payroll_timekeeping"})'>Payroll &amp;
+                    Timekeeping</a>,
+                <a ui-sref='inside.categories({page: "manualsandguides", section: "security"})'>Security</a>,
+                <a ui-sref='inside.categories({page: "manualsandguides", section: "technical"})'>Technical</a>,
+                <a ui-sref='inside.categories({page: "manualsandguides"})'>more</a>&hellip;
+            </div>
+        </li>
+
+        <!--SCIENCES-->
+        <li class="list-group-item" snl-render-on-finish ng-init="show10 = prefCtrl.portletExpanded['browseTechweb-sciencesAndResearch']">
+            <snl-expander-data show="show10" ng-click="browseTechwebCtrl.categoryExpand('browseTechweb-sciencesAndResearch', show10);"
+                               snl-click-tracking="AroundSandiaSciResearchExpand"></snl-expander-data>
+            <h3 class="group-title"><a ui-sref='inside.categories({page: "sciencesandresearch"})'>Sciences & Research</a></h3>
+            <div class='group-links fadeIt' ng-show="show10">
+                <a ui-sref='inside.categories({page: "sciencesandresearch", section: "chemistry"})'>Chemistry</a>,
+                <a ui-sref='inside.categories({page: "sciencesandresearch", section: "computerscience"})'>Computer Science</a>,
+                <a ui-sref='inside.categories({page: "sciencesandresearch", section: "earthscience_geology"})'>Earth Science
+                    &amp; Geology</a>,
+                <a ui-sref='inside.categories({page: "sciencesandresearch", section: "math"})'>Math</a>,
+                <a ui-sref='inside.categories({page: "sciencesandresearch", section: "physics"})'>Physics</a>,
+                <a ui-sref='inside.categories({page: "sciencesandresearch", section: "workinggroups-programsandcapabilities"})'>Working
+                    Groups</a>,
+                <a ui-sref='inside.categories({page: "sciencesandresearch"})'>more</a>&hellip;
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+<div class='panel-footer'>
+    <p>Can't find something? <a href="mailto:inside-help@sandia.gov?subject=I can't find something in Browse Techweb">Let
+        us know!</a></p>
+</div>
+</div>

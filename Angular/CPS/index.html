@@ -1,0 +1,460 @@
+<html ng-app="processApp" lang="en">
+<head>
+  <meta content="initial-scale=1" name="viewport">
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title> Hiring Process</title>
+  <meta content="" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<system-region name="HEAD"/>-->
+
+  <!--<link href="https://info-dev.sandia.gov/cps/_assets/css/skel.css" rel="stylesheet">-->
+  <link href="https://info-dev.sandia.gov/cps/_assets/js/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet">
+  <!--
+    <link href="https://info-dev.sandia.gov/cps/_assets/css/style.css" rel="stylesheet">
+    <link href="https://info-dev.sandia.gov/cps/_assets/css/print.css" media="print" rel="stylesheet">
+    <link href="../../_assets/css/main.css" rel="stylesheet" type="text/css">
+    <link href="https://info-dev.sandia.gov/cps/_assets/css/contacts-style.css" rel="stylesheet">
+  -->
+
+  <script src="https://info-dev.sandia.gov/cps/_assets/js/vendor/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="https://info-dev.sandia.gov/cps/_assets/js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="https://info-dev.sandia.gov/cps/_assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript"></script>
+  <!--
+    <style type="text/css">.row{border-bottom:solid 1px transparent}.row>*{float:left}.row:after,.row:before{content:"";display:block;clear:both;height:0}.row.uniform>*>:first-child{margin-top:0}.row.uniform>*>:last-child{margin-bottom:0}.\31 2u,.\31 2u\24{width:100%;clear:none;margin-left:0}.\31 1u,.\31 1u\24{width:91.6666666667%;clear:none;margin-left:0}.\31 0u,.\31 0u\24{width:83.3333333333%;clear:none;margin-left:0}.\39 u,.\39 u\24{width:75%;clear:none;margin-left:0}.\38 u,.\38 u\24{width:66.6666666667%;clear:none;margin-left:0}.\37 u,.\37 u\24{width:58.3333333333%;clear:none;margin-left:0}.\36 u,.\36 u\24{width:50%;clear:none;margin-left:0}.\35 u,.\35 u\24{width:41.6666666667%;clear:none;margin-left:0}.\34 u,.\34 u\24{width:33.3333333333%;clear:none;margin-left:0}.\33 u,.\33 u\24{width:20%;clear:none;margin-left:0}.\32 u,.\32 u\24{width:16.6666666667%;clear:none;margin-left:0}.\31 u,.\31 u\24{width:8.3333333333%;clear:none;margin-left:0}.\31 2u\24+*,.\31 1u\24+*,.\31 0u\24+*,.\39 u\24+*,.\38 u\24+*,.\37 u\24+*,.\36 u\24+*,.\35 u\24+*,.\34 u\24+*,.\33 u\24+*,.\32 u\24+*,.\31 u\24+*{clear:left;}.\-11u{margin-left:91.6666666667%}.\-10u{margin-left:83.3333333333%}.\-9u{margin-left:75%}.\-8u{margin-left:66.6666666667%}.\-7u{margin-left:58.3333333333%}.\-6u{margin-left:50%}.\-5u{margin-left:41.6666666667%}.\-4u{margin-left:33.3333333333%}.\-3u{margin-left:25%}.\-2u{margin-left:16.6666666667%}.\-1u{margin-left:8.3333333333%}</style><style type="text/css">.container{margin-left:auto;margin-right:auto;width:960px}.container.\31 25\25{width:100%;max-width:1200px;min-width:960px}.container.\37 5\25{width:720px}.container.\35 0\25{width:480px}.container.\32 5\25{width:240px}</style><style type="text/css">.row>*{padding:30px 0 0 30px}.row{margin:-30px 0 -1px -30px}.row.uniform>*{padding:30px 0 0 30px}.row.uniform{margin:-30px 0 -1px -30px}.row.\32 00\25>*{padding:60px 0 0 60px}.row.\32 00\25{margin:-60px 0 -1px -60px}.row.uniform.\32 00\25>*{padding:60px 0 0 60px}.row.uniform.\32 00\25{margin:-60px 0 -1px -60px}.row.\31 50\25>*{padding:45px 0 0 45px}.row.\31 50\25{margin:-45px 0 -1px -45px}.row.uniform.\31 50\25>*{padding:45px 0 0 45px}.row.uniform.\31 50\25{margin:-45px 0 -1px -45px}.row.\35 0\25>*{padding:15px 0 0 15px}.row.\35 0\25{margin:-15px 0 -1px -15px}.row.uniform.\35 0\25>*{padding:15px 0 0 15px}.row.uniform.\35 0\25{margin:-15px 0 -1px -15px}.row.\32 5\25>*{padding:7.5px 0 0 7.5px}.row.\32 5\25{margin:-7.5px 0 -1px -7.5px}.row.uniform.\32 5\25>*{padding:7.5px 0 0 7.5px}.row.uniform.\32 5\25{margin:-7.5px 0 -1px -7.5px}.row.\30 \25>*{padding:0}.row.\30 \25{margin:0 0 -1px 0}</style><style type="text/css">.\31 2u\28 global\29,.\31 2u\24\28 global\29{width:100%;clear:none;margin-left:0}.\31 1u\28 global\29,.\31 1u\24\28 global\29{width:91.6666666667%;clear:none;margin-left:0}.\31 0u\28 global\29,.\31 0u\24\28 global\29{width:83.3333333333%;clear:none;margin-left:0}.\39 u\28 global\29,.\39 u\24\28 global\29{width:75%;clear:none;margin-left:0}.\38 u\28 global\29,.\38 u\24\28 global\29{width:66.6666666667%;clear:none;margin-left:0}.\37 u\28 global\29,.\37 u\24\28 global\29{width:58.3333333333%;clear:none;margin-left:0}.\36 u\28 global\29,.\36 u\24\28 global\29{width:50%;clear:none;margin-left:0}.\35 u\28 global\29,.\35 u\24\28 global\29{width:41.6666666667%;clear:none;margin-left:0}.\34 u\28 global\29,.\34 u\24\28 global\29{width:33.3333333333%;clear:none;margin-left:0}.\33 u\28 global\29,.\33 u\24\28 global\29{width:20%;clear:none;margin-left:0}.\32 u\28 global\29,.\32 u\24\28 global\29{width:16.6666666667%;clear:none;margin-left:0}.\31 u\28 global\29,.\31 u\24\28 global\29{width:8.3333333333%;clear:none;margin-left:0}.\31 2u\24\28 global\29+*,.\31 1u\24\28 global\29+*,.\31 0u\24\28 global\29+*,.\39 u\24\28 global\29+*,.\38 u\24\28 global\29+*,.\37 u\24\28 global\29+*,.\36 u\24\28 global\29+*,.\35 u\24\28 global\29+*,.\34 u\24\28 global\29+*,.\33 u\24\28 global\29+*,.\32 u\24\28 global\29+*,.\31 u\24\28 global\29+*{clear:left;}.\-11u\28 global\29{margin-left:91.6666666667%}.\-10u\28 global\29{margin-left:83.3333333333%}.\-9u\28 global\29{margin-left:75%}.\-8u\28 global\29{margin-left:66.6666666667%}.\-7u\28 global\29{margin-left:58.3333333333%}.\-6u\28 global\29{margin-left:50%}.\-5u\28 global\29{margin-left:41.6666666667%}.\-4u\28 global\29{margin-left:33.3333333333%}.\-3u\28 global\29{margin-left:25%}.\-2u\28 global\29{margin-left:16.6666666667%}.\-1u\28 global\29{margin-left:8.3333333333%}.\31 2u\28 wide\29,.\31 2u\24\28 wide\29{width:100%;clear:none;margin-left:0}.\31 1u\28 wide\29,.\31 1u\24\28 wide\29{width:91.6666666667%;clear:none;margin-left:0}.\31 0u\28 wide\29,.\31 0u\24\28 wide\29{width:83.3333333333%;clear:none;margin-left:0}.\39 u\28 wide\29,.\39 u\24\28 wide\29{width:75%;clear:none;margin-left:0}.\38 u\28 wide\29,.\38 u\24\28 wide\29{width:66.6666666667%;clear:none;margin-left:0}.\37 u\28 wide\29,.\37 u\24\28 wide\29{width:58.3333333333%;clear:none;margin-left:0}.\36 u\28 wide\29,.\36 u\24\28 wide\29{width:50%;clear:none;margin-left:0}.\35 u\28 wide\29,.\35 u\24\28 wide\29{width:41.6666666667%;clear:none;margin-left:0}.\34 u\28 wide\29,.\34 u\24\28 wide\29{width:33.3333333333%;clear:none;margin-left:0}.\33 u\28 wide\29,.\33 u\24\28 wide\29{width:20%;clear:none;margin-left:0}.\32 u\28 wide\29,.\32 u\24\28 wide\29{width:16.6666666667%;clear:none;margin-left:0}.\31 u\28 wide\29,.\31 u\24\28 wide\29{width:8.3333333333%;clear:none;margin-left:0}.\31 2u\24\28 wide\29+*,.\31 1u\24\28 wide\29+*,.\31 0u\24\28 wide\29+*,.\39 u\24\28 wide\29+*,.\38 u\24\28 wide\29+*,.\37 u\24\28 wide\29+*,.\36 u\24\28 wide\29+*,.\35 u\24\28 wide\29+*,.\34 u\24\28 wide\29+*,.\33 u\24\28 wide\29+*,.\32 u\24\28 wide\29+*,.\31 u\24\28 wide\29+*{clear:left;}.\-11u\28 wide\29{margin-left:91.6666666667%}.\-10u\28 wide\29{margin-left:83.3333333333%}.\-9u\28 wide\29{margin-left:75%}.\-8u\28 wide\29{margin-left:66.6666666667%}.\-7u\28 wide\29{margin-left:58.3333333333%}.\-6u\28 wide\29{margin-left:50%}.\-5u\28 wide\29{margin-left:41.6666666667%}.\-4u\28 wide\29{margin-left:33.3333333333%}.\-3u\28 wide\29{margin-left:25%}.\-2u\28 wide\29{margin-left:16.6666666667%}.\-1u\28 wide\29{margin-left:8.3333333333%}.\31 2u\28 normal\29,.\31 2u\24\28 normal\29{width:100%;clear:none;margin-left:0}.\31 1u\28 normal\29,.\31 1u\24\28 normal\29{width:91.6666666667%;clear:none;margin-left:0}.\31 0u\28 normal\29,.\31 0u\24\28 normal\29{width:83.3333333333%;clear:none;margin-left:0}.\39 u\28 normal\29,.\39 u\24\28 normal\29{width:75%;clear:none;margin-left:0}.\38 u\28 normal\29,.\38 u\24\28 normal\29{width:66.6666666667%;clear:none;margin-left:0}.\37 u\28 normal\29,.\37 u\24\28 normal\29{width:58.3333333333%;clear:none;margin-left:0}.\36 u\28 normal\29,.\36 u\24\28 normal\29{width:50%;clear:none;margin-left:0}.\35 u\28 normal\29,.\35 u\24\28 normal\29{width:41.6666666667%;clear:none;margin-left:0}.\34 u\28 normal\29,.\34 u\24\28 normal\29{width:33.3333333333%;clear:none;margin-left:0}.\33 u\28 normal\29,.\33 u\24\28 normal\29{width:20%;clear:none;margin-left:0}.\32 u\28 normal\29,.\32 u\24\28 normal\29{width:16.6666666667%;clear:none;margin-left:0}.\31 u\28 normal\29,.\31 u\24\28 normal\29{width:8.3333333333%;clear:none;margin-left:0}.\31 2u\24\28 normal\29+*,.\31 1u\24\28 normal\29+*,.\31 0u\24\28 normal\29+*,.\39 u\24\28 normal\29+*,.\38 u\24\28 normal\29+*,.\37 u\24\28 normal\29+*,.\36 u\24\28 normal\29+*,.\35 u\24\28 normal\29+*,.\34 u\24\28 normal\29+*,.\33 u\24\28 normal\29+*,.\32 u\24\28 normal\29+*,.\31 u\24\28 normal\29+*{clear:left;}.\-11u\28 normal\29{margin-left:91.6666666667%}.\-10u\28 normal\29{margin-left:83.3333333333%}.\-9u\28 normal\29{margin-left:75%}.\-8u\28 normal\29{margin-left:66.6666666667%}.\-7u\28 normal\29{margin-left:58.3333333333%}.\-6u\28 normal\29{margin-left:50%}.\-5u\28 normal\29{margin-left:41.6666666667%}.\-4u\28 normal\29{margin-left:33.3333333333%}.\-3u\28 normal\29{margin-left:25%}.\-2u\28 normal\29{margin-left:16.6666666667%}.\-1u\28 normal\29{margin-left:8.3333333333%}</style><style type="text/css">.not-global,.not-wide,.not-normal{display:none!important}.only-narrow,.only-narrower,.only-mobile,.only-mobilep{display:none!important}</style><link href="/cps/_assets/css/style-wide.css" type="text/css" rel="stylesheet"><link href="/cps/_assets/css/style-normal.css" type="text/css" rel="stylesheet"><script src="https://info-dev.sandia.gov/cps/_assets/js/skel.min.js" type="text/javascript"></script>
+  -->
+  <!--
+    <script src="https://info-dev.sandia.gov/cps/_assets/js/skel-layers.min.js" type="text/javascript"></script>
+    <script src="https://info-dev.sandia.gov/cps/_assets/js/jquery.dropotron.min.js" type="text/javascript"></script>
+    <script src="https://info-dev.sandia.gov/cps/_assets/js/init.js" type="text/javascript"></script>
+  -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://info-dev.sandia.gov/cps/_assets/js/sticky-button.js" type="text/javascript"></script>
+
+  <!--<script src="https://prod.sandia.gov/suit/header/latest/header.min.js" type="text/javascript"></script>
+  <link href="//prod.sandia.gov/suit/header/1.2/css/suit_header.css" type="text/css" rel="stylesheet">-->
+  <link rel="stylesheet" href="https://prod.sandia.gov/ui-patternlibrary/common/css/snl-pl-main.css">
+  <link rel="stylesheet" href="https://prod.sandia.gov/ui-patternlibrary/common/css/snl-patternLibrary.css">
+  <!--<script src="https://prod.sandia.gov/ui-patternlibrary/globalHeader/js/header.js"></script>-->
+  <!--<script src="https://pl.sandia.gov/globalheader/current/js/header.js" data-cchd="true" data-search="true" data-footer="true" data-id="20160602" data-name="SandiaGlobalHeader" type="text/javascript"></script>-->
+
+  <!--
+    <script src="https://info-dev.sandia.gov/cps/_assets/js/browser-detect.js" type="text/javascript"></script>
+
+    <script data-require="angular.js@1.2.6" data-semver="1.2.6" src="https://info-dev.sandia.gov/cps/_assets/angular/angular.js"></script>
+    <script data-require="angular-animate.js@1.2.6" data-semver="1.2.6" src="https://info-dev.sandia.gov/cps/_assets/angular/angular-animate.js"></script>
+    <script src="https://info-dev.sandia.gov/cps/_assets/js/contacts.js"></script>
+  -->
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="js/angularjs.min.js"></script>
+  <script src="js/demo.js" type="text/javascript"></script>
+</head>
+<body>
+<div role="banner" class="container-fluid header">
+    <div class="navbar-header col-md-3">
+      <a href="" class="brand"><h3>Corporate Policy System</h3></a>
+    </div>
+    <nav>
+      <ul class="nav navbar-nav navbar-top col-md-6" role="navigation">
+        <li class="dropdown">
+          <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Policy Categories <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">Communications</a></li>
+            <li><a href="">Environment, Safety &amp; Health</a></li>
+            <li><a href="">Facilities &amp; Building Management</a></li>
+            <li><a href="">Financial Management</a></li>
+            <li><a href="">Government Relations</a></li>
+            <li><a href="">Human Resources / Workforce Management</a></li>
+            <li><a href="">Independent Audit, Ethics and Business Conduct</a></li>
+            <li><a href="">Information Technology</a></li>
+            <li><a href="">Legal Management</a></li>
+            <li><a href="">Management &amp Support Services</a></li>
+            <li><a href="">Quality Assurance</a></li>
+            <li><a href="">Safeguards &amp; Security</a></li>
+            <li><a href="">Supply Chain Management</a></li>
+          </ul>
+        </li>
+        <li><a>How Do I...</a></li>
+        <li><a>Contact Us</a></li>
+      </ul>
+    </nav>
+    <form id="searchSite" onsubmit=" return true" method="post" action="/" class="col-md-3">
+      <input type="text" autocomplete="off" id="searchTerm" name="searchTerm" class="form-control" value="" placeholder="Search Site" maxlength="65">
+    </form>
+</div>
+<div class="container-fluid">
+  <div class="row main-content clearfix">
+    <div class="col-md-9">
+      <div class="row">
+        <ol class="breadcrumb col-md-12 pull-right">
+          <li class="active"><a href="#">Process Overview</a></li>
+          <li><a href="#">Requisition</a></li>
+          <li><a href="#">Post</a></li>
+          <li><a href="#">Source</a></li>
+          <li><a href="#">Apply</a></li>
+          <li><a href="#">Screen</a></li>
+          <li><a href="#">Interview</a></li>
+          <li><a href="#">Offer</a></li>
+          <li><a href="#">Verification &amp; Hire</a></li>
+          <li><a href="#">Onboard</a></li>
+        </ol>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <div style="font-size:2em;">Process Overview</div>
+          <hr/>
+          <div>
+            The Unified Hire Procedure (UHP) provides direction for hiring individuals into Sandia. External hires into the Laboratories normally occur through the UHP post and bid process and in certain circumstances through the no-post process.&nbsp; Internal movement primarily occurs through the UHP post and bid process, and secondarily through lateral transfers. (See
+            <a href="https://infoq.sandia.gov/cps/human_resources/policy/processes/procedures/HR100.1.10.html">HR100.1.10</a>, <em>Move Employees Outside of Post &amp; Bid</em>.)
+            <br/>
+            Sandia, an equal opportunity employer, makes employment decisions on the basis of business needs and candidate qualifications. See Sandia’s Corporate procedure, <a href="https://infoq.sandia.gov/cps/human_resources/policy/processes/procedures/HR100.5.4.html">HR100.5.4</a>, <em>Maintain a Non-Discriminatory Workplace - Equal Employment Opportunity (EEO) and Affirmative Action (AA)</em>,
+            or <a href="https://sharepoint.sandia.gov/sites/EEO_and_AA_Management_Resources/default.aspx">EEO and AA Management Resources SharePoint</a> site—Manager Access Only.
+            <br/>
+            The employment relationship at Sandia is employment-at-will. As such, both Sandia and employees have the right to discontinue employment with or without cause, at any time, and for any reason. Any verbal or written representations regarding the duration or permanence of employment with Sandia are superseded by this policy and, if applicable, the appropriate collective bargaining
+            agreement.
+            <br/>
+            Offers of employment are not employment contracts and therefore are not to be construed or interpreted as a guarantee of continued employment.
+            <br/>
+            Hiring actions are initiated by management in accordance with an approved Workforce Acquisition Plan (WAP).
+            <br/>
+            Recruiting talent is coordinated through the Recruiting &amp; Student Intern Programs organization; hiring is coordinated by the Workforce Acquisition &amp; Relocation Services organization.
+            <br/>
+            Staff Augmentation and procurement contractors are not Sandia employees.&nbsp;Therefore, they may only apply to externally posted job openings.
+            <br/>
+            Applications of this procedure will not supersede the Laboratories collective bargaining agreements.&nbsp;See the <a href="http://info.sandia.gov/hr/labor/agreements.htm">collective labor bargaining agreements</a> for represented employee requirements.
+          </div>
+          <hr/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 main-content">
+          <h3 style="text-align:center;">Hiring Process</h3>
+          <div class="step-links" style="text-align:center">
+            <button class="pStep" id="step1" type="button" value="hide/show">Determine the Most Appropriate Member of the Workforce (MOW) Type</button>
+            <span class="button-dash">&nbsp;</span>
+            <button class="pStep" id="step2" type="button" value="hide/show">Identify the Best MOW Option</button>
+            <span class="button-dash">&nbsp;</span>
+            <button class="pStep" id="step3" type="button" value="hide/show">Identify Specific Hiring Requirements (see applicable Collective Bargaining Agreement)</button>
+          </div>
+          <div id="stepContentContainer" class="row">
+            <div id="step1content" class="col-md-10 col-md-offset-2 hide" data-resources=[{'title':'}]>
+              <h4>Step Overview</h4>
+              <p>
+                <step-overview></step-overview>
+              </p>
+              <h4>Description</h4>
+              <p></p>
+              <p>Consider the following to determine the most appropriate MOW type (e.g., employee, regular or temporary, or staff augmentation contract associate) when filling a Member of the Workforce (MOW) need:</p>
+              <ol>
+                <li>What is the scope of work?
+                  <ul>
+                    <li>Is it existing work or new work?</li>
+                    <li>Is it core to the mission space?</li>
+                    <li>Is it short-term or long-term in nature, e.g., less than 3 years or greater than 3 years?</li>
+                    <li>What is the level of the work to be performed? Will you require an experienced individual, or can the position be filled with an inexperienced hire?</li>
+                  </ul>
+                </li>
+                <li>What is the status of funding for the work?</li>
+                <li>Is the work expected to be enduring or subject to change based on completed projects?</li>
+                <li>Does the role represent, or take action on behalf of Sandia? If yes, the role must be filled by a Sandia employee (temporary or regular).</li>
+                <li>Could the work be done better and/or more cost effectively through an outside entity with specialized skills in this area?</li>
+                <li>What is the organization’s composition of members of the workforce?
+                  <ul>
+                    <li>By mix of regular and temporary employees, and contractors?</li>
+                    <li>By job level mix (Member, Senior, Principal, Distinguished)?</li>
+                    <li>By skill mix and educational mix (diversity of skills, and diversity of educational backgrounds)?</li>
+                  </ul>
+                </li>
+                <li>Could this workforce need present an opportunity for the professional development of a Sandia employee through transfer, matrix, or a rotational assignment?</li>
+                <li>What is the best workforce type for the work?</li>
+              </ol>
+              <p></p>
+              <h4>Resources</h4>
+              <p>
+                <step-resources></step-resources>
+              </p>
+            </div>
+            <div id="step2content" class="col-md-10 col-md-offset-2 hide">
+              <h4>Step Overview</h4>
+              <p>
+                <step-overview></step-overview>
+              </p>
+              <h4>Description</h4>
+              <p></p>
+              <p>Use the following table to identify the best workforce option.</p>
+              <table border="1" cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                  <td width="50%"><strong>Consider using</strong></td>
+                  <td width="50%"><strong>If/when</strong></td>
+                </tr>
+                <tr>
+                  <td width="50%">Regular employee (no term limit)</td>
+                  <td width="50%">Work is sustainable and enduring in nature.</td>
+                </tr>
+                <tr>
+                  <td width="50%">Limited Term Employee (LTE) – Non Represented (1 year period up to 3 year term limit, as needed by business, with line manager direction to HRBP)</td>
+                  <td width="50%">
+                    <ul>
+                      <li>Use for exempt and non-exempt labor to meet short-term work surges in which employees meet the same criteria as regular employees.</li>
+                      <li>Hired into the Lab meeting all external hire criteria and processes.</li>
+                      <li>Work requires employee to act on behalf of Sandia</li>
+                      <li>An LTE is eligible to bid on other positions.</li>
+                      <li>An LTE’s hire date will be used as his/her effective service date when moving into a regular position provided there is no more than a 30-day break in service.</li>
+                      <li>Provide value-added contributions to Sandia’s workforce.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">Limited Term Employee (LTE) – Represented (see appropriate Collective Bargaining Agreement)</td>
+                  <td width="50%">
+                    <ul>
+                      <li>OPEIU LTE program provides non-exempt support for short-term assignments for up to 1 year, with an option to extend for up to one additional one year assignment. Exceptions are contingent upon mutual agreement between the Laboratories and the Union.</li>
+                      <li>MTC LTE program provides support for up to 2 years.&nbsp; Extensions of represented LTEs are contingent upon mutual agreement between the Laboratories and the applicable union.</li>
+                      <li>Apprenticeship positions are required to remain in their position for the duration of the program.</li>
+                      <li>The Laboratories and Council may extend the term at any time during the term apprenticeship.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">Postdoctoral Appointees (Up to a 6 year term)</td>
+                  <td width="50%">
+                    <ul>
+                      <li>The Postdoctoral Appointee program is designed to recruit outstanding Ph.D. applicants to assist line organizations in meeting mission objectives and provide a professional technical work environment for the employee.</li>
+                      <li>The Ph.D. must have been conferred within 5 years prior to employment. These assignments are for a 1-year period, with the option at management’s discretion, to serve a term no longer than five additional 1-year assignments.</li>
+                      <li>Postdoctoral Appointees may be converted to limited-term exempt staff assignments; however, total time at Sandia in such temporary classifications cannot exceed a combined total of 6 years.</li>
+                      <li>A Postdoctoral Appointee may be hired as regular staff at any time during the term of the assignment or at the termination of the assignment.</li>
+                      <li>The effective service date for a converted employee will be the start date of the initial term of temporary employment provided there is no more than a 30-day break in service.</li>
+                      <li>Extensions of up to 6 years require employee's manager approval.</li>
+                      <li>Six years or greater requires employee's manager and HR VP approval.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">Truman Fellowship Program (up to 3 year appointment)</td>
+                  <td width="50%">
+                    <ul>
+                      <li>The President Harry S. Truman Fellowship program seeks to attract nationally recognized, new Ph.D. scientists and engineers to Sandia.</li>
+                      <li>The Truman Fellows benefit from the opportunity to work on a topic of their choosing with some of the nation's best scientists and engineers. Sandia benefits from the expected transfer of new science and technology that enhances Sandia’s ability to address future DOE missions.</li>
+                      <li>Truman Fellowship applicants are expected to have either solved a major scientific or engineering problem in their thesis work or provided a new approach or insight to a major problem, as evidenced by a recognized impact in their field.</li>
+                      <li>Selection for this award is based on the applicant's original contribution in solving an important problem, its impact, research proposal, academic record and recommendations, science and engineering background, research interests and professional goals, and compatibility of background and interests with Sandia's research needs.</li>
+                      <li>The Truman Fellowship is a 3 year appointment. The appointment normally commences on October 1, although exceptions may be made to accommodate special circumstances.</li>
+                      <li>A Truman Fellow may be hired as regular staff at the termination of the fellowship. The effective service date for a Truman Fellow conversion to regular status is the start date of his/her initial temporary employment as a Truman Fellow, provided there is no more than a 30-day break in service.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">University Summer Faculty Program (up to 6 month term)</td>
+                  <td width="50%">
+                    <ul>
+                      <li>The University Summer Faculty Program is designed to attract professors from colleges and universities throughout the country who will make significant and value-added contributions to Sandia’s technical work during the summer months, promote university relations, and build a constituency at targeted universities.</li>
+                      <li>The program provides interesting and challenging work aimed at enhancing Sandia’s reputation in the academic community and complementing campus recruiting.</li>
+                      <li>Technical applicants are professors widely recognized as authorities in their field and capable of carrying technical assignments while also providing consultative guidance.</li>
+                      <li>Applicants are recruited nationally for summer assignments.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">Faculty Sabbatical Program (up to 1 year term)</td>
+                  <td width="50%">The Faculty Sabbatical Program is the same as the University Summer Faculty Program, except that the maximum term of employment is 1 year.</td>
+                </tr>
+                <tr>
+                  <td width="50%">High School Summer Faculty Program (up to 6 month term)</td>
+                  <td width="50%">
+                    <ul>
+                      <li>The High School Summer Faculty Program provides practical work experience for local middle and high school teachers in areas related to math and science or business occupations.</li>
+                      <li>Teachers are given the opportunity to enhance their knowledge bases in a research and development environment.</li>
+                      <li>The intent is for these teachers to use their Sandia experience in the classroom to increase their students’ interest in STEM career fields.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">Student Intern (See Student Intern Programs Section)</td>
+                  <td width="50%">
+                    <ul>
+                      <li>Temporary labor while participating in Sandia’s Student Intern Program as a year-round, summer, academic, or co-op student at the high school, undergraduate or graduate level.</li>
+                      <li>Perform short-term work ranging from basic to complex based on student’s education and capabilities.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">Limited Term Recurrent</td>
+                  <td width="50%">
+                    <ul>
+                      <li>Temporary labor used to meet minimum staffing levels in certain situations requiring specialized certifications, e.g., meeting emergency response or medical clinic staffing levels.</li>
+                      <li>This type is used to leverage certifications obtained in other employment for work performed at Sandia on a recurrent basis, i.e., part-time with non-regular hours.</li>
+                      <li>Contact your Staffing Partner before using this workforce type.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <p>Staff Augmentation Contract Associate</p>
+                    <p>See <a href="https://info.sandia.gov/cps/human_resources/policy/processes/procedures/HR100.1.3.html">HR100.1.3</a>, <em>Acquire Services of Non-Employees via Consolidated Staff Augmentation</em></p>
+                  </td>
+                  <td width="50%">
+                    <ul>
+                      <li>Contractors obtained to meet short-term work surges (up to 3 years based on business need).</li>
+                      <li>Use to perform non-vital, non-core work when training time is minimal, and work churn is acceptable. The work does not require commitments or representation on behalf of Sandia.</li>
+                    </ul>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <p></p>
+              <h4>Resources</h4>
+              <p></p>
+              <ul>
+                <li>Also refer to <a href="https://eims.sandia.gov/Workplace/getContent?id=current&amp;vsId=%7B15822D8F-725E-4A12-A971-97BDB334C42D%7D&amp;objectStoreName=EIMS.__.Content&amp;objectType=document">Workforce Options Management Guide</a> for guidance.&nbsp;</li>
+                <li><strong>Note:</strong> If considering a Foreign National, refer to <a href="https://infoq.sandia.gov/cps/human_resources/policy/processes/procedures/HR100.1.4.html">HR100.1.4</a>, <em>Hire Foreign Nationals and Dual Citizens</em>, for more information.</li>
+              </ul>
+              <p></p>
+            </div>
+            <div id="step3content"  class="col-md-10 col-md-offset-2 hide">
+              <h4>Step Overview</h4>
+              <p>
+                <step-overview></step-overview>
+              </p>
+              <h4>Description</h4>
+              <p></p>
+              <ul>
+                <li>Consider recruited, pipeline and sourced applicants meeting minimum qualifications.</li>
+                <li>Consider employees identified as surplus by Sandia.</li>
+                <li>Utilize the Job Requisition Request Form (JRRF) to initiate the job posting process. (Note: PeopleSoft is the official record of the job posting and process.)</li>
+                <li>Post either internally or both internally and externally for a minimum of 7 calendar days.&nbsp; Subsequent posting periods are in whole-day increments.&nbsp; The maximum posting period is normally 120 days.</li>
+                <li>Ensure external hires are interviewed by 3 interviewers, including one outside of the center.&nbsp;Student intern hires only require one interviewer, and the interview may be conducted by phone.</li>
+                <li>Document all interviews.</li>
+                <li>Document basis for selection:
+                  <ul>
+                    <li>Non-represented hires (except student interns), use the <a href="https://eims.sandia.gov/Workplace/getContent?vsId=%7BC646895E-E250-498F-9975-7F33613256E1%7D&amp;objectStoreName=EIMS.__.Content&amp;objectType=document">Hiring Justification Form</a>; augmented with a comprehensive selection matrix if appropriate. (This does not eliminate the need to document interviews.)
+                    </li>
+                    <li>For represented hires (except student interns), document selections in the Represented Employee Selection Matrix (SF4001-ESM).</li>
+                    <li>For all student intern hires, document basis for selection using the Selection Notification function in HR Self-Service in lieu of the Hiring Justification Form.</li>
+                  </ul>
+                </li>
+                <li>Document selections in the Represented Employee Selection Matrix (SF 4001-ESM).</li>
+                <li>Hiring managers should complete due diligence checks on hires.&nbsp; Completion of due diligence is reflected in the Hiring Justification Form.&nbsp; Reference checks are normally completed for 2 references from previous employers or professional references, using the corporate Reference Checking Form.&nbsp; Letters of recommendation may be used when hiring new college
+                  graduates, Postdoctoral Appointees, or others with no external work experience.&nbsp;Review of college academic record is used when hiring student interns. Reference checks on non-represented internal applicants are also encouraged but required for represented employees.&nbsp; Document actions taken.
+                </li>
+                <li>External represented hires are required to provide three letters of recommendation.</li>
+                <li>Ensure selected individuals meet minimum qualification requirements for the selected job level based on the job posting and Lab job criteria.</li>
+                <li>Utilize Lab Success Factors in selection process.</li>
+                <li>Negotiate transfer date for internal hires; a minimum of 2 weeks is the norm for a release date once the offer is approved in PeopleSoft. (<strong>Note: </strong>If the releasing manager has had the employee for less than 1 year, they may not allow the individual to transfer within 1 year, or may require an extended transfer date to complete the backfill.)</li>
+              </ul>
+              <p></p>
+              <h4>Resources</h4>
+              <p><strong>Note:</strong> Access the <a href="https://sharepoint.sandia.gov/sites/HR_Manual/">HR Manual</a> to see specific detailed workflow steps for the different hiring processes, i.e., non-represented, represented, student programs, special programs (e.g., Master’s Fellowship, Critical Skills Master’s Program), and the staff augmentation contract associate contracting process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 right-rail">
+      <div id="stepResources" class="resources">
+        <h5>Step Resources</h5>
+        <ul>
+          <li class="dropdown">
+            <a aria-expanded="false" onclick="return toggleChild(this);" class="dropdown-toggle" href="#">
+              <svg viewBox="0 0 24 24" class="snl-icon snl-icon-chevron-right" title="Show Data">
+                <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+              </svg>
+              Policy Categories</a>
+            <ul class="hide">
+              <li>
+                <a href="https://something">Human Resources</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a aria-expanded="false"  onclick="return toggleChild(this);" class="dropdown-toggle" href="#">
+              <svg viewBox="0 0 24 24" class="snl-icon snl-icon-chevron-right" title="Show Data">
+                <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+              </svg>
+              Policies</a>
+            <ul class="hide">
+              <li>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a aria-expanded="false"  onclick="return toggleChild(this);" class="dropdown-toggle" href="#">
+              <svg viewBox="0 0 24 24" class="snl-icon snl-icon-chevron-right" title="Show Data">
+                <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+              </svg>
+              Related Processes</a>
+            <ul class="hide">
+              <li><a href="https://infoq.sandia.gov/cps/human_resources/policy/processes/procedures/HR100.5.4.html">Maintain a Non-Discriminatory Workplace - Equal Employment Opportunity (EEO) and Affirmative Action (AA)</a></li>
+              <li><a href="../policy/HR.html">Human Resources &amp; Communications</a></li>
+            </ul>
+          </li>
+          <li>
+            <a aria-expanded="false"  onclick="return toggleChild(this);" class="dropdown-toggle" href="#">
+              <svg viewBox="0 0 24 24" class="snl-icon snl-icon-chevron-right" title="Show Data">
+                <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+              </svg>
+              Drivers</a>
+            <ul class="hide">
+              <li>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a aria-expanded="false"  onclick="return toggleChild(this);" class="dropdown-toggle" href="#">
+              <svg viewBox="0 0 24 24" class="snl-icon snl-icon-chevron-right" title="Show Data">
+                <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+              </svg>
+              Reference Documents</a>
+            <ul class="hide">
+              <li>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a aria-expanded="false"  onclick="return toggleChild(this);" class="dropdown-toggle" href="#">
+              <svg viewBox="0 0 24 24" class="snl-icon snl-icon-chevron-right" title="Show Data">
+                <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+              </svg>
+              Websites</a>
+            <ul class="hide">
+              <li>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a aria-expanded="false"  onclick="return toggleChild(this);" class="dropdown-toggle" href="#">
+              <svg viewBox="0 0 24 24" class="snl-icon snl-icon-chevron-right" title="Show Data">
+                <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+              </svg>
+              Training Requirements</a>
+            <ul class="hide">
+              <li>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a aria-expanded="false"  onclick="return toggleChild(this);" class="dropdown-toggle" href="#">
+              <svg viewBox="0 0 24 24" class="snl-icon snl-icon-chevron-right" title="Show Data">
+                <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+              </svg>
+              Required Reviews</a>
+            <ul class="hide">
+              <li>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript"
+        data-name="SandiaGlobalHeader"
+        data-id="20160602"
+        data-footer="true"
+        data-search="true"
+        data-cchd="true"
+        src="https://pl.sandia.gov/globalheader/current/js/header.js">
+</script>
+</body>
+</html>

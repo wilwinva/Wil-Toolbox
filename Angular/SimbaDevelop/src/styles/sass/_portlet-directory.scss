@@ -1,0 +1,487 @@
+
+#dirQuickSearch {
+    .panel-body {
+        padding: $base-pixel-x2;
+    }
+    
+        
+    .loader-container {
+        height: 100%;
+        position: absolute;
+        transition: height 0.3s;
+        float: left;
+        width: 100%;
+        background: white;
+        z-index: 999;
+    }
+
+    #SNLDirectoryDiv {
+        background-color: $snl-medium-blue-700;
+        background-image: linear-gradient(
+                            $snl-medium-blue-400 0%,
+                            $snl-medium-blue-400 35%,
+                            $snl-medium-blue-700 65%,
+                            $snl-medium-blue-700 100%);
+        background-size: 100% 300%;
+        background-position: 50% 100%;
+        border-bottom: 0px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        transition: all .6s;
+        @include smi-ease(1)
+        
+        &.results-success {
+            background-color: $snl-medium-blue-400;
+            background-image: linear-gradient(
+                            $snl-medium-blue-400 0%,
+                            $snl-medium-blue-400 35%,
+                            $snl-medium-blue-700 65%,
+                            $snl-medium-blue-700 100%);
+            background-position: 50% 00%;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            
+            
+            #SNLDirectoryInputDiv {
+                animation: bump 0.4s ease-in-out 1;
+                
+                #SNLDirectoryInput, .btn {
+                border-color: $snl-medium-blue-400;
+                }
+            }
+            
+        }
+        .input-group-btn {
+            
+            .btn {
+                opacity: 1;
+                border: 1px solid $snl-medium-blue-700;
+				padding:$base-pixel;
+				background:#fff;
+            }
+            
+            &.ng-hide-remove, &.ng-hide-add {
+                
+                .btn {
+                    transition: all 0.2s;
+                    @include smi-ease(1)
+                        }
+            }   
+        
+            &.ng-hide {
+                
+                .btn {
+                    opacity: 0;
+                    width: 0%;
+                }
+            }
+        }
+    }
+    #SNLDirectoryInputDiv {
+        width: 100%;
+        
+        #SNLDirectoryInput {
+            border-color: $snl-medium-blue-700;
+            padding: $base-pixel;
+            transition: all .5s ease;
+            
+            &.no-search-term {
+                border-top-right-radius: 3px !important;
+                border-bottom-right-radius: 3px !important;
+            }
+
+        }
+        
+        .input-message {
+            position: absolute;
+            top: $base-pixel + 1;
+            left: $base-pixel;
+            z-index: 4;
+            transition: all 0.2s;
+            @include smi-ease(1);
+            opacity: 1;
+            width: 124px;
+            overflow: hidden;
+            white-space: nowrap;
+            color: $snl-red;
+            
+            &.ng-hide-add {
+                
+            }
+            &.ng-hide-remove {
+                
+            }
+            &.ng-hide {
+                width: 0%;
+                opacity: 0;
+                
+                & + #SNLDirectoryInput {
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                }
+            }
+            
+        }
+        
+        &.has-error {
+            animation: error-shake 0.4s ease-in-out 1;
+            
+            #SNLDirectoryInput, .btn {
+                border-color: $snl-red-400;
+            }
+            
+            #SNLDirectoryInput {
+                padding-left: 132px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+        }
+    }
+    
+    .advanced-search-link {
+        color: white;
+        margin-bottom: -6px;
+        margin-top: $base-pixel;
+        cursor: pointer;
+        
+        .snl-icon {
+            polygon {
+                fill: #ffffff;
+                }
+        }
+        
+        &.expanded {
+            .snl-icon-chevron-right {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    
+    .advanced-search {
+        border-bottom: none;
+        
+        .input-group {
+            margin-bottom: $base-pixel;
+			width:100%;
+            
+            &:last-of-type {
+				padding-top: $base-pixel;
+                margin-bottom: 0;
+            }
+            
+            .form-control {
+                height: auto;
+                padding: $base-pixel-half $base-pixel;
+            }
+            
+            .input-group-addon {
+                @extend .form-control;
+                background: #eeeeee;
+                font-size: $base-pixel * 1.75;
+				width:$base-pixel-x12;
+				text-align:left;
+            }
+            
+            .btn {
+                @extend .form-control;
+                border: 1px solid $snl-blue-grey-600;
+                color: $snl-blue-grey-600;
+                background: transparent;
+                
+                &.btn-primary {
+                    color: white;
+                    background: $snl-blue-grey-600;
+                    float: left;
+                }
+            }
+        }
+    }
+    
+    .directory-listing {
+        
+        .panel-footer {
+            border-top: 1px solid $sandia-border-grey;
+            background-color: $snl-blue-grey-50;
+        }
+		
+		.directory-pagination {
+				@extend .panel-footer;
+				padding:0;
+				background-color: $snl-blue-grey-50;
+				
+				.table-controls {
+        				.pagination {
+          					@include paginationColorize(desaturate($snl-blue-grey-600, 10%))  
+        					}
+        				.records-per-page {
+            				select {
+                				border-color: tint(desaturate($snl-blue-grey-600, 10%), 55%);
+            				}
+						}
+					}
+		
+				}
+		
+		.table-responsive {
+				margin:0;
+			}
+        
+        .saple-id-photo {
+            border-radius: 6px;
+            border-collapse: separate;
+            overflow:hidden;
+            @include shadow(1)
+        }
+        .saple-info p.saple-location {
+			display:block;
+		}
+        .location-map {
+			display:none;
+		}
+        #orgTable {
+            background: $snl-blue-grey-50;
+            border-bottom: 1px solid $sandia-border-grey;
+			
+            td {
+                padding: $base-pixel-x1-5 $base-pixel-x1-5;
+				font-weight:400;
+                font-size: 20px;
+				line-height:20px;
+				border:none;
+                
+                > a:hover {
+                   text-decoration: none;
+                    
+                    svg {
+                        padding: 2px;
+                        
+                        use {
+                            @include snl-icon-state(hover);
+                        }
+                    }
+                }
+				
+				.vertical-divider {
+					color:$sandia-border-grey;
+					font-size: $base-pixel-x3;
+					line-height:20px;
+					font-weight: 200;
+					}
+            	}
+        }
+        
+        .org-manager {
+            border-top: 1px solid $sandia-border-grey;
+            margin-bottom: 0px;
+            margin-top: $base-pixel-x1-5;
+            padding-top: $base-pixel;
+            font-size: $base-pixel-x2;
+            line-height: $base-pixel-x3;
+            
+            .org-manager-name, .org-manager-office {
+                display: inline-block;
+                margin-right: $base-pixel;
+            }
+            
+
+        }
+        
+        .sub-orgs {
+            background: $snl-blue-grey-50;
+            border-top: 1px solid $sandia-border-grey;
+            
+            > p {
+                margin-bottom: 0px;
+                padding: $base-pixel-x2 $base-pixel-x2 0;
+                font-weight: 400;
+                font-size: 20px;
+            }
+            
+            .manager-col {
+                padding: $base-pixel-x1-5 $base-pixel;
+            }
+            
+            .org-col {
+                padding-left: $base-pixel-x2;
+            }
+        }
+		
+        .table {
+            margin-bottom: 0;
+		
+            thead {
+
+                th {
+					padding:$base-pixel-x2 $base-pixel !important;
+					color:$snl-medium-blue-800;
+					
+					&:first-child {
+                        	padding-left: $base-pixel-x2 !important;
+                    	}
+						
+                    	&:last-child {
+                        	padding-left: $base-pixel!important;
+							padding-right:$base-pixel-x2 !important;
+                    	}
+                	}
+            	}		
+        }
+
+        tr.person {
+
+            td {
+                padding:$base-pixel-x1-5 $base-pixel;
+                line-height:$base-pixel-x3;
+                font-size:14px;
+            }
+
+            td:last-child {
+                    padding-right:$base-pixel-x2;
+                }
+        }
+
+        td.name-col, td.phone-col {
+
+            a {
+                cursor: pointer;
+                font-weight:600;
+            }
+        }
+
+        td.phone-col { /*white-space:nowrap;*/}
+		
+		td.org-col { 
+		
+			a {
+				cursor:pointer;
+			}
+		}
+
+        td.name-col {
+
+            padding: 0!important;
+
+            a {
+                color: $text-color;
+                padding: $base-pixel-x1-5 $base-pixel $base-pixel-x1-5 $base-pixel + 4px;
+                line-height: 24px;
+                display:block;
+                width:100%;
+                &:hover {
+                    cursor:pointer;
+                }
+				
+				.snl-icon {
+					float:left;
+					margin-left:-4px;
+				}
+
+            /*    i {
+                    opacity: 0.54;
+                    padding-right: $base-pixel;
+					padding-top:1px;
+                    font-size: 12px;
+                    display:inline;
+                    float:left;
+
+                }*/
+
+                .name {
+                    display:block;
+                    margin-left: 24px;
+                }
+            }
+        }
+
+        tr.person-info-animate {
+            opacity: 1;
+            max-height: 200px;
+
+            &.ng-hide-remove {
+                transition: all linear 0.3s;
+            }
+
+            &.ng-hide {
+                opacity: 0;
+                height: 10px;
+                overflow: hidden;
+            }
+        }
+
+        td.person-info {
+            padding-bottom: 0;
+        }
+
+        td.person-info, .panel-body {
+            padding-left: 0;
+            padding-right: 0;
+            border-top: none;
+
+            p {
+                line-height: 1.5;
+                font-size:14px;
+            }
+        }
+
+        .panel-body.single-person {
+            padding-top: 1.25em;
+            padding-bottom: 0px;
+
+            .map-image {
+                margin: -($base-pixel *3) 0 (-($base-pixel *2) + 1px);
+            }
+
+            .saple-info p.saple-location {
+                display:none;
+            }   
+        }
+
+        .saple-info {
+            padding: 0 ($base-pixel *3) $base-pixel-x3;
+
+            .saple-name {
+                margin-bottom: 0!important;
+
+                a {
+                    color: $text-color;
+                }
+            }
+
+            .saple-occupation {
+                font-weight: 400;
+                opacity: 0.54;
+                margin: 0 0 $base-pixel-x2;
+            }
+
+            .saple-contact, p.saple-location {
+                margin: 0;
+            }
+
+            .row {
+
+                .col-xs-8, .col-xs-9 {
+                    padding-left:0 !important;
+                }
+            }
+        } 
+
+        .social-links {
+            background: #f9f9f9;
+            font-size:14px;
+
+                > li {
+
+                    > a, span {
+                        padding: $base-pixel-x1-5;
+                        text-align: center;
+                        display:block;
+                        position: relative;
+                    }
+
+                    span {
+                        color: #999;
+                    }
+                }
+        }   
+    }
+}

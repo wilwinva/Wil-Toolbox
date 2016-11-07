@@ -1,0 +1,866 @@
+
+.atl.panel {
+  border: 0px;
+  @include shadow(1);
+
+  ul, ol, li {
+    max-width: none;
+  }
+
+  .faq-answer-wrapper {
+    margin-top: 24px;
+
+    ul > li {
+      list-style-type: disc;
+    }
+
+    ol > li {
+      list-style: inherit;
+    }
+  }
+
+  .faq-policies div.ng-scope ul {
+    padding-left: 0;
+  }
+
+  .panel-heading {
+    background: $sandia-medium-blue;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-left: -1px;
+    margin-right: -1px;
+    padding: $base-pixel-x2;
+
+    a, a:visited {
+      @extend .panel-heading;
+      background: transparent;
+      padding: $base-pixel-x2 0;
+
+      &[ng-href=""]:hover {
+        cursor: text;
+        text-decoration: none;
+      }
+    }
+  }
+
+  span.group-title {
+    font-weight: 600;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .list-group-item, .go-to-maps {
+    border-color: $sandia-border-grey;
+    padding: $base-pixel-x2;
+  }
+
+  .date, thead th, .label {
+    opacity: 0.54;
+  }
+
+  td {
+    line-height: $base-pixel-x3;
+    /*font-size: 14px;*/
+    padding: $base-pixel-x2;
+  }
+
+  thead th, .label {
+    color: $text-color;
+    font-size: 14px;
+  }
+
+  thead th {
+    padding: $base-pixel+2px $base-pixel-x2 $base-pixel !important;
+  }
+
+  thead td {
+    line-height: $base-pixel-x2;
+    padding: $base-pixel $base-pixel-x2!important;
+  }
+
+  .table {
+
+    tbody + tbody {
+      border:none;
+    }
+  }
+
+  .saple-id-photo {
+    border-radius: 6px;
+    border-collapse: separate;
+    overflow:hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+
+  .snl-icon {
+    display: inline-block;
+    height: 24px;
+    left: 12px;
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1) 0.1s;
+    vertical-align: top;
+    width: 24px;
+  }
+
+  .snl-icon-chevron-right {
+    padding: 4px;
+    transform: rotate(0deg);
+  }
+
+  .snl-icon-chevron-right.expanded {
+    transform: rotate(90deg);
+  }
+
+  .snl-icon use,
+  .snl-icon-chevron-right polygon {
+    fill: #999;
+  }
+
+  svg {
+    box-sizing: border-box;
+  }
+}
+
+
+/* ======================== ATL SAPLE ========================== */
+
+.atl-saple {
+
+  .panel-heading {
+    font-weight: 400!important;
+
+    .search-term {
+      font-weight: 600;
+    }
+  }
+
+  .table {
+
+    thead {
+
+      th {
+        padding:$base-pixel-x2 $base-pixel !important;
+
+        &:last-child {
+          padding-right:$base-pixel-x2 !important;
+        }
+
+        &:first-child {
+          padding-left:$base-pixel-x2 !important;
+        }
+      }
+    }
+  }
+
+  tr.person {
+
+    td {
+      padding:$base-pixel-x2 $base-pixel;
+      line-height:$base-pixel-x2;
+      font-size:14px;
+    }
+
+    td:last-child {
+      padding-right:$base-pixel-x2;
+    }
+
+  }
+
+  td.name-col, td.org-col, td.phone-col {
+
+    a{
+      color:$text-color;
+    }
+
+  }
+
+  td.phone-col { white-space:nowrap;}
+
+  td.name-col {
+
+    padding: 0!important;
+
+    a {
+      padding: $base-pixel-x2 $base-pixel $base-pixel-x2 $base-pixel + 4px;
+      display:block;
+      width:100%;
+      &:hover {
+        cursor:pointer;
+      }
+
+      i {
+        opacity: 0.54;
+        padding-right: $base-pixel;
+        font-size: 12px;
+        display:inline;
+        float:left;
+
+      }
+
+      .name {
+        display:block;
+        margin-left: 24px;
+      }
+    }
+  }
+
+  tr.person-info-animate {
+    opacity: 1;
+    max-height: 200px;
+
+    &.ng-hide-remove {
+      transition: all linear 0.3s;
+    }
+
+    &.ng-hide {
+      opacity: 0;
+      height: 10px;
+      overflow: hidden;
+    }
+  }
+
+  td.person-info {
+    padding-bottom: 0;
+  }
+
+  td.person-info, .panel-body {
+    padding-left: 0;
+    padding-right: 0;
+    border-top: none;
+
+    p {
+      line-height: 1.5;
+      font-size:14px;
+    }
+  }
+
+  .panel-body.single-person {
+    padding-top: 1.25em;
+    padding-bottom: 0px;
+
+    .map-image {
+      margin: -($base-pixel *3) 0 (-($base-pixel *2) + 1px);
+    }
+
+    .saple-location-map-visible {
+      display:none!important;
+    }
+  }
+
+  .saple-info {
+    padding: 0 ($base-pixel *3) $base-pixel-x3;
+
+    .saple-name {
+      margin-bottom: 0!important;
+
+      a {
+        color: $text-color;
+      }
+    }
+
+    .saple-occupation {
+      font-weight: 400;
+      opacity: 0.54;
+      margin: 0 0 $base-pixel-x2;
+    }
+
+    .saple-contact, p.saple-location {
+      margin: 0;
+    }
+
+    .saple-phone {
+      white-space: nowrap;
+    }
+
+    .row {
+
+      .col-xs-8, .col-xs-9 {
+        padding-left:0 !important;
+      }
+    }
+  }
+
+  .social-links {
+    background: #f9f9f9;
+    font-size:14px;
+
+    > li {
+
+      > a, span {
+        padding: $base-pixel-x1-5;
+        text-align: center;
+        display:block;
+        position: relative;
+      }
+
+      span {
+        color: #999;
+      }
+    }
+  }
+
+  .location-map {
+
+    position:relative;
+    overflow-x:auto;
+    overflow-y:hidden;
+    background:$sandia-map-beige;
+
+    /* TEMP Styles for Review */
+    /*height: $base-pixel * 16;
+    overflow:hidden;
+    background: url(images/maps-temp-bg.jpg) no-repeat center;*/
+    /* TEMP Styles for Review END */
+
+    .saple-location {
+      z-index: 100;
+      position: absolute;
+      display: inline;
+      top: $base-pixel-x2;
+      left: $base-pixel-x2;
+      padding: $base-pixel $base-pixel-x2;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      border-radius:3px;
+      font-size:14px;
+    }
+
+  }
+
+  div.SandiaMapContainer {
+    border-top:1px solid #ddd;
+
+    div.mapInfoCards {
+      display:none !important;
+    }
+
+    div.EmbeddedHeader {
+      /*top: $base-pixel-x2 !important;*/
+    }
+
+  }
+}
+
+#atlSapleMultiple.atl-saple {
+
+  .saple-info p.saple-location {
+    display:block;
+  }
+
+  .location-map {
+    display:none;
+  }
+}
+
+/* ======================== ATL Corporate Forms ========================== */
+
+.atl-corpForms {
+  background: #fafafa;
+
+  .docTitle {
+    display: block;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  .docNum {
+    display: block;
+    line-height: 200%;
+  }
+
+  .docRef {
+    color: #666;
+    display: block;
+    font-size: 14px;
+
+    a, a:visited {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  td.docDescription br {
+    display: none;
+    font-size: 1px;
+    height: 1px;
+    line-height: 1px;
+
+  }
+
+  .downloadTypes {
+    min-width:25%;
+
+    a {
+      color: #555;
+      display: block;
+      float: left;
+      font-size: 14px;
+      margin: -4px 4px 2px 0;
+      padding: 4px;
+      text-align:center;
+    }
+  }
+}
+
+.atl-corpForms .downloadTypes a,
+.atl-corpForms .downloadTypes a img,
+.atl-corpForms .downloadTypes a:visited,
+.atl-corpForms .downloadTypes a:visited img {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+  color: #555;
+  text-decoration: none;
+}
+.atl-corpForms .downloadTypes a:hover {
+  background: #eee none repeat scroll 0 0;
+  border: medium none;
+  text-decoration: none;
+}
+.atl-corpForms .downloadTypes img {
+  height: 24px;
+  margin-bottom:4px;
+  width: 24px;
+}
+
+/* ======================== ATL Org ========================== */
+
+.atl-org {
+  background: #fafafa;
+
+  .container-fluid.person-info {
+    width: 50%;
+    float:left;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .row {
+
+    .col-xs-8, .col-xs-9 {
+      padding-left:0 !important;
+    }
+  }
+
+  .label {
+    display:block;
+    padding:0;
+    margin-bottom: $base-pixel-half;
+    text-align: left;
+    line-height: 1;
+  }
+
+  h3 {
+    margin-bottom: 4px!important;
+    margin-top: 0px;
+  }
+
+  .btn {
+    background: #fff;
+    border: 1px solid $sandia-border-grey;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    padding:7px $base-pixel-x2;
+
+    &:hover {
+      background:#999!important;
+      border:1px solid $sandia-border-grey-md;
+      color:#fff;
+    }
+  }
+
+  hr {
+    margin: 0;
+    border-color: $sandia-border-grey;
+  }
+
+
+}
+
+
+/* ======================== ATL Teaser ========================== */
+
+
+.atl-teaser {
+
+  td:first-of-type {
+    width: 33%;
+  }
+
+  p, h3 {
+    line-height: 1.5 !important;
+    font-size: 14px;
+    margin-bottom: $base-pixel !important;
+  }
+
+  h3 {
+    opacity: 0.54;
+    font-weight: 600;
+  }
+
+
+  img {
+    margin-bottom: $base-pixel;
+  }
+}
+
+/* ======================== ATL Advance Search ========================== */
+
+.atl-advanced-search {
+  margin-bottom: $base-pixel-x3;
+
+  .btn {
+    background: $sandia-blue;
+    border-color: $sandia-blue!important;
+    padding: $base-pixel-x2;
+    color: white;
+    white-space: normal;
+
+    &:hover {
+      background: darken( $sandia-blue, 5%);
+
+    }
+  }
+}
+
+/* ======================== ATL Metagroups ========================== */
+
+.atl-metagroups {
+
+  li.list-group-item {
+    padding: $base-pixel-x1-5 $base-pixel-x2 !important;
+
+    span {
+      display:block;
+    }
+  }
+
+
+}
+
+/* ======================== ATL Maps ========================== */
+
+.atl-maps {
+
+  .panel-body {
+    padding: 0;
+    overflow-x:auto;
+    overflow-y:hidden;
+    background:$sandia-map-beige;
+  }
+}
+
+/*-- base --*/
+
+div.SandiaMapContainer {
+  position:relative;
+}
+
+div.SandiaMapContainer,
+div.SandiaMapContainer * {
+  font: 16px/1.5em 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  -moz-osx-font-smoothing: normal;
+}
+
+div.SandiaMapContainer a,
+div.SandiaMapContainer button {
+  /* cursor: pointer !important;*/
+}
+
+div.SandiaMapContainer div.EmbeddedHeader {
+  background:#fff;
+  box-shadow:none;
+  border:none;
+  box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+  width: auto !important;
+  position:absolute;
+  right: $base-pixel-x2 !important;
+  /*top: $base-pixel-x7 !important;*/
+  height:auto;
+  border-radius:3px;
+  margin-top:$base-pixel-x2;
+}
+
+
+
+/* ======================== ATL Plug ========================== */
+
+.atl-plug {
+  .list-group-item {
+    p {
+      margin-bottom: $base-pixel!important;
+    }
+  }
+}
+
+/*-- toolbar -------------------------------------------*/
+
+div.SandiaMapContainer div.MapToolbar {
+  /* display: block;
+   float: right;
+   overflow: hidden;*/
+}
+
+div.SandiaMapContainer div.MapToolbar div.ToolbarGroup {
+  margin:4px !important;
+}
+
+/* the searchMenuToggleBtn and menuToggleButton should follow the same styles as
+ * the rest of the toolbar buttons. Which is why they all share the same styles. */
+div.searchBox div.mainItems button.searchMenuToggleBtn,
+div.SandiaMapContainer div.EmbeddedHeader button.menuToggleButton,
+div.SandiaMapContainer div.MapToolbar div.ToolbarGroup button {
+  border:none;
+  background-color:transparent;
+  box-shadow:none;
+  opacity:.6;
+  margin-right:4px !important;
+
+  &:last-child {
+    margin-right:0 !important;
+  }
+
+  /*display: block;
+  float: left;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #9e9e9e;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+  margin-right: 5px !important;
+  background-color: #ededed;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 50%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);*/
+}
+
+div.searchBox div.mainItems button.searchMenuToggleBtn:focus,
+div.SandiaMapContainer div.EmbeddedHeader button.menuToggleButton:focus,
+div.SandiaMapContainer div.MapToolbar div.ToolbarGroup button:focus {
+  border:none;
+}
+
+div.searchBox div.mainItems button.searchMenuToggleBtn span {
+  /*display: none;*/ /* we don't use that here. */
+}
+
+
+
+/*-- Cards ------------------------------------------------*/
+
+div.SandiaMapContainer div.mapInfoCards {
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.2) !important;
+  position:relative;
+  margin:0 !important;
+}
+
+div.SandiaMapContainer div.mapInfoCards.fullScreenView {
+  /*position: fixed;
+  width: 500px;
+  top: 20px;
+  left: 20px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);*/
+}
+
+div.SandiaMapContainer div.mapInfoCards button.prevInfoCardBtn,
+div.SandiaMapContainer div.mapInfoCards button.nextInfoCardBtn {
+  height:auto;
+  font-weight:600;
+}
+
+div.SandiaMapContainer div.mapInfoCards button.prevInfoCardBtn {
+  /* float: left;
+   border-left: none;*/
+}
+
+div.SandiaMapContainer div.mapInfoCards button.nextInfoCardBtn {
+  /*float: right;
+  border-right: none;*/
+}
+
+div.SandiaMapContainer div.mapInfoCards div.infoCardConatiner {
+  /* display: block;
+   width: 100%;*/
+}
+
+div.SandiaMapContainer div.mapInfoCards div.infoCardConatiner div.cardContent {
+  /* display: block;
+   padding: 10px;*/
+}
+
+div.SandiaMapContainer div.mapInfoCards div.infoCardConatiner div.cardHeader {
+  padding:$base-pixel 0 $base-pixel $base-pixel-x2;
+  border:none;
+  height:auto;
+}
+
+
+div.SandiaMapContainer div.mapInfoCards div.infoCardConatiner div.cardHeader,
+div.SandiaMapContainer div.mapInfoCards div.infoCardConatiner div.cardHeader p {
+  text-align:left;
+}
+
+div.SandiaMapContainer div.mapInfoCards div.infoCardConatiner div.cardHeader p {
+  padding:0 !important;
+  line-height: $base-pixel-x3;
+  font-size:16px;
+  font-weight:600;
+
+  select {
+    padding-right: $base-pixel-x3;
+    padding-left:4px;
+    font-size: 14px !important;
+    width: auto  !important;
+
+    option {
+      font-size:14px;
+    }
+  }
+
+}
+
+
+div.SandiaMapContainer div.mapInfoCards div.infoCardConatiner div.cardContent div.titleBox div.imageBox {
+  /* display: block;
+   float: left;
+   margin-right: 10px;
+   overflow: hidden;
+   width: 50px;
+   height: 50px;
+   background-color: #b9b9b9;*/
+}
+
+div.SandiaMapContainer div.mapInfoCards div.infoCardConatiner div.cardContent div.titleBox div.imageBox img {
+  /* height: 50px;*/
+}
+
+div.SandiaMapContainer div.mapInfoCards div.infoCardConatiner.collapsedCard {
+  /*display: none;*/
+}
+
+/* ======================== ATL Term Definition Styles ========================== */
+
+.ui-dialog-content {
+    max-height: 300px !important;
+    overflow: auto;
+}
+
+.termcontainer {
+  font-family: "Source Sans Pro", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+}
+
+.ui-dialog-content li {
+    list-style-type: disc;
+}
+
+.ui-dialog {
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  z-index: 10;
+}
+
+.ui-dialog-titlebar.ui-widget-header.ui-corner-all {
+  border-radius: 0;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0.5em 1.5em;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+  background: none;
+  border: none;
+}
+
+.ui-dialog .ui-dialog-content {
+  padding: 1.5em 1.5em 0;
+}
+
+.ui-dialog .ui-dialog-title {
+  float: left;
+  margin: .1em 0;
+  white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.14em;
+}
+
+.ui-widget-header {
+  background: transparent none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+  font-weight: 500;
+}
+
+button.ui-button {
+  position: relative;
+  right: -2.7em;
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.ui-button-icon-only .ui-button-text, 
+.ui-button-icons-only .ui-button-text {
+  padding: .4em;
+  text-indent: -9999999px;
+}
+
+.ui-button .ui-button-text {
+  display: none;
+  line-height: normal;
+}
+
+// .ui-button-icon-primary {
+//   position: relative;
+//   color: #888888;
+//   display: inline-block;
+//   width: 15px;
+//   height: 15px;
+//   overflow: hidden;
+//   &:before, &:after {
+//     content: '';
+//     position: absolute;
+//     height: 2px;
+//     width: 100%;
+//     top: 50%;
+//     left: 0;
+//     margin-top: -1px;
+//     background: #000;
+//   }
+//   &:before {
+//     transform: rotate(45deg);
+//   }
+//   &:after {
+//     transform: rotate(-45deg);
+//   }
+// }
+.ui-dialog {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+@media (max-width: 760px) {
+  .ui-dialog {
+    width: 90% !important;
+  }
+}

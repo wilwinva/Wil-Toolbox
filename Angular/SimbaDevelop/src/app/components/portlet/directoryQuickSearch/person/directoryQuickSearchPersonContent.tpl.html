@@ -1,0 +1,97 @@
+<div class="container-fluid saple-info">
+    <div class="row">
+        <div class="col-md-4 col-sm-3 col-xs-4">
+            <div class="saple-id-photo">
+                <img class="img-responsive" ng-src="{{saple.misc.badgephoto.value}}"
+                     alt="{{saple.name.prettyName.value}}'s badge photo"/>
+            </div>
+        </div>
+        <div class="col-xs-8">
+            <h3 class="saple-name">
+                <a ng-href="https://webprod.sandia.gov/SAPLE/search.jsp?query=snlid:{{saple.misc.snlid.value}}&amp;viewType=single&amp;source=SearchPointNext"
+                   title="Go to the SAPLE listing for {{saple.name.prettyName.value}}"
+                   ng-bind="saple.name.prettyName.value"></a>
+            </h3>
+
+            <p class="saple-occupation" ng-bind="occupation" ng-init="occupation=saple.job.type.value == 'Employee'?saple.job.occupation.value:saple.job.type.value"></p>
+
+            <p class="saple-contact" ng-init="hasOrgLink = (saple.org.link.value && saple.org.link.value.length > 0);hasSandiaEmail = (saple.misc.email.value | validateSapleEmail);">
+                <a ng-href="https://webprod.sandia.gov/SAPLE/search.jsp?query=org:{{saple.org.number.value}}&amp;source=plug&amp;showAll=true"
+                   class="saple-link" title="Org.{{saple.org.number.value}}Roster"
+                   ng-bind="saple.org.number.value"></a>
+                <span class="divider"> | </span>
+                <a ng-href="{{saple.org.link.value}}" ng-bind="saple.org.title.value" ng-if="hasOrgLink"></a>
+                <span ng-href="{{saple.org.link.value}}" ng-bind="saple.org.title.value" ng-if="!hasOrgLink"></span>
+            </p>
+
+            <p class="saple-contact" ng-if="saple.misc.email">
+                <a ng-href="mailto:{{saple.misc.email.value}}" title="Send e-mail to {{saple.name.prettyName.value}}"
+                   class="saple-email" ng-bind="saple.misc.email.value"></a>
+                <span class="divider" ng-if="saple.phone.office.value"> | </span>
+                {{saple.phone.office.value | phone}}
+            </p>
+
+            <p class="saple-location" ng-if="saple.location.building || saple.misc.snlid">
+              <span ng-if="saple.location.building && saple.location.area.value != 'CA'">
+                Location: <a title="View in Sandia Maps"
+                             href="https://map.sandia.gov/apps/map/?room={{saple.location.room.value}}+{{saple.location.building.value}}">{{saple.location.building.value}}/{{saple.location.room.value}}
+                  {{saple.location.area.value}}</a>
+              </span>
+              <span ng-if="saple.location.building && saple.location.area.value == 'CA'">
+                Location: <a title="View in Sandia Maps"
+                             href="https://map.sandia.gov/apps/map/?room={{saple.location.room.value}}+{{saple.location.building.value}}+{{saple.location.area.value}}">{{saple.location.building.value}}/{{saple.location.room.value}}
+                  {{saple.location.area.value}}</a>
+              </span>
+                <span class="saple-mailstop" ng-if="saple.location.mailstop.value">| Mail Stop: {{saple.location.mailstop.value}}</span>
+            </p>
+            <p class="saple-snlid" ng-if="saple.misc.snlid">SNLID: {{saple.misc.snlid.value}}</p>
+        </div>
+    </div>
+</div>
+<!--hide these links if user record does not contain a misc/userid-->
+<ul class="social-links nav nav-justified">
+    <li>
+        <a href="https://mysite.sandia.gov/Person.aspx?accountname=SANDIA%5C{{saple.misc.userid.value}}"
+           title="Go to the MySite for {{saple.name.prettyName.value}}" ng-if="saple.misc.userid && hasSandiaEmail">
+            MySite
+        </a>
+        <span ng-if="!saple.misc.userid || !hasSandiaEmail">My Site</span>
+    </li>
+    <li>
+        <a href="https://snl-wiki.sandia.gov/display/~{{saple.misc.userid.value}}"
+           title="Go to the Sandiapedia profile page for {{saple.name.prettyName.value}}" ng-if="saple.misc.userid">
+            Sandiapedia
+        </a>
+        <span ng-if="!saple.misc.userid">Sandiapedia</span>
+    </li>
+    <li>
+        <a href="https://rails-rn-prod.sandia.gov/plug/users/{{saple.misc.userid.value}}/follow_stream"
+           title="Go to the Plug profile page for {{saple.name.prettyName.value}}" ng-if="saple.misc.userid">
+            Plug
+        </a>
+        <span ng-if="!saple.misc.userid">Plug</span>
+    </li>
+    <li>
+        <a href="https://webprod.sandia.gov/SAPLE/search.jsp?query=snlid:{{saple.misc.snlid.value}}&amp;viewType=single&amp;source=SearchPointNext"
+           title="Go to the SAPLE listing for {{saple.name.prettyName.value}}">
+            SAPLE
+        </a>
+    </li>
+</ul>
+<div id="maps" class="location-map" ng-if="saple.location.building">
+    <div class="saple-location" ng-if="saple.location.area.value != 'CA'">
+        Location: <a title="View in Sandia Maps"
+                     href="https://map.sandia.gov/apps/map/?room={{saple.location.room.value}}+{{saple.location.building.value}}">{{saple.location.building.value}}/{{saple.location.room.value}}
+        {{saple.location.area.value}}</a>
+    </div>
+    <div class="saple-location" ng-if="saple.location.area.value == 'CA'">
+        Location: <a title="View in Sandia Maps"
+                     href="https://map.sandia.gov/apps/map/?room={{saple.location.room.value}}+{{saple.location.building.value}}+{{saple.location.area.value}}">{{saple.location.building.value}}/{{saple.location.room.value}}
+        {{saple.location.area.value}}</a>
+    </div>
+
+    <div ng-if="map">
+        <!--<atl-map-directive room="null" username="saple.misc.userid.value" mapOn = "map"></atl-map-directive>-->
+    </div>
+</div>
+<ng-transclude></ng-transclude>

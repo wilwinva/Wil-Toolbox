@@ -1,0 +1,57 @@
+<!-- My Property Portlet based on signed in user -->
+<div ng-show="apiCtrl.fetching" class="loader-container"> <!-- ng-show="apiCtrl.fetching" -->
+    <div class="loaderbg"></div>
+    <div class="loader"></div>
+</div>
+
+<div id="PropertyPortlet" class="panel-body" ng-hide="apiCtrl.error">
+
+  <div dir-paginate="property in apiCtrl.data|itemsPerPage:apiCtrl.pageSize" pagination-id="property" snl-on-finish-render="apiCtrl.renderPagination()" snl-click-tracking="PropertyResultExpand">
+    <ul class="list-group">
+      <li class="list-group-item clearfix" ng-init="show = false">
+        <snl-expander-data show="show"></snl-expander-data>
+        <h3 ng-click="show=show?false:true" class="group-title"><span class="ng-binding" ng-bind="property.manufacturer"></span> <span class="ng-binding" ng-bind="property.model"></span> <span class="pull-right date ng-binding" ng-bind="property.property"></span></h3>
+
+        <ul class="list-group clearfix fadeIt" ng-show="show">
+
+        	<li class="list-group-item clearfix">
+                <span>Cost</span>
+                <span class="pull-right date ng-binding" ng-bind="property.cost"></span>
+            </li>
+        	<li class="list-group-item clearfix">
+                <span>Description</span>
+                <span class="pull-right date ng-binding" ng-bind="property.description"></span>
+            </li>
+        	<li class="list-group-item clearfix">
+                <span>Location</span>
+                <span class="pull-right date ng-binding" ng-bind="property.location"></span>
+            </li>
+          	<li class="list-group-item clearfix">
+                <span>Manufacturer</span>
+                <span class="pull-right date ng-binding" ng-bind="property.manufacturer"></span>
+            </li>
+          	<li class="list-group-item clearfix">
+                <span>Model</span>
+                <span class="pull-right date ng-binding" ng-bind="property.model"></span>
+            </li>
+            <!--<li class="list-group-item"><span>Property</span> <span class="pull-right date ng-binding" ng-bind="property.property"></span></li>-->
+          	<li class="list-group-item clearfix">
+                <span>Serial</span>
+                <span class="pull-right date ng-binding" ng-bind="property.serial"></span>
+            </li>
+          	<li class="list-group-item clearfix">
+                <span>Service Date</span>
+              <span class="pull-right date ng-binding" ng-bind="property.service_date | reformatDate | date:'MM/dd/yyyy'"></span>
+            </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+    <snl-paginator pagination-id="property" page-size="apiCtrl.pageSize"
+                   page-options="apiCtrl.pageOptions" num-records="apiCtrl.numRecords" scroll-to="#PropertyPortlet"
+                   min-data-length="5" snl-click-tracking="PropertyPagination"></snl-paginator>
+</div>
+<div class="panel-footer">
+    <p>For more information visit the <a ng-href="{{apiCtrl.propertyPageUrl}}">Property Page</a>.</p>
+</div>

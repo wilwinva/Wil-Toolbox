@@ -1,0 +1,13 @@
+<div class="panel atl atl-plug">
+  <div class="panel-heading">
+    <a class="searchLink" ng-class="{noPayload: !atl.payload}" ng-href="{{atl.link | decode | replaceSpaces}}"
+       ng-bind-html="atl.title | decode | replaceSpaces"></a>
+  </div>
+  <ul class="list-group" ng-if="atl.payload">
+    <li class="list-group-item" data-ng-repeat="payload in atl.payload">
+      <a href="{{payload.link | decode | replaceSpaces}}" ng-bind-html="payload.title | decode | replaceSpaces"></a>
+      <p class="date" ng-bind-html="payload.pubDate | decode | replaceSpaces"></p>
+      <p ng-bind-html="payload.description | decode | replaceSpaces | unwantedUnicode | limitCharacters200"></p>
+    </li>
+  </ul>
+</div>

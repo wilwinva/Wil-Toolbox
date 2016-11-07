@@ -1,0 +1,84 @@
+header{margin-top:46px;}
+
+hr{border-color:#d6d6d6}
+*:focus{outline:none}
+span:focus,svg:focus,p:focus,th:focus{outline:none}
+
+.snl-icon{width:24px;height:24px;display:inline-block;vertical-align:top;transition:all .3s .1s;transition-timing-function:cubic-bezier(0.55, 0, 0.1, 1)}
+.snl-icon:hover{cursor:pointer}
+.snl-icon use{fill:#999999}
+.snl-icon.snl-icon-16px{width:16px !important;height:16px !important}
+.snl-icon-chevron-down{transform:rotate(90deg);margin-right:-2px;margin-top:1px}
+.snl-icon-chevron-down.expanded{transform:rotate(-90deg)}
+.snl-icon-chevron-right{padding:4px;transform:rotate(0deg)}
+.snl-icon-chevron-right.expanded{transform:rotate(90deg)}
+.snl-icon-chevron-right polygon{fill:#999999}
+.snl-icon-caret-up{transform:rotate(-180deg);margin-top:4px}
+.snl-icon-caret-down{transform:rotate(0deg);margin-top:4px}
+
+.header{background:#0076a9}
+.header .navbar-header{padding:8px 0}
+.header a.brand,header a.brand:visited{color:white}
+.header a.brand:hover,header a.brand:focus,header a.brand:visited:hover,header a.brand:visited:focus{color:#76d6ff;cursor:pointer;transition:all 0.2s;transition-timing-function:cubic-bezier(0.55, 0, 0.1, 1);text-decoration:underline;outline:none}
+.header a.brand:focus:active,header a.brand:visited:focus:active{color:white;text-decoration:none}
+.header a.brand h3,header a.brand:visited h3{margin-bottom:0;font-size:22px;line-height:24px;margin-top:-1px;text-decoration:none}
+.header .navbar-top{padding:8px 0;line-height:24px;color:#fff}
+.header .navbar-top li{border-left:1px solid #009adc;padding:0 8px}
+.header .navbar-top li:first-child{border-left:none}
+.header .navbar-top li:last-child{padding-right:0}
+.header .navbar-top a,header .navbar-top a:visited{padding:0;color:#fff;margin:0;line-height:24px}
+.header .navbar-top a:hover,header .navbar-top a:focus,header .navbar-top a:visited:hover,header .navbar-top a:visited:focus{text-decoration:underline;color:#76d6ff;outline:none}
+.header .navbar-top a:focus:active,header .navbar-top a:visited:focus:active{color:white;text-decoration:none}
+.header .navbar-top li ul.dropdown-menu{background(#eee;)}
+.header .navbar-top li ul.dropdown-menu li{border-bottom:1px solid #009adc;width:400px;}
+.header .navbar-top li ul.dropdown-menu li:last-child{border-bottom: none;}
+.header .navbar-top li ul.dropdown-menu li a{color:#000;}
+
+.header .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {background-color:transparent !important;color: #76d6ff;}
+
+.header #searchSite{margin:5px 0 0 0;}
+.header #searchSite input#searchTerm{height:30px;line-height:24px;font-size:.75em;}
+
+.breadcrumb,.breadcrumb li{margin-bottom:0;}
+.breadcrumb li a{font-size:.5em;}
+.breadcrumb li.active a{color:#7996a4;font-weight:600;text-decoration: none;}
+
+hr{margin:12px 0;}
+
+.right-rail{}
+.right-rail #stepResources ul{padding-left:0;}
+.right-rail li{list-style-position: inside;}
+
+.resources{border: 1px solid #666;background:lightgray;padding:5px;margin:10px 0;}
+.resources>ul>li{list-style-type: none;}
+.resources ul ul>li{list-style-type: none;list-style-position: outside;}
+.resources ul ul{margin:0 0 10px 40px;padding-left:10px;}
+.resources>ul .dropdown-menu{position:relative;float:none;box-shadow:none;background:transparent;border:none;margin:0;padding:0;}
+.resources>ul .dropdown-menu li{margin-bottom:0;}
+
+.open .snl-icon-chevron-right {
+  transform: rotate(90deg);
+}
+
+.main-content button{width:25%;color:#444}
+.step-links{text-align:center;}
+.step-links .button-dash{border-top:3px solid #000;display:inline-block;width:15px;height:1px;margin:0 -5px;}
+.step-links button.pStep,.step-links .button-dash{vertical-align: middle;}
+button.pStep{background-color: #0097df;
+  border: 1px solid #006699;
+  border-radius: 8px;
+  display: inline-block;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 18px;
+  padding: 10px 30px;
+  text-decoration: none;
+  white-space: normal;
+}
+
+.main-navigation{background:#8EBAFF none repeat scroll 0 0;margin-bottom:30px;}
+.main-navigation .nav li{float:left;}
+.main-navigation .nav li a{color:#fff;text-align:center;padding:8px 16px;vertical-align: middle;}
+.main-navigation .nav li:hover{background:#0076a9}
+
+#faq{}
+#faq ol{list-style:inside decimal;}

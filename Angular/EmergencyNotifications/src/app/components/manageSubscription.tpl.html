@@ -1,0 +1,33 @@
+<snl-site-header user-first-name="{{userCtrl.userFirstName}}" user-last-name="{{userCtrl.userLastName}}"></snl-site-header>
+
+<div class="container-fluid main-content">
+    <div class="row content">
+        <h1>Manage Alerts</h1>
+        <!-- TODO: Clean up form with correct values and tie in controller. -->
+        <div class="col-md-12">
+            <form>
+                <label>Subscribe to alerts</label>
+                <br>
+                Gate Closers
+                <select>
+                    <option value="volvo">Eubank</option>
+                    <option value="saab">Wyoming</option>
+                    <option value="mercedes">Gate 1</option>
+                    <option value="audi">Gate 2</option>
+                </select>
+                Weather
+                <input type="checkbox" name="weather">
+                Shelter
+                <input type="checkbox" name="shelter">
+                Soup of the Day
+                <input type="checkbox" name="soup">
+                Delays
+                <input type="checkbox" name="delays">
+                IT Outages
+                <input type="checkbox" name="outages">
+                <br>
+                <a type="submit" name="submit" class="btn btn-default">Submit</a>
+            </form>
+        </div>
+    </div>
+</div>

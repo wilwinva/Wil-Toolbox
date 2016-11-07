@@ -1,0 +1,87 @@
+<div>
+    <div id="SNLDirectoryDiv" class="panel-body" ng-class="{'results-success':hasResult}">
+        <form autocomplete="off" name="SNLDirectoryForm" name="SNLDirectoryForm">
+            <div id="SNLDirectoryInputDiv" class="input-group" ng-class="{'has-error':ctrl.noResultsFound == true}">
+                <span ng-show="ctrl.noResultsFound == true" ng-hide="ctrl.noResultsFound == false"
+                      class="input-message" style="display: hidden;">No Results Found:</span>
+                <input type="text" name="SNLDirectoryInput" class="form-control" id="SNLDirectoryInput" snl-click-tracking="DirectoryInputBox"
+                       ng-class="{'no-search-term':ctrl.searchTermLength==0}" size="30"
+                       placeholder="Enter name, email, or org"
+                       ng-model="ctrl.searchTerm" ng-model-options="{debounce:400}"
+                       ng-change="ctrl.fetchResults(ctrl.searchTerm);"
+                       ng-focus="show=false;"/>
+                <div class="input-group-btn" ng-hide="ctrl.searchTermLength==0">
+                    <button class="btn" type="reset" ng-click="ctrl.clearSearchTerm()" snl-click-tracking="DirectoryClearSearch">
+                        <svg class="snl-icon snl-icon-close">
+                            <use xlink:href="#snl-icon-close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="advanced-search-link" ng-attr-title="{{show?'Close Advanced Search':'Show Advanced Search'}}"
+               ng-click="show=!show;ctrl.clearSearchTerm()" onclick="document.SNLDirectoryForm.reset();" snl-click-tracking="DirectoryAdvSearchExpand">
+                <svg class="snl-icon snl-icon-chevron-right" ng-class="{'expanded': show}" viewBox="0 0 24 24">
+                    <polygon points="8.8,3.5 6.7,5.6 13.1,12 6.7,18.4 8.8,20.5 17.3,12 "/>
+                </svg>
+                <span class="ng-hide" ng-show="show">Close </span>Advanced Search
+            </p>
+        </form>
+    </div>
+    <div class="panel-body advanced-search fadeIt ng-hide" ng-show="show">
+        <form ng-submit="ctrl.fetchSingleResults()" name="emplquery">
+            <div class="input-group">
+                <span class="input-group-addon" id="directory-portlet-advanced-name">Name</span>
+                <input type="text" name="ename" size="30" class="form-control"
+                        aria-describedby="directory-portlet-advanced-name" ng-model="ctrl.ename">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="directory-portlet-advanced-dept">Organization</span>
+                <input type="text" name="dept" size="8" class="form-control"
+                        aria-describedby="directory-portlet-advanced-dept" ng-model="ctrl.dept">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="directory-portlet-advanced-bldg">Building</span>
+                <input type="text" name="bldg" size="8" class="form-control"
+                        aria-describedby="directory-portlet-advanced-bldg" ng-model="ctrl.bldg">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="directory-portlet-advanced-phone">Phone/Fax</span>
+                <input type="text" name="phone" size="12" class="form-control"
+                        aria-describedby="directory-portlet-advanced-phone" ng-model="ctrl.phone">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="directory-portlet-advanced-mailstop">Mail Stop</span>
+                <input type="text" name="mailstop" size="4" class="form-control"
+                        aria-describedby="directory-portlet-advanced-mailstop" ng-model="ctrl.mailstop">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="directory-portlet-advanced-emailid">Email ID</span>
+                <input type="text" name="emailid" size="8" class="form-control"
+                        aria-describedby="directory-portlet-advanced-emailid" ng-model="ctrl.emailid">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="directory-portlet-advanced-empltype">Type</span>
+                <select name="empltype" size="1" class="form-control"
+                         aria-describedby="directory-portlet-advanced-empltype" ng-model="ctrl.empltype">
+                    <option selected="selected" value=""></option>
+                    <option value="Colleague">Colleague</option>
+                    <option value="Emeritus">Emeritus</option>
+                    <option value="Employee">Employee</option>
+                    <option value="JIT Contractor">JIT Contractor</option>
+                    <option value="No Fee Consultant">No Fee Consultant</option>
+                    <option value="PO Contractor">PO Contractor</option>
+                    <option value="SARAPE">SARAPE</option>
+                    <option value="Staff Augmentation">Staff Augmentation</option>
+                    <option value="Visitor">Visitor</option>
+                </select>
+            </div>
+            <div class="input-group">
+                 
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn" ng-click="ctrl.clearSearchTerm()">Clear</button>
+            </div>
+        </form>
+    </div>
+    <ng-include class="fadeIt" src="'app/components/portlet/directoryQuickSearch/results/directoryQuickSearchResults.tpl.html'"
+                ng-if="ctrl.searchTermLength > 0 && hasResult"></ng-include>
+</div>

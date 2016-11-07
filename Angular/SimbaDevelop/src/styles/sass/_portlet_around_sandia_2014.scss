@@ -1,0 +1,498 @@
+/* CSS Document */
+
+/*--*/
+
+.aroundSandia {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  display: block;
+  background: #fff;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  border-top: 1px solid #ddd;
+}
+
+.aroundSandia a {
+  color: #7fd6ff;
+}
+
+.aroundSandia a:visited {
+  color: #A8B1CB;
+}
+
+.aroundSandia a:hover {
+  color: #e46c1e;
+}
+
+.aroundSandia p {
+  font-size: 13px;
+  line-height: 150%;
+  margin-bottom: 1.5em;
+}
+
+.aroundSandia h3 {
+  color: #fff;
+  font-size: 30px;
+  line-height: 130%;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+  border: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-rendering: optimizelegibility;
+  width: auto;
+}
+
+.aroundSandia h3 a,
+.aroundSandia h3 a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.aroundSandia h3 a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.aroundSandia .feature h3,
+.aroundSandia .subFeature h3 {
+  padding: 20px 20px 42px;
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+}
+
+.aroundSandia .subFeature h3 {
+  padding: 20px 16px 42px 20px;
+  font-size: 16px;
+  bottom: 1px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+
+.aroundSandia .subList h3 {
+  font-size: 14px;
+  /*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);*/
+  text-shadow: none;
+}
+
+.aroundSandia ul#stage,
+.aroundSandia ul#stage2 {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style-image: none;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+.aroundSandia ul#stage2 {
+  border-top: 1px solid #666;
+  background: #666;
+  padding: 0 20px;
+  width: auto;
+ /* display:none;*/
+}
+
+.aroundSandia ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.aroundSandia .feature {
+  position: relative;
+  float: left;
+  margin-right: 1%;
+}
+
+.aroundSandia .subFeature {
+  position: relative;
+  float: left;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1%;
+}
+
+.aroundSandia .subList {
+  display: block;
+  float: none;
+  background: #666;
+  padding: 8px 0px 10px;
+  position: relative;
+  border-bottom: 1px solid #777;
+  width: 100%;
+  overflow: hidden;
+}
+
+.aroundSandia .subList h3 {
+  padding: 0 84px 0 0;
+  display: block;
+  float: left;
+  line-height: 150%;
+  text-shadow: none;
+  /*letter-spacing:.05em;*/
+}
+
+.aroundSandia li:last-child {
+  border-bottom: none;
+}
+
+.aroundSandia #story1 {
+  background-color: #555 !important;
+}
+
+.aroundSandia #story2 {
+  background-color: #9fbf09 !important; /*-- lime green --*/
+}
+
+.aroundSandia.dos #story2 {
+  background-color: #666 !important; /*-- none --*/
+}
+
+.aroundSandia #story3 {
+  background-color: #e56109 !important; /*-- orange --*/
+}
+
+/*-- social links --*/
+
+.aroundSandia .socialLinks {
+  display: block;
+  position: absolute;
+  bottom: 14px;
+  left: 18px;
+  font-size: 12px;
+  font-size: 11px;
+  color: #fff;
+  letter-spacing: .01em;
+  font-weight: 600 !important;
+  text-align: left;
+  vertical-align: middle;
+  height: 2em;
+
+  transition: opacity .2s cubic-bezier(0, 0, 0.60, 1) .15s;
+  opacity: .8;
+}
+
+.aroundSandia .subFeature .socialLinks {
+  bottom: 12px;
+}
+
+.aroundSandia .feature:hover .socialLinks,
+.aroundSandia .subFeature:hover .socialLinks,
+.aroundSandia .subList:hover .socialLinks {
+  transition: opacity .3s cubic-bezier(0, 0, 0.60, 1) .15s;
+  opacity: 1;
+  font-weight:600 !important;
+}
+
+.aroundSandia .socialLinks a,
+.aroundSandia .socialLinks a:visited {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.aroundSandia .socialLinks a:hover {
+  text-decoration: none;
+}
+
+.aroundSandia .socialLinks a.commentCount,
+.aroundSandia .socialLinks a.commentCount:visited {
+  background: transparent url(/images/comment_icon.png) 0 0 no-repeat;
+  font-size: 10px; /*-- added 2014-06-05 blbyers --*/
+  /*width:2.65em;*/
+  width: 2.88em; /*-- added 2014-06-05 blbyers --*/
+  font-weight: 600;
+  height: 1.9em;
+  text-align: center;
+  vertical-align: baseline;
+  overflow: visible;
+  padding-top: .22em;
+}
+
+.aroundSandia .socialLinks a.commentCount:hover {
+  text-decoration: none;
+}
+
+.aroundSandia .socialLinks .plugIt:before {
+  content: "\00b7";
+  display: block;
+  float: left;
+  padding: 0 5px;
+}
+
+.aroundSandia .subList .socialLinks {
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  /*top:-1px;*/
+  float: right;
+  text-align: right;
+  display: block;
+  padding: 0px;
+  margin-left: -84px;
+  margin-bottom: -.2em;
+}
+
+/*--*/
+
+.aroundSandia .aspectwrapper {
+  display: inline-block; /* shrink to fit */
+  width: 67%; /* whatever width you like */
+  position: relative; /* so .content can use position: absolute */
+}
+
+.aroundSandia .aspectwrapper::after {
+  padding-top: 70.009%; /* percentage of containing block _width_ */
+  display: block;
+  content: '';
+}
+
+/* if only one article */
+.aroundSandia.uno .aspectwrapper {
+  width: 100%;
+  margin-bottom: 1%;
+
+}
+
+.aroundSandia.uno .feature {
+  margin-right: 0;
+}
+
+/* if only two articles */
+.aroundSandia.dos .feature.aspectwrapper {
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+.aroundSandia.dos .subFeature.aspectwrapper2 {
+  width: 100%;
+}
+
+.aspectwrapper2 {
+  display: inline-block; /* shrink to fit */
+  width: 32%; /* whatever width you like */
+  position: relative; /* so .content can use position: absolute */
+}
+
+.aroundSandia .aspectwrapper2::after {
+  padding-top: 71.75%; /* percentage of containing block _width_ */
+  display: block;
+  content: '';
+}
+
+/* saf3+, chrome1+ */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  .aroundSandia .aspectwrapper2::after {
+    padding-top: 71.77%;
+  }
+
+  .aroundSandia .subFeature {
+    float: right;
+  }
+
+  .aroundSandia.layout2 #story3.subFeature {
+    float: right;
+  }
+}
+
+.aroundSandia .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; /* follow the parent's edges */
+  overflow: hidden;
+}
+
+/*--*/
+
+.aroundSandia #story1 {
+  background-size: cover;
+  background-position: center;
+}
+
+.aroundSandia #story2 {
+  background-size: cover;
+  background-position: center;
+}
+
+.aroundSandia #story3 {
+  background-size: cover;
+  background-position: center;
+}
+
+.aroundSandia #story1 .content {
+  background-color: rgba(0, 0, 0, .30);
+}
+
+.aroundSandia #story2 .content {
+  background-color: rgba(159, 191, 9, .8); /*-- #9fbf09 -- lime green --*/
+}
+
+.aroundSandia #story3 .content {
+  background-color: rgba(229, 97, 9, .8); /*-- #e56109 -- orange --*/
+}
+
+/*--*/
+
+/*-- Portrait Feature Image --*/
+
+.aroundSandia.portrait .feature.aspectwrapper {
+  width: 40%; /* whatever width you like */
+}
+
+.aroundSandia.portrait .feature.aspectwrapper::after {
+  padding-top: 130%; /* percentage of containing block _width_ */
+  display: block;
+  content: '';
+}
+
+/* if only one article and .portrait*/
+.aroundSandia.portrait.uno .feature.aspectwrapper {
+  width: 100%;
+  margin-bottom: 1%;
+
+}
+
+.aroundSandia.portrait .subFeature.aspectwrapper2 {
+  display: inline-block; /* shrink to fit */
+  width: 59%; /* whatever width you like */
+  position: relative; /* so .content can use position: absolute */
+}
+
+.aroundSandia.portrait .subFeature.aspectwrapper2::after {
+  padding-top: 43.2%; /* percentage of containing block _width_ */
+  display: block;
+  content: '';
+}
+
+/* if only two articles and .portrait */
+.aroundSandia.portrait.dos .feature.aspectwrapper {
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+.aroundSandia.portrait.dos .subFeature.aspectwrapper2 {
+  width: 100%;
+}
+
+.aroundSandia.layout2.portrait .feature.aspectwrapper::after {
+  padding-top: 130%; /* percentage of containing block _width_ */
+}
+
+.aroundSandia.layout2.portrait .subFeature.aspectwrapper2 {
+  width: 49.4%;
+}
+
+.aroundSandia.layout2.portrait .subFeature.aspectwrapper2::after {
+  padding-top: 64%; /* percentage of containing block _width_ */
+}
+
+/*-- layout 1 for narrow width --*/
+
+.aroundSandia.narrow .feature {
+  float: none;
+  margin-right: 0;
+  margin-bottom: 0.5%; /*-- changed from "1%" - 2014-06-05 blbyers --*/
+}
+
+.aroundSandia.narrow .feature h3,
+.aroundSandia.portrait .feature h3 {
+  font-size: 24px;
+}
+
+.aroundSandia.narrow .subList h3 {
+  font-size: 13px;
+}
+
+.aroundSandia.narrow .subFeature {
+  float: none;
+}
+
+.aroundSandia.narrow .feature.aspectwrapper {
+  width: 100%;
+}
+
+.aroundSandia.narrow .subFeature.aspectwrapper2 {
+  width: 100%;
+}
+
+.aroundSandia.narrow .subFeature.aspectwrapper2::after {
+  padding-top: 40%; /* percentage of containing block _width_ */
+
+}
+
+/*-- layout 2 for medium width --*/
+
+.aroundSandia.layout2 .feature {
+  float: none;
+  margin-right: 0;
+  margin-bottom: 0.6%;
+}
+
+.aroundSandia.layout2 .feature h3 {
+  font-size: 24px;
+}
+
+.aroundSandia.layout2 .subList h3 {
+  font-size: 13px;
+}
+
+.aroundSandia.layout2 .subFeature {
+  float: left;
+}
+
+.aroundSandia.layout2 .subFeature#story2 {
+  margin-right: 1.2%;
+}
+
+.aroundSandia.layout2 .feature.aspectwrapper {
+  width: 100%;
+}
+
+.aroundSandia.layout2 .feature.aspectwrapper::after {
+  padding-top: 55% !important; /* percentage of containing block _width_ */
+}
+
+.aroundSandia.layout2 .subFeature.aspectwrapper2 {
+  width: 49.4%;
+}
+
+.aroundSandia.layout2 .subFeature.aspectwrapper2::after {
+  padding-top: 60% !important; /* percentage of containing block _width_ */
+
+}
+
+/* if only two articles and layout 2 */
+.aroundSandia.layout2.dos .feature.aspectwrapper {
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+.aroundSandia.layout2.dos .subFeature.aspectwrapper2 {
+  width: 100%;
+}
+
+/*--*/
+
+.aroundSandia .footer {
+  background: #555;
+  color: #999;
+  padding: 7px 20px 10px;
+  overflow: hidden;
+  font-size: 13px;
+  letter-spacing: .02em;
+}
+
+.aroundSandia .footer p {
+  margin: 0 0 .1em 0;
+  padding: 0;
+  line-height: 150%;
+}

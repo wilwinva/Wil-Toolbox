@@ -1,0 +1,210 @@
+<inside-menu></inside-menu>
+<div class="col-md-10 col-sm-9 main-content">
+    <ng-include src="'app/components/topRegion/topRegion.tpl.html'"></ng-include>
+    <div class="container-fluid">
+        <div class="row layout-normal">
+            <h1>Sandia Site Addresses</h1>
+        </div>
+        <div class="row layout-normal">
+            <!-- Left Column -->
+            <div class="col-md-7 layout-col-1">
+                <!--Mailing addresses for Sandia National Labs-->
+                <h3>Sandia &mdash; New Mexico</h3>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <strong>For regular UNCLASSIFIED mail:</strong><br>
+                                PO Box 5800<br>
+                                Mail Stop XXXX<br>
+                                Albuquerque, NM 87185-(mail stop)
+                            </p>
+                            <p><strong>For UNCLASSIFIED overnight or express packages:</strong><br>
+                                Sandia National Laboratories<br>
+                                Attn: Requester Name<br>
+                                Bldg. #, Room #,<br>
+                                Project/Task #, PO #<br>
+                                Mail Stop XXXX<br>
+                                1515 Eubank SE<br>
+                                Albuquerque, NM 87123
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <strong>For regular UNCLASSIFIED deliveries:</strong><br>
+                                1515 Eubank SE<br>
+                                Mail Stop XXXX<br>
+                                Albuquerque, NM 87123
+                            </p>
+                            <p><strong>Hours of Operation:</strong><br> 7:30-5:00 p.m.<br>
+                                Mountain Time, M - F<br>
+                                FTS/Locator: 505-845-0011
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <h3 style="margin-top:0px; padding-top:0px;">Sandia &mdash; California</h3>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <strong>For regular UNCLASSIFIED mail:</strong><br>
+                                PO Box 969<br>
+                                Mail Stop XXXX<br>
+                                Livermore, CA 94551-0969
+                            </p>
+                            <p>
+                                <strong>For UNCLASSIFIED overnight or express packages:</strong><br>
+                                Sandia National Laboratories<br>
+                                Attn: Requester Name<br>
+                                Bldg. #, Room #,<br>
+                                Project/Task #, PO #<br>
+                                Mail Stop XXXX<br>
+                                7011 East Avenue<br>
+                                Livermore, CA 94550
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <strong>For regular UNCLASSIFIED deliveries:</strong><br>
+                                7011 East Avenue<br>
+                                Mail Stop XXXX<br>
+                                Livermore, CA 94550
+                            </p>
+                            <br>
+                            <p>
+                                <strong>Hours of Operation:</strong><br> 7:00 a.m. - 4:00 p.m.<br>
+                                Pacific Time, M - Th<br>
+                                925-294-3000<br>
+                                Toll Free: 7-1-800-472-6342
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column -->
+            <div class="col-md-5 layout-col-2">
+                <h4 style="color:#C00;">ATTENTION: Classified Mail</h4>
+                <p>Before sending any classified mail, it is a REQUIREMENT that you MUST check the <a
+                        href="https://cfwebprod.sandia.gov/cfdocs/MCA/templates/Home.cfm">Classified Matter Channel
+                    Directory</a>. Work with your Classified Administrative Specialist to ensure all the required checks
+                    are performed.</p>
+                <!-- Begin Sandia - Additional Sites -->
+                <h3 style="line-height:25px;">Sandia &mdash; Additional Sites</h3>
+
+                <div class="panel panel-default portlet">
+
+                <ul class="list-group">
+                    <li class="list-group-item clearfix" ng-init="showAddresses1 = false">
+                        <snl-expander-data show="showAddresses1"></snl-expander-data>
+                        <h4 class="group-title" ng-click="showAddresses1=showAddresses1?false:true">Minnesota</h4>
+                        <div class="clearfix fadeIt expander-info" ng-show="showAddresses1">
+                            <p>Mail Stop 1397<br>
+                                4000 Lexington Avenue, Ste 225<br>
+                                Shoreview, MN 55126-8202</p>
+                            <p>651-209-7613</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item clearfix" ng-init="showAddresses2 = false">
+                        <snl-expander-data show="showAddresses2"></snl-expander-data>
+                        <h4 class="group-title" ng-click="showAddresses2=showAddresses2?false:true">Nevada Test Site</h4>
+                        <div class="clearfix fadeIt expander-info" ng-show="showAddresses2">
+                            <p>PO Box 238<br>
+                                Mail Stop 1391<br>
+                                Nevada Test Site <br>
+                                Mercury, NV 89023 </p>
+
+                            <p><strong>Hours of Operation:</strong><br> 7:00 a.m. - 5:00 p.m.<br>
+                                Pacific Time, M - Th<br>
+                                702-295-6200</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item clearfix" ng-init="showAddresses3 = false">
+                        <snl-expander-data show="showAddresses3"></snl-expander-data>
+                        <h4 class="group-title" ng-click="showAddresses3=showAddresses3?false:true">Tonopah</h4>
+                        <div class="clearfix fadeIt expander-info" ng-show="showAddresses3">
+                            <p>PO Box 871<br>
+                                Mail Stop 1392<br>
+                                Tonopah, NV 89049</p>
+
+                            <p><strong>Hours of Operation:</strong><br> 6:30 a.m. - 4:30 p.m.<br>
+                                Pacific Time, M - Th</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item clearfix" ng-init="showAddresses4 = false">
+                        <snl-expander-data show="showAddresses4"></snl-expander-data>
+                        <h4 class="group-title" ng-click="showAddresses4=showAddresses4?false:true">Washington, DC</h4>
+                        <div class="clearfix fadeIt expander-info" ng-show="showAddresses4">
+                            <p>Mail Stop 1393<br>
+                                950 L'Enfant Plaza SW, Ste 110<br>
+                                Washington, D.C. 20024-2123<br/></p>
+
+                            <p><strong>Hours of Operation:</strong><br> 7:30 a.m. - 5:30 p.m.<br>
+                                Eastern Time, M - Th<br>
+                                7:30 a.m. - 4:30 p.m. Eastern Time, Friday<br>
+                                202-314-3027 or 202-314-3030</p>
+                        </div>
+                    </li>
+                </ul>
+               </div>
+
+                <h3 style="line-height:25px;">Other Facilities</h3>
+
+                <div class="panel panel-default portlet">
+                <ul class="list-group">
+                    <li class="list-group-item clearfix" ng-init="showAddresses5 = false">
+                        <snl-expander-data show="showAddresses5"></snl-expander-data>
+                        <h4 class="group-title" ng-click="showAddresses5=showAddresses5?false:true">Advanced Materials Laboratory (AML)</h4>
+                        <div class="clearfix fadeIt expander-info" ng-show="showAddresses5">
+                            <p>Mail Stop 1349<br>
+                                1001 University Blvd. SE, Ste 100 <br>
+                                Albuquerque, NM 87106</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item clearfix" ng-init="showAddresses6 = false">
+                        <snl-expander-data show="showAddresses6"></snl-expander-data>
+                        <h4 class="group-title" ng-click="showAddresses6=showAddresses6?false:true">Lockheed Martin</h4>
+                        <div class="clearfix fadeIt expander-info" ng-show="showAddresses6">
+                            <p>Mail Stop 1380<br>
+                                1155 University SE<br>
+                                Albuquerque, NM 87106</p>
+
+                            <p>505-843-4000</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item clearfix" ng-init="showAddresses7 = false">
+                        <snl-expander-data show="showAddresses7"></snl-expander-data>
+                        <h4 class="group-title" ng-click="showAddresses7=showAddresses7?false:true">Weapons Evaluation Test Laboratory</h4>
+                        <div class="clearfix fadeIt expander-info" ng-show="showAddresses7">
+                            <p>Sandia Mail Stop 1390 <br>
+                                c/o B&amp;W Pantex <br>
+                                PO Box 30020 <br>
+                                Amarillo, TX &nbsp;79120</p>
+
+                            <p><strong>Hours of Operation:</strong><br> 6:30 a.m. - 5:00 p.m.<br>
+                                Central Time, M - Th</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item clearfix" ng-init="showAddresses8 = false">
+                        <snl-expander-data show="showAddresses8"></snl-expander-data>
+                        <h4 class="group-title" ng-click="showAddresses8=showAddresses8?false:true">WIPP</h4>
+                        <div class="clearfix fadeIt expander-info" ng-show="showAddresses8">
+                            <p>Mail Stop 1395<br>
+                                4100 National Parks Highway<br>
+                                Carlsbad, NM 88220<br></p>
+
+                            <p><strong>Hours of Operation:</strong><br> 7:30 a.m. - 4:30 p.m.<br>
+                                Mountain Time, M - F<br>
+                                Albuquerque Direct Line: 284-2705<br>
+                                Sandia WIPP: 575-234-0026</p>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>$(window).scrollTop(0)</script>

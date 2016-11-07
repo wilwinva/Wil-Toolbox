@@ -1,0 +1,40 @@
+/////// MBE Stuff
+
+.mbe-group {
+  padding:$base-pixel-x6;
+  border-bottom: 1px solid $snl-blue-grey-100;
+
+  &.mbe-intro {
+    background: url("images/mbe-model1-background.png") right 45% no-repeat;
+    background-size: 45% auto;
+  }
+
+  &.mbe-advantages {
+    background: #d1dfe5;
+  }
+
+  &.mbe-roadmap {
+    background: #efe1dc;
+  }
+
+.scroller {
+  text-align: center;
+}
+
+  h1.col-sm-12 {
+    padding-left:$base-pixel-x3;
+    padding-right: $base-pixel-x3;
+  }
+
+  h2.col-sm-12, h3.col-sm-12 {
+    padding-left:0;
+    padding-right: 0;
+  }
+}
+
+.snl-icon-chevron-up{transform:rotate(-90deg);}
+.snl-icon-chevron-down{transform:rotate(90deg);}
+
+.tabs a{padding:5px 10px;border:1px solid black;}
+.tabs a:active{background:blue;color:white;}
+

@@ -1,0 +1,10 @@
+{
+  "status": "SUCCESS",
+  "user": {
+    "id": 1,
+    "firstName": "Bob",
+    "lastName" : "Loblaw",
+    "access_token": "JHSKjdhhs87&7shjshakj@9JJLKSHJJLDSH",
+    "role": "account_admin"
+  }
+}

@@ -1,0 +1,50 @@
+<span id="atlForms" class="atlStyleOne atlWrapper colxs-12">
+  <div class="panel atl atl-corpForms" id="centeredFormsATL">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col"><a href="http://info.sandia.gov/corpdata/corpforms/formlst.htm">Corporate Forms</a></th>
+        <th scope="col">Download</th>
+      </tr>
+      </thead>
+      <tbody ng-init="showForms=false">
+      <tr class="docRow fadeIt" ng-repeat="payload in atl.payload" ng-show="$index<2?true:showForms">
+        <td class="docDescription">
+            <span class="docTitle">
+               <a ng-href="{{payload.link | decode | replaceSpaces}}" ng-bind="payload.title | decode | replaceSpaces"></a>
+            </span>
+          <br>
+          <span class="docNum">Form {{(payload.description | decode | replaceSpaces | removeStars)}}</span>
+          <br>
+            <span class="docRef">
+              <a ng-href="http://info.sandia.gov/corpdata/corpforms/formlst.htm#{{payload.payload[0].categoryAnchor}}">
+                {{payload.payload[0].formCategory | removeFormsText}} Forms
+              </a>
+            </span>
+        </td>
+        <td class="downloadTypes">
+
+          <a ng-href="{{payload.link | decode | replaceSpaces}}" ng-if="payload.payload[0].link1Type == 'MS Word'">
+            <img src="//prod.sandia.gov/ui-patternlibrary/common/images/64px-ms-word-icon.png"><br>.DOC
+          </a>
+          <a ng-href="{{payload.link | decode | replaceSpaces}}" ng-if="payload.payload[0].link1Type == 'Excel'">
+            <img src="//prod.sandia.gov/ui-patternlibrary/common/images/64px-ms-xls-icon.png"><br>.XSL
+          </a>
+          <a ng-href="{{payload.payload[0].link2 | decode | replaceSpaces}}" ng-if="payload.payload[0].link2.length != 0">
+            <img src="//prod.sandia.gov/ui-patternlibrary/common/images/64px-adobe-pdf-icon.png"><br>.PDF
+          </a>
+        </td>
+      </tr>
+      </tbody>
+      <tfoot ng-show="atl.payload.length > 2">
+        <tr>
+          <td>
+            Showing <span>{{!showForms?'2':atl.payload.length}}</span> of {{atl.payload.length}}&nbsp;&nbsp;<a class="show-more-less" ng-click="showForms=showForms?false:true">{{!showForms?'Show more':'Show less'}}</a>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</span>

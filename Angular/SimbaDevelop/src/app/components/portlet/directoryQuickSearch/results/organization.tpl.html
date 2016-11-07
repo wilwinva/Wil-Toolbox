@@ -1,0 +1,26 @@
+<table id="orgTable" class="table">
+    <tr>
+        <td>
+            <a title="Show Parent Org {{rosterInfo.parentOrg.value}}" ng-click="ctrl.fetchResults(rosterInfo.parentOrg.value)">
+                <svg class="snl-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#snl-icon-uparrow"></use>
+                </svg>
+            </a>
+            <span class="org-number" ng-bind="rosterInfo.orgNumber.value" ng-if="rosterInfo.orgNumber.value"></span>
+            <span class="vertical-divider" ng-if="rosterInfo.orgTitle.value"></span>
+                    <span class="org-title" ng-if="rosterInfo.orgTitle.value">
+                        &nbsp;|&nbsp;
+                        <a ng-if="rosterInfo.orgUrl && rosterInfo.orgUrl.value" ng-bind-html="rosterInfo.orgTitle.value"
+                           ng-href="{{rosterInfo.orgUrl.value}}"></a>
+                        <span ng-if="!rosterInfo.orgUrl || !rosterInfo.orgUrl.value" ng-bind-html="rosterInfo.orgTitle.value"></span>
+                        <p class="org-manager" ng-if="rosterInfo.manager.name.prettyName.value">
+                            <span class="org-manager-name" ng-if="rosterInfo.manager.name.prettyName.value">{{rosterInfo.manager.job.title.value}}: <a
+                                    ng-href="mailto:{{rosterInfo.manager.misc.email.value}}"
+                                    ng-bind="rosterInfo.manager.name.prettyName.value"></a></span>
+                            <span class="org-manager-office" ng-if="rosterInfo.manager.phone.office.value">{{rosterInfo.manager.phone.office.value | phone}}</span>
+                            <!-- hiding for now since we don't display other people's mobile info <span class="org-manager-mobile" ng-if="rosterInfo.manager.phone.mobile.value"><label>Mobile</label> {{rosterInfo.manager.phone.mobile.value | phone}}</span> -->
+                        </p>
+                    </span>
+        </td>
+    </tr>
+</table>

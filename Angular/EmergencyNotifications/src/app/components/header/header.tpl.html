@@ -1,0 +1,25 @@
+<header role="banner">
+    <div class="container-fluid">
+        <div class="navbar-header"><a ui-sref="home.subscribe" class="brand">Emergency Notification Subscription Service</a></div>
+        <ul class="nav navbar-nav navbar-right pull-right">
+            <li class=""><a ui-sref="home.manage">Manage Subscriptions</a></li>
+            <li class=""><a ui-sref="home.sysAdmin">Administration</a></li>
+            <li class="hidden-xs"><a href="mailto:smi-dev@sandia.gov?subject=Emergency Management Feedback">Provide
+                Feedback</a></li>
+            <li class="user-name">
+                <span ng-bind="userFirstName"></span>
+                <span ng-bind="userLastName" class="hidden-xs"></span>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!-- Admin Banner -->
+<header role="banner">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right pull-right">
+            <li class=""><a ui-sref="home.sysAdmin">Administer User Subscriptions</a></li>
+            <li class=""><a ui-sref="home.contentAdmin">Administer Alerts</a></li>
+        </ul>
+    </div>
+</header>

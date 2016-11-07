@@ -1,0 +1,64 @@
+/*BROWSE TECHWEB PORTLET*/
+
+.portlet.panel.portlet-browse-techweb {
+	
+	.list-group {
+	
+		&:first-child {
+			border-bottom:1px solid $sandia-border-grey;
+		}
+		
+		.snl-icon {
+			float:left;
+			margin-left:-6px;
+			margin-right:$base-pixel-half + 2;
+		}
+		
+		.list-group-item {
+			padding:$base-pixel-x1-5 $base-pixel-x2; 
+			
+			h4, h5 {
+				margin-bottom:0;
+				margin-left:$base-pixel-x3;
+			}
+			
+			&:last-child {
+				border-bottom:none;
+			}
+			
+			.group-links {
+				padding:$base-pixel 0 $base-pixel-half;
+				margin-left:$base-pixel-x3;
+				overflow:visible;
+			}
+			
+		}
+	}
+}
+
+
+
+/* Large */
+@media (min-width: 1200px) {
+
+	.portlet.panel.portlet-browse-techweb {
+	
+		.list-group {
+			width:50%;
+			float:left;
+			
+			&:first-child {
+				border-right:1px solid $sandia-border-grey;
+				margin-right:-1px;
+				border-bottom:none;
+			}
+			
+			&:last-child {
+				border-left:1px solid $sandia-border-grey;
+			}
+			
+		}
+		
+	}
+    
+}
