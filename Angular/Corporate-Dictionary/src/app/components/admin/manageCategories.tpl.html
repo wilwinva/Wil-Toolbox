@@ -1,49 +1,42 @@
-<div id="editCategory" class="row" ng-init="addCategory = false;">
-    <h1><span ng-bind="addCategory ? 'Add' : 'Edit'"></span> a Category</h1>
-    <div class="content">
-        <div class="row required">
-            <span class="col-sm-12">
-                <span class="glyphicon glyphicon-asterisk">Required</span>
-            </span>
-        </div>
-        <div class="row" ng-show="!addCategory">
-            <label class="col-sm-2" ng-show="!addCategory">Category</label>
-            <span class="glyphicon glyphicon-asterisk clean" ng-show="!addCategory"></span>
+<div id="editCategory" class="row">
+    <form name="manageCategory" novalidate>
+        <h1><span ng-bind="ctrl.addCategory ? 'Add' : 'Edit'"></span> a Category</h1>
+        <div class="content">
+        <div class="row" ng-show="!ctrl.addCategory">
+            <label class="col-sm-2" ng-show="!ctrl.addCategory">Category</label>
+            <span class="glyphicon glyphicon-asterisk clean" ng-show="!ctrl.addCategory"></span>
             <input name="key" value="A" type="hidden"/>
-            <select id="category" name="category" ng-show="!addCategory"
+            <select id="category" name="category" ng-show="!ctrl.addCategory"
                     title="Select a category to modify." ng-model="ctrl.filterCategory"
-                    ng-options="option.name for option in ctrl.categoryOptions">
+                    ng-options="option.name for option in ctrl.categoryOptions" ng-change="ctrl.selectedCategory(ctrl.filterCategory)">
                 <option value="" selected disabled>Category</option>
             </select>
-            <md-button ng-click="addCategory = true;" class="btn btn-link pull-right">Add Category</md-button>
+            <md-button ng-click="ctrl.addCategory = true;" class="btn btn-link pull-right">Add Category</md-button>
         </div>
-        <div class="row" ng-show="ctrl.filterCategory.name.length > 0 && !addCategory">
-            <label class="col-sm-2">Category Name
-                <span class="glyphicon glyphicon-asterisk required"></span>
-            </label>
-            <input type="text" class="catDesc" value="{{ctrl.filterCategory.name}}">
+        <div class="row" ng-show="ctrl.filterCategory.name.length > 0 && !ctrl.addCategory">
+            <label class="col-sm-2 required">Category Name</label>
+            <input type="text" class="catDesc" ng-model="ctrl.filterCategory.name" ng-required="true" ng-trim="true">
         </div>
-        <div class="row" ng-show="addCategory">
-            <label class="col-sm-2">Category Name
-                <span class="glyphicon glyphicon-asterisk required"></span>
-            </label>
-            <input type="text" class="catDesc" value="">
-            <md-button ng-click="addCategory = false;" class="btn btn-link pull-right">Edit Category</md-button>
+        <div class="row" ng-show="ctrl.addCategory">
+            <label class="col-sm-2 required">Category Name</label>
+            <input type="text" class="catDesc" ng-model="ctrl.newCategory" ng-required="ctrl.addCategory?true:false" ng-trim="true"/>
+            <md-button ng-click="ctrl.addCategory = false;" class="btn btn-link pull-right">Edit Category</md-button>
         </div>
     </div>
     <div class="row" id="categoryActions">
         <hr/>
         <span class="pull-right">
-            <button ng-click="ctrl.cancel();addCategory=false;">
+            <button class="btn btn-default" ng-click="ctrl.cancel();ctrl.addCategory=false;">
                 Cancel
             </button>
             <!--TODO: we need logic around this button, should be disabled unless there aren't any associated terms -->
-            <button ng-click="" ng-if="!addCategory">
+            <button class="btn btn-default" ng-click="ctrl.deleteCategory()" ng-if="!ctrl.addCategory && ctrl.categoryUsed" ng-disabled="manageCategory.$invalid && !ctrl.addCategory && !ctrl.categoryUsed">
                 Delete
             </button>
-            <button ng-click="">
+            <button class="btn btn-primary" ng-click="ctrl.submitCategory(ctrl.addCategory)" ng-disabled="manageCategory.$invalid">
                 Submit
             </button>
         </span>
     </div>
+    </form>
 </div>

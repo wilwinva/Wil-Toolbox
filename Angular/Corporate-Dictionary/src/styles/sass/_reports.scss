@@ -1,0 +1,68 @@
+.changereport {
+  .col-sm-offset-2 {
+    padding-left: 4px;
+  }
+}
+
+.termbyid {
+
+  .col-sm-offset-3 {
+    padding-left: 8px;
+  }
+}
+
+div#ui-datepicker-div {
+  margin-top: -48px;
+}
+
+body {
+
+  .ui-widget-header {
+    border: none;
+    background: none;
+    color: #444;
+    font-weight: bold;
+  }
+
+  .ui-widget-content {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #444;
+  }
+
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #ccc;
+    background: white;
+    font-weight: normal;
+    color: #0076a9;
+  }
+
+  .ui-datepicker th {
+    font-weight: normal;
+  }
+
+  .ui-state-highlight,
+  .ui-widget-content .ui-state-highlight,
+  .ui-widget-header .ui-state-highlight {
+    border: 1px solid #015174;
+    background: rgba(0,118,169,0.2);
+    color: #444;
+  }
+
+  .ui-state-active,
+  .ui-widget-content .ui-state-active,
+  .ui-widget-header .ui-state-active {
+    border: 1px solid #015174;
+    background: #0076a9;
+    font-weight: normal;
+    color: #fff;
+  }
+}
+
+.noresultsmsg {
+  display: none;
+  text-align: center;
+  margin: 104px auto;
+  font-size: $base-pixel-x8 - 4;
+  font-weight: 300;
+}

@@ -40,22 +40,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/froala_editor.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/froala_editor.pkgd.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/froala_style.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/char_counter.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/code_view.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/colors.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/draggable.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/emoticons.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/file.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/fullscreen.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/image_manager.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/image.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/line_breaker.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/quick_insert.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/table.min.css" />
-    <link rel="stylesheet" href="bower_components/froala-wysiwyg-editor/css/plugins/video.min.css" />
+    <link rel="stylesheet" href="bower_components/summernote/dist/summernote.css" />
     <!-- endbower -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="bower_components/snl-common/dist/styles/snl-common.css"/>
@@ -92,8 +77,8 @@
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>
@@ -103,41 +88,14 @@
 <script src="bower_components/angular-material/angular-material.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/summernote/dist/summernote.js"></script>
+<script src="bower_components/angular-summernote/dist/angular-summernote.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
 <script src="bower_components/json3/lib/json3.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/froala_editor.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/froala_editor.pkgd.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/align.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/char_counter.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/code_beautifier.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/code_view.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/colors.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/draggable.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/emoticons.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/entities.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/file.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/font_family.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/font_size.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/fullscreen.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/image.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/image_manager.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/inline_style.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/line_breaker.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/link.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/lists.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/paragraph_format.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/paragraph_style.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/quick_insert.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/quote.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/save.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/table.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/url.min.js"></script>
-<script src="bower_components/froala-wysiwyg-editor/js/plugins/video.min.js"></script>
 <!-- endbower -->
 <script src="bower_components/snl-common/dist/lib/snl-common.min.js"></script>
-<script src="bower_components/angular-froala/src/froala-sanitize.js"></script>
-<script src="bower_components/angular-froala/src/angular-froala.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({.tmp,src}) scripts/scripts.js -->
@@ -148,13 +106,17 @@
 <script src="app/components/header/header.js"></script>
 <script src="app/components/viewTerms.js"></script>
 <script src="app/components/admin/actions/adminActions.js"></script>
-<script src="app/components/admin/termPicker/termPicker.js"></script>
+<script src="app/components/termPicker/termPicker.js"></script>
+<script src="app/components/admin/manageCategories.js"></script>
 <script src="app/components/admin/manageTerm.js"></script>
 <script src="app/components/pagination/paginator.js"></script>
 <script src="app/components/pagination/pageSizer.js"></script>
 <script src="app/components/report/actions/reportActions.js"></script>
 <script src="app/models/dictionaryModel.js"></script>
-<script src="app/common/localStorageModel.js"></script>
+<script src="common/localStorageModel.js"></script>
+<script src="app/components/report/searchFilters/searchFilters.js"></script>
+<script src="app/components/report/searchFilters/relatedTermsIdSearch.js"></script>
+<script src="app/components/report/createReportCtrl.js"></script>
 <!-- endbuild -->
 
 <!--<script src="https://pl.sandia.gov/common/current/js/sticky-button.js"></script>-->

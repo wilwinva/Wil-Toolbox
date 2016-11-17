@@ -1,6 +1,8 @@
 <?php
 
 
+
+
 //header('Content-Type: text/html');
 
 //error_reporting(E_ALL);
@@ -36,16 +38,16 @@ function get_db_connection()
     global $_db_connections, $_environment;
 
     // Environment determines which credentials' array to grab
-    $env_offset = 3; // prod by default
+    $env_offset = 2; // dev by default
     if ($_environment == "dev") {
-        $env_offset = 1;
+        $env_offset = 0;
     } else if ($_environment == "qual") {
-        $env_offset = 2;
+        $env_offset = 1;
     }
     return $_db_connections[$env_offset];
 }
 
-function query($sql, $params = array(), $max_rows = 500)
+function query($sql, $params = array(), $action, $max_rows = 500)
 {
     $credentials = get_db_connection();
     $server = $credentials[2];
@@ -60,14 +62,17 @@ function query($sql, $params = array(), $max_rows = 500)
     $dbh = null;
     try {
         $dbh = new PDO($server, $username, $password);
+        //$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
-        print "Error!: " . $e->getMessage() . "\n\n<br/>";
+        echo "Error!: " . $e->getMessage() . "\n\n<br/>";
         die();
     }
+
     $stmt = $dbh->prepare($sql);
 
     // Execute statement
     $success = $stmt->execute();
+
     // Populate return object
     $rows = array();
     $num_rows = 0;
@@ -77,6 +82,7 @@ function query($sql, $params = array(), $max_rows = 500)
     }
 
     return $rows;
+
 }
 
 // Handle querystring actions
@@ -102,27 +108,49 @@ if (isset($_GET['action'])) {
 
 
 function addAcronym(){
-    echo "in addAcronym";
-
     $_POST = json_decode(file_get_contents('php://input'), true);
-
-    var_dump($_POST);
-
-    foreach($_POST as $key=>$post_data){
-        echo "You posted:" . $key . " = " . $post_data . "<br>";
-    }
-
     $acronym = $_POST['acronym'];
     $abbrev_simplified = $_POST['abbrev_simplified'];
     $term_name = $_POST['term_name'];
     $delete_flag = $_POST['delete_flag'];
-    $sub_policy_areas = $_POST['sub_policy_areas'];
-    $related_terms = $_POST['related_terms'];
+    $definition = "This is the definition";
+    $sub_policy_areas = $_POST['categories'];
+    $related_terms = $_POST['relatedTerms'];
     $update_reason = $_POST['update_reason'];
+    $term_anchor = str_replace(' ', '_', strtolower($term_name));
+    $source_id = 4; // 4=acronym, 3=CDM. // TODO Fix this with a passed in variable.
+    $expansion_in_caps = strtoupper($term_name);
+    $created_by = $_SERVER['REMOTE_USER'];
+    $create_application = "ACRONYMS";
+    $last_update_app = "ACRONYMS";
+    $now = date('Y-m-d H:i:s').substr((string)microtime(), 1, 4);  // Oh, my...
+
+    // Insert Term
+    $sql = "INSERT INTO dbo.term (term_name,term_anchor,source_id,definition,owner_snl_id,owner_deptid,delete_flag,created_by,
+                      created_date,create_application,update_reason,acronym,abbrev_simplified,expansion_in_caps)
+			OUTPUT INSERTED.term_id
+			VALUES ('".$term_name."', '".$term_anchor."', ".$source_id.", '".$definition."', 69001, 9531, '".$delete_flag."', null, null, null, '".
+        $update_reason."', '".$acronym."', '".$abbrev_simplified."', '" .$expansion_in_caps."')";
+
+    $results =  query($sql, -1);
+    $termId = $results[0][term_id];
+
+    // Insert Categories (policy areas)
+    foreach($sub_policy_areas as $key=>$category){
+        $sql = "INSERT INTO dbo.term_2_sub_policy_area (term_id, sub_policy_area_id, created_by, create_application, delete_flag, last_updated_by, last_updated_date, last_update_app)
+				VALUES ($termId, $category[id], '$created_by',  '$create_application', 'N','$created_by', '$now', '$last_update_app')";
+        $results =  query($sql, -1);
+    }
+
+    // Insert Related Terms
+    foreach($related_terms as $key=>$term){
+        $sql = "INSERT INTO related_term (term_id, related_term_id, created_by, create_application, delete_flag, last_updated_by, last_updated_date, last_update_app)
+				VALUES ($termId, $term[id], '$created_by',  '$create_application', 'N','$created_by', '$now', '$last_update_app')";
+        $results =  query($sql, -1);
+    }
 
 
-    //$sql = "INSERT INTO dbo.term (term_name,term_anchor,source_id,definition,owner_snl_id,owner_deptid,delete_flag,created_by,
-    // created_date,create_application,update_reason,acronym,abbrev_simplified,expansion_in_caps) ";
+
 
 
 
@@ -183,12 +211,12 @@ function retrieve_terms_by_index($alphaIndex)
 
 
     $results =  query($sql, -1);
-    // The results will have duplicate terms when they have either different categories (policy area desc) or related terms.
+    // Loop through the results to add custom JSON values and remove duplicates from the query.
     foreach($results as  $index => & $item) {
 
         // Create supersededByTerm object that consists of the superseded ID and Name values.
         if($item['supersededById']) {
-            $item['supersededByTerm'] = (object) array('id' => $item['supersededById'], 'name' => $item['supersededByName']);
+            $item['supersededByTerm'] = (object) array('id' => $item['supersededById'], 'term' => $item['supersededByName']);
         }
         else {
             $item['supersededByTerm'] = (object) array();
@@ -215,11 +243,11 @@ function retrieve_terms_by_index($alphaIndex)
         unset($item['relatedTermName']);
         unset($item['relatedTermId']);
 
-
+        // The results will have duplicate terms when they have either different categories (policy area desc) or related terms.
         // Look ahead to see if the next term is the same.
         $x=1;
         while($results[$index+$x]['term'] == $item['term']) {
-            // If so, and it has either a different policy area or related term, add it to the array.
+            // If so, and it has either a different policy area (category) or related term, add it to the array.
             if($results[$index+$x]['categoryName'] != $item['categoryName']) {
                 array_push($item['categories'], array("name" => $results[$index+$x]['categoryName'], "id" => $results[$index+$x]['categoryId']));
             }
@@ -232,7 +260,8 @@ function retrieve_terms_by_index($alphaIndex)
         }
 
     }
-    // Unset doesn't change the index of the arrays and it leaves gaps that Angular can't deal with.  array_values simply rebases the indexs in the arrays to remove the gaps.
+    // Unset used above doesn't change the index of the arrays and it leaves gaps that Angular can't deal with.
+    // array_values() simply rebases the indexes in the arrays to remove the gaps.
     $results = array_values($results);
     echo '{"q":"'.strtoupper($alphaIndex).'", "results": ' . json_encode($results) . '}';
 

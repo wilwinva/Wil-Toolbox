@@ -68,16 +68,117 @@ INSERT INTO cdm.dbo.term_2_sub_glossary (term_id,sub_glossary_id,created_by,crea
 UPDATE cdm.dbo.term
 SET term_id=?,term_name=?,term_anchor=?,definition=?,owner_snl_id=?,owner_deptid=?,delete_flag=?,last_updated_by=?,last_updated_date=?,last_update_application=?,update_reason=?,acronym=?,abbrev_simplified=?,expansion_in_caps=?
 WHERE term_id=?
-//TODO: is term_history updated every time a term changes?
-//can the term_name be updated or would that be a new term?
 
-//TODO: we will need to keep track of what the category/subcategory mapping was before and after the update
-UPDATE term_2_sub_policy_area SET delete_flag='Y', last_updated_by=?,last_updated_date=?,last_update_app=? where term_id=? and sub_policy_area_id=?
-INSERT INTO cdm.dbo.term_2_sub_policy_area (term_id,sub_policy_area_id,created_by,created_date,create_application,delete_flag, last_updated_by,last_updated_date,last_update_app) VALUES (?,?,?,?,?,?,?,?,?)
+-- SQL for updating term_history --
+//Select former "current" term row, also the only time TermUpdateReason should be blank is on generation of a new, empty record...
+SELECT term_name FROM term WHERE term_id = '".$termid."'
+
+INSERT INTO term_history
+			(
+				term_id, term_name, term_anchor,
+				source_id, definition, owner_snl_id, owner_deptid, delete_flag, owner_from_old_data,
+				superseded_by, update_reason,
+				created_by, created_date, create_application,
+				last_updated_by, last_updated_date, last_update_application,
+
+				archived_by, archived_date, archived_application
+			)
+
+					SELECT term_id, term_name, term_anchor,
+					source_id, definition, owner_snl_id, owner_deptid, delete_flag, owner_from_old_data,
+					superseded_by, update_reason,
+					created_by, created_date, create_application,
+					last_updated_by, last_updated_date, last_update_application,
+
+					'".$username."',
+					GetDate(),
+					'CADM'
+
+					FROM term WHERE term_id = '".$termid."'
+
+--- We need to keep track of what the category/subcategory mapping was before and after the update ---
+//make sure we're not adding duplicate filings...
+UPDATE term_2_sub_policy_area
+SET delete_flag='Y',
+last_updated_by= '$created_by',
+last_updated_date= '$now',
+last_update_app='$create_application'
+where term_id='".$termId."' and sub_policy_area_id='".$sub_policy_area_id."'
+
+INSERT INTO cdm.dbo.term_2_sub_policy_area
+(term_id,
+sub_policy_area_id,
+created_by,
+created_date,
+create_application,
+delete_flag,
+last_updated_by,
+last_updated_date,
+last_update_app)
+VALUES (
+'$termId',
+'$category',
+'$created_by',
+'$now',
+'$create_application',
+'N',
+'$created_by',
+'$now',
+'$create_application'
+)
 
 //TODO: we will need to keep track of what the glossary/subglossary mapping was before and after the update
-UPDATE term_2_sub_glossary SET delete_flag='Y', last_updated_by=?,last_updated_date=?,last_update_app=? where term_id=? and sub_glossary_id=?
-INSERT INTO cdm.dbo.term_2_sub_glossary (term_id,sub_glossary_id,created_by,created_date,create_application,delete_flag, last_updated_by,last_updated_date,last_update_app) VALUES (?,?,?,?,?,?,?,?,?)
+UPDATE term_2_sub_glossary
+SET delete_flag='Y',
+last_updated_by=?,
+last_updated_date=?,
+last_update_app=?
+where term_id=? and sub_glossary_id=?
+
+INSERT INTO cdm.dbo.term_2_sub_glossary
+(term_id,
+sub_glossary_id,
+created_by,
+created_date,
+create_application,
+delete_flag,
+last_updated_by,
+last_updated_date,
+last_update_app)
+VALUES (?,?,?,?,?,?,?,?,?)
+
+//TODO: deleting a whole policy branch...
+<!--- fetch all the sub_policies under a given policy... --->
+
+SELECT sub_policy_area_id
+FROM sub_policy_area
+WHERE policy_area_id = '".$policy_area_id."'
+
+<!-- now delete the whole list of sub_policies for a given term... --->
+UPDATE term_2_sub_policy_area
+SET delete_flag = 'Y',
+last_updated_by = '$created_by',
+last_updated_date = '$now',
+last_update_app = '$create_application'
+WHERE
+    term_id = '".$termId."'
+AND
+    sub_policy_area_id in (
+
+    <cfset first_loop = true>
+    <cfloop query="qFetchPolicyBranch">
+
+        <cfif first_loop eq false>
+            <cfoutput>
+                ,
+            </cfoutput>
+        </cfif>
+        <cfset first_loop = false>
+        #sub_policy_area_id#
+    </cfloop>
+
+    )
+
 ----------------------------------------------------
 
 ---- SQL for Maintain Category/Sub-Categories -------

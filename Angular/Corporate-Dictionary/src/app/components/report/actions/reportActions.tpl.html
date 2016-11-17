@@ -3,12 +3,9 @@
         <div class="col-sm-12">
             <p>Explore Corporate Acronym and Dictionary Reports</p>
             <form>
-                <select class="form-control">
+                <select class="form-control" ng-model="reportSelected" ng-options="opt.value as opt.label for opt in options"
+                        ng-change="goToSelectedReport()">
                     <option disabled="disabled" selected="selected" value="">Select a Report</option>
-                    <option ui-sref="createChangeReport">Change Report</option>
-                    <option ui-sref="createHistoryReport">History Report</option>
-                    <option ui-sref="createTermByDateReport">Term By Date Report</option>
-                    <option ui-sref="createReviewSpreadsheet">Review Spreadsheet</option>
                 </select>
             </form>
         </div>

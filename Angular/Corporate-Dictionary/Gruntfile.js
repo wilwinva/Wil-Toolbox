@@ -89,7 +89,8 @@ module.exports = function (grunt) {
                         'termByFilterUrl': '/cadm/apis/cadm.php?action=getFilteredTerms&q=',
                         'categoryUrl': '/cadm/apis/cadm.php?action=getCategories',
                         'sourceUrl': 'mocks/sourceMock.js', //TODO: need php url
-                        'indexUrl': '/cadm/apis/indexOptions.json'
+                        'indexUrl': '/cadm/apis/indexOptions.json',
+                        'cadmUrl': '/cadm/apis/cadm.php?action=addAcronym'
                     }
                 }
             },
@@ -102,7 +103,8 @@ module.exports = function (grunt) {
                         'termByFilterUrl': 'mocks/termMock.json?q=',
                         'categoryUrl': 'mocks/categoryMock.js',
                         'sourceUrl': 'mocks/sourceMock.js',
-                        'indexUrl': 'mocks/indexOptionsMock.js'
+                        'indexUrl': 'mocks/indexOptionsMock.js',
+                        'cadmUrl': '#'
                     }
                 }
             },
@@ -534,6 +536,12 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'bower_components/angular-material/',
                         src: ['angular-material.css'],
+                        dest: '<%= config.dist %>/styles/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/summernote/dist/',
+                        src: ['font/*', 'summernote.css'],
                         dest: '<%= config.dist %>/styles/'
                     }
                 ]

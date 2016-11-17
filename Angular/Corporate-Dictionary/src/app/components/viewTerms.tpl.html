@@ -13,7 +13,9 @@
             <form id="SearchForm" method="post" name="SearchForm" class="form-inline">
                 <h3>Explore the Corporate Acronyms and Dictionary
                     <!--TODO: need ng-if admin -->
-                    <span class="glyphicon glyphicon-question-sign helpIcon" title="1. Search for the term to be edited &#013;2. Once found, hover over the term until the pencil icon appears &#013;3. Click on the pencil to open the edit window" ng-click="ctrl.popupHelpDialog($event)"></span></h3>
+                </h3>
+                <span tabindex="-1" class="glyphicon glyphicon-question-sign helpIcon" title="1. Search for the term to be edited&#013;2. Once found, hover over the term until the pencil icon appears&#013;3. Click on the pencil to open the edit window"
+                      data-title="<ol><li>Search for the term to be edited</li><li>Once found, hover over the term until the pencil icon appears</li><li>Click on the pencil to open the edit window</li></ol>" ng-click="ctrl.popupHelpDialog($event)"></span>
                 <div class="cpsDictionaryAlphabet">
                     <div class="form-group">
                         <label>Search Text:</label>&#160;
@@ -33,6 +35,7 @@
                                    value="TermOnly"
                                    type="checkbox"
                                    ng-model="ctrl.search.term"
+                                   ng-change="ctrl.loadFilteredResults();"
                             />
                             <label for="searchTypeTermOnly">Term</label>
                         </span>
@@ -44,6 +47,7 @@
                                    value="AcronymOnly"
                                    type="checkbox"
                                    ng-model="ctrl.search.acronym"
+                                   ng-change="ctrl.loadFilteredResults();"
                             />
                             <label for="searchTypeAcronymOnly">Acronym</label>
                         </span>
@@ -53,7 +57,9 @@
                                    name="searchType"
                                    title="Search within Definitions."
                                    value="DefOnly" type="checkbox"
-                                   ng-model="ctrl.search.definition"/>
+                                   ng-model="ctrl.search.definition"
+                                   ng-change="ctrl.loadFilteredResults();"
+                            />
                             <label for="searchTypeDefOnly">Definition</label>
                         </span>
                         <span class="padding">
@@ -62,7 +68,9 @@
                                    name="searchType"
                                    title="Search within Ids."
                                    value="IdOnly" type="checkbox"
-                                   ng-model="ctrl.search.id"/>
+                                   ng-model="ctrl.search.id"
+                                   ng-change="ctrl.loadFilteredResults();"
+                            />
                             <label for="searchTypeIdOnly">Id</label>
                         </span>
                     </div>
@@ -72,12 +80,22 @@
                             <select id="searchCategory" class="form-control" name="category"
                                     ng-model="ctrl.search.category"
                                     ng-options="option.name for option in ctrl.categoryOptions"
-                                    title="Limit terms to a category.">
+                                    title="Limit terms to a category."
+                                    ng-change="ctrl.categorySelected()">
                                 <option selected="selected" value="">All Categories</option>
                             </select>
+                            <div class="subCategory padding" ng-if="ctrl.isESH">
+                                <label>Sub-Category:</label>
+                                <select id="searchSubCategory" class="form-control" name="subCategory"
+                                        ng-model="ctrl.search.subCategory"
+                                        ng-options="option.name for option in ctrl.subCategoryOptions"
+                                        title="Limit terms to a category.">
+                                    <option selected="selected" value="">--None--</option>
+                                </select>
+                            </div>
                         </div>
                         <!--TODO: need ng-if admin -->
-                        <span class="padding">
+                        <span class="padding" style="vertical-align:top;" ng-if="ctrl.isAdmin">
                             <label for="TermDeleteFlag">Term status is:</label>
                             <select id="TermDeleteFlag" class="form-control"
                                     ng-options="item as item.option for item in ctrl.statusOptions"
@@ -91,19 +109,19 @@
         <!-- This has class col-md-3 --->
         <div class="col-sm-3">
             <snl-report-actions></snl-report-actions>
-            <snl-admin-actions></snl-admin-actions>
+            <snl-admin-actions ng-if="ctrl.isAdmin"></snl-admin-actions>
         </div>
     </div>
     <div class="row" id="CpsDictionaryDiv" ng-show="ctrl.terms.length>0">
         <hr/>
         <div class="col-md-12">
-            <h3>"{{ctrl.queryText}}"</h3>
+            <h3>"{{ctrl.queryText}}" <span class="filteredTermCount">{{(ctrl.terms | filter:ctrl.filterTerms).length}} record(s) returned</span></h3>
             <div class="search-results col-md-12" id="searchResults">
-                <div class="result row" ng-repeat="term in ctrl.terms | searchtypefilter:ctrl.search"
+                <div class="result row" ng-repeat="term in ctrl.terms | filter:ctrl.filterTerms"
                      ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                    <h5 ng-bind-html="term.term | highlight:ctrl.search"></h5>
+                    <h5 class="pull-left" ng-bind-html="term.term | highlight:ctrl.search"></h5>
 
-                    <span class="result-actions pull-right">
+                    <span class="result-actions">
                             <svg class="snl-icon snl-icon-edit" ng-click="ctrl.editTerm(term);" title="Edit Result"
                                  viewbox="0 0 24 24" ng-class="{'show-pencil': hover}">
                                 <g class="pencil-shape">

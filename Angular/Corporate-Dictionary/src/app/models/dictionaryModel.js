@@ -9,7 +9,7 @@
  * dictionaryModel of the application.
  */
 angular.module('corpDictApp')
-    .service('dictionaryModel', ['$q', '$http', function DictionaryModel($q, $http) {
+    .service('dictionaryModel', ['$q', '$http', 'ENV', function DictionaryModel($q, $http, ENV) {
         var dictionaryModel = this;
 
         dictionaryModel.fetch = function ($url) {
@@ -18,10 +18,11 @@ angular.module('corpDictApp')
             });
         };
 
-        dictionaryModel.fetchFilteredTerms = function ($url, filterText) {
+        dictionaryModel.fetchFilteredTerms = function (filterText) {
             //TODO: add logic to construct $url based on filter criteria
-            console.info("running fetchFilteredTerms: " + $url + filterText);
-            return $http.get($url + filterText).then(function (response) {
+//            console.info("running fetchFilteredTerms: " + ENV.termByFilterUrl + filterText);
+            return $http.get(ENV.termByFilterUrl + filterText).then(function (response) {
+//              console.log('fetchFilteredTerms'+JSON.stringify(response.data));
                 return response.data;
             });
         };
@@ -78,10 +79,11 @@ angular.module('corpDictApp')
             console.info("Categories: " + data.categories);
             console.info("Related terms: " + data.relatedTerms);
             console.info("Reason for creation: " + data.updateReason);
+            console.info("Is Update: " + data.isUpdate);
 
-            var url = "https://info-dev.sandia.gov/cadm/apis/cadm.php?action=addAcronym";
-
-            return $http.post(url, data);
+          var url = ENV.cadmUrl;
+          var x = $http.post(url, data);
+          return x;
         };
 
     }]);

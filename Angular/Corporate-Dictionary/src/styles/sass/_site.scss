@@ -241,10 +241,6 @@ md-dialog-content .help-container.ng-hide-animate.ng-hide-add, md-dialog-content
   display: none;
 }
 
-.required {
-  color: red;
-}
-
 .clean {
   color: transparent;
 }
@@ -294,4 +290,28 @@ md-dialog-content .help-container.ng-hide-animate.ng-hide-add, md-dialog-content
 
 .helpIcon:hover {
   cursor: pointer;
+}
+
+#SearchForm > h3 {
+  display: inline-block;
+}
+
+.supersededTermWrapper {
+  margin-left: 10px;
+}
+
+.definitionWrapper {
+  display: inline-block;
+  padding-left: 0;
+}
+
+.required::after {
+  content: " *";
+  vertical-align: top;
+}
+
+h3 > .filteredTermCount {
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: .5em;
 }

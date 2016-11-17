@@ -77,6 +77,10 @@ span:focus, svg:focus, p:focus, th:focus {
 }
 
 .content-container {
+    background: #fff;
+}
+
+.content-container {
     amin-height: 1040px;
     min-height: calc(100vh - 112px);
 }
@@ -287,7 +291,7 @@ select {
     background: $snl-dark-blue-800;
     transition: top 0.4s ease-in;
     color: white!important;
-    
+    visibility: hidden;
     &:focus, &:active {
         top: 0px; 
         color: white!important;

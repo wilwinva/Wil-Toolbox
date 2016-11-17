@@ -1,0 +1,52 @@
+<form ng-submit="submit()">
+    <div class="form-horizontal changereport" ng-if="changereport">
+        <div class="form-group">
+            <label for="sdate" class="col-sm-2 control-label">Start Date:</label>
+            <div class="col-sm-4">
+                <input type="text" id="sdate" min="2010-10-01" id="myDate"
+                       class="form-control" name="csd" ng-model="recordquery.csd" snl-datepicker/>
+            </div>
+            <label for="edate" class="col-sm-2 control-label">End Date:</label>
+            <div class="col-sm-4">
+                <input type="text" id="edate" class="form-control" name="ced" ng-model="recordquery.ced" snl-datepicker/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="category-select" class="col-sm-2 control-label">Category:</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="category-select" name="cat"
+                        title="Select Categories associated to the term." ng-model="selectedCategory"
+                        ng-options="option.name for option in ctrl.categoryOptions"
+                        ng-change="ctrl.addCategory(selectedCategory); recordquery.cat = changeAmp(selectedCategory.name) ">
+                    <option value="" selected disabled>Category</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-horizontal termbyid" ng-if="termbyid">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Related Terms</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="Enter Term or Term ID" value=""
+                       name="termid" ng-model="recordquery.termid" ng-focus="findTerms = true"/>
+            </div>
+            <term-picker class="ng-hide"></term-picker>
+        </div>
+    </div>
+    <div class="form-horizontal termsbydate" ng-if="termsbydate">
+        <div class="form-group">
+            <label for="selected-date" class="col-sm-2">Selected Date</label>
+            <div class="col-sm-4">
+                <input type="text" id="selected-date" class="form-control"
+                       name="date" ng-model="recordquery.date" snl-datepicker>
+            </div>
+        </div>
+        <p class="col-sm-offset-2"><strong>Note:</strong> Term version history starts: Oct. 01, 2010.</p>
+    </div>
+    <div class="form-group {{report}}">
+        <div ng-class="isHistoryReport ? 'col-sm-offset-3':'col-sm-offset-2'">
+            <button type="submit" class="btn btn-blue" id="viewbtn">View</button>
+            <button type="button" class="btn btn-blue" id="xlsbtn">XLS</button>
+        </div>
+    </div>
+</form>

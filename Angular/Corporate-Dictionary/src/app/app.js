@@ -20,10 +20,11 @@ angular
         'ngAria',
         'ngMaterial',
         'ngMessages',
-        'froala',
+      /*'froala',*/
         /*'material.svgAssetsCache',*/
         'corpDictApp.config.constants',
-        'angularUtils.directives.dirPagination'
+      'angularUtils.directives.dirPagination',
+      'summernote'
     ])
     .value('froalaConfig', {
         toolbarInline: false,
@@ -90,27 +91,27 @@ angular
                 .state('manageCategories', {
                     url: '/manageCategories',
                     templateUrl: 'app/components/admin/manageCategories.tpl.html',
-                    controller: 'ManageTermCtrl as ctrl'
+                    controller: 'ManageCategoriesCtrl as ctrl'
                 })
                 .state('createChangeReport', {
                     url: '/createChangeReport',
                     templateUrl: 'app/components/report/createChangeReport.tpl.html',
-                    controller: 'ManageTermCtrl as ctrl'
+                    controller: 'RecordViewCtrl as ctrl'
                 })
                 .state('createHistoryReport', {
                     url: '/createHistoryReport',
                     templateUrl: 'app/components/report/createHistoryReport.tpl.html',
-                    controller: 'ManageTermCtrl as ctrl'
+                    controller: 'RecordViewCtrl as ctrl'
                 })
                 .state('createTermByDateReport', {
                     url: '/createTermByDateReport',
                     templateUrl: 'app/components/report/createTermByDateReport.tpl.html',
-                    controller: 'ManageTermCtrl as ctrl'
+                    controller: 'RecordViewCtrl as ctrl'
                 })
                 .state('createReviewSpreadsheet', {
                     url: '/createReviewSpreadsheet',
                     templateUrl: 'app/components/report/createReviewSpreadsheet.tpl.html',
-                    controller: 'ManageTermCtrl as ctrl'
+                    controller: 'RecordViewCtrl as ctrl'
                 });
         }
     ])
